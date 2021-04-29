@@ -1,0 +1,140 @@
+C19,D,Time,Project,Task,Day,Hours
+X,1,9-10,--,Billing,THU,1.0
+,1,10-11,L0MDT,Meeting,THU,1.0
+,1,11:30-12,L0MDT,Firmware,THU,0.5
+,1,12-1,GE21,USCMS Meeting; Accruals,THU,1.0
+,1,2-2:30,ME0,Chat with Evaldas,THU,0.5
+,1,2:30-3,L0MDT,Git merge,THU,0.5
+,,,,,,
+X,2,9-10,EMPHATIC,Chat with Eric,FRI,1.0
+,2,10-10:30,L0MDT,Chat with Eric,FRI,0.5
+,2,10:30 - 11:30,ETL,Chat with Daniel,FRI,1.0
+,2,11:30-12,L0MDT,Gitlab issues,FRI,0.5
+,2,1-3,EMPHATIC,Meeting with Eric + Linyan + Mike,FRI,2.0
+,2,3-4,Tracker,IPMC linker issues,FRI,1.0
+,2,4-5,ME0,Segment finding firmware,FRI,1.0
+,,,,,,
+,,,,,,
+X,5,9-9:30,Tracker,IPMC dongle parts,MON,0.5
+,5,9:30-10,ETL,Looking for sheets,MON,0.5
+,5,10-10:30,L0MDT,Spybuffers,MON,0.5
+,5,12:30-1,Tracker,IPMC,MON,0.5
+,5,1-5:00,L0MDT,Spybuffers,MON,4.0
+,5,5:30-6,L0MDT,,MON,0.5
+,,,,,,
+X,6,9-11,L0MDT,Spybuffers; Repo merge,TUE,2.0
+,6,11-12,ME0,Firmware,TUE,1.0
+,6,2-3,L0MDT,Spybuffers; Repo merge,TUE,1.0
+,6,3-7,ETL,Module PCB,TUE,4.0
+,,,,,,
+X,7,9-12,Tracker,"Apollo Chat, IPMC",WED,3.0
+,7,12-1,--,Lunch,WED,1.0
+,7,2-2:30,Tracker,IPMC,WED,0.5
+,7,2:30-3,GE11,Firmware,WED,0.5
+,7,3-5,ETL,Meeting; Module PCB,WED,2.0
+,,,,,,
+X,8,9-11,L0MDT,Meeting,THU,2.0
+,8,11-1,ETL,Module PCB; Gitlab issues,THU,2.0
+,8,2-3:30,L0MDT,Spybuffers,THU,1.5
+,,,,,,
+X,9,9-11,Tracker,Meeting,FRI,2.0
+,9,11-12,L0MDT,Firmware,FRI,1.0
+,9,12-1,--,LUNCH,FRI,1.0
+,9,1-3,EMPHATIC,Meeting with Eric + Linyan,FRI,1.0
+,9,3-4,ETL,Module shims,FRI,1.0
+,9,4-5:30,ME0,Meeting,FRI,1.5
+,,,,,,
+,,,,,,
+X,12,9-10:30,L0MDT,Spybuffers,MON,1.5
+,12,10:30-11:30,ETL,Meeting,MON,1.0
+,12,11:30-1,--,LUNCH,MON,1.5
+,12,1:30-2,L0MDT,Spybuffers,MON,0.5
+,12,2-3,L0MDT,Meeting,MON,1.0
+,12,3-6:00,ME0,Segment Finder,MON,3.0
+,,,,,,
+X,13,9-11,L0MDT,"Spybuffers, Repository updates",TUE,2.0
+,13,11-12,ME0,Meeting,TUE,1.0
+,13,12-3:30,L0MDT,"Spybuffers, AXI Infrastructure, Repository updates",TUE,3.5
+,13,4-5,ME0,Chat with Chloe,TUE,1.0
+,13,5-5:30,Tracker,TCDS2 / firmware junk,TUE,0.5
+,,,,,,
+X,14,8:30-9,ME0,Firmware,WED,0.5
+,14,9-10,Tracker,Meeting,WED,1.0
+,14,10-11,ME0,Firmware,WED,1.0
+,14,11-11:30,Tracker,Soldering IPMC dongles,WED,0.5
+,14,12-1,--,LUNCH,WED,1.0
+,14,1-3,L0MDT,Firmware,WED,2.0
+,14,3-4,ME0,Firmware,WED,1.0
+,14,4-5,ETL,Meeting,WED,1.0
+,14,5-5:30,ME0,Firmware,WED,0.5
+,15,5:30-8,ME0,Firmware,THU,2.5
+,,,,,,
+X,15,9-10,ME0,Firmware,THU,1.0
+,15,10-11,L0MDT,Meeting,THU,1.0
+,15,11-6,ME0,Firmware,THU,7.0
+,,,,,,
+X,16,9-10,Tracker,Meeting,FRI,1.0
+,16,10-11:30,Tracker,"IPMC, update firmware, makefile",FRI,1.5
+,16,12:30-1,--,Lunch,FRI,0.5
+,16,1-2:00,Tracker,IPMC programming,FRI,1.0
+,16,2-3,L0MDT,Infrastructure chat,FRI,1.0
+,16,3-4,Tracker,IPMC,FRI,1.0
+,,,,,,
+,,,,,,
+,19,9-5,HOLIDAY,Patriots Day,MON,8.0
+,,,,,,
+X,20,9-10,--,Moving & computer setup,TUE,1.0
+,20,10-11,ME0,ASIAGO Schematic Updates,TUE,1.0
+,20,11-12,ME0,Firmware Meeting,TUE,1.0
+,20,12-12:30,ME0,Chat with Evaldas,TUE,0.5
+,20,12:30-1,GE11,Chat with Evaldas,TUE,0.5
+,20,1-1:30,GE21,Chat with Evaldas,TUE,0.5
+,20,2-4,L0MDT,Firmware,TUE,2.0
+,20,4-5,ME0,Chat with Chloe,TUE,1.0
+,,,,,,
+X,21,8:30-10:30,Tracker,Meeting,WED,2.0
+,21,10:30-11:30,Tracker,IPMC cable / programming,WED,1.0
+,21,11:30-12,EMPHATIC,Meeting,WED,0.5
+,21,12-1,--,LUNCH,WED,1.0
+,21,1-4,ME0,ASIAGO Layout,WED,3.0
+,21,4-4:30,ETL,Chat with Daniel,WED,0.5
+,21,4:30-6,ME0,ASIAGO Layout,WED,1.5
+,,,,,,
+,21,9-10,Tracker,Meeting,WED,1.0
+,21,9-9,--,Figure out what I did this day????,WED,0.0
+,,,,,,
+,22,9-5,VACATION,,THU,8.0
+,,,,,,
+,23,9-5,VACATION,,FRI,8.0
+,,,,,,
+,,,,,,
+,26,9-5,VACATION,,MON,8.0
+,,,,,,
+,27,9-5,VACATION,,TUE,8.0
+,,,,,,
+X,28,9-11,Tracker,IPMC,WED,2.0
+,28,11-12,Tracker,IPMC,WED,1.0
+,28,12-1,--,LUNCH,WED,1.0
+,28,1-2,L0MDT,Chat with Daniel,WED,1.0
+,28,2-3,ETL,Chat with Daniel,WED,1.0
+,28,3-4,Tracker,IPMC,WED,1.0
+,28,4-5,ETL,Meeting,WED,1.0
+,28,5-6,Tracker,IPMC,WED,1.0
+,28,8:30-9,Tracker,IPMC,WED,0.5
+,,,,,,
+,29,9-10,L0MDT,Emails,THU,1.0
+X,29,10-11,L0MDT,Meeting,THU,1.0
+,29,11:30-2,SICK,Chiropractor,THU,2.5
+,29,4-5,ME0,Meeting,THU,1.0
+,29,5-8,ADMIN,Database setup,THU,3.0
+,29,8-9,ETL,Chat with Indara,THU,1.0
+,,,,,,
+,,,,,,
+,,,,,,
+,29,,,,THU,
+,29,,,,THU,
+,29,,,,THU,
+,29,,,,THU,
+,,,,,,
+,30,,,,FRI,
+,,,,,,
