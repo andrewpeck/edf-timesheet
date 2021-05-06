@@ -1,122 +1,38 @@
 #+TITLE: Billing
 
-* Helpers
-:PROPERTIES:
-:VISIBILITY: children
-:END:
-** Clock
+* May  2021
+#+ATTR_HTML: :border 2 :frame none
+#+TBLNAME: May 2021
+|---+-----+---+-------------+----------+----------------------------+-----+-------|
+|   | C19 | D |        Time | Project  | Task                       | Day | Hours |
+|---+-----+---+-------------+----------+----------------------------+-----+-------|
+| # | X   | 3 |  9:30-10:30 | L0MDT    | Slides                     | MON |   1.0 |
+| # |     | 3 | 10:30-12:30 | ETL      | Grounding meeting          | MON |   1.5 |
+| # |     | 3 |     12:30-1 | L0MDT    | Slides                     | MON |   0.5 |
+| # |     | 3 |      1-1:30 | ETL      | RB PO + Shipping           | MON |   0.5 |
+| # |     | 3 |         2-3 | L0MDT    | Meeting                    | MON |   1.0 |
+| # |     | 3 |         3-5 | ME0      | ASIAGO Schematic + Layout  | MON |   2.0 |
+| # |     | 3 |      5-6:30 | L0MDT    | Chat with Eric             | MON |   1.5 |
+| # |     |   |             |          |                            |     |       |
+| # | X   | 4 |     9-11:00 | L0MDT    | Hardware specifications    | TUE |   2.0 |
+| # |     | 4 |    11-11:30 | L0MDT    | Hog Meeting                | TUE |   0.5 |
+| # |     | 4 |     12:30-1 | GE21     | VTRX Chat                  | TUE |   0.5 |
+| # |     | 4 |      1-2:30 | ME0      | Meeting                    | TUE |   1.5 |
+| # |     | 4 |      2:30-3 | ETL      | Firmware CI Config         | TUE |   0.5 |
+| # |     |   |             |          |                            |     |       |
+| # | X   | 5 |      8:30-9 | L0MDT    | Slides                     | WED |   0.5 |
+| # |     | 5 |        9-10 | Tracker  | Meeting                    | WED |   1.0 |
+| # |     | 5 |       10-12 | L0MDT    | Meeting                    | WED |   2.0 |
+| # |     | 5 |    12-12:30 | EMPHATIC | Chat with Eric             | WED |   0.5 |
+| # |     | 5 |      1-2:30 | ME0      | Layout + Schematic Updates | WED |   1.5 |
+| # |     | 5 |      2:30-3 | ME0      | Stackup                    | WED |   0.5 |
+| # |     | 5 |      3-3:30 | ETL      | Chat with Daniel           | WED |   0.5 |
+| # |     |   |             |          |                            |     |       |
+| # |     |   |             |          |                            |     |       |
+| # |     |   |             |          |                            |     |       |
+|---+-----+---+-------------+----------+----------------------------+-----+-------|
+#+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"May 2021"))::$8='(org-sbe subtract (a $$4))
 
-#+NAME: ymd_to_weekday
-#+begin_src emacs-lisp :output both
-;; press C-c ' here to edit in emacs-lisp-mode
-
-;; W = ( d + floor (2.6m - 0.2) - 2C + Y + floor(Y/4) + floor (C/4) ) mod 7
-;; https://cs.uwaterloo.ca/~alopez-o/math-faq/node73.html
-;; k is day (1 to 31)
-;; m is month (1 = March, ..., 10 = December, 11 = Jan, 12 = Feb) Treat Jan & Feb as months of the preceding year
-;; C is century (1987 has C = 19)
-;; Y is year (1987 has Y = 87 except Y = 86 for Jan & Feb)
-;; W is week day (0 = Sunday, ..., 6 = Saturday)
-
-(defun ymd-to-weekday (C Y m d)
-
-  ;; (1 = March, ..., 10 = December, 11 = Jan, 12 = Feb) Treat Jan & Feb as months of the preceding year
-  (if (< m 3)
-      (progn (setf Y (- Y 1))
-             (setf m (+ m 10)))
-    (setf m (- m 2)))
-
-  ;; Return the day of the week
-  (mod (+ d
-          (floor (- (* m 2.6) 0.2))
-          (- (* 2 C))
-          Y
-          (floor (/ Y 4.0))
-          (floor (/ C 4.0))) 7))
-
-(defun weekday-to-abbr (d)
-  (aref ["SUN" "MON" "TUE" "WED" "THU" "FRI" "SAT"] d))
-
-(defun month-to-number (m)
-  (pcase m
-    ("January"   1)
-    ("February"  2)
-    ("March"     3)
-    ("April"     4)
-    ("May"       5)
-    ("June"      6)
-    ("July"      7)
-    ("August"    8)
-    ("September" 9)
-    ("October"   10)
-    ("November"  11)
-    ("December"  12)
-    (t -1)))
-
-;; org-get-outline-path t
-(let* ((heading (split-string path " " t))
-       (month (month-to-number (car heading)))
-       (year (string-to-number (cadr heading)))
-       (y (mod year 100))
-       (c (/ year 100)))
-  (if (string= k "") " "
-    (weekday-to-abbr (ymd-to-weekday c y month (string-to-number k)))))
-
-#+END_SRC
-
-#+NAME: subtract
-#+begin_src emacs-lisp :output both
-;; press C-c ' here to edit in emacs-lisp-mode
-
-(defun clock-to-float (time)
-  "Convert a clock time (e.g. 12:30) to a float (e.g. 12.5)"
-  (let* ((split (split-string time ":" t))
-         (hours (string-to-number (car split)))
-         (minutes 0))
-    (when (cadr split)
-      (setf minutes (string-to-number (cadr split))))
-    (print (+ hours (/ minutes 60.0)))))
-
-(defun range-to-time (range)
-  "Convert a 12hr clock time range time (e.g. 1-2:30) to a float amount of time (1.5)"
-  (let ((start (clock-to-float (car (split-string range "-" t))))
-        (end (clock-to-float (cadr (split-string range "-" t)))))
-    (when (> start end)
-      (setf end (+ 12 end)))
-    (- end start))
-  )
-
-(if (not (equal a ""))
-    (range-to-time a)
-  a)
-#+END_SRC
-
-** Lisp function to export org mode tables to CSVs
-#+begin_src elisp :exports code :results none
-;; tables to export should be annotated with a '#+TBLNAME:' or '#+NAME:'
-;; files will be named as name.csv
-(require 'org)
-(require 'org-table)
-
-(defun org-table-export-all ()
-  "Export to CSV all named tables in current org mode file"
-  (interactive)
-  (show-all)
-  (let ((case-fold-search t))
-    (while (search-forward-regexp "#\\(\\+TBLNAME: \\|\\+NAME: \\)\\(.*\\)" nil t)
-      (let ((name (match-string-no-properties 2)))
-        (progn
-          (next-line)
-          (org-table-export (format "%s.csv" name) "orgtbl-to-csv"))))))
-#+end_src
-
-** https://emacs.stackexchange.com/questions/7375/can-i-format-cells-in-an-org-mode-table-differently-depending-on-a-formula
-** Local Variables :noexport:
-# eval: (make-variable-buffer-local 'after-save-hook)
-# Local Variables:
-# fill-column: 120
-# eval: (add-hook 'after-save-hook #'org-html-export-to-html nil 'local)
-# End:
 * Archive
 :PROPERTIES:
 :VISIBILITY: children
@@ -140,7 +56,7 @@
 | # |     |    |             |          |                                            |     |       |
 | # |     |  2 |   8:30-9:30 | GE11     | Cocotb                                     | TUE |   1.0 |
 | # |     |  2 |  9:30-10:30 | L0MDT    | Cocotb                                     | TUE |   1.0 |
-| # |     |  2 |        11-4 | Tracker  | IPMC                                       | FRI |   5.0 |
+| # |     |  2 |        11-4 | Tracker  | IPMC                                       | TUE |   5.0 |
 | # |     |    |             |          |                                            |     |       |
 | # |     |  3 |     9-10:30 | Tracker  | Meeting                                    | WED |   1.5 |
 | # |     |  3 |       11-12 | L0MDT    | Chat with Guillermo                        | WED |   1.0 |
@@ -297,18 +213,18 @@
 | # |     | 31 |         4-5 | Tracker  | IPMC shelf testing                         | WED |   1.0 |
 |---+-----+----+-------------+----------+--------------------------------------------+-----+-------|
 #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"March 2021"))::$8='(org-sbe subtract (a $$4))
-* April 2021
+** April 2021
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: April 2021
 |---+-----+----+---------------+----------+----------------------------------------------------+-----+-------|
 |   | C19 |  D |          Time | Project  | Task                                               | Day | Hours |
 |---+-----+----+---------------+----------+----------------------------------------------------+-----+-------|
-| # | X   |  1 |          9-10 | --       | Billing                                            | THU |   1.0 |
+| # | X   |  1 |          9-10 | ADMIN    | Billing                                            | THU |   1.0 |
 | # |     |  1 |         10-11 | L0MDT    | Meeting                                            | THU |   1.0 |
-| # |     |  1 |      11:30-12 | L0MDT    | Firmware                                           | THU |   0.5 |
+| # |     |  1 |         11-12 | L0MDT    | Firmware                                           | THU |   1.0 |
 | # |     |  1 |          12-1 | GE21     | USCMS Meeting; Accruals                            | THU |   1.0 |
-| # |     |  1 |        2-2:30 | ME0      | Chat with Evaldas                                  | THU |   0.5 |
-| # |     |  1 |        2:30-3 | L0MDT    | Git merge                                          | THU |   0.5 |
+| # |     |  1 |        2-3:00 | ME0      | Chat with Evaldas                                  | THU |   1.0 |
+| # |     |  1 |     3:00-6:00 | L0MDT    | Firmware                                           | THU |   3.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   |  2 |          9-10 | EMPHATIC | Chat with Eric                                     | FRI |   1.0 |
 | # |     |  2 |      10-10:30 | L0MDT    | Chat with Eric                                     | FRI |   0.5 |
@@ -317,6 +233,7 @@
 | # |     |  2 |           1-3 | EMPHATIC | Meeting with Eric + Linyan + Mike                  | FRI |   2.0 |
 | # |     |  2 |           3-4 | Tracker  | IPMC linker issues                                 | FRI |   1.0 |
 | # |     |  2 |           4-5 | ME0      | Segment finding firmware                           | FRI |   1.0 |
+| # |     |  2 |           5-6 | Tracker  | IPMC                                               | FRI |   1.0 |
 | # |     |    |               |          |                                                    |     |       |
 |---+-----+----+---------------+----------+----------------------------------------------------+-----+-------|
 | # |     |    |               |          |                                                    |     |       |
@@ -324,12 +241,11 @@
 | # |     |  5 |       9:30-10 | ETL      | Looking for sheets                                 | MON |   0.5 |
 | # |     |  5 |      10-10:30 | L0MDT    | Spybuffers                                         | MON |   0.5 |
 | # |     |  5 |       12:30-1 | Tracker  | IPMC                                               | MON |   0.5 |
-| # |     |  5 |        1-5:00 | L0MDT    | Spybuffers                                         | MON |   4.0 |
-| # |     |  5 |        5:30-6 | L0MDT    |                                                    | MON |   0.5 |
+| # |     |  5 |        1-6:00 | L0MDT    | Spybuffers                                         | MON |   5.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   |  6 |          9-11 | L0MDT    | Spybuffers; Repo merge                             | TUE |   2.0 |
 | # |     |  6 |         11-12 | ME0      | Firmware                                           | TUE |   1.0 |
-| # |     |  6 |           2-3 | L0MDT    | Spybuffers; Repo merge                             | TUE |   1.0 |
+| # |     |  6 |           1-2 | L0MDT    | Spybuffers; Repo merge                             | TUE |   1.0 |
 | # |     |  6 |           3-7 | ETL      | Module PCB                                         | TUE |   4.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   |  7 |          9-12 | Tracker  | Apollo Chat, IPMC                                  | WED |   3.0 |
@@ -337,10 +253,13 @@
 | # |     |  7 |        2-2:30 | Tracker  | IPMC                                               | WED |   0.5 |
 | # |     |  7 |        2:30-3 | GE11     | Firmware                                           | WED |   0.5 |
 | # |     |  7 |           3-5 | ETL      | Meeting; Module PCB                                | WED |   2.0 |
+| # |     |  7 |           5-7 | L0MDT    | Firmware                                           | WED |   2.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   |  8 |          9-11 | L0MDT    | Meeting                                            | THU |   2.0 |
 | # |     |  8 |          11-1 | ETL      | Module PCB; Gitlab issues                          | THU |   2.0 |
 | # |     |  8 |        2-3:30 | L0MDT    | Spybuffers                                         | THU |   1.5 |
+| # |     |  8 |        3:30-5 | SICK     | Chiropractor                                       | THU |   1.5 |
+| # |     |  8 |           5-6 | L0MDT    | Spybuffers                                         | THU |   1.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   |  9 |          9-11 | Tracker  | Meeting                                            | FRI |   2.0 |
 | # |     |  9 |         11-12 | L0MDT    | Firmware                                           | FRI |   1.0 |
@@ -390,14 +309,14 @@
 | # |     |    |               |          |                                                    |     |       |
 | # |     | 19 |           9-5 | HOLIDAY  | Patriots Day                                       | MON |   8.0 |
 | # |     |    |               |          |                                                    |     |       |
-| # | X   | 20 |          9-10 | --       | Moving & computer setup                            | TUE |   1.0 |
+| # | X   | 20 |          9-10 | ME0      | Layout computer setup                              | TUE |   1.0 |
 | # |     | 20 |         10-11 | ME0      | ASIAGO Schematic Updates                           | TUE |   1.0 |
 | # |     | 20 |         11-12 | ME0      | Firmware Meeting                                   | TUE |   1.0 |
 | # |     | 20 |      12-12:30 | ME0      | Chat with Evaldas                                  | TUE |   0.5 |
 | # |     | 20 |       12:30-1 | GE11     | Chat with Evaldas                                  | TUE |   0.5 |
 | # |     | 20 |        1-1:30 | GE21     | Chat with Evaldas                                  | TUE |   0.5 |
-| # |     | 20 |           2-4 | L0MDT    | Firmware                                           | TUE |   2.0 |
-| # |     | 20 |           4-5 | ME0      | Chat with Chloe                                    | TUE |   1.0 |
+| # |     | 20 |           2-5 | L0MDT    | Firmware                                           | TUE |   2.0 |
+| # |     | 20 |           5-6 | ME0      | Chat with Chloe                                    | TUE |   1.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # | X   | 21 |    8:30-10:30 | Tracker  | Meeting                                            | WED |   2.0 |
 | # |     | 21 |   10:30-11:30 | Tracker  | IPMC cable / programming                           | WED |   1.0 |
@@ -406,9 +325,6 @@
 | # |     | 21 |           1-4 | ME0      | ASIAGO Layout                                      | WED |   3.0 |
 | # |     | 21 |        4-4:30 | ETL      | Chat with Daniel                                   | WED |   0.5 |
 | # |     | 21 |        4:30-6 | ME0      | ASIAGO Layout                                      | WED |   1.5 |
-| # |     |    |               |          |                                                    |     |       |
-| # |     | 21 |          9-10 | Tracker  | Meeting                                            | WED |   1.0 |
-| # |     | 21 |           9-9 | --       | Figure out what I did this day????                 | WED |   0.0 |
 | # |     |    |               |          |                                                    |     |       |
 | # |     | 22 |           9-5 | VACATION |                                                    | THU |   8.0 |
 | # |     |    |               |          |                                                    |     |       |
@@ -437,14 +353,128 @@
 | # |     | 29 |           5-8 | ADMIN    | Database setup                                     | THU |   3.0 |
 | # |     | 29 |           8-9 | ETL      | Chat with Indara                                   | THU |   1.0 |
 | # |     |    |               |          |                                                    |     |       |
-| # |     |    |               |          |                                                    |     |       |
-| # |     |    |               |          |                                                    |     |       |
-| # |     | 29 |               |          |                                                    | THU |       |
-| # |     | 29 |               |          |                                                    | THU |       |
-| # |     | 29 |               |          |                                                    | THU |       |
-| # |     | 29 |               |          |                                                    | THU |       |
-| # |     |    |               |          |                                                    |     |       |
-| # |     | 30 |               |          |                                                    | FRI |       |
+| # |     | 30 |          9-10 | Tracker  | Meeting                                            | FRI |   1.0 |
+| # |     | 30 |         10-11 | Tracker  | IPMC build updates                                 | FRI |   1.0 |
+| # |     | 30 |      11-11:30 | ETL      | Fab queries                                        | FRI |   0.5 |
+| # |     | 30 |     1:30-2:30 | ETL      | Fab queries; I2C w/ Daniel                         | FRI |   1.0 |
+| # |     | 30 |        2:30-5 | Tracker  | IPMC CI; IPMC build                                | FRI |   2.5 |
 | # |     |    |               |          |                                                    |     |       |
 |---+-----+----+---------------+----------+----------------------------------------------------+-----+-------|
 #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"April 2021"))::$8='(org-sbe subtract (a $$4))
+
+* Helpers
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+** Clock
+#+NAME: ymd_to_weekday
+#+begin_src emacs-lisp :output both
+;; press C-c ' here to edit in emacs-lisp-mode
+
+;; W = ( d + floor (2.6m - 0.2) - 2C + Y + floor(Y/4) + floor (C/4) ) mod 7
+;; https://cs.uwaterloo.ca/~alopez-o/math-faq/node73.html
+;; k is day (1 to 31)
+;; m is month (1 = March, ..., 10 = December, 11 = Jan, 12 = Feb) Treat Jan & Feb as months of the preceding year
+;; C is century (1987 has C = 19)
+;; Y is year (1987 has Y = 87 except Y = 86 for Jan & Feb)
+;; W is week day (0 = Sunday, ..., 6 = Saturday)
+
+(defun ymd-to-weekday (C Y m d)
+
+  ;; (1 = March, ..., 10 = December, 11 = Jan, 12 = Feb) Treat Jan & Feb as months of the preceding year
+  (if (< m 3)
+      (progn (setf Y (- Y 1))
+             (setf m (+ m 10)))
+    (setf m (- m 2)))
+
+  ;; Return the day of the week
+  (mod (+ d
+          (floor (- (* m 2.6) 0.2))
+          (- (* 2 C))
+          Y
+          (floor (/ Y 4.0))
+          (floor (/ C 4.0))) 7))
+
+(defun weekday-to-abbr (d)
+  (aref ["SUN" "MON" "TUE" "WED" "THU" "FRI" "SAT"] d))
+
+(defun month-to-number (m)
+  (pcase m
+    ("January"   1)
+    ("February"  2)
+    ("March"     3)
+    ("April"     4)
+    ("May"       5)
+    ("June"      6)
+    ("July"      7)
+    ("August"    8)
+    ("September" 9)
+    ("October"   10)
+    ("November"  11)
+    ("December"  12)
+    (t -1)))
+
+;; org-get-outline-path t
+(let* ((heading (split-string path " " t))
+       (month (month-to-number (car heading)))
+       (year (string-to-number (cadr heading)))
+       (y (mod year 100))
+       (c (/ year 100)))
+  (if (string= k "") " "
+    (weekday-to-abbr (ymd-to-weekday c y month (string-to-number k)))))
+
+#+END_SRC
+
+#+NAME: subtract
+#+begin_src emacs-lisp :output both
+;; press C-c ' here to edit in emacs-lisp-mode
+
+(defun clock-to-float (time)
+  "Convert a clock time (e.g. 12:30) to a float (e.g. 12.5)"
+  (let* ((split (split-string time ":" t))
+         (hours (string-to-number (car split)))
+         (minutes 0))
+    (when (cadr split)
+      (setf minutes (string-to-number (cadr split))))
+    (print (+ hours (/ minutes 60.0)))))
+
+(defun range-to-time (range)
+  "Convert a 12hr clock time range time (e.g. 1-2:30) to a float amount of time (1.5)"
+  (let ((start (clock-to-float (car (split-string range "-" t))))
+        (end (clock-to-float (cadr (split-string range "-" t)))))
+    (when (> start end)
+      (setf end (+ 12 end)))
+    (- end start))
+  )
+
+(if (not (equal a ""))
+    (range-to-time a)
+  a)
+#+END_SRC
+
+** Lisp function to export org mode tables to CSVs
+#+begin_src elisp :exports code :results none
+;; tables to export should be annotated with a '#+TBLNAME:' or '#+NAME:'
+;; files will be named as name.csv
+(require 'org)
+(require 'org-table)
+
+(defun org-table-export-all ()
+  "Export to CSV all named tables in current org mode file"
+  (interactive)
+  (show-all)
+  (let ((case-fold-search t))
+    (while (search-forward-regexp "#\\(\\+TBLNAME: \\|\\+NAME: \\)\\(.*\\)" nil t)
+      (let ((name (match-string-no-properties 2)))
+        (progn
+          (next-line)
+          (org-table-export (format "%s.csv" name) "orgtbl-to-csv"))))))
+#+end_src
+
+*** https://emacs.stackexchange.com/questions/7375/can-i-format-cells-in-an-org-mode-table-differently-depending-on-a-formula
+** Local Variables :noexport:
+# eval: (make-variable-buffer-local 'after-save-hook)
+# Local Variables:
+# fill-column: 120
+# eval: (add-hook 'after-save-hook #'org-html-export-to-html nil 'local)
+# End:

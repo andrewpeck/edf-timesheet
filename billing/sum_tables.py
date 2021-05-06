@@ -2,6 +2,7 @@ import csv
 import datetime
 import pprint
 import re
+import sys
 from glob import glob
 
 ONEDAY = datetime.timedelta(days=1)
@@ -88,6 +89,10 @@ def check_project_active (name, time, dict):
 projects = {}
 summaries = {}
 
+if sys.version_info < (3,0,0):
+    print(__file__ + ' requires Python 3, while Python ' + str(sys.version[0] + ' was detected. Terminating. '))
+    sys.exit(1)
+
 for file in glob("* *.csv"):
     d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
     month = d.month
@@ -156,8 +161,8 @@ def project_to_summary():
                 notes = re.sub(r";\s*$","",notes) # REMOVE THE LAST SEMICOLON
                 summaries[year][week][prj]["notes"] = notes
 
-    #pp = pprint.PrettyPrinter(indent=4)
-    #pp.pprint(summaries)
+    # pp = pprint.PrettyPrinter(indent=4)
+    # pp.pprint(summaries)
 
 project_to_summary()
 
@@ -184,16 +189,18 @@ for file in glob("* *.csv"):
             print_weekdays(d)
             print_spacer()
             week = d.isocalendar()[1]
-            for prj in summaries[year][week]:
-                if (prj == "--"):
-                    continue
-                princ ("| %20s |" % prj)
-                for weekday in range(7):
-                    if weekday in summaries[year][week][prj]:
-                        princ (" % 3.2f |" % summaries[year][week][prj][weekday])
-                    else:
-                        princ ("     0 |")
-                princ("%s | \n" % summaries[year][week][prj]["notes"])
+
+            if (week in summaries[year]):
+                for prj in summaries[year][week]:
+                    if (prj == "--"):
+                        continue
+                    princ ("| %20s |" % prj)
+                    for weekday in range(7):
+                        if weekday in summaries[year][week][prj]:
+                            princ (" % 3.2f |" % summaries[year][week][prj][weekday])
+                        else:
+                            princ ("     0 |")
+                    princ("%s | \n" % summaries[year][week][prj]["notes"])
 
         if (d.weekday()==6):
             print_spacer()
