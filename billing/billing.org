@@ -27,8 +27,18 @@
 | # |     | 5 |      1-2:30 | ME0      | Layout + Schematic Updates | WED |   1.5 |
 | # |     | 5 |      2:30-3 | ME0      | Stackup                    | WED |   0.5 |
 | # |     | 5 |      3-3:30 | ETL      | Chat with Daniel           | WED |   0.5 |
+| # |     | 5 |   3:30-6:30 | ME0      | Layout                     | WED |   3.0 |
 | # |     |   |             |          |                            |     |       |
+| # | X   | 6 |      9-9:30 | L0MDT    | Meeting                    | THU |   0.5 |
+| # |     | 6 |       10-11 | L0MDT    | Meeting                    | THU |   1.0 |
+| # |     | 6 |    11-11:30 | GE21     | OH Review                  | THU |   0.5 |
+| # |     | 6 |    11:30-12 | ETL      | Chat                       | THU |   0.5 |
+| # |     | 6 |     12-1:30 | L0MDT    | Specifications doc         | THU |   1.5 |
+| # |     | 6 |         2-6 | SICK     | Back pain                  | THU |   4.0 |
 | # |     |   |             |          |                            |     |       |
+| # | X   | 7 |        9-10 | Tracker  | Meeting                    | FRI |   1.0 |
+| # |     | 7 |       10-11 | Tracker  | IPMC Cold Reset            | FRI |   1.0 |
+| # |     |   |    11-11:30 | GE21     | VTRX+                      |     |   0.5 |
 | # |     |   |             |          |                            |     |       |
 |---+-----+---+-------------+----------+----------------------------+-----+-------|
 #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"May 2021"))::$8='(org-sbe subtract (a $$4))
