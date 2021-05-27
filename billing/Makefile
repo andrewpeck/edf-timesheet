@@ -1,4 +1,6 @@
-all: timestamp summary_tables.org summary_tables.html
+.PHONY: export_org_tables.sh timestamp summary_tables.org summary_tables.html
+
+all: export_org_tables.sh timestamp summary_tables.org summary_tables.html
 
 export_org_tables.sh: billing.org
 	@bash export_org_tables.sh billing.org
@@ -14,3 +16,8 @@ summary_tables.html: summary_tables.org
 	@bash org_to_html.sh summary_tables.org
 	@scp summary_tables.html ohm:~/public_html/notes/hours.html
 	@scp *-*.csv ohm:~/billing/
+
+clean:
+	rm *.csv
+	rm summary_tables.org
+	rm summary_tables.html

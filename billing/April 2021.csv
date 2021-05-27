@@ -129,7 +129,7 @@ X,29,10-11,L0MDT,Meeting,THU,1.0
 ,29,5-8,ADMIN,Database setup,THU,3.0
 ,29,8-9,ETL,Chat with Indara,THU,1.0
 ,,,,,,
-,30,9-10,Tracker,Meeting,FRI,1.0
+X,30,9-10,Tracker,Meeting,FRI,1.0
 ,30,10-11,Tracker,IPMC build updates,FRI,1.0
 ,30,11-11:30,ETL,Fab queries,FRI,0.5
 ,30,1:30-2:30,ETL,Fab queries; I2C w/ Daniel,FRI,1.0

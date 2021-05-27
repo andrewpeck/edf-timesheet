@@ -17,6 +17,7 @@ def substitute_project_name (name):
     name = name.replace("GE11","CMS-EMU-OPS-GE11")
     name = name.replace("ME0","CMS-EMU-UPGRADE-ME0")
     name = name.replace("L0MDT","ATLAS-MUON-PHASE2")
+    name = name.replace("IPMC","CMS-PIXEL-DTC")
     name = name.replace("TRACKER","CMS-PIXEL-DTC")
     name = name.replace("VACATION","VAC")
     return name
