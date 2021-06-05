@@ -591,12 +591,36 @@
 ** June 2021
  #+ATTR_HTML: :border 2 :frame none
  #+TBLNAME: June 2021
- |---+-----+---+-------+----------+-----------------------------------------------------------+-----+-------|
- |   | C19 | D |  Time | Project  | Task                                                      | Day | Hours |
- |---+-----+---+-------+----------+-----------------------------------------------------------+-----+-------|
- | # | X   | 1 | 10-11 | L0MDT    | Meet with Eric                                            | TUE |   1.0 |
- | # |     | 1 | 11-12 | L0MDT    | Meeting                                                   | TUE |   1.0 |
- | # |     | 1 |   1-6 | EMPHATIC | Ethernet Firmware; Documentation; Eval board setup + test | TUE |   4.0 |
- | # |     | 1 |   6-7 | ETL      | LINPOL Email Discussion                                   | TUE |   4.0 |
- |---+-----+---+-------+----------+-----------------------------------------------------------+-----+-------|
+ |---+-----+---+----------+----------+-----------------------------------------------------------+-----+-------|
+ |   | C19 | D |     Time | Project  | Task                                                      | Day | Hours |
+ |---+-----+---+----------+----------+-----------------------------------------------------------+-----+-------|
+ | # | X   | 1 |    10-11 | L0MDT    | Meet with Eric                                            | TUE |   1.0 |
+ | # |     | 1 |    11-12 | L0MDT    | Meeting                                                   | TUE |   1.0 |
+ | # |     | 1 |      1-6 | EMPHATIC | Ethernet Firmware; Documentation; Eval board setup + test | TUE |   4.0 |
+ | # |     | 1 |      6-7 | ETL      | LINPOL Email Discussion                                   | TUE |   4.0 |
+ | # |     |   |          |          |                                                           |     |       |
+ | # | X   | 2 |     9-10 | Tracker  | Meeting                                                   | WED |   1.0 |
+ | # |     | 2 | 10-12:30 | EMPHATIC | Firmware                                                  | WED |   2.0 |
+ | # |     | 2 |      1-2 | Tracker  | IPMC Updates                                              | WED |   1.0 |
+ | # |     | 2 |   2-3:30 | ME0      | Meet with Chloe                                           | WED |   1.5 |
+ | # |     | 2 |   3:30-4 | GE21     | Firmware timing closure                                   | WED |   0.5 |
+ | # |     | 2 |      4-5 | ETL      | Meeting                                                   | WED |   1.0 |
+ | # |     | 2 |      5-6 | GE21     | Firmware timing closure                                   | WED |   1.0 |
+ | # |     | 2 |      6-8 | EMPHATIC | IPBus DAQ readout                                         | WED |   2.0 |
+ | # |     | 2 |   8-9:30 | L0MDT    | Apollo Documentation                                      | WED |   1.0 |
+ | # |     | 2 |  9:30-11 | Tracker  | Apollo Documentation                                      | WED |   1.5 |
+ | # |     |   |          |          |                                                           |     |       |
+ | # |     | 3 |     9-11 | GE21     | Meeting; Firmware Updates                                 | THU |   3.0 |
+ | # |     | 3 |    11-12 | GE11     | Firmware Updates                                          | THU |   1.0 |
+ | # |     | 3 |     12-1 | IPMC     | Firmware Updates                                          | THU |   1.0 |
+ | # |     | 3 |      3-4 | EMPHATIC | Work with Tejasava                                        | THU |   1.0 |
+ | # |     | 3 |      4-7 | EMPHATIC | DAQ Firmware                                              | THU |   2.0 |
+ | # |     |   |          |          |                                                           |     |       |
+ | # |     | 4 |     9-10 | Tracker  | Meeting                                                   | FRI |   1.0 |
+ | # |     | 4 | 10-11:30 | EMPHATIC | DAQ Firmware                                              | FRI |   1.5 |
+ | # |     | 4 |     12-1 | EMPHATIC | Work with Tejasava                                        | FRI |   1.0 |
+ | # |     | 4 |      1-2 | GE21     | Firmware Updates                                          | FRI |   1.0 |
+ | # |     | 4 |      2-6 | Tracker  | IPMC Updates                                              | FRI |   4.0 |
+ | # |     |   |          |          |                                                           |     |       |
+ |---+-----+---+----------+----------+-----------------------------------------------------------+-----+-------|
  #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"June 2021"))::$8='(org-sbe subtract (a $$4))
