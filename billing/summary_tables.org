@@ -1,137 +1,24 @@
 #+TITLE: Hours
 
-* 2021-05
-#+TBLNAME: 2021-05
-| 2021-05              |   Mo |   Tu |   We |   Th |   Fr | Sa | Su | Notes                                                                                                               |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |  26* |  27* |  28* |  29* |  30* |  1 |  2 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-| ADMIN                |    0 |    0 |    0 | 3.00 |    0 |  0 |  0 | Database setup                                                                                                      |
-| ATLAS-MUON-PHASE2    |    0 |    0 | 1.00 | 2.00 |    0 |  0 |  0 | Meeting; Chat with Daniel; Emails                                                                                   |
-| CMS-EMU-UPGRADE-ME0  |    0 |    0 |    0 | 1.00 |    0 |  0 |  0 | Meeting                                                                                                             |
-| CMS-ETL              |    0 |    0 | 2.00 | 1.00 | 1.50 |  0 |  0 | Fab queries; Chat with Indara; Chat with Daniel; I2C w/ Daniel; Meeting                                             |
-| CMS-PIXEL-DTC        |    0 |    0 | 5.50 |    0 | 4.50 |  0 |  0 | IPMC build; IPMC CI; IPMC; IPMC build updates; Meeting                                                              |
-| SICK                 |    0 |    0 |    0 | 2.50 |    0 |  0 |  0 | Chiropractor                                                                                                        |
-| VAC                  | 8.00 | 8.00 |    0 |    0 |    0 |  0 |  0 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |    3 |    4 |    5 |    6 |    7 |  8 |  9 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 4.00 | 3.50 | 2.50 | 3.00 | 1.00 |  0 |  0 | Chat with Eric; Slides; Specifications doc; Email; Hardware specifications; Hog Meeting; Meeting; Firmware          |
-| CMS-ETL              | 2.00 | 1.00 | 0.50 | 0.50 |    0 |  0 |  0 | Grounding meeting; Chat with Daniel; Chat; RB PO + Shipping; CI Config; Firmware                                    |
-| CMS-EMU-UPGRADE-ME0  | 2.00 | 1.50 | 5.00 |    0 | 2.50 |  0 |  0 | Layout + Schematic Updates; Meet with Chloe; Meeting; Stackup; ASIAGO Schematic + Layout; Layout                    |
-| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 | 0.50 | 2.00 |  0 |  0 | TMR firmware updates; VTRX Chat; OH Review; VTRX+                                                                   |
-| CMS-PIXEL-DTC        |    0 |    0 | 1.00 |    0 | 2.00 |  0 |  0 | IPMC Cold Reset; Meeting                                                                                            |
-| EMPHATIC             |    0 |    0 | 0.50 |    0 |    0 |  0 |  0 | Chat with Eric                                                                                                      |
-| SICK                 |    0 |    0 |    0 | 4.00 |    0 |  0 |  0 | Back pain                                                                                                           |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |   10 |   11 |   12 |   13 |   14 | 15 | 16 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 0.50 | 5.50 | 1.00 |    0 | 1.50 |  0 |  0 | xTCA Meeting; Gitlab issues; Chat w Dan; Firmware Updates; Felix meeting; Firmware                                  |
-| CMS-ETL              |    0 | 0.50 | 1.50 | 1.00 | 2.50 |  0 |  0 | Weekly meeting; thermal tests; Chat with Indara + Daniel; Temperature measurements; hardware debug; Meet with Frank |
-| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 | 1.00 |    0 |  0 |  0 | Debugging help; Meeting; UCLA Chat                                                                                  |
-| CMS-EMU-UPGRADE-GE21 |    0 |    0 | 3.00 | 1.00 |    0 |  0 |  0 | TMR Firmware; Firmware                                                                                              |
-| CMS-PIXEL-DTC        | 2.00 |    0 | 2.50 |    0 | 1.00 |  0 |  0 | IPMC review; IPMC; Meeting; IPMC Review                                                                             |
-| EMPHATIC             |    0 |    0 | 0.50 |    0 |    0 |  0 |  0 | FPGA hunt                                                                                                           |
-| SICK                 | 6.00 |    0 |    0 | 2.50 |    0 |  0 |  0 | Chiropractor; Covid vaccine                                                                                         |
-| CMS-EMU-OPS-GE11     |    0 |    0 |    0 | 2.00 |    0 |  0 |  0 | Firmware                                                                                                            |
-| CMS-EMU-OPS-CSC      |    0 |    0 |    0 | 0.50 |    0 |  0 |  0 | Email Jay                                                                                                           |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |   17 |   18 |   19 |   20 |   21 | 22 | 23 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 2.00 |    0 | 3.00 | 3.00 |    0 |  0 |  0 | Firmware review; slides; Meeting; Firmware                                                                          |
-| CMS-ETL              | 2.50 |    0 |    0 |    0 |    0 |  0 |  0 | RB documentation; Meeting                                                                                           |
-| CMS-EMU-UPGRADE-ME0  | 1.50 | 2.00 | 0.50 |    0 |    0 |  0 |  0 | Email; Meet with Chloe; Layout updates; Meeting                                                                     |
-| CMS-PIXEL-DTC        | 1.50 | 4.00 | 4.00 |    0 |    0 |  0 |  0 | IPMC Firmware; IPMC; Chat with Dan; Meeting; IPMC Review; Firmware; IPMC Chat with Dan; IPMC updates                |
-| VAC                  |    0 |    0 |    0 | 5.00 | 8.00 |  0 |  0 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |   24 |   25 |   26 |   27 |   28 | 29 | 30 |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 1.00 |    0 |    0 | 6.00 |    0 |  0 |  0 | Meeting; Visit with Thiago                                                                                          |
-| CMS-ETL              | 1.50 |    0 |    0 |    0 | 4.00 |  0 |  0 | Meeting; Lab setup; Power adapter                                                                                   |
-| CMS-EMU-UPGRADE-ME0  | 2.00 | 3.00 |    0 | 1.00 | 0.50 |  0 |  0 | Meet with Chloe; Cocotb issues; Meeting; Help Chloe                                                                 |
-| CMS-EMU-UPGRADE-GE21 |    0 | 1.50 |    0 |    0 | 1.00 |  0 |  0 | PRBS Firmware; Chat with Evaldas                                                                                    |
-| CMS-PIXEL-DTC        | 2.50 | 2.00 | 5.00 |    0 | 1.00 |  0 |  0 | Firmware updates & report; IPMC Firmware; Firmware updates; IPMC; Debugging w/ Dan; Meeting; Firmware               |
-| EMPHATIC             |    0 |    0 | 4.00 | 2.00 |    0 |  0 |  0 | Meeting; Ethernet Firmware; Repository setup                                                                        |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|                      |   31 |   1* |   2* |   3* |   4* | 5* | 6* |                                                                                                                     |
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-|----------------------+------+------+------+------+------+----+----+---------------------------------------------------------------------------------------------------------------------|
-
-* 2021-04
-#+TBLNAME: 2021-04
-| 2021-04              |   Mo |   Tu |   We |    Th |   Fr | Sa | Su | Notes                                                                                                                                 |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-|                      |  29* |  30* |  31* |     1 |    2 |  3 |  4 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-| ADMIN                |    0 |    0 |    0 |  1.00 |    0 |  0 |  0 | Billing                                                                                                                               |
-| ATLAS-MUON-PHASE2    | 6.50 | 5.00 |    0 |  5.00 | 1.00 |  0 |  0 | Chat with Eric; YAML; Firmware build system; Gitlab issues; Project builds; Meeting; Spybuffers; Firmware; Debugging XML to VHDL      |
-| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 |  1.00 |    0 |  0 |  0 | Accruals; Firmware updates & repo; USCMS Meeting                                                                                      |
-| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |  1.00 | 1.00 |  0 |  0 | Segment finding firmware; Chat with Chloe; Chat with Evaldas                                                                          |
-| EMPHATIC             |    0 |    0 |    0 |     0 | 3.00 |  0 |  0 | Meeting with Eric + Linyan + Mike; Chat with Eric                                                                                     |
-| CMS-ETL              |    0 |    0 |    0 |     0 | 1.00 |  0 |  0 | Chat with Daniel                                                                                                                      |
-| CMS-PIXEL-DTC        | 1.00 | 1.00 | 5.00 |     0 | 2.00 |  0 |  0 | IPMC makefile + shelf testing; IPMC shelf testing; Project build issues; new adapter dongle for v1; IPMC; Meeting; IPMC linker issues |
-| CMS-EMU-OPS-GE11     |    0 | 0.50 |    0 |     0 |    0 |  0 |  0 | Firmware updates & repo                                                                                                               |
-| SICK                 |    0 |    0 | 3.00 |     0 |    0 |  0 |  0 | Chiropractor                                                                                                                          |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-|                      |    5 |    6 |    7 |     8 |    9 | 10 | 11 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 5.50 | 3.00 | 2.00 |  4.50 | 1.00 |  0 |  0 | Repo merge; Meeting; Spybuffers; Firmware                                                                                             |
-| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |     0 | 1.50 |  0 |  0 | Firmware; Meeting                                                                                                                     |
-| EMPHATIC             |    0 |    0 |    0 |     0 | 1.00 |  0 |  0 | Meeting with Eric + Linyan                                                                                                            |
-| CMS-ETL              | 0.50 | 4.00 | 2.00 |  2.00 | 1.00 |  0 |  0 | Module shims; Gitlab issues; Meeting; Looking for sheets; Module PCB                                                                  |
-| CMS-PIXEL-DTC        | 1.00 |    0 | 3.50 |     0 | 2.00 |  0 |  0 | IPMC dongle parts; IPMC; Meeting; Apollo Chat                                                                                         |
-| CMS-EMU-OPS-GE11     |    0 |    0 | 0.50 |     0 |    0 |  0 |  0 | Firmware                                                                                                                              |
-| SICK                 |    0 |    0 |    0 |  1.50 |    0 |  0 |  0 | Chiropractor                                                                                                                          |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-|                      |   12 |   13 |   14 |    15 |   16 | 17 | 18 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    | 3.00 | 5.50 | 2.00 |  1.00 | 1.00 |  0 |  0 | Infrastructure chat; Repository updates; Meeting; Spybuffers; Firmware; AXI Infrastructure                                            |
-| CMS-EMU-UPGRADE-ME0  | 3.00 | 2.00 | 3.00 | 10.50 |    0 |  0 |  0 | Segment Finder; Meeting; Firmware; Chat with Chloe                                                                                    |
-| CMS-ETL              | 1.00 |    0 | 1.00 |     0 |    0 |  0 |  0 | Meeting                                                                                                                               |
-| CMS-PIXEL-DTC        |    0 | 0.50 | 1.50 |     0 | 4.50 |  0 |  0 | IPMC programming; update firmware; IPMC; TCDS2 / firmware junk; Meeting; makefile; Soldering IPMC dongles                             |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-|                      |   19 |   20 |   21 |    22 |   23 | 24 | 25 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-| ATLAS-MUON-PHASE2    |    0 | 2.00 |    0 |     0 |    0 |  0 |  0 | Firmware                                                                                                                              |
-| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 |     0 |    0 |  0 |  0 | Chat with Evaldas                                                                                                                     |
-| CMS-EMU-UPGRADE-ME0  |    0 | 4.50 | 4.50 |     0 |    0 |  0 |  0 | Firmware Meeting; ASIAGO Schematic Updates; Layout computer setup; Chat with Evaldas; ASIAGO Layout; Chat with Chloe                  |
-| EMPHATIC             |    0 |    0 | 0.50 |     0 |    0 |  0 |  0 | Meeting                                                                                                                               |
-| CMS-ETL              |    0 |    0 | 0.50 |     0 |    0 |  0 |  0 | Chat with Daniel                                                                                                                      |
-| CMS-PIXEL-DTC        |    0 |    0 | 3.00 |     0 |    0 |  0 |  0 | Meeting; IPMC cable / programming                                                                                                     |
-| CMS-EMU-OPS-GE11     |    0 | 0.50 |    0 |     0 |    0 |  0 |  0 | Chat with Evaldas                                                                                                                     |
-| HOLIDAY              | 8.00 |    0 |    0 |     0 |    0 |  0 |  0 | Patriots Day                                                                                                                          |
-| VAC                  |    0 |    0 |    0 |  8.00 | 8.00 |  0 |  0 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-|                      |   26 |   27 |   28 |    29 |   30 | 1* | 2* |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-| ADMIN                |    0 |    0 |    0 |  3.00 |    0 |  0 |  0 | Database setup                                                                                                                        |
-| ATLAS-MUON-PHASE2    |    0 |    0 | 1.00 |  2.00 |    0 |  0 |  0 | Meeting; Chat with Daniel; Emails                                                                                                     |
-| CMS-EMU-UPGRADE-ME0  |    0 |    0 |    0 |  1.00 |    0 |  0 |  0 | Meeting                                                                                                                               |
-| CMS-ETL              |    0 |    0 | 2.00 |  1.00 | 1.50 |  0 |  0 | Fab queries; Chat with Indara; Chat with Daniel; I2C w/ Daniel; Meeting                                                               |
-| CMS-PIXEL-DTC        |    0 |    0 | 5.50 |     0 | 4.50 |  0 |  0 | IPMC build; IPMC CI; IPMC; IPMC build updates; Meeting                                                                                |
-| SICK                 |    0 |    0 |    0 |  2.50 |    0 |  0 |  0 | Chiropractor                                                                                                                          |
-| VAC                  | 8.00 | 8.00 |    0 |     0 |    0 |  0 |  0 |                                                                                                                                       |
-|----------------------+------+------+------+-------+------+----+----+---------------------------------------------------------------------------------------------------------------------------------------|
-
 * 2021-03
 #+TBLNAME: 2021-03
 | 2021-03              |   Mo |   Tu |   We |   Th |   Fr | Sa | Su | Notes                                                                                                                                               |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |                      |    1 |    2 |    3 |    4 |    5 |  6 |  7 |                                                                                                                                                     |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMS-ETL              | 2.50 |    0 | 1.00 |    0 |    0 |  0 |  0 | Meeting; Slides for Ted                                                                                                                             |
-| ATLAS-MUON-PHASE2    | 4.00 | 1.00 | 4.50 | 2.50 | 1.00 |  0 |  0 | Slides; Cocotb; Meeting with John; CSM Setup; Meeting; Chat with Guillermo                                                                          |
-| CMS-PIXEL-DTC        | 1.00 | 5.00 | 1.50 |    0 | 1.00 |  0 |  0 | Meeting; IPMC; IPMC work                                                                                                                            |
-| CMS-EMU-UPGRADE-ME0  | 0.50 |    0 | 2.00 | 1.00 | 1.50 |  0 |  0 | Chat with Evaldas; Segment finding; Meeting; Chat with Chloe                                                                                        |
-| CMS-EMU-UPGRADE-GE21 | 0.50 |    0 |    0 | 1.00 | 1.50 |  0 |  0 | Firmware testing; Cocotb; Chat with Evaldas                                                                                                         |
-| CMS-EMU-OPS-GE11     |    0 | 1.00 |    0 | 1.00 | 1.50 |  0 |  0 | Firmware testing; Cocotb; Chat with Evaldas; Testbench                                                                                              |
+| CMS-ETL              | 2.50 |    0 | 1.00 |    0 |    0 |  0 |  0 | Slides for Ted; Meeting                                                                                                                             |
+| ATLAS-MUON-PHASE2    | 4.00 | 1.00 | 4.50 | 2.50 | 1.00 |  0 |  0 | CSM Setup; Meeting; Slides; Meeting with John; Cocotb; Chat with Guillermo                                                                          |
+| CMS-PIXEL-DTC        | 1.00 | 5.00 | 1.50 |    0 | 1.00 |  0 |  0 | IPMC work; IPMC; Meeting                                                                                                                            |
+| CMS-EMU-UPGRADE-ME0  | 0.50 |    0 | 2.00 | 1.00 | 1.50 |  0 |  0 | Meeting; Chat with Chloe; Segment finding; Chat with Evaldas                                                                                        |
+| CMS-EMU-UPGRADE-GE21 | 0.50 |    0 |    0 | 1.00 | 1.50 |  0 |  0 | Cocotb; Chat with Evaldas; Firmware testing                                                                                                         |
+| CMS-EMU-OPS-GE11     |    0 | 1.00 |    0 | 1.00 | 1.50 |  0 |  0 | Testbench; Cocotb; Chat with Evaldas; Firmware testing                                                                                              |
 | EMPHATIC             |    0 |    0 | 1.00 | 0.50 | 2.00 |  0 |  0 | Firmware review + Meeting; Code review; Chat with Eric                                                                                              |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |                      |    8 |    9 |   10 |   11 |   12 | 13 | 14 |                                                                                                                                                     |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMS-ETL              |    0 |    0 | 0.50 | 0.50 | 2.00 |  0 |  0 | Skype interrupts; LPGBT issues; Chat with Daniel; fusing & board repair; LPGBT issues :(                                                            |
+| CMS-ETL              |    0 |    0 | 0.50 | 0.50 | 2.00 |  0 |  0 | fusing & board repair; Skype interrupts; LPGBT issues :(; LPGBT issues; Chat with Daniel                                                            |
 | ATLAS-MUON-PHASE2    |    0 |    0 |    0 | 2.00 |    0 |  0 |  0 | Meeting                                                                                                                                             |
-| CMS-PIXEL-DTC        |    0 |    0 | 2.50 |    0 | 3.00 |  0 |  0 | USB Boot/chat with Dan; IPMC; IPMC / YAML chat with Dan; Meeting; IPMC Development; TIF Meeting                                                     |
+| CMS-PIXEL-DTC        |    0 |    0 | 2.50 |    0 | 3.00 |  0 |  0 | IPMC / YAML chat with Dan; IPMC Development; Meeting; TIF Meeting; IPMC; USB Boot/chat with Dan                                                     |
 | CMS-EMU-UPGRADE-ME0  |    0 |    0 | 1.00 |    0 | 1.00 |  0 |  0 | Hog testing; Meeting                                                                                                                                |
 | CMS-EMU-UPGRADE-GE21 |    0 |    0 |    0 | 1.00 |    0 |  0 |  0 | Cluster building                                                                                                                                    |
 | CMS-EMU-OPS-GE11     |    0 |    0 |    0 | 0.50 |    0 |  0 |  0 | Cluster building                                                                                                                                    |
@@ -141,10 +28,10 @@
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |                      |   15 |   16 |   17 |   18 |   19 | 20 | 21 |                                                                                                                                                     |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMS-ETL              | 2.00 | 0.50 | 1.50 |    0 | 4.00 |  0 |  0 | test stand setup; Assembly queries; Chat with Daniel; Computer setup; CI setup; Meeting; Lab computer setup                                         |
-| ATLAS-MUON-PHASE2    | 4.00 | 5.00 | 1.50 | 2.00 | 1.00 |  0 |  0 | firmware rebasing; YAML; YAML slaves firmware; Firmware updates; Chat with Eric + Dan; FELIX Meeting; Meeting; Repository work; YAML infrastructure |
-| CMS-PIXEL-DTC        | 1.00 | 1.00 | 2.00 |    0 | 1.50 |  0 |  0 | Chat with Eric + Dan; IPMC chat; IPMC + control chat with Dan; Meeting; Help charlie w/ ipbb                                                        |
-| CMS-EMU-UPGRADE-ME0  |    0 |    0 |    0 |    0 | 2.50 |  0 |  0 | Firmware; GEM Meeting                                                                                                                               |
+| CMS-ETL              | 2.00 | 0.50 | 1.50 |    0 | 4.00 |  0 |  0 | CI setup; Lab computer setup; Meeting; Assembly queries; Computer setup; test stand setup; Chat with Daniel                                         |
+| ATLAS-MUON-PHASE2    | 4.00 | 5.00 | 1.50 | 2.00 | 1.00 |  0 |  0 | YAML slaves firmware; YAML infrastructure; YAML; Meeting; Firmware updates; firmware rebasing; FELIX Meeting; Chat with Eric + Dan; Repository work |
+| CMS-PIXEL-DTC        | 1.00 | 1.00 | 2.00 |    0 | 1.50 |  0 |  0 | Meeting; IPMC + control chat with Dan; Help charlie w/ ipbb; IPMC chat; Chat with Eric + Dan                                                        |
+| CMS-EMU-UPGRADE-ME0  |    0 |    0 |    0 |    0 | 2.50 |  0 |  0 | GEM Meeting; Firmware                                                                                                                               |
 | CMS-EMU-UPGRADE-GE21 |    0 |    0 |    0 | 3.50 | 0.50 |  0 |  0 | Firmware testing                                                                                                                                    |
 | CMS-EMU-OPS-GE11     |    0 |    0 | 0.50 | 3.50 |    0 |  0 |  0 | Firmware testing; Firmware strip mapping                                                                                                            |
 | EMPHATIC             | 1.00 |    0 |    0 |    0 |    0 |  0 |  0 | Readout discussion with Eric                                                                                                                        |
@@ -153,23 +40,89 @@
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |                      |   22 |   23 |   24 |   25 |   26 | 27 | 28 |                                                                                                                                                     |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMS-ETL              | 2.50 | 1.00 |    0 |    0 |    0 |  0 |  0 | test stand setup; Test stand setup; Email to Indara; Orders; interrupts                                                                             |
-| ATLAS-MUON-PHASE2    | 2.50 |    0 | 2.00 | 7.50 | 8.50 |  0 |  0 | Chat with Dan + Eric; Meeting with Dan; firmware builds; Firmware updates; Meeting; Spybuffers                                                      |
-| CMS-PIXEL-DTC        |    0 | 3.50 | 2.00 | 1.00 |    0 |  0 |  0 | Backend Meeting; IPMC Adapter PCB; ordering                                                                                                         |
-| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |    0 | 1.00 |  0 |  0 | Meeting; Chat with Joseph                                                                                                                           |
-| CMS-EMU-UPGRADE-GE21 | 1.00 | 1.00 |    0 |    0 |    0 |  0 |  0 | Firmware integration; Trigger link testing; repo setup                                                                                              |
-| CMS-EMU-OPS-GE11     |    0 | 1.50 |    0 |    0 |    0 |  0 |  0 | Firmware integration; repo setup                                                                                                                    |
+| CMS-ETL              | 2.50 | 1.00 |    0 |    0 |    0 |  0 |  0 | Email to Indara; Test stand setup; Orders; test stand setup; interrupts                                                                             |
+| ATLAS-MUON-PHASE2    | 2.50 |    0 | 2.00 | 7.50 | 8.50 |  0 |  0 | firmware builds; Meeting; Meeting with Dan; Firmware updates; Chat with Dan + Eric; Spybuffers                                                      |
+| CMS-PIXEL-DTC        |    0 | 3.50 | 2.00 | 1.00 |    0 |  0 |  0 | IPMC Adapter PCB; ordering; Backend Meeting                                                                                                         |
+| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |    0 | 1.00 |  0 |  0 | Chat with Joseph; Meeting                                                                                                                           |
+| CMS-EMU-UPGRADE-GE21 | 1.00 | 1.00 |    0 |    0 |    0 |  0 |  0 | repo setup; Trigger link testing; Firmware integration                                                                                              |
+| CMS-EMU-OPS-GE11     |    0 | 1.50 |    0 |    0 |    0 |  0 |  0 | repo setup; Firmware integration                                                                                                                    |
 | EMPHATIC             | 1.00 |    0 |    0 |    0 |    0 |  0 |  0 | Meeting with Eric + Linyan                                                                                                                          |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |                      |   29 |   30 |   31 |   1* |   2* | 3* | 4* |                                                                                                                                                     |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ADMIN                |    0 |    0 |    0 | 1.00 |    0 |  0 |  0 | Billing                                                                                                                                             |
-| ATLAS-MUON-PHASE2    | 6.50 | 5.00 |    0 | 5.00 | 1.00 |  0 |  0 | Chat with Eric; YAML; Firmware build system; Gitlab issues; Project builds; Meeting; Spybuffers; Firmware; Debugging XML to VHDL                    |
-| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 | 1.00 |    0 |  0 |  0 | Accruals; Firmware updates & repo; USCMS Meeting                                                                                                    |
-| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 | 1.00 | 1.00 |  0 |  0 | Segment finding firmware; Chat with Chloe; Chat with Evaldas                                                                                        |
-| EMPHATIC             |    0 |    0 |    0 |    0 | 3.00 |  0 |  0 | Meeting with Eric + Linyan + Mike; Chat with Eric                                                                                                   |
-| CMS-ETL              |    0 |    0 |    0 |    0 | 1.00 |  0 |  0 | Chat with Daniel                                                                                                                                    |
-| CMS-PIXEL-DTC        | 1.00 | 1.00 | 5.00 |    0 | 2.00 |  0 |  0 | IPMC makefile + shelf testing; IPMC shelf testing; Project build issues; new adapter dongle for v1; IPMC; Meeting; IPMC linker issues               |
+| ATLAS-MUON-PHASE2    | 6.50 | 5.00 |    0 |    0 |    0 |  0 |  0 | Project builds; Meeting; YAML; Firmware; Firmware build system; Debugging XML to VHDL; Spybuffers                                                   |
+| CMS-PIXEL-DTC        | 1.00 | 1.00 | 5.00 |    0 |    0 |  0 |  0 | new adapter dongle for v1; IPMC shelf testing; Meeting; IPMC; Project build issues; IPMC makefile + shelf testing                                   |
+| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |    0 |    0 |  0 |  0 | Chat with Chloe                                                                                                                                     |
+| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 |    0 |    0 |  0 |  0 | Firmware updates & repo                                                                                                                             |
 | CMS-EMU-OPS-GE11     |    0 | 0.50 |    0 |    0 |    0 |  0 |  0 | Firmware updates & repo                                                                                                                             |
 | SICK                 |    0 |    0 | 3.00 |    0 |    0 |  0 |  0 | Chiropractor                                                                                                                                        |
 |----------------------+------+------+------+------+------+----+----+-----------------------------------------------------------------------------------------------------------------------------------------------------|
+
+* 2021-04
+#+TBLNAME: 2021-04
+| 2021-04              |   Mo |   Tu |   We | Th | Fr | Sa | Su | Notes                                                                                                             |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|                      |  29* |  30* |  31* |  1 |  2 |  3 |  4 |                                                                                                                   |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+| ATLAS-MUON-PHASE2    | 6.50 | 5.00 |    0 |  0 |  0 |  0 |  0 | Project builds; Meeting; YAML; Firmware; Firmware build system; Debugging XML to VHDL; Spybuffers                 |
+| CMS-PIXEL-DTC        | 1.00 | 1.00 | 5.00 |  0 |  0 |  0 |  0 | new adapter dongle for v1; IPMC shelf testing; Meeting; IPMC; Project build issues; IPMC makefile + shelf testing |
+| CMS-EMU-UPGRADE-ME0  |    0 | 1.00 |    0 |  0 |  0 |  0 |  0 | Chat with Chloe                                                                                                   |
+| CMS-EMU-UPGRADE-GE21 |    0 | 0.50 |    0 |  0 |  0 |  0 |  0 | Firmware updates & repo                                                                                           |
+| CMS-EMU-OPS-GE11     |    0 | 0.50 |    0 |  0 |  0 |  0 |  0 | Firmware updates & repo                                                                                           |
+| SICK                 |    0 |    0 | 3.00 |  0 |  0 |  0 |  0 | Chiropractor                                                                                                      |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|                      |    5 |    6 |    7 |  8 |  9 | 10 | 11 |                                                                                                                   |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|                      |   12 |   13 |   14 | 15 | 16 | 17 | 18 |                                                                                                                   |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|                      |   19 |   20 |   21 | 22 | 23 | 24 | 25 |                                                                                                                   |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|                      |   26 |   27 |   28 | 29 | 30 | 1* | 2* |                                                                                                                   |
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+|----------------------+------+------+------+----+----+----+----+-------------------------------------------------------------------------------------------------------------------|
+
+* 2021-05
+#+TBLNAME: 2021-05
+| 2021-05 |  Mo |  Tu |  We |  Th |  Fr | Sa | Su | Notes |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         | 26* | 27* | 28* | 29* | 30* |  1 |  2 |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         |   3 |   4 |   5 |   6 |   7 |  8 |  9 |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         |  10 |  11 |  12 |  13 |  14 | 15 | 16 |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         |  17 |  18 |  19 |  20 |  21 | 22 | 23 |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         |  24 |  25 |  26 |  27 |  28 | 29 | 30 |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|         |  31 |  1* |  2* |  3* |  4* | 5* | 6* |       |
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+|---------+-----+-----+-----+-----+-----+----+----+-------|
+
+* 2021-06
+#+TBLNAME: 2021-06
+| 2021-06 |  Mo | Tu | We | Th | Fr | Sa | Su | Notes |
+|---------+-----+----+----+----+----+----+----+-------|
+|         | 31* |  1 |  2 |  3 |  4 |  5 |  6 |       |
+|---------+-----+----+----+----+----+----+----+-------|
+|---------+-----+----+----+----+----+----+----+-------|
+|         |   7 |  8 |  9 | 10 | 11 | 12 | 13 |       |
+|---------+-----+----+----+----+----+----+----+-------|
+|---------+-----+----+----+----+----+----+----+-------|
+|         |  14 | 15 | 16 | 17 | 18 | 19 | 20 |       |
+|---------+-----+----+----+----+----+----+----+-------|
+|---------+-----+----+----+----+----+----+----+-------|
+|         |  21 | 22 | 23 | 24 | 25 | 26 | 27 |       |
+|---------+-----+----+----+----+----+----+----+-------|
+|---------+-----+----+----+----+----+----+----+-------|
+|         |  28 | 29 | 30 | 1* | 2* | 3* | 4* |       |
+|---------+-----+----+----+----+----+----+----+-------|
+|---------+-----+----+----+----+----+----+----+-------|

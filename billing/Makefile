@@ -1,18 +1,17 @@
-.PHONY: export_org_tables.sh timestamp summary_tables.org summary_tables.html
+.PHONY: export_org_tables summary_tables summary_tables_html
 
-all: export_org_tables.sh timestamp summary_tables.org summary_tables.html
+all: export_org_tables summary_tables summary_tables_html
 
-export_org_tables.sh: billing.org
+export_org_tables:
 	@bash export_org_tables.sh billing.org
-	@touch export_org_tables.sh
 
-summary_tables.org: sum_tables.py billing.org
+summary_tables: sum_tables.py
 	@python sum_tables.py > summary_tables.org
 	@bash ./beautify_table.sh summary_tables.org
 	@cat summary_tables.org
 	@bash export_org_tables.sh summary_tables.org
 
-summary_tables.html: summary_tables.org
+summary_tables_html: summary_tables
 	@bash org_to_html.sh summary_tables.org
 	@scp summary_tables.html ohm:~/public_html/notes/hours.html
 	@scp *-*.csv ohm:~/billing/
