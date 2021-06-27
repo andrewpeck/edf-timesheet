@@ -8,9 +8,11 @@ from glob import glob
 ONEDAY = datetime.timedelta(days=1)
 
 def princ (string):
+    """Wrapper to print without a newine... uhg"""
     print (string, end='')
 
 def substitute_project_name (name):
+    """Common substitions from shorthand to EDF database names"""
     name = name.replace("ETL","CMS-ETL")
     name = name.replace("GE21","CMS-EMU-UPGRADE-GE21")
     name = name.replace("CSC","CMS-EMU-OPS-CSC")
@@ -23,6 +25,7 @@ def substitute_project_name (name):
     return name
 
 def csv_to_dict (file):
+    """Reads in an org-mode table exported to csv, convert it a python dictionary"""
 
     with open(file) as csvfile:
 
@@ -45,38 +48,18 @@ def csv_to_dict (file):
                 projects [project][day]["hours"] += hours
                 projects [project][day]["description"] += description + "; "
 
-                #print ("%d %s %s %3.2f" % (day, project, description, hours))
-
         return projects
 
 def is_float(string):
+    """Check if argument is a floating point number"""
     try:
         float(string)
         return True
     except ValueError:
         return False
 
-def print_spacer ():
-    spacer = "|----------------------+-------+-------+-------+-------+-------+-------+-------+-------|"
-    print(spacer)
-
-def print_weekdays (time):
-    d = time
-    # print the day number headings
-    princ("| %20s |" % "")
-    for weekday in range(7):
-        if (d.day < 7 and d.weekday() > weekday):
-            diff = d.weekday() - weekday
-            princ ("% 6d*|" % (d-diff*ONEDAY).day )
-        else:
-            if (d.month==month):
-                princ ("% 6d |" % d.day)
-            else:
-                princ ("% 6d*|" % d.day)
-            d = d + ONEDAY
-    princ("       |\n")
-
 def check_project_active (name, time, dict):
+    """Check if a project had activity on a given day"""
     d = time
     for i in range(7):
         if (d.month in projects):
@@ -86,34 +69,9 @@ def check_project_active (name, time, dict):
                         return True
         d = d + ONEDAY # INCREMENT
 
+def project_to_summary(projects):
 
-projects = {}
-summaries = {}
-
-if sys.version_info < (3,0,0):
-    print(__file__ + ' requires Python 3, while Python ' + str(sys.version[0] + ' was detected. Terminating. '))
-    sys.exit(1)
-
-for file in glob("* *.csv"):
-    d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
-    month = d.month
-    year = d.year
-
-    if (not year in projects):
-        projects[year]={}
-
-    projects[year][month] = csv_to_dict (file)
-
-def project_to_summary():
-
-    # pp = pprint.PrettyPrinter(indent=4)
-    # pp.pprint(projects)
-
-    # d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
-
-    # month = d.month
-    # year = d.year
-    # week = d.isocalendar()[1]
+    summaries = {}
 
     for year in projects:
         for month in projects[year]:
@@ -124,9 +82,9 @@ def project_to_summary():
                     week = d.isocalendar()[1]
                     weekday = d.weekday()
 
-
                     hours = projects[year][month][prj][day]["hours"]
                     description = projects[year][month][prj][day]["description"] + "; "
+
                     # intialize the dict
                     if not year in summaries:
                         summaries [year] = {}
@@ -141,8 +99,6 @@ def project_to_summary():
 
                     summaries[year][week][prj][weekday] += hours
                     summaries[year][week][prj]["notes"] += description
-
-                    #print (week)
 
     for year in summaries:
         for week in summaries[year]:
@@ -162,49 +118,93 @@ def project_to_summary():
                 notes = re.sub(r";\s*$","",notes) # REMOVE THE LAST SEMICOLON
                 summaries[year][week][prj]["notes"] = notes
 
-    # pp = pprint.PrettyPrinter(indent=4)
-    # pp.pprint(summaries)
+    return summaries
 
-project_to_summary()
 
-print("#+TITLE: Hours")
-for file in glob("* *.csv"):
+def print_org_summary(summaries):
 
-     d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
+    def print_spacer ():
+        spacer = "|----------------------+-------+-------+-------+-------+-------+-------+-------+-------|"
+        print(spacer)
 
-     month = d.month
-     year = d.year
+    def print_weekdays (time):
+        """"""
+        d = time
+        # print the day number headings
+        princ("| %20s |" % "")
+        for weekday in range(7):
+            if (d.day < 7 and d.weekday() > weekday):
+                diff = d.weekday() - weekday
+                princ ("% 6d*|" % (d-diff*ONEDAY).day )
+            else:
+                if (d.month==month):
+                    princ ("% 6d |" % d.day)
+                else:
+                    princ ("% 6d*|" % d.day)
+                d = d + ONEDAY
+        princ("       |\n")
 
-     d = datetime.datetime(year,month,1)
+    print("#+TITLE: Hours")
 
-     print("")
-     print("* %4d-%02d" % (year, month))
-     print("#+TBLNAME: %4d-%02d" % (year, month))
-     print("| %20s |    Mo |    Tu |    We |    Th |    Fr |    Sa |    Su | Notes |" %
-           ("%04d-%02d" % (year, month) ))
-     print_spacer()
+    for file in glob("* *.csv"):
 
-     while (d.month == month):
+         d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
 
-        if (d.day==1 or d.weekday() == 0):
-            print_weekdays(d)
-            print_spacer()
-            week = d.isocalendar()[1]
+         month = d.month
+         year = d.year
 
-            if (week in summaries[year]):
-                for prj in summaries[year][week]:
-                    if (prj == "--"):
-                        continue
-                    princ ("| %20s |" % prj)
-                    for weekday in range(7):
-                        if weekday in summaries[year][week][prj]:
-                            princ (" % 3.2f |" % summaries[year][week][prj][weekday])
-                        else:
-                            princ ("     0 |")
-                    princ("%s | \n" % summaries[year][week][prj]["notes"])
+         d = datetime.datetime(year,month,1)
 
-        if (d.weekday()==6):
-            print_spacer()
+         print("")
+         print("* %4d-%02d" % (year, month))
+         print("#+TBLNAME: %4d-%02d" % (year, month))
+         print("| %20s |    Mo |    Tu |    We |    Th |    Fr |    Sa |    Su | Notes |" %
+               ("%04d-%02d" % (year, month) ))
+         print_spacer()
 
-        d = d + ONEDAY # INCREMENT
-     print_spacer()
+         while (d.month == month):
+
+            if (d.day==1 or d.weekday() == 0):
+                print_weekdays(d)
+                print_spacer()
+                week = d.isocalendar()[1]
+
+                if (week in summaries[year]):
+                    for prj in summaries[year][week]:
+                        if (prj == "--"):
+                            continue
+                        princ ("| %20s |" % prj)
+                        for weekday in range(7):
+                            if weekday in summaries[year][week][prj]:
+                                princ (" % 3.2f |" % summaries[year][week][prj][weekday])
+                            else:
+                                princ ("     0 |")
+                        princ("%s | \n" % summaries[year][week][prj]["notes"])
+
+            if (d.weekday()==6):
+                print_spacer()
+
+            d = d + ONEDAY # INCREMENT
+         print_spacer()
+
+if sys.version_info < (3,0,0):
+    print(__file__ + ' requires Python 3, while Python ' +
+          str(sys.version[0] + ' was detected. Terminating. '))
+    sys.exit(1)
+
+def parse_projects():
+
+    projects={}
+
+    for file in glob("* *.csv"):
+        d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
+        month = d.month
+        year = d.year
+
+        if (not year in projects):
+            projects[year]={}
+
+            projects[year][month] = csv_to_dict (file)
+    return projects
+
+print_org_summary(project_to_summary(parse_projects()))
