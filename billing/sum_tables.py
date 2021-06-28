@@ -197,6 +197,7 @@ def parse_projects():
     projects={}
 
     for file in glob("* *.csv"):
+        print("Parsing %s" % file)
         d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
         month = d.month
         year = d.year
@@ -204,7 +205,8 @@ def parse_projects():
         if (not year in projects):
             projects[year]={}
 
-            projects[year][month] = csv_to_dict (file)
+        projects[year][month] = csv_to_dict (file)
+
     return projects
 
 print_org_summary(project_to_summary(parse_projects()))

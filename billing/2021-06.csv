@@ -1,6 +1,32 @@
 2021-06,Mo,Tu,We,Th,Fr,Sa,Su,Notes
 ,31*,1,2,3,4,5,6,
+CMS-ETL,2.00,4.00,1.00,0,0,0,0,Firmware; Meeting; LINPOL Email Discussion
+CMS-EMU-UPGRADE-GE21,1.00,0,1.50,3.00,1.00,0,0,Firmware; Firmware Updates; Meeting; Firmware timing closure
+CMS-PIXEL-DTC,3.00,0,3.50,1.00,5.00,0,0,Apollo Documentation; Firmware Updates; IPMC Updates; Meeting; Meetings + IPMC
+CMS-EMU-OPS-GE11,1.00,0,0,1.00,0,0,0,Firmware; Firmware Updates
+ATLAS-MUON-PHASE2,0,2.00,1.00,0,0,0,0,Apollo Documentation; Meeting; Meet with Eric
+EMPHATIC,0,4.00,4.00,3.00,2.50,0,0,Eval board setup + test; Documentation; Firmware; DAQ Firmware; IPBus DAQ readout; Work with Tejasava; Ethernet Firmware
+CMS-EMU-UPGRADE-ME0,0,0,1.50,0,0,0,0,Meet with Chloe
 ,7,8,9,10,11,12,13,
+ATLAS-MUON-PHASE2,1.00,2.00,1.50,1.00,3.00,0,0,Gitlab maintainence; Firmware; Soc Workshop
+EMPHATIC,0.50,3.00,2.50,0,1.00,0,0,Tejasava; Firmware repo; Board debug; Firmware updates; Meet with Eric; Debugging; Trenz support
+CMS-ETL,2.00,0,2.00,2.50,0,0,0,LINPOL; Meet with Andy; Emails
+CMS-PIXEL-DTC,4.00,3.00,1.50,1.00,3.50,0,0,IPMC/APOLLO; Soc Workshop; IPMC Updates; IPMC
+CMS-EMU-UPGRADE-GE21,1.00,0,0,4.50,0,0,0,Radtest firmware; SEM Firmware
 ,14,15,16,17,18,19,20,
+ATLAS-MUON-PHASE2,2.00,3.00,0,2.50,0,0,0,Aldec tutorial; Meetings; Meeting; HOG Tutorial
+EMPHATIC,0,0,0,0.50,0,0,0,Chat with Eric
+CMS-ETL,2.00,0,0,1.50,0,0,0,Meeting; Work with Daniel; Slides
+CMS-PIXEL-DTC,3.00,4.00,7.00,3.50,0,0,0,IPMC/ESM; IPMC
+CMS-EMU-UPGRADE-ME0,0,0,1.00,0,0,0,0,Chloe
+SICK,0,2.00,0,0,0,0,0,Chiropractor
+HOLIDAY,0,0,0,0,8.00,0,0,Juneteenth
 ,21,22,23,24,25,26,27,
+ATLAS-MUON-PHASE2,2.00,0,0,2.00,0,0,0,HOG; Meeting; Chat with Eric
+EMPHATIC,1.00,0,0,0,0,0,0,Chat with Eric
+CMS-ETL,0,0,0,1.00,0,0,0,Firmware
+CMS-PIXEL-DTC,5.00,4.00,7.00,4.00,4.00,0,0,Lab setup; Chat with Dan; Meeting; IPMC/ESM; IPMC Firmware; Apollo ethernet; IPMC
+CMS-EMU-UPGRADE-ME0,0,2.00,0,1.00,0,0,0,Meeting; Chloe
+CMS-EMU-UPGRADE-GE21,0,1.00,1.00,0,3.00,0,0,Firmware; Trigger Firmware Testing
+CMS-EMU-OPS-GE11,0,1.00,1.00,2.00,2.50,0,0,Firmware; Trigger Firmware Testing
 ,28,29,30,1*,2*,3*,4*,
