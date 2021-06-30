@@ -187,12 +187,10 @@ def print_org_summary(summaries):
             d = d + ONEDAY # INCREMENT
          print_spacer()
 
-if sys.version_info < (3,0,0):
-    print(__file__ + ' requires Python 3, while Python ' +
-          str(sys.version[0] + ' was detected. Terminating. '))
-    sys.exit(1)
-
 def parse_projects():
+    """Reads in Org exported CSV files and converts it into a
+    dictionary of the form
+    projects[year][month][project][day][hours/description]"""
 
     projects={}
 
@@ -209,4 +207,10 @@ def parse_projects():
 
     return projects
 
-print_org_summary(project_to_summary(parse_projects()))
+
+if __name__ == "__main__":
+    if sys.version_info < (3,0,0):
+        print(__file__ + ' requires Python 3, while Python ' +
+              str(sys.version[0] + ' was detected. Terminating. '))
+        sys.exit(1)
+    print_org_summary(project_to_summary(parse_projects()))
