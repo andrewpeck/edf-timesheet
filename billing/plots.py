@@ -66,11 +66,9 @@ for prj in projects:
 
         date += delta
 
-#print (projects)
-
-# Create data
 y = []
 t = []
+
 for prj in projects:
     y.append(projects[prj])
     t.append(prj)
@@ -78,20 +76,37 @@ x = range(len(y[0]))
 print(y)
 
 normalize = True
+indaraize = True
+
+if (indaraize):
+    indara = [0 for j in range(len(y[0]))]
+    not_indara = [0 for j in range(len(y[0]))]
+
+    for prj in projects:
+        for day in range(len(y[0])):
+            if (prj in ["CMS-ETL", "CMS-EMU-UPGRADE-ME0", "CMS-EMU-UPGRADE-GE21", "CMS-EMU-OPS-CSC","CMS-EMU-OPS-GE11"]):
+                indara[day] += projects[prj][day]
+            else:
+                not_indara[day] += projects[prj][day]
+
+    y=[indara,not_indara]
 
 if (normalize):
-    for i in range(len(y[0])):
+    for week in range(len(y[0])):
         sum = 0
 
-        for j in range(len(y)):
-            sum += y[j][i]
+        for prj in range(len(y)):
+            sum += y[prj][week]
 
-        for j in range(len(y)):
-            y[j][i] = y[j][i]/sum
+        for prj in range(len(y)):
+            y[prj][week] = y[prj][week]/sum
 
-
-
-# Basic stacked area chart.
-plt.stackplot(x, y, labels=t)
-plt.legend(loc='upper left')
-plt.show()
+if (indaraize):
+    plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"])
+    plt.legend(loc='upper left')
+    plt.show()
+else:
+    # Basic stacked area chart.
+    plt.stackplot(x, y, labels=t)
+    plt.legend(loc='upper left')
+    plt.show()

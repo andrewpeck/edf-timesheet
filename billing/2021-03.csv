@@ -1,47 +1,165 @@
-2021-03,Mo,Tu,We,Th,Fr,Sa,Su,Notes
-,1,2,3,4,5,6,7,
-CMS-ETL,2.50,0,1.00,0,0,0,0,Slides for Ted; Meeting
-ATLAS-MUON-PHASE2,4.00,1.00,4.50,2.50,1.00,0,0,Meeting with John; Cocotb; Meeting; Chat with Guillermo; CSM Setup; Slides
-CMS-PIXEL-DTC,1.00,5.00,1.50,0,1.00,0,0,Meeting; IPMC; IPMC work
-CMS-EMU-UPGRADE-ME0,0.50,0,2.00,1.00,1.50,0,0,Segment finding; Meeting; Chat with Evaldas; Chat with Chloe
-CMS-EMU-UPGRADE-GE21,0.50,0,0,1.00,1.50,0,0,Chat with Evaldas; Firmware testing; Cocotb
-CMS-EMU-OPS-GE11,0,1.00,0,1.00,1.50,0,0,Cocotb; Chat with Evaldas; Testbench; Firmware testing
-EMPHATIC,0,0,1.00,0.50,2.00,0,0,Code review; Chat with Eric; Firmware review + Meeting
-,8,9,10,11,12,13,14,
-CMS-ETL,0,0,0.50,0.50,2.00,0,0,LPGBT issues :(; fusing & board repair; Skype interrupts; Chat with Daniel; LPGBT issues
-ATLAS-MUON-PHASE2,0,0,0,2.00,0,0,0,Meeting
-CMS-PIXEL-DTC,0,0,2.50,0,3.00,0,0,IPMC / YAML chat with Dan; Meeting; TIF Meeting; IPMC Development; USB Boot/chat with Dan; IPMC
-CMS-EMU-UPGRADE-ME0,0,0,1.00,0,1.00,0,0,Meeting; Hog testing
-CMS-EMU-UPGRADE-GE21,0,0,0,1.00,0,0,0,Cluster building
-CMS-EMU-OPS-GE11,0,0,0,0.50,0,0,0,Cluster building
-EMPHATIC,0,0,1.00,0,0,0,0,Meeting
-VAC,8.00,8.00,0,0,0,0,0,
-SICK,0,0,2.00,2.50,0,0,0,Chiropractor
-,15,16,17,18,19,20,21,
-CMS-ETL,2.00,0.50,1.50,0,4.00,0,0,Lab computer setup; Computer setup; CI setup; Meeting; Chat with Daniel; test stand setup; Assembly queries
-ATLAS-MUON-PHASE2,4.00,5.00,1.50,2.00,1.00,0,0,Repository work; Chat with Eric + Dan; Meeting; YAML slaves firmware; Firmware updates; YAML; YAML infrastructure; firmware rebasing; FELIX Meeting
-CMS-PIXEL-DTC,1.00,1.00,2.00,0,1.50,0,0,Help charlie w/ ipbb; IPMC + control chat with Dan; Chat with Eric + Dan; Meeting; IPMC chat
-CMS-EMU-UPGRADE-ME0,0,0,0,0,2.50,0,0,GEM Meeting; Firmware
-CMS-EMU-UPGRADE-GE21,0,0,0,3.50,0.50,0,0,Firmware testing
-CMS-EMU-OPS-GE11,0,0,0.50,3.50,0,0,0,Firmware testing; Firmware strip mapping
-EMPHATIC,1.00,0,0,0,0,0,0,Readout discussion with Eric
-SICK,0,0,2.50,0,0,0,0,Chiropractor
-CMS-EMU-OPS-CSC,0,0,0,0,0.50,0,0,Email to Alex Dorsett
-,22,23,24,25,26,27,28,
-CMS-ETL,2.50,1.00,0,0,0,0,0,Test stand setup; interrupts; test stand setup; Email to Indara; Orders
-ATLAS-MUON-PHASE2,2.50,0,2.00,7.50,8.50,0,0,Chat with Dan + Eric; Meeting with Dan; Meeting; Firmware updates; firmware builds; Spybuffers
-CMS-PIXEL-DTC,0,3.50,2.00,1.00,0,0,0,ordering; Backend Meeting; IPMC Adapter PCB
-CMS-EMU-UPGRADE-ME0,0,1.00,0,0,1.00,0,0,Meeting; Chat with Joseph
-CMS-EMU-UPGRADE-GE21,1.00,1.00,0,0,0,0,0,repo setup; Firmware integration; Trigger link testing
-CMS-EMU-OPS-GE11,0,1.50,0,0,0,0,0,repo setup; Firmware integration
-EMPHATIC,1.00,0,0,0,0,0,0,Meeting with Eric + Linyan
-,29,30,31,1*,2*,3*,4*,
-ADMIN,0,0,0,1.00,0,0,0,Billing
-ATLAS-MUON-PHASE2,6.50,5.00,0,5.00,1.00,0,0,Firmware; Gitlab issues; Chat with Eric; Debugging XML to VHDL; Project builds; Meeting; YAML; Firmware build system; Spybuffers
-CMS-EMU-UPGRADE-GE21,0,0.50,0,1.00,0,0,0,Accruals; Firmware updates & repo; USCMS Meeting
-CMS-EMU-UPGRADE-ME0,0,1.00,0,1.00,1.00,0,0,Chat with Chloe; Chat with Evaldas; Segment finding firmware
-EMPHATIC,0,0,0,0,3.00,0,0,Meeting with Eric + Linyan + Mike; Chat with Eric
-CMS-ETL,0,0,0,0,1.00,0,0,Chat with Daniel
-CMS-PIXEL-DTC,1.00,1.00,5.00,0,2.00,0,0,IPMC makefile + shelf testing; IPMC shelf testing; Meeting; new adapter dongle for v1; IPMC linker issues; Project build issues; IPMC
-CMS-EMU-OPS-GE11,0,0.50,0,0,0,0,0,Firmware updates & repo
-SICK,0,0,3.00,0,0,0,0,Chiropractor
+C19,D,Time,Project,Task,,Hours
+,,,,,,
+,1,8:30-9:30,ETL,Slides for Ted,MON,1.0
+,1,9:30-10:30,L0MDT,Cocotb,,1.0
+,1,10:30-12,ETL,Meeting,MON,1.5
+,1,12-1,Tracker,IPMC work,MON,1.0
+,1,1:30-2,ME0,Segment finding,MON,0.5
+,1,2-2:30,L0MDT,Meeting with John,MON,0.5
+,1,5-6,L0MDT,Cocotb,MON,1.0
+,1,6-6:30,GE21,Cocotb,MON,0.5
+,1,6:30-8,L0MDT,Cocotb,MON,1.5
+,,,,,,
+,2,8:30-9:30,GE11,Cocotb,TUE,1.0
+,2,9:30-10:30,L0MDT,Cocotb,TUE,1.0
+,2,11-4,Tracker,IPMC,TUE,5.0
+,,,,,,
+,3,9-10:30,Tracker,Meeting,WED,1.5
+,3,11-12,L0MDT,Chat with Guillermo,WED,1.0
+,3,12-1:30,L0MDT,CSM Setup,WED,1.5
+,3,1:30-2,EMPHATIC,Chat with Eric,WED,0.5
+,3,2-4,L0MDT,Slides,WED,2.0
+,3,4-5,ETL,Meeting,WED,1.0
+,3,5-7,ME0,Chat with Chloe,WED,2.0
+,3,8:30-9,EMPHATIC,Code review,WED,0.5
+,,,,,,
+,4,9-11:30,L0MDT,Meeting,THU,2.5
+,4,11:30-12,EMPHATIC,Code review,THU,0.5
+,4,3-4,ME0,Chat with Evaldas,THU,1.0
+,4,4-5,GE21,Chat with Evaldas,THU,1.0
+,4,5-6,GE11,Chat with Evaldas,THU,1.0
+,,,,,,
+,5,10:30-11:30,Tracker,IPMC,FRI,1.0
+,5,12:30-2:30,EMPHATIC,Firmware review + Meeting,FRI,2.0
+,5,2:30-4,ME0,Meeting,FRI,1.5
+,5,6-7,GE11,Testbench,FRI,1.0
+,5,7-8,L0MDT,Cocotb,FRI,1.0
+,5,8-8:30,GE11,Firmware testing,FRI,0.5
+,5,8:30-10,GE21,Firmware testing,FRI,1.5
+,,,,,,
+,,,,,,
+,8,9-5,VACATION,,MON,8.0
+,,,,,,
+,9,9-5,VACATION,,TUE,8.0
+,,,,,,
+,10,9-10:30,Tracker,Meeting,WED,1.5
+,10,10:30-11,--,Email Catchup,WED,0.5
+,10,11-12,EMPHATIC,Meeting,WED,1.0
+,10,12-1,--,EDF Lunch,WED,1.0
+,10,1-1:30,Tracker,IPMC,WED,0.5
+,10,1:30-3:30,SICK,Chiropractor,WED,2.0
+,10,3:30-4,Tracker,USB Boot/chat with Dan,WED,0.5
+,10,4:30-5,ETL,Chat with Daniel,WED,0.5
+,10,5-6:00,ME0,Hog testing,WED,1.0
+,,,,,,
+,11,9-11,L0MDT,Meeting,THU,2.0
+,11,11-12,GE21,Cluster building,THU,1.0
+,11,12-12:30,GE11,Cluster building,THU,0.5
+,11,1-1:30,ETL,Skype interrupts,THU,0.5
+,11,1:30-4,SICK,Chiropractor,THU,2.5
+,,,,,,
+,12,9-10,Tracker,TIF Meeting,FRI,1.0
+,12,11-11:30,Tracker,IPMC Development,FRI,0.5
+,12,11:30-12:30,--,Lunch,FRI,1.0
+,12,12:30-1,Tracker,IPMC,FRI,0.5
+,12,1-2,ETL,LPGBT issues :(,FRI,1.0
+,12,2-3,ME0,Meeting,FRI,1.0
+,12,3-4,Tracker,IPMC / YAML chat with Dan,FRI,1.0
+,12,4-5,ETL,"LPGBT issues, fusing & board repair",FRI,1.0
+,,,,,,
+,,,,,,
+,15,10-11,EMPHATIC,Readout discussion with Eric,MON,1.0
+,15,11-11:30,L0MDT,YAML slaves firmware,MON,0.5
+,15,11:30-1:30,ETL,Meeting,MON,2.0
+,15,1:30-2,L0MDT,YAML slaves firmware,MON,0.5
+,15,2-3,L0MDT,Meeting,MON,1.0
+,15,3-4,L0MDT,firmware rebasing,MON,1.0
+,15,4-5,Tracker,IPMC + control chat with Dan,MON,1.0
+,15,5-6,L0MDT,Firmware updates,MON,1.0
+,,,,,,
+,16,9:30-10:30,Tracker,Help charlie w/ ipbb,TUE,1.0
+,16,10:30-12,L0MDT,YAML infrastructure,TUE,1.5
+,16,2:30-4,L0MDT,YAML infrastructure,TUE,1.5
+,16,4-4:30,ETL,Assembly queries,TUE,0.5
+,16,4:30-6:30,L0MDT,YAML infrastructure,TUE,2.0
+,,,,,,
+,17,9-10,Tracker,Meeting,WED,1.0
+,17,10-10:30,GE11,Firmware strip mapping,WED,0.5
+,17,10:30-11,ETL,Chat with Daniel,WED,0.5
+,17,11-11:30,L0MDT,Repository work,WED,0.5
+,17,11:30-2,SICK,Chiropractor,WED,2.5
+,17,2-2:30,L0MDT,YAML,WED,0.5
+,17,4-5:00,ETL,Meeting; Lab computer setup,WED,1.0
+,17,2:30-3:30,Tracker,Chat with Eric + Dan,WED,1.0
+,17,3:30-4,L0MDT,Chat with Eric + Dan,WED,0.5
+,,,,,,
+,18,10-12,L0MDT,Meeting,THU,2.0
+,18,9-10,GE21,Firmware testing,THU,1.0
+,18,1:30-2,GE11,Firmware testing,THU,0.5
+,18,2:30-5:30,GE11,Firmware testing,THU,3.0
+,18,5:30-8,GE21,Firmware testing,THU,2.5
+,,,,,,
+,19,9-10,L0MDT,FELIX Meeting,FRI,1.0
+,19,10-11:30,Tracker,Meeting; IPMC chat,FRI,1.5
+,19,11:30-12,GE21,Firmware testing,FRI,0.5
+,19,12-1:30,ME0,Firmware,FRI,1.5
+,19,2-3,ME0,GEM Meeting,FRI,1.0
+,19,3-3:30,CSC,Email to Alex Dorsett,FRI,0.5
+,19,3-7,ETL,"Computer setup, test stand setup, CI setup",FRI,4.0
+,,,,,,
+,,,,,,
+,22,9-10:30,L0MDT,Meeting,MON,1.5
+,22,9-9:30,ETL,interrupts,MON,0.5
+,22,8-9,GE21,Trigger link testing,MON,1.0
+,22,1-2,EMPHATIC,Meeting with Eric + Linyan,MON,1.0
+,22,2-3,L0MDT,Meeting,MON,1.0
+,22,10:30-11:30,ETL,Test stand setup,MON,1.0
+,22,3-4,ETL,test stand setup,MON,1.0
+,,,,,,
+,23,9-12:30,Tracker,Backend Meeting,TUE,3.5
+,23,12:30-1,ETL,"Orders, interrupts",TUE,0.5
+,23,1-1:30,GE11,Firmware integration,TUE,0.5
+,23,2-3,GE11,"Firmware integration, repo setup",TUE,1.0
+,23,3-4,GE21,"Firmware integration, repo setup",TUE,1.0
+,23,4:30-5:30,ME0,Chat with Joseph,TUE,1.0
+,23,7:30-8,ETL,Email to Indara,TUE,0.5
+,,,,,,
+,24,9-11,Tracker,Backend Meeting,WED,2.0
+,24,11-12,L0MDT,Firmware updates,WED,1.0
+,24,12-1,--,Lunch with Daniel,WED,1.0
+,24,1-4,--,Chiropractor,WED,3.0
+,24,4-5,L0MDT,Spybuffers; Chat with Dan + Eric,WED,1.0
+,,,,,,
+,25,9-12,L0MDT,"Meeting, Spybuffers",THU,3.0
+,25,12:30-3,L0MDT,"Spybuffers, Meeting with Dan",THU,2.5
+,25,4-5,Tracker,"IPMC Adapter PCB, ordering",THU,1.0
+,25,5-6,L0MDT,Spybuffers,THU,1.0
+,25,6-7,L0MDT,Spybuffers,THU,1.0
+,,,,,,
+,26,8-9,L0MDT,Spybuffers,FRI,1.0
+,26,9-11,L0MDT,Meeting; Spybuffers,FRI,2.0
+,26,11-12,--,EDF Lunch,FRI,1.0
+,26,12-2,L0MDT,Meeting,FRI,2.0
+,26,2-3,ME0,Meeting,FRI,1.0
+,26,3-5:30,L0MDT,Spybuffers; firmware builds,FRI,2.5
+,26,10-11,L0MDT,Spybuffers; firmware builds,FRI,1.0
+,,,,,,
+,,,,,,
+,,,,,,
+,29,9:30-11,L0MDT,"Project builds, Spybuffers, YAML",MON,1.5
+,29,11-12,Tracker,"IPMC, new adapter dongle for v1",MON,1.0
+,29,1-2,L0MDT,Firmware build system,MON,1.0
+,29,2-3,L0MDT,Meeting,MON,1.0
+,29,3-6,L0MDT,Firmware build system,MON,3.0
+,,,,,,
+,30,9-11,L0MDT,Firmware,TUE,2.0
+,30,11-12,Tracker,Project build issues,TUE,1.0
+,30,12-1,L0MDT,Firmware,TUE,1.0
+,30,1-1:30,GE11,Firmware updates & repo,TUE,0.5
+,30,1:30-2,GE21,Firmware updates & repo,TUE,0.5
+,30,4-5,ME0,Chat with Chloe,TUE,1.0
+,30,7-9,L0MDT,Debugging XML to VHDL,TUE,2.0
+,,,,,,
+,31,9-1,Tracker,"Meeting, IPMC makefile + shelf testing",WED,4.0
+,31,1-4,SICK,Chiropractor,WED,3.0
+,31,4-5,Tracker,IPMC shelf testing,WED,1.0

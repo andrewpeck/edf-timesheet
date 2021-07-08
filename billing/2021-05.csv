@@ -1,48 +1,140 @@
-2021-05,Mo,Tu,We,Th,Fr,Sa,Su,Notes
-,26*,27*,28*,29*,30*,1,2,
-ADMIN,0,0,0,3.00,0,0,0,Database setup
-ATLAS-MUON-PHASE2,0,0,1.00,2.00,0,0,0,Meeting; Chat with Daniel; Emails
-CMS-EMU-UPGRADE-ME0,0,0,0,1.00,0,0,0,Meeting
-CMS-ETL,0,0,2.00,1.00,1.50,0,0,Fab queries; Meeting; Chat with Indara; Chat with Daniel; I2C w/ Daniel
-CMS-PIXEL-DTC,0,0,5.50,0,4.50,0,0,IPMC build; IPMC CI; Meeting; IPMC build updates; IPMC
-SICK,0,0,0,2.50,0,0,0,Chiropractor
-VAC,8.00,8.00,0,0,0,0,0,
-,3,4,5,6,7,8,9,
-ATLAS-MUON-PHASE2,4.00,3.50,2.50,3.00,1.00,0,0,Hog Meeting; Firmware; Chat with Eric; Specifications doc; Email; Meeting; Hardware specifications; Slides
-CMS-ETL,2.00,1.00,0.50,0.50,0,0,0,Firmware; RB PO + Shipping; Grounding meeting; Chat with Daniel; CI Config; Chat
-CMS-EMU-UPGRADE-ME0,2.00,1.50,5.00,0,2.50,0,0,Meet with Chloe; Meeting; Layout + Schematic Updates; ASIAGO Schematic + Layout; Layout; Stackup
-CMS-EMU-UPGRADE-GE21,0,0.50,0,0.50,2.00,0,0,TMR firmware updates; VTRX+; VTRX Chat; OH Review
-CMS-PIXEL-DTC,0,0,1.00,0,2.00,0,0,Meeting; IPMC Cold Reset
-EMPHATIC,0,0,0.50,0,0,0,0,Chat with Eric
-SICK,0,0,0,4.00,0,0,0,Back pain
-,10,11,12,13,14,15,16,
-ATLAS-MUON-PHASE2,0.50,5.50,1.00,0,1.50,0,0,Firmware; Felix meeting; Gitlab issues; Firmware Updates; Chat w Dan; xTCA Meeting
-CMS-ETL,0,0.50,1.50,1.00,2.50,0,0,Weekly meeting; thermal tests; Meet with Frank; Temperature measurements; Chat with Indara + Daniel; hardware debug
-CMS-EMU-UPGRADE-ME0,0,1.00,0,1.00,0,0,0,Debugging help; UCLA Chat; Meeting
-CMS-EMU-UPGRADE-GE21,0,0,3.00,1.00,0,0,0,Firmware; TMR Firmware
-CMS-PIXEL-DTC,2.00,0,2.50,0,1.00,0,0,IPMC review; IPMC Review; Meeting; IPMC
-EMPHATIC,0,0,0.50,0,0,0,0,FPGA hunt
-SICK,6.00,0,0,2.50,0,0,0,Covid vaccine; Chiropractor
-CMS-EMU-OPS-GE11,0,0,0,2.00,0,0,0,Firmware
-CMS-EMU-OPS-CSC,0,0,0,0.50,0,0,0,Email Jay
-,17,18,19,20,21,22,23,
-ATLAS-MUON-PHASE2,2.00,0,3.00,3.00,0,0,0,Firmware; Meeting; Firmware review; slides
-CMS-ETL,2.50,0,0,0,0,0,0,RB documentation; Meeting
-CMS-EMU-UPGRADE-ME0,1.50,2.00,0.50,0,0,0,0,Layout updates; Meet with Chloe; Email; Meeting
-CMS-PIXEL-DTC,1.50,4.00,4.00,0,0,0,0,Firmware; IPMC updates; IPMC Review; Chat with Dan; Meeting; IPMC Firmware; IPMC; IPMC Chat with Dan
-VAC,0,0,0,5.00,8.00,0,0,
-,24,25,26,27,28,29,30,
-ATLAS-MUON-PHASE2,1.00,0,0,6.00,0,0,0,Meeting; Visit with Thiago
-CMS-ETL,1.50,0,0,0,4.00,0,0,Power adapter; Lab setup; Meeting
-CMS-EMU-UPGRADE-ME0,2.00,3.00,0,1.00,0.50,0,0,Meet with Chloe; Meeting; Cocotb issues; Help Chloe
-CMS-EMU-UPGRADE-GE21,0,1.50,0,0,1.00,0,0,PRBS Firmware; Chat with Evaldas
-CMS-PIXEL-DTC,2.50,2.00,5.00,0,1.00,0,0,Firmware; Firmware updates & report; Meeting; Debugging w/ Dan; Firmware updates; IPMC Firmware; IPMC
-EMPHATIC,0,0,4.00,2.00,0,0,0,Meeting; Repository setup; Ethernet Firmware
-,31,1*,2*,3*,4*,5*,6*,
-CMS-ETL,2.00,4.00,1.00,0,0,0,0,Firmware; Meeting; LINPOL Email Discussion
-CMS-EMU-UPGRADE-GE21,1.00,0,1.50,3.00,1.00,0,0,Firmware; Firmware Updates; Meeting; Firmware timing closure
-CMS-PIXEL-DTC,3.00,0,3.50,1.00,5.00,0,0,Apollo Documentation; Firmware Updates; IPMC Updates; Meeting; Meetings + IPMC
-CMS-EMU-OPS-GE11,1.00,0,0,1.00,0,0,0,Firmware; Firmware Updates
-ATLAS-MUON-PHASE2,0,2.00,1.00,0,0,0,0,Apollo Documentation; Meeting; Meet with Eric
-EMPHATIC,0,4.00,4.00,3.00,2.50,0,0,Eval board setup + test; Documentation; Firmware; DAQ Firmware; IPBus DAQ readout; Work with Tejasava; Ethernet Firmware
-CMS-EMU-UPGRADE-ME0,0,0,1.50,0,0,0,0,Meet with Chloe
+,D,Time,Project,Task,Day,Hours
+,3,9:30-10:30,L0MDT,Slides,MON,1.0
+,3,10:30-12:30,ETL,Grounding meeting,MON,1.5
+,3,12:30-1,L0MDT,Slides,MON,0.5
+,3,1-1:30,ETL,RB PO + Shipping,MON,0.5
+,3,2-3,L0MDT,Meeting,MON,1.0
+,3,3-5,ME0,ASIAGO Schematic + Layout,MON,2.0
+,3,5-6:30,L0MDT,Chat with Eric,MON,1.5
+,,,,,,
+,4,9-11:00,L0MDT,Hardware specifications,TUE,2.0
+,4,11-11:30,L0MDT,Hog Meeting,TUE,0.5
+,4,12:30-1,GE21,VTRX Chat,TUE,0.5
+,4,1-2:30,ME0,Meeting,TUE,1.5
+,4,2:30-3:30,ETL,Firmware; CI Config,TUE,1.0
+,4,3:30-4:30,L0MDT,Firmware,TUE,1.0
+,,,,,,
+,5,8:30-9,L0MDT,Slides,WED,0.5
+,5,9-10,Tracker,Meeting,WED,1.0
+,5,10-12,L0MDT,Meeting,WED,2.0
+,5,12-12:30,EMPHATIC,Chat with Eric,WED,0.5
+,5,1-2:30,ME0,Layout + Schematic Updates,WED,1.5
+,5,2:30-3,ME0,Stackup,WED,0.5
+,5,3-3:30,ETL,Chat with Daniel,WED,0.5
+,5,3:30-6:30,ME0,Layout,WED,3.0
+,,,,,,
+,6,9-9:30,L0MDT,Meeting,THU,0.5
+,6,10-11,L0MDT,Meeting,THU,1.0
+,6,11-11:30,GE21,OH Review,THU,0.5
+,6,11:30-12,ETL,Chat,THU,0.5
+,6,12-1:30,L0MDT,Specifications doc,THU,1.5
+,6,2-6,SICK,Back pain,THU,4.0
+,,,,,,
+,7,9-10,Tracker,Meeting,FRI,1.0
+,7,10-11,Tracker,IPMC Cold Reset,FRI,1.0
+,7,11-11:30,GE21,VTRX+,FRI,0.5
+,7,11:30-1,--,LUNCH,FRI,1.5
+,7,1-2:30,GE21,TMR firmware updates,FRI,1.5
+,7,2:30-5,ME0,Meet with Chloe,FRI,2.5
+,7,5-6,L0MDT,Email,FRI,1.0
+,,,,,,
+,,,,,,
+,10,9:30-10,L0MDT,Gitlab issues,MON,0.5
+,10,10-12,Tracker,IPMC Review,MON,2.0
+,10,12-6,SICK,Covid vaccine,MON,6.0
+,,,,,,
+,11,9-10,L0MDT,xTCA Meeting,TUE,1.0
+,11,10-11,L0MDT,Firmware,TUE,1.0
+,11,11-11:30,ME0,UCLA Chat,TUE,0.5
+,11,11:30-1,L0MDT,Firmware Updates,TUE,1.5
+,11,1:30-3:30,L0MDT,Firmware Updates,TUE,2.0
+,11,3:30-4,ME0,Debugging help,TUE,0.5
+,11,4-4:30,ETL,Meet with Frank,TUE,0.5
+,,,,,,
+,12,9-10:30,Tracker,Meeting,WED,1.5
+,12,10:30-11,EMPHATIC,FPGA hunt,WED,0.5
+,12,11-12,Tracker,IPMC review,WED,1.0
+,12,12-1,GE21,TMR Firmware,WED,1.0
+,12,1-3,GE21,TMR Firmware,WED,2.0
+,12,3-3:30,--,LUNCH,WED,0.5
+,12,3:30-5,ETL,Weekly meeting; thermal tests,WED,1.5
+,12,5-6,L0MDT,Firmware,WED,1.0
+,,,,,,
+,13,9-10,GE21,Firmware,THU,1.0
+,13,10-11,GE11,Firmware,THU,1.0
+,13,11-12,ETL,Chat with Indara + Daniel,THU,1.0
+,13,12-1,GE11,Firmware,THU,1.0
+,13,1-1:30,CSC,Email Jay,THU,0.5
+,13,1:30-4,SICK,Chiropractor,THU,2.5
+,13,4-5,ME0,Meeting,THU,1.0
+,,,,,,
+,14,9-10,L0MDT,Felix meeting,FRI,1.0
+,14,10-10:30,L0MDT,Chat w Dan,FRI,0.5
+,14,10:30-11:30,ETL,Temperature measurements; hardware debug,FRI,2.0
+,14,12:30-2,--,LUNCH,FRI,1.5
+,14,2-2:30,ETL,Temperature measurements,FRI,0.5
+,14,2:30-3:30,Tracker,IPMC,FRI,1.0
+,,,,,,
+,,,,,,
+,17,9:30-10:30,ETL,RB documentation,MON,1.0
+,17,10:30-12,ETL,Meeting,MON,1.5
+,17,12-1:30,ME0,Layout updates,MON,1.5
+,17,1:30-2,Tracker,IPMC Chat with Dan,MON,0.5
+,17,2-3,L0MDT,Meeting,MON,1.0
+,17,3-4,Tracker,IPMC Firmware,MON,1.0
+,17,5-6,L0MDT,Firmware,MON,1.0
+,,,,,,
+,18,11-12,ME0,Meeting,TUE,1.0
+,18,12-4,Tracker,IPMC updates,TUE,4.0
+,18,4-5,ME0,Meet with Chloe,TUE,1.0
+,,,,,,
+,19,9-10,Tracker,Meeting,WED,1.0
+,19,10-11,Tracker,Firmware,WED,1.0
+,19,11-12,Tracker,IPMC Review,WED,1.0
+,19,12-1,--,LUNCH,WED,1.0
+,19,1-2,Tracker,IPMC; Chat with Dan,WED,1.0
+,19,2-2:30,ME0,Email,WED,0.5
+,19,2:30-5:30,L0MDT,Firmware; slides,WED,3.0
+,,,,,,
+,20,9-12,L0MDT,Firmware review,THU,3.0
+,20,12-5,VACATION,,THU,5.0
+,,,,,,
+,21,9-5,VACATION,,FRI,8.0
+,,,,,,
+,,,,,,
+,24,9-10:30,Tracker,Firmware updates & report,MON,1.5
+,24,10:30-12,ETL,Meeting,MON,1.5
+,24,12-1,--,LUNCH,MON,1.0
+,24,1-2,Tracker,Firmware updates,MON,1.0
+,24,2-3,L0MDT,Meeting,MON,1.0
+,24,3-5,ME0,Cocotb issues,MON,2.0
+,,,,,,
+,25,10-11,Tracker,Firmware updates,TUE,1.0
+,25,11-12,ME0,Meeting,TUE,1.0
+,25,12-1:30,GE21,Chat with Evaldas,TUE,1.5
+,25,3-5,Tracker,Firmware updates,TUE,1.0
+,25,5-7,ME0,Meet with Chloe,TUE,2.0
+,,,,,,
+,26,9-10:30,Tracker,Meeting,WED,1.5
+,26,10:30-11,Tracker,Firmware,WED,0.5
+,26,11-12,EMPHATIC,Meeting,WED,1.0
+,26,12-1,--,LUNCH,WED,1.0
+,26,1-3,Tracker,IPMC Firmware,WED,2.0
+,26,4-5,Tracker,Debugging w/ Dan,WED,1.0
+,26,6-9,EMPHATIC,Ethernet Firmware,WED,3.0
+,,,,,,
+,27,9-11,EMPHATIC,Ethernet Firmware; Repository setup,THU,2.0
+,27,11-5,L0MDT,Visit with Thiago,THU,6.0
+,27,4-6,ME0,Meeting,THU,1.0
+,,,,,,
+,28,9-10,Tracker,IPMC,FRI,1.0
+,28,11-12,GE21,PRBS Firmware,FRI,1.0
+,28,1-5,ETL,Power adapter; Lab setup,FRI,4.0
+,28,5-5:30,ME0,Help Chloe,FRI,0.5
+,,,,,,
+,,,,,,
+,31,9-12,Tracker,Meetings + IPMC,MON,3.0
+,31,12-2,ETL,Firmware,MON,2.0
+,31,2-3,GE21,Firmware,MON,1.0
+,31,3-4,GE11,Firmware,MON,1.0
+,,,,,,

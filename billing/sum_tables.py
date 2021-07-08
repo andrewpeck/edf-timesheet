@@ -3,9 +3,18 @@ import datetime
 import pprint
 import re
 import sys
+import os
+import re
+from collections import OrderedDict
 from glob import glob
 
+
 ONEDAY = datetime.timedelta(days=1)
+
+def get_csv_files ():
+    res = [f for f in os.listdir("./") if re.search(r'.[0-9]+-[0-9]+\.csv$', f)]
+    res.sort()
+    return res
 
 def princ (string):
     """Wrapper to print without a newine... uhg"""
@@ -29,7 +38,7 @@ def csv_to_dict (file):
 
     with open(file) as csvfile:
 
-        projects = {}
+        projects = OrderedDict()
 
         table = csv.reader(csvfile, delimiter=",")
         for row in table:
@@ -40,7 +49,7 @@ def csv_to_dict (file):
                 hours = float(row[6])
 
                 if not project in projects:
-                    projects [project] = {}
+                    projects [project] = OrderedDict()
 
                 if not day in projects[project]:
                     projects [project][day] = {"hours" : 0.0, "description" : ""}
@@ -71,7 +80,7 @@ def check_project_active (name, time, dict):
 
 def project_to_summary(projects):
 
-    summaries = {}
+    summaries = OrderedDict()
 
     for year in projects:
         for month in projects[year]:
@@ -87,11 +96,11 @@ def project_to_summary(projects):
 
                     # intialize the dict
                     if not year in summaries:
-                        summaries [year] = {}
+                        summaries [year] = OrderedDict()
                     if not week in summaries[year]:
-                        summaries [year][week] = {}
+                        summaries [year][week] = OrderedDict()
                     if not prj in summaries[year][week]:
-                        summaries [year][week][prj] = {}
+                        summaries [year][week][prj] = OrderedDict()
                     if not weekday in summaries[year][week][prj]:
                         summaries [year][week][prj][weekday] = 0
                     if not "notes" in summaries[year][week][prj]:
@@ -146,9 +155,9 @@ def print_org_summary(summaries):
 
     print("#+TITLE: Hours")
 
-    for file in glob("* *.csv"):
+    for file in get_csv_files():
 
-         d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
+         d = datetime.datetime.strptime(file.replace(".csv",""), "%Y-%m")
 
          month = d.month
          year = d.year
@@ -157,7 +166,7 @@ def print_org_summary(summaries):
 
          print("")
          print("* %4d-%02d" % (year, month))
-         print("#+TBLNAME: %4d-%02d" % (year, month))
+         print("#+TBLNAME: %4d-%02d-Summary" % (year, month))
          print("| %20s |    Mo |    Tu |    We |    Th |    Fr |    Sa |    Su | Notes |" %
                ("%04d-%02d" % (year, month) ))
          print_spacer()
@@ -192,16 +201,16 @@ def parse_projects():
     dictionary of the form
     projects[year][month][project][day][hours/description]"""
 
-    projects={}
+    projects=OrderedDict()
 
-    for file in glob("* *.csv"):
-        print("Parsing %s" % file)
-        d = datetime.datetime.strptime(file.replace(".csv",""), "%B %Y")
+    for file in get_csv_files():
+        #print("Parsing %s" % file)
+        d = datetime.datetime.strptime(file.replace(".csv",""), "%Y-%m")
         month = d.month
         year = d.year
 
         if (not year in projects):
-            projects[year]={}
+            projects[year]=OrderedDict()
 
         projects[year][month] = csv_to_dict (file)
 
