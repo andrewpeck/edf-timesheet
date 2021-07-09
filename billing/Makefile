@@ -13,8 +13,8 @@ summary_tables: sum_tables.py
 
 summary_tables_html: summary_tables
 	@bash org_to_html.sh summary_tables.org
-	@scp summary_tables.html ohm:~/public_html/notes/hours.html
-	@scp *-*.csv ohm:~/billing/
+#@scp summary_tables.html ohm:~/public_html/notes/hours.html
+	@scp *-*Summary.csv ohm:~/billing/
 
 clean:
 	rm *.csv
