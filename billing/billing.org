@@ -779,39 +779,45 @@ return (plots.plot_table(figname, True))
 ** July 2021
  #+ATTR_HTML: :border 2 :frame none
  #+TBLNAME: 2021-07
- |---+-----+---+--------+----------+----------------+-----+-------|
- |   | C19 | D |   Time | Project  | Task           | Day | Hours |
- |---+-----+---+--------+----------+----------------+-----+-------|
- | # |     |   |        |          |                |     |       |
- | # |     | 1 |   9-11 | L0MDT    | Meetings       | THU |   2.0 |
- | # |     | 1 |   11-3 | APOLLO   | IPMC           | THU |   4.0 |
- | # |     | 1 |    3-4 | GE11     | Firmware       | THU |   1.0 |
- | # |     | 1 |    4-5 | ME0      | Meeting        | THU |   1.0 |
- | # |     |   |        |          |                |     |       |
- | # |     | 2 |   9-10 | Tracker  | Meeting        | FRI |   1.0 |
- | # |     | 2 |  10-12 | GE11     | Firmware       | FRI |   2.0 |
- | # |     | 2 |   12-2 | APOLLO   | IPMC Firmware  | FRI |   2.0 |
- | # |     | 2 |    2-4 | APOLLO   | IPMC           | FRI |   2.0 |
- | # |     |   |        |          |                |     |       |
- |---+-----+---+--------+----------+----------------+-----+-------|
- | # |     | 5 |    9-5 | HOLIDAY  | July 4th       | MON |   8.0 |
- | # |     |   |        |          |                |     |       |
- | # |     | 6 |    9-5 | VACATION |                | TUE |   8.0 |
- | # |     |   |        |          |                |     |       |
- | # |     | 7 |    9-5 | VACATION |                | WED |   8.0 |
- | # |     |   |        |          |                |     |       |
- | # |     | 8 |   9-11 | L0MDT    | Meetings       | THU |   2.0 |
- | # |     | 8 |  11-12 | L0MDT    | Chat with Eric |     |   1.0 |
- | # |     | 8 |   12-1 | --       | Lunch          | THU |   1.0 |
- | # |     | 8 |    1-2 | IPMC     | Firmware       | THU |   1.0 |
- | # |     | 8 | 2-2:30 | ETL      | Email to Girts | THU |   0.5 |
- | # |     | 8 | 2:30-3 | ADMIN    | Billing        | THU |   0.5 |
- | # |     | 8 |    3-4 | ME0      | Chloe          | THU |   1.0 |
- | # |     | 8 |    4-5 | ME0      | UCLA           | THU |   1.0 |
- | # |     |   |        |          |                |     |       |
- | # |     |   |        |          |                |     |       |
- | # |     |   |        |          |                |     |       |
- | # |     |   |        |          |                |     |       |
- | # |     |   |        |          |                |     |       |
- |---+-----+---+--------+----------+----------------+-----+-------|
- #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"July 2021"))::$8='(org-sbe subtract (a $$4))
+ |---+-----+---+-----------+----------+---------------------------+-----+-------|
+ |   | C19 | D |      Time | Project  | Task                      | Day | Hours |
+ |---+-----+---+-----------+----------+---------------------------+-----+-------|
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 1 |      9-11 | L0MDT    | Meetings                  | THU |   2.0 |
+ | # |     | 1 |      11-3 | APOLLO   | IPMC                      | THU |   4.0 |
+ | # |     | 1 |       3-4 | GE11     | Firmware                  | THU |   1.0 |
+ | # |     | 1 |       4-5 | ME0      | Meeting                   | THU |   1.0 |
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 2 |      9-10 | Tracker  | Meeting                   | FRI |   1.0 |
+ | # |     | 2 |     10-12 | GE11     | Firmware                  | FRI |   2.0 |
+ | # |     | 2 |      12-2 | APOLLO   | IPMC Firmware             | FRI |   2.0 |
+ | # |     | 2 |       2-4 | APOLLO   | IPMC                      | FRI |   2.0 |
+ | # |     |   |           |          |                           |     |       |
+ |---+-----+---+-----------+----------+---------------------------+-----+-------|
+ | # |     | 5 |       9-5 | HOLIDAY  | July 4th                  | MON |   8.0 |
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 6 |       9-5 | VACATION |                           | TUE |   8.0 |
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 7 |       9-5 | VACATION |                           | WED |   8.0 |
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 8 |      9-11 | L0MDT    | Meetings                  | THU |   2.0 |
+ | # |     | 8 |     11-12 | L0MDT    | Chat with Eric            | THU |   1.0 |
+ | # |     | 8 |      12-1 | --       | Lunch                     | THU |   1.0 |
+ | # |     | 8 |       1-2 | IPMC     | Firmware                  | THU |   1.0 |
+ | # |     | 8 |    2-2:30 | ETL      | Email to Girts            | THU |   0.5 |
+ | # |     | 8 |    2:30-3 | ADMIN    | Billing                   | THU |   0.5 |
+ | # |     | 8 |       3-4 | ME0      | Chloe                     | THU |   1.0 |
+ | # |     | 8 |       4-5 | ME0      | UCLA                      | THU |   1.0 |
+ | # |     |   |           |          |                           |     |       |
+ | # |     | 9 |      9-10 | Tracker  | Meeting                   | FRI |   1.0 |
+ | # |     | 9 |  10:30-12 | EMPHATIC | Meet with Eric + Tejasava | FRI |   1.5 |
+ | # |     | 9 |      12-2 | --       | EDF LUNCH                 | FRI |   2.0 |
+ | # |     | 9 | 2:00-2:30 | EMPHATIC | Meet with Eric + Tejasava | FRI |   0.5 |
+ | # |     | 9 | 2:30-5:30 | ETL      | Emulator Board            | FRI |   3.0 |
+ | # |     |   |           |          |                           |     |       |
+ |---+-----+---+-----------+----------+---------------------------+-----+-------|
+ | # |     |   |           |          |                           |     |       |
+ | # |     |   |           |          |                           |     |       |
+ | # |     |   |           |          |                           |     |       |
+ |---+-----+---+-----------+----------+---------------------------+-----+-------|
+#+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"July 2021"))::$8='(org-sbe subtract (a $$4))
