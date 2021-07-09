@@ -84,7 +84,7 @@ X,9,9-10:30,Tracker,Soc Workshop,WED,1.0
 ,16,3-4,ME0,Chloe,WED,1.0
 ,16,4-6,Tracker,IPMC/ESM,WED,2.0
 ,,,,,,
-,17,9-11:30,L0MDT,Meetings,THU,2.5
+,17,9-11:30,L0MDT,Meeting,THU,2.5
 ,17,11:30-12,Tracker,IPMC/ESM,THU,0.5
 ,17,12:30-1,EMPHATIC,Chat with Eric,THU,0.5
 ,17,1-2:30,ETL,Work with Daniel,THU,1.5
@@ -148,5 +148,5 @@ X,9,9-10:30,Tracker,Soc Workshop,WED,1.0
 ,30,10-11,GE11,Firmware,WED,1.0
 ,30,11-12,GE11,Firmware,WED,1.0
 ,30,12-1,Tracker,Meeting,WED,1.0
-,30,4-6,ETL,Meetings,WED,2.0
+,30,4-6,ETL,Meeting,WED,2.0
 ,,,,,,
