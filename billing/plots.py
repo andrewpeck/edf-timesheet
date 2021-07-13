@@ -6,7 +6,7 @@ import dateutil
 import pprint
 from collections import OrderedDict
 
-def plot_table(figname, indaraize=False):
+def plot_table(figname, zeynepize=False, indaraize=False):
 
     month_begin = 13
     year_begin = 3000
@@ -141,6 +141,19 @@ def plot_table(figname, indaraize=False):
 
         y=[indara,not_indara]
 
+    if (zeynepize):
+        zeynep = [0 for j in range(len(y[0]))]
+        not_zeynep = [0 for j in range(len(y[0]))]
+
+        for prj in projects:
+            for day in range(len(y[0])):
+                if (prj in ["CMS-PIXEL-DTC", "APOLLO"]):
+                    zeynep[day] += projects[prj][day]
+                else:
+                    not_zeynep[day] += projects[prj][day]
+
+        y=[zeynep,not_zeynep]
+
     if (normalize):
         for week in range(len(y[0])):
 
@@ -157,6 +170,10 @@ def plot_table(figname, indaraize=False):
 
     if (indaraize):
         plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"])
+        plt.legend(loc='upper left')
+        plt.savefig(figname)
+    elif (zeynepize):
+        plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep", "not zeynep"])
         plt.legend(loc='upper left')
         plt.savefig(figname)
     else:
