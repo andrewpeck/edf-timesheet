@@ -601,7 +601,7 @@ return (plots.plot_table(figname, True))
  | # |   | 28 |        9-10 | Tracker  | IPMC                                     | FRI |   1.0 |
  | # |   | 28 |       11-12 | GE21     | PRBS Firmware                            | FRI |   1.0 |
  | # |   | 28 |         1-5 | ETL      | Power adapter; Lab setup                 | FRI |   4.0 |
- | # |   | 28 |      5-5:30 | ME0      | Help Chloe                               | FRI |   0.5 |
+ | # |   | 28 |      5-5:30 | ME0      | Chloe                                    | FRI |   0.5 |
  | # |   |    |             |          |                                          |     |       |
  |---+---+----+-------------+----------+------------------------------------------+-----+-------|
  |   |   |    |             |          |                                          |     |       |
@@ -705,7 +705,7 @@ return (plots.plot_table(figname, True))
  | # |     | 16 |         3-4 | ME0      | Chloe                                                     | WED |   1.0 |
  | # |     | 16 |         4-6 | Tracker  | IPMC/ESM                                                  | WED |   2.0 |
  | # |     |    |             |          |                                                           |     |       |
- | # |     | 17 |     9-11:30 | L0MDT    | Meeting                                                  | THU |   2.5 |
+ | # |     | 17 |     9-11:30 | L0MDT    | Meeting                                                   | THU |   2.5 |
  | # |     | 17 |    11:30-12 | Tracker  | IPMC/ESM                                                  | THU |   0.5 |
  | # |     | 17 |     12:30-1 | EMPHATIC | Chat with Eric                                            | THU |   0.5 |
  | # |     | 17 |      1-2:30 | ETL      | Work with Daniel                                          | THU |   1.5 |
@@ -767,11 +767,11 @@ return (plots.plot_table(figname, True))
  | # |     | 29 |         2-3 | APOLLO   | Chat w/ Eric + Dan                                        | TUE |   1.0 |
  | # |     | 29 |         3-5 | SICK     | Chiropractor                                              | TUE |   2.0 |
  | # |     |    |             |          |                                                           |     |       |
- | # |     | 30 |        9-10 | APOLLO   | IPMC issues                                               | WED |   1.0 |
+ | # |     | 30 |        9-10 | APOLLO   | IPMC                                                      | WED |   1.0 |
  | # |     | 30 |       10-11 | GE11     | Firmware                                                  | WED |   1.0 |
  | # |     | 30 |       11-12 | GE11     | Firmware                                                  | WED |   1.0 |
  | # |     | 30 |        12-1 | Tracker  | Meeting                                                   | WED |   1.0 |
- | # |     | 30 |         4-6 | ETL      | Meeting                                                  | WED |   2.0 |
+ | # |     | 30 |         4-6 | ETL      | Meeting                                                   | WED |   2.0 |
  | # |     |    |             |          |                                                           |     |       |
  |---+-----+----+-------------+----------+-----------------------------------------------------------+-----+-------|
  #+TBLFM: $7='(org-sbe ymd_to_weekday (k $$3) (path $"June 2021"))::$8='(org-sbe subtract (a $$4))
@@ -790,7 +790,7 @@ return (plots.plot_table(figname, True))
  | # |     |   |           |          |                           |     |       |
  | # |     | 2 |      9-10 | Tracker  | Meeting                   | FRI |   1.0 |
  | # |     | 2 |     10-12 | GE11     | Firmware                  | FRI |   2.0 |
- | # |     | 2 |      12-2 | APOLLO   | IPMC Firmware             | FRI |   2.0 |
+ | # |     | 2 |      12-2 | APOLLO   | IPMC                      | FRI |   2.0 |
  | # |     | 2 |       2-4 | APOLLO   | IPMC                      | FRI |   2.0 |
  | # |     |   |           |          |                           |     |       |
  |---+-----+---+-----------+----------+---------------------------+-----+-------|
@@ -807,7 +807,7 @@ return (plots.plot_table(figname, True))
  | # |     | 8 |    2-2:30 | ETL      | Email to Girts            | THU |   0.5 |
  | # |     | 8 |    2:30-3 | ADMIN    | Billing                   | THU |   0.5 |
  | # |     | 8 |       3-4 | ME0      | Chloe                     | THU |   1.0 |
- | # |     | 8 |       4-5 | ME0      | UCLA                      | THU |   1.0 |
+ | # |     | 8 |       4-5 | ME0      | UCLA Meeting              | THU |   1.0 |
  | # |     |   |           |          |                           |     |       |
  | # |     | 9 |      9-10 | Tracker  | Meeting                   | FRI |   1.0 |
  | # |     | 9 |  10:30-12 | EMPHATIC | Meet with Eric + Tejasava | FRI |   1.5 |

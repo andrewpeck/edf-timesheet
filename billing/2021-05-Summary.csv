@@ -34,7 +34,7 @@ VAC,0,0,0,5.00,8.00,0,0,
 ,24,25,26,27,28,29,30,
 ATLAS-MUON-PHASE2,1.00,0,0,6.00,0,0,0,Meeting; Visit with Thiago
 CMS-ETL,1.50,0,0,0,4.00,0,0,Lab setup; Meeting; Power adapter
-CMS-EMU-UPGRADE-ME0,2.00,3.00,0,1.00,0.50,0,0,Cocotb issues; Help Chloe; Meet with Chloe; Meeting
+CMS-EMU-UPGRADE-ME0,2.00,3.00,0,1.00,0.50,0,0,Chloe; Cocotb issues; Meet with Chloe; Meeting
 CMS-EMU-UPGRADE-GE21,0,1.50,0,0,1.00,0,0,Chat with Evaldas; PRBS Firmware
 CMS-PIXEL-DTC,2.50,2.00,5.00,0,1.00,0,0,Debugging w/ Dan; Firmware; Firmware updates; Firmware updates & report; IPMC; IPMC Firmware; Meeting
 EMPHATIC,0,0,4.00,2.00,0,0,0,Ethernet Firmware; Meeting; Repository setup

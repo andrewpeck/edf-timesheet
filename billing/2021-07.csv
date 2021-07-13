@@ -7,7 +7,7 @@ C19,D,Time,Project,Task,Day,Hours
 ,,,,,,
 ,2,9-10,Tracker,Meeting,FRI,1.0
 ,2,10-12,GE11,Firmware,FRI,2.0
-,2,12-2,APOLLO,IPMC Firmware,FRI,2.0
+,2,12-2,APOLLO,IPMC,FRI,2.0
 ,2,2-4,APOLLO,IPMC,FRI,2.0
 ,,,,,,
 ,5,9-5,HOLIDAY,July 4th,MON,8.0
@@ -23,7 +23,7 @@ C19,D,Time,Project,Task,Day,Hours
 ,8,2-2:30,ETL,Email to Girts,THU,0.5
 ,8,2:30-3,ADMIN,Billing,THU,0.5
 ,8,3-4,ME0,Chloe,THU,1.0
-,8,4-5,ME0,UCLA,THU,1.0
+,8,4-5,ME0,UCLA Meeting,THU,1.0
 ,,,,,,
 ,9,9-10,Tracker,Meeting,FRI,1.0
 ,9,10:30-12,EMPHATIC,Meet with Eric + Tejasava,FRI,1.5
