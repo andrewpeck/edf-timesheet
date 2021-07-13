@@ -42,11 +42,11 @@ def csv_to_dict (file):
 
         table = csv.reader(csvfile, delimiter=",")
         for row in table:
-            if is_float(row[6]):
-                day = int(row[1])
-                project = substitute_project_name(row[3].upper())
-                description = row[4]
-                hours = float(row[6])
+            if is_float(row[5]):
+                day = int(row[0])
+                project = substitute_project_name(row[2].upper())
+                description = row[3]
+                hours = float(row[5])
 
                 if not project in projects:
                     projects [project] = OrderedDict()
