@@ -169,7 +169,7 @@ def plot_table(figname, zeynepize=False, indaraize=False):
     plt.xticks(rotation=75, ha='right')
 
     if (indaraize):
-        plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"])
+        plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"], colors = ["#008080","#abcdef"])
         plt.legend(loc='upper left')
         plt.savefig(figname)
     elif (zeynepize):
