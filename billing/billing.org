@@ -889,7 +889,13 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |    |           |          |                           |     |       |
  | # | 22 |      9-10 | ATLAS    | Meeting                   | THU |   1.0 |
  | # | 22 |     10-11 | ATLAS    | Meeting                   | THU |   1.0 |
- | # | 22 |           |          |                           | THU |       |
+ | # | 22 |  11-11:30 | CSC      | GEM-CSC Meeting           | THU |   0.5 |
+ | # | 22 |  11:30-12 | GE11     | GEM-CSC Meeting           | THU |   0.5 |
+ | # | 22 |      12-1 | --       | LUNCH                     | THU |   1.0 |
+ | # | 22 |       1-2 | GE21     | Hog updates               | THU |   1.0 |
+ | # | 22 |       2-3 | ME0      | Hog updates               | THU |   1.0 |
+ | # | 22 |       3-4 | ETL      | Meeting                   | THU |   1.0 |
+ | # | 22 |       4-5 | ME0      | Meeting                   | THU |   1.0 |
  | # |    |           |          |                           |     |       |
  |---+----+-----------+----------+---------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"July 2021"))::$7='(org-sbe subtract (a $$3))
