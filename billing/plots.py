@@ -172,19 +172,24 @@ def plot_table(figname, zeynepize=False, indaraize=False):
 
     plt.xticks(rotation=75, ha='right')
 
+    fontP = FontProperties()
+    fontP.set_size('x-small')
+    plt.margins(x=0)
+    plt.margins(y=0)
+
     if (indaraize):
         plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"], colors = ["#008080","#abcdef"])
         plt.legend(loc='upper left')
-        plt.savefig(figname)
+        plt.savefig(figname, bbox_inches="tight")
     elif (zeynepize):
         plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep", "not zeynep"])
         plt.legend(loc='upper left')
-        plt.savefig(figname)
+        plt.savefig(figname, bbox_inches="tight")
     else:
         # Basic stacked area chart.
         plt.stackplot(x, y, labels=t)
-        plt.legend(loc='upper left')
-        plt.savefig(figname)
+        plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
+        plt.savefig(figname, bbox_inches="tight")
 
     return "./%s" % figname
 
