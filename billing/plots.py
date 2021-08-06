@@ -1,6 +1,7 @@
 import sum_tables
 import sys
 import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
 import datetime
 import dateutil
 import pprint
@@ -38,7 +39,7 @@ def plot_table(figname, zeynepize=False, indaraize=False):
         d = (d + datetime.timedelta(weeks=1))
         date_list.append("%d/%02d" % (d.month, d.day-d.day % 7 + 1))
 
-    print(date_list)
+    #print(date_list)
 
     work = sum_tables.parse_projects()
 
@@ -51,6 +52,7 @@ def plot_table(figname, zeynepize=False, indaraize=False):
                     if (prj not in ["SICK", "VAC", "--", "ADMIN", "HOLIDAY"]):
                         projects[prj] = []
 
+    print("%30s, Month, Hours, Cost" % "Project")
     for prj in projects:
 
         date = start_date
@@ -84,11 +86,13 @@ def plot_table(figname, zeynepize=False, indaraize=False):
             date += delta
 
             if (date.month != month):
-                print("Project %s Month %d, accruals = %4.1f hours = $%6.1f" %
+                print("%30s, %5d,  %4.1f, $%6.1f" %
                       (prj, month, monthsum, monthsum*70.0))
 
     y = []
     t = []
+
+    print("")
 
     for prj in projects:
         y.append(projects[prj])
@@ -110,21 +114,21 @@ def plot_table(figname, zeynepize=False, indaraize=False):
         else:
             weeks_to_pop += 1
 
-    print(weeks_to_pop)
+    #print(weeks_to_pop)
     if (weeks_to_pop > 0):
         for i in range(weeks_to_pop):
             x.pop()
             for i in range(len(y)):
                 y[i].pop()
 
-    for i in x:
-        sum_tables.princ("%s " % i)
-    sum_tables.princ("\n")
+    #for i in x:
+    #    sum_tables.princ("%s " % i)
+    #sum_tables.princ("\n")
 
-    for i in y:
-        for j in i:
-            sum_tables.princ("%4.1f " % j)
-        sum_tables.princ("\n")
+    #for i in y:
+    #    for j in i:
+    #        sum_tables.princ("%4.1f " % j)
+    #    sum_tables.princ("\n")
 
     normalize = True
 
