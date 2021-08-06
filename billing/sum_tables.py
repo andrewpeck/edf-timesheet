@@ -21,16 +21,27 @@ def princ (string):
     print (string, end='')
 
 def substitute_project_name (name):
+
+    def subst (name, foo, bar):
+        if name==foo:
+            return bar
+        else:
+            return name
+
     """Common substitions from shorthand to EDF database names"""
-    name = name.replace("ETL","CMS-ETL")
-    name = name.replace("GE21","CMS-EMU-UPGRADE-GE21")
-    name = name.replace("CSC","CMS-EMU-OPS-CSC")
-    name = name.replace("GE11","CMS-EMU-OPS-GE11")
-    name = name.replace("ME0","CMS-EMU-UPGRADE-ME0")
-    name = name.replace("L0MDT","ATLAS-MUON-PHASE2")
-    name = name.replace("IPMC","CMS-PIXEL-DTC")
-    name = name.replace("TRACKER","CMS-PIXEL-DTC")
-    name = name.replace("VACATION","VAC")
+    name = subst(name, "ETL", "CMS-ETL")
+    name = subst(name, "ETL-RB", "CMS-ETL")
+    name = subst(name, "ETL-MODULE", "CMS-ETL")
+    name = subst(name, "GE21", "CMS-EMU-UPGRADE-GE21")
+    name = subst(name, "CSC", "CMS-EMU-OPS-CSC")
+    name = subst(name, "GE11", "CMS-EMU-OPS-GE11")
+    name = subst(name, "ME0", "CMS-EMU-UPGRADE-ME0")
+    name = subst(name, "IPMC", "CMS-PIXEL-DTC")
+    name = subst(name, "ATLAS", "ATLAS-MUON-PHASE2")
+    name = subst(name, "L0MDT", "ATLAS-MUON-PHASE2")
+    name = subst(name, "APOLLO-IPMC", "APOLLO")
+    name = subst(name, "TRACKER", "CMS-PIXEL-DTC")
+    name = subst(name, "VACATION", "VAC")
     return name
 
 def csv_to_dict (file):
