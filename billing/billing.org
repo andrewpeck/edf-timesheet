@@ -133,43 +133,43 @@ python plots.py
 | CMS-ETL              |     5 |  19.5 | $1365.0 |
 | CMS-ETL              |     6 |  21.0 | $1470.0 |
 | CMS-ETL              |     7 |  32.5 | $2275.0 |
-| CMS-ETL              |     8 |   0.0 | $   0.0 |
+| CMS-ETL              |     8 |  20.0 | $1400.0 |
 | ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
 | ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
 | ATLAS-MUON-PHASE2    |     5 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
 | ATLAS-MUON-PHASE2    |     7 |  16.5 | $1155.0 |
-| ATLAS-MUON-PHASE2    |     8 |   2.0 | $ 140.0 |
+| ATLAS-MUON-PHASE2    |     8 |  22.0 | $1540.0 |
 | CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
 | CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     5 |  31.5 | $2205.0 |
 | CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
 | CMS-PIXEL-DTC        |     7 |   9.0 | $ 630.0 |
-| CMS-PIXEL-DTC        |     8 |   0.0 | $   0.0 |
+| CMS-PIXEL-DTC        |     8 |   1.0 | $  70.0 |
 | CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
 | CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
 | CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
 | CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
 | CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
-| CMS-EMU-UPGRADE-ME0  |     8 |   0.0 | $   0.0 |
+| CMS-EMU-UPGRADE-ME0  |     8 |   5.0 | $ 350.0 |
 | CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
 | CMS-EMU-UPGRADE-GE21 |     5 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
 | CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 210.0 |
-| CMS-EMU-UPGRADE-GE21 |     8 |   0.0 | $   0.0 |
+| CMS-EMU-UPGRADE-GE21 |     8 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
 | CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
 | CMS-EMU-OPS-GE11     |     5 |   3.0 | $ 210.0 |
 | CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
 | CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 420.0 |
-| CMS-EMU-OPS-GE11     |     8 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-GE11     |     8 |   0.5 | $  35.0 |
 | EMPHATIC             |     3 |   6.5 | $ 455.0 |
 | EMPHATIC             |     4 |   4.5 | $ 315.0 |
 | EMPHATIC             |     5 |   7.0 | $ 490.0 |
 | EMPHATIC             |     6 |  22.0 | $1540.0 |
 | EMPHATIC             |     7 |   6.5 | $ 455.0 |
-| EMPHATIC             |     8 |   0.0 | $   0.0 |
+| EMPHATIC             |     8 |   1.0 | $  70.0 |
 | CMS-EMU-OPS-CSC      |     3 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-CSC      |     4 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     5 |   0.5 | $  35.0 |
@@ -181,7 +181,7 @@ python plots.py
 | APOLLO               |     5 |   0.0 | $   0.0 |
 | APOLLO               |     6 |   5.5 | $ 385.0 |
 | APOLLO               |     7 |  31.5 | $2205.0 |
-| APOLLO               |     8 |   3.0 | $ 210.0 |
+| APOLLO               |     8 |   5.5 | $ 385.0 |
 
 ** Summary
 #+begin_src python :var figname="work_history_total.png" :results file :exports results
@@ -1017,39 +1017,63 @@ return (plots.plot_table(figname, zeynepize=True))
 ** August 2021
  #+ATTR_HTML: :border 2 :frame none
  #+TBLNAME: 2021-08
- |---+---+----------+----------+--------------------------------+-----+-------|
- |   | D |     Time | Project  | Task                           | Day | Hours |
- |---+---+----------+----------+--------------------------------+-----+-------|
- | # |   |          |          |                                |     |       |
- | # | 2 |     9-12 | APOLLO   | Regmap                         | MON |   3.0 |
- | # | 2 |     12-1 | --       | LUNCH                          | MON |   1.0 |
- | # | 2 |      1-2 | L0MDT    | Regmap update                  | MON |   1.0 |
- | # | 2 |      2-3 | L0MDT    | Meeting                        | MON |   1.0 |
- | # | 2 |   3-5:30 | ETL      | SW debugging; firmware updates | MON |   2.5 |
- | # |   |          |          |                                |     |       |
- | # | 3 |     9-10 | ETL      | Link format                    | TUE |   1.0 |
- | # | 3 |    10-11 | --       | Office moving                  | TUE |   1.0 |
- | # | 3 |    11-12 | ME0      | Meeting                        | TUE |   1.0 |
- | # | 3 |     12-1 | --       | LUNCH                          | TUE |   1.0 |
- | # | 3 |      1-6 | ETL      | Readout board schematic        | TUE |   5.0 |
- | # | 3 |      6-7 | ETL      | Managers                       | TUE |   1.0 |
- | # |   |          |          |                                |     |       |
- | # | 4 |     9-11 | ETL      | Readout board schematic        | WED |   2.0 |
- | # | 4 |    11-12 | L0MDT    | Firmware updates               | WED |   1.0 |
- | # | 4 |     12-1 | Tracker  | Meeting                        | WED |   1.0 |
- | # | 4 |      1-2 | L0MDT    | Firmware updates               | WED |   1.0 |
- | # | 4 |   2-3:30 | ME0      | Chloe                          | WED |   1.5 |
- | # | 4 |   3:30-4 | L0MDT    | Firmware updates               | WED |   0.5 |
- | # | 4 |   4-6:00 | ETL      | Meeting                        | WED |   2.0 |
- | # |   |          |          |                                |     |       |
- | # | 5 |     9-10 | ETL      | Slides                         | THU |   1.0 |
- | # | 5 | 10-12:00 | L0MDT    | Firmware updates               | THU |   2.0 |
- | # | 5 | 12-12:30 | --       | LUNCH                          | THU |   0.5 |
- | # | 5 |  12:30-1 | EMPHATIC | Talk with Eric                 | THU |   0.5 |
- | # | 5 |   1-1:30 | ETL      | Talk with Eric, Daniel         | THU |   0.5 |
- | # | 5 |   1:30-3 | L0MDT    | Firmware updates               | THU |   1.5 |
- | # | 5 |   3-3:30 | ETL      | SW debugging                   | THU |   0.5 |
- | # | 5 |   3:30-6 | L0MDT    | Firmware updates               | THU |   2.5 |
- | # |   |          |          |                                |     |       |
- |---+---+----------+----------+--------------------------------+-----+-------|
+ |---+----+------------+----------+-------------------------------------+-----+-------|
+ |   |  D |       Time | Project  | Task                                | Day | Hours |
+ |---+----+------------+----------+-------------------------------------+-----+-------|
+ | # |    |            |          |                                     |     |       |
+ | # |  2 |       9-12 | APOLLO   | Regmap                              | MON |   3.0 |
+ | # |  2 |       12-1 | --       | LUNCH                               | MON |   1.0 |
+ | # |  2 |        1-2 | L0MDT    | Regmap update                       | MON |   1.0 |
+ | # |  2 |        2-3 | L0MDT    | Meeting                             | MON |   1.0 |
+ | # |  2 |     3-5:30 | ETL      | SW debugging; firmware updates      | MON |   2.5 |
+ | # |    |            |          |                                     |     |       |
+ | # |  3 |       9-10 | ETL      | Link format                         | TUE |   1.0 |
+ | # |  3 |      10-11 | --       | Office moving                       | TUE |   1.0 |
+ | # |  3 |      11-12 | ME0      | Meeting                             | TUE |   1.0 |
+ | # |  3 |       12-1 | --       | LUNCH                               | TUE |   1.0 |
+ | # |  3 |        1-6 | ETL      | Readout board schematic             | TUE |   5.0 |
+ | # |  3 |        6-7 | ETL      | Managers                            | TUE |   1.0 |
+ | # |    |            |          |                                     |     |       |
+ | # |  4 |       9-11 | ETL      | Readout board schematic             | WED |   2.0 |
+ | # |  4 |      11-12 | L0MDT    | Firmware updates                    | WED |   1.0 |
+ | # |  4 |       12-1 | Tracker  | Meeting                             | WED |   1.0 |
+ | # |  4 |        1-2 | L0MDT    | Firmware updates                    | WED |   1.0 |
+ | # |  4 |     2-3:30 | ME0      | Chloe                               | WED |   1.5 |
+ | # |  4 |     3:30-4 | L0MDT    | Firmware updates                    | WED |   0.5 |
+ | # |  4 |     4-6:00 | ETL      | Meeting                             | WED |   2.0 |
+ | # |    |            |          |                                     |     |       |
+ | # |  5 |       9-10 | ETL      | Slides                              | THU |   1.0 |
+ | # |  5 |   10-12:00 | L0MDT    | Firmware updates                    | THU |   2.0 |
+ | # |  5 |   12-12:30 | --       | LUNCH                               | THU |   0.5 |
+ | # |  5 |    12:30-1 | EMPHATIC | Talk with Eric                      | THU |   0.5 |
+ | # |  5 |     1-1:30 | ETL      | Talk with Eric, Daniel              | THU |   0.5 |
+ | # |  5 |     1:30-3 | L0MDT    | Firmware updates                    | THU |   1.5 |
+ | # |  5 |     3-3:30 | ETL      | SW debugging                        | THU |   0.5 |
+ | # |  5 |     3:30-6 | L0MDT    | Firmware updates                    | THU |   2.5 |
+ | # |    |            |          |                                     |     |       |
+ | # |  6 |       9-11 | L0MDT    | Firmware updates                    | FRI |   2.0 |
+ | # |  6 |      11-12 | APOLLO   | IPMC                                | FRI |   1.0 |
+ | # |  6 |       12-1 | --       | LUNCH                               | FRI |   1.0 |
+ | # |  6 |        1-2 | L0MDT    | Firmware updates                    | FRI |   1.0 |
+ | # |  6 |        2-3 | ME0      | Schematic updates; Review responses | FRI |   1.0 |
+ | # |  6 |     3-4:30 | APOLLO   | IPMC                                | FRI |   1.0 |
+ | # |    |            |          |                                     |     |       |
+ | # |  9 |     9-9:30 | GE21     | Gitlab repo                         | MON |   0.5 |
+ | # |  9 |    9:30-10 | GE11     | Gitlab repo                         | MON |   0.5 |
+ | # |  9 |   10-12:30 | L0MDT    | Firmware updates                    | MON |   2.5 |
+ | # |  9 | 12:30-2:30 | L0MDT    | Firmware updates                    | MON |   2.0 |
+ | # |  9 |  2:30-3:30 | --       | LUNCH                               | MON |   1.0 |
+ | # |  9 |  3:30-5:30 | L0MDT    | Firmware updates                    | MON |   2.0 |
+ | # |    |            |          |                                     |     |       |
+ | # | 10 |    9:30-10 | APOLLO   | IPMC                                | TUE |   0.5 |
+ | # | 10 |   10-10:30 | ETL      | Slides                              | TUE |   0.5 |
+ | # | 10 |   10:30-11 | ETL      | Slides                              | TUE |   0.5 |
+ | # | 10 |   11-12:30 | ME0      | Meeting                             | TUE |   1.5 |
+ | # | 10 | 12:30-1:30 | APOLLO   | Power outage                        | TUE |   1.0 |
+ | # | 10 |     1:30-2 | L0MDT    | Firmware updates                    | TUE |   0.5 |
+ | # | 10 |        2-3 | L0MDT    | Firmware updates                    | TUE |   2.0 |
+ | # | 10 |     3-6:30 | ETL      | RB testing                          | TUE |   3.5 |
+ | # | 10 |     6:30-7 | EMPHATIC | Tejasava                            | TUE |   0.5 |
+ | # |    |            |          |                                     |     |       |
+ |---+----+------------+----------+-------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2021"))::$7='(org-sbe subtract (a $$3))
