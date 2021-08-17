@@ -7,6 +7,7 @@ import dateutil
 import pprint
 from collections import OrderedDict
 
+
 def plot_table(figname, zeynepize=False, indaraize=False):
 
     month_begin = 13
@@ -35,7 +36,8 @@ def plot_table(figname, zeynepize=False, indaraize=False):
     date_range = int((end_date - start_date).days / 7)
     date_list = []
     d = start_date
-    for x in range (date_range):
+
+    for x in range(date_range):
         d = (d + datetime.timedelta(weeks=1))
         date_list.append("%d/%02d" % (d.month, d.day-d.day % 7 + 1))
 
@@ -138,12 +140,14 @@ def plot_table(figname, zeynepize=False, indaraize=False):
 
         for prj in projects:
             for day in range(len(y[0])):
-                if (prj in ["CMS-ETL", "CMS-EMU-UPGRADE-ME0", "CMS-EMU-UPGRADE-GE21", "CMS-EMU-OPS-CSC","CMS-EMU-OPS-GE11"]):
+                if (prj in ["CMS-ETL", "CMS-EMU-UPGRADE-ME0",
+                            "CMS-EMU-UPGRADE-GE21",
+                            "CMS-EMU-OPS-CSC", "CMS-EMU-OPS-GE11"]):
                     indara[day] += projects[prj][day]
                 else:
                     not_indara[day] += projects[prj][day]
 
-        y=[indara,not_indara]
+        y = [indara, not_indara]
 
     if (zeynepize):
         zeynep = [0 for j in range(len(y[0]))]
@@ -156,7 +160,7 @@ def plot_table(figname, zeynepize=False, indaraize=False):
                 else:
                     not_zeynep[day] += projects[prj][day]
 
-        y=[zeynep,not_zeynep]
+        y = [zeynep, not_zeynep]
 
     if (normalize):
         for week in range(len(y[0])):
@@ -167,8 +171,8 @@ def plot_table(figname, zeynepize=False, indaraize=False):
                 sum += y[prj][week]
 
             for prj in range(len(y)):
-                if sum>0:
-                  y[prj][week] = y[prj][week]/sum
+                if sum > 0:
+                    y[prj][week] = y[prj][week]/sum
 
     plt.xticks(rotation=75, ha='right')
 
@@ -178,7 +182,8 @@ def plot_table(figname, zeynepize=False, indaraize=False):
     plt.margins(y=0)
 
     if (indaraize):
-        plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"], colors = ["#008080","#abcdef"])
+        plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"],
+                      colors = ["#008080","#abcdef"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif (zeynepize):
@@ -193,8 +198,9 @@ def plot_table(figname, zeynepize=False, indaraize=False):
 
     return "./%s" % figname
 
+
 if __name__ == "__main__":
-    if sys.version_info < (3,0,0):
+    if sys.version_info < (3, 0, 0):
         print(__file__ + ' requires Python 3, while Python ' +
               str(sys.version[0] + ' was detected. Terminating. '))
         sys.exit(1)
