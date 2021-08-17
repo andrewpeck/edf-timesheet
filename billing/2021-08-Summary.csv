@@ -17,13 +17,14 @@ CMS-EMU-UPGRADE-ME0,0,1.00,1.50,0,1.00,0,0,Chloe; Meeting; Review responses; Sch
 CMS-PIXEL-DTC,0,0,1.00,0,0,0,0,Meeting
 EMPHATIC,0,0,0,0.50,0,0,0,Talk with Eric
 ,9,10,11,12,13,14,15,
-APOLLO,0,0.50,0,0,0,0,0,IPMC
-ATLAS-MUON-PHASE2,6.50,2.00,0,0,0,0,0,Firmware updates
-CMS-ETL,0,4.50,0,0,0,0,0,RB testing; Slides
-CMS-EMU-UPGRADE-ME0,0,1.50,0,0,0,0,0,Meeting
+APOLLO,0,1.50,1.00,0,0.50,0,0,IPMC; IPMC Firmware updates; Power outage
+ATLAS-MUON-PHASE2,6.50,2.50,1.50,2.50,0,0,0,Firmware; Firmware issues; Firmware updates; meetings
+CMS-ETL,0,4.50,2.50,2.50,2.50,0,0,Board testing; Daniel; KCU Setup; RB Testing; RB testing; Slides; Slides w/ Chris+Daniel; Tejasava; meeting
+CMS-EMU-UPGRADE-ME0,0,1.50,0,2.50,0.50,0,0,Chat w/ UCLA; Chloe; Meeting
+CMS-PIXEL-DTC,0,0,1.00,0,1.00,0,0,Firmware updates; Meeting
 EMPHATIC,0,0.50,0,0,0,0,0,Tejasava
-CMS-EMU-UPGRADE-GE21,0.50,0,0,0,0,0,0,Gitlab repo
-CMS-EMU-OPS-GE11,0.50,0,0,0,0,0,0,Gitlab repo
+CMS-EMU-UPGRADE-GE21,0.50,0,0,0,1.00,0,0,Gitlab repo; Metadata format
+CMS-EMU-OPS-GE11,0.50,0,0,0,1.00,0,0,Gitlab repo; Metadata format
 ,16,17,18,19,20,21,22,
 ,23,24,25,26,27,28,29,
 ,30,31,1*,2*,3*,4*,5*,

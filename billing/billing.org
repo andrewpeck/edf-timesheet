@@ -1,10 +1,102 @@
 #+TITLE: Billing
 #+SETUPFILE: "../org.setup"
+* Visualization
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+** Accruals
+#+begin_src bash :exports results
+python plots.py
+#+end_src
+
+#+RESULTS:
+| Project              | Month | Hours | Cost    |
+| CMS-ETL              |     3 |  18.0 | $1260.0 |
+| CMS-ETL              |     4 |  17.5 | $1225.0 |
+| CMS-ETL              |     5 |  19.5 | $1365.0 |
+| CMS-ETL              |     6 |  21.0 | $1470.0 |
+| CMS-ETL              |     7 |  32.5 | $2275.0 |
+| CMS-ETL              |     8 |  25.0 | $1750.0 |
+| ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
+| ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
+| ATLAS-MUON-PHASE2    |     5 |  37.5 | $2625.0 |
+| ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
+| ATLAS-MUON-PHASE2    |     7 |  16.5 | $1155.0 |
+| ATLAS-MUON-PHASE2    |     8 |  26.5 | $1855.0 |
+| CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
+| CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
+| CMS-PIXEL-DTC        |     5 |  31.5 | $2205.0 |
+| CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
+| CMS-PIXEL-DTC        |     7 |   9.0 | $ 630.0 |
+| CMS-PIXEL-DTC        |     8 |   2.0 | $ 140.0 |
+| CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
+| CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
+| CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
+| CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
+| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
+| CMS-EMU-UPGRADE-ME0  |     8 |   7.5 | $ 525.0 |
+| CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
+| CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
+| CMS-EMU-UPGRADE-GE21 |     5 |  10.5 | $ 735.0 |
+| CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
+| CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 210.0 |
+| CMS-EMU-UPGRADE-GE21 |     8 |   0.5 | $  35.0 |
+| CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
+| CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
+| CMS-EMU-OPS-GE11     |     5 |   3.0 | $ 210.0 |
+| CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
+| CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 420.0 |
+| CMS-EMU-OPS-GE11     |     8 |   0.5 | $  35.0 |
+| EMPHATIC             |     3 |   6.5 | $ 455.0 |
+| EMPHATIC             |     4 |   4.5 | $ 315.0 |
+| EMPHATIC             |     5 |   7.0 | $ 490.0 |
+| EMPHATIC             |     6 |  22.0 | $1540.0 |
+| EMPHATIC             |     7 |   6.5 | $ 455.0 |
+| EMPHATIC             |     8 |   1.0 | $  70.0 |
+| CMS-EMU-OPS-CSC      |     3 |   0.5 | $  35.0 |
+| CMS-EMU-OPS-CSC      |     4 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-CSC      |     5 |   0.5 | $  35.0 |
+| CMS-EMU-OPS-CSC      |     6 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 140.0 |
+| CMS-EMU-OPS-CSC      |     8 |   0.0 | $   0.0 |
+| APOLLO               |     3 |   0.0 | $   0.0 |
+| APOLLO               |     4 |   0.0 | $   0.0 |
+| APOLLO               |     5 |   0.0 | $   0.0 |
+| APOLLO               |     6 |   5.5 | $ 385.0 |
+| APOLLO               |     7 |  31.5 | $2205.0 |
+| APOLLO               |     8 |   7.5 | $ 525.0 |
+
+** Summary
+#+begin_src python :var figname="work_history_total.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, False))
+#+end_src
+#+RESULTS:
+[[file:./work_history_total.png]]
+** Indara
+#+begin_src python :var figname="work_history_indara.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, indaraize=True))
+#+end_src
+
+#+RESULTS:
+[[file:./work_history_indara.png]]
+** Zeynep
+#+begin_src python :var figname="work_history_zeynep.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, zeynepize=True))
+#+end_src
+
+#+RESULTS:
+[[file:./work_history_zeynep.png]]
 * Helpers :noexport:
 :PROPERTIES:
 :VISIBILITY: children
 :END:
-** Clock
+** Clock Functions
 #+NAME: ymd_to_weekday
 #+begin_src emacs-lisp :output both
 ;; press C-c ' here to edit in emacs-lisp-mode
@@ -117,102 +209,30 @@
 # eval: (add-hook 'after-save-hook #'org-html-export-to-html nil 'local)
 # eval: (ap/nowrap)
 # End:
-* Visualization
-:PROPERTIES:
-:VISIBILITY: children
-:END:
-** Accruals
-#+begin_src bash :exports results
-python plots.py
-#+end_src
-
-#+RESULTS:
-| Project              | Month | Hours | Cost    |
-| CMS-ETL              |     3 |  18.0 | $1260.0 |
-| CMS-ETL              |     4 |  17.5 | $1225.0 |
-| CMS-ETL              |     5 |  19.5 | $1365.0 |
-| CMS-ETL              |     6 |  21.0 | $1470.0 |
-| CMS-ETL              |     7 |  32.5 | $2275.0 |
-| CMS-ETL              |     8 |  20.0 | $1400.0 |
-| ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
-| ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
-| ATLAS-MUON-PHASE2    |     5 |  37.5 | $2625.0 |
-| ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
-| ATLAS-MUON-PHASE2    |     7 |  16.5 | $1155.0 |
-| ATLAS-MUON-PHASE2    |     8 |  22.0 | $1540.0 |
-| CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
-| CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
-| CMS-PIXEL-DTC        |     5 |  31.5 | $2205.0 |
-| CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
-| CMS-PIXEL-DTC        |     7 |   9.0 | $ 630.0 |
-| CMS-PIXEL-DTC        |     8 |   1.0 | $  70.0 |
-| CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
-| CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
-| CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
-| CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
-| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
-| CMS-EMU-UPGRADE-ME0  |     8 |   5.0 | $ 350.0 |
-| CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
-| CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
-| CMS-EMU-UPGRADE-GE21 |     5 |  10.5 | $ 735.0 |
-| CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
-| CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 210.0 |
-| CMS-EMU-UPGRADE-GE21 |     8 |   0.5 | $  35.0 |
-| CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
-| CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
-| CMS-EMU-OPS-GE11     |     5 |   3.0 | $ 210.0 |
-| CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
-| CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 420.0 |
-| CMS-EMU-OPS-GE11     |     8 |   0.5 | $  35.0 |
-| EMPHATIC             |     3 |   6.5 | $ 455.0 |
-| EMPHATIC             |     4 |   4.5 | $ 315.0 |
-| EMPHATIC             |     5 |   7.0 | $ 490.0 |
-| EMPHATIC             |     6 |  22.0 | $1540.0 |
-| EMPHATIC             |     7 |   6.5 | $ 455.0 |
-| EMPHATIC             |     8 |   1.0 | $  70.0 |
-| CMS-EMU-OPS-CSC      |     3 |   0.5 | $  35.0 |
-| CMS-EMU-OPS-CSC      |     4 |   0.0 | $   0.0 |
-| CMS-EMU-OPS-CSC      |     5 |   0.5 | $  35.0 |
-| CMS-EMU-OPS-CSC      |     6 |   0.0 | $   0.0 |
-| CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 140.0 |
-| CMS-EMU-OPS-CSC      |     8 |   0.0 | $   0.0 |
-| APOLLO               |     3 |   0.0 | $   0.0 |
-| APOLLO               |     4 |   0.0 | $   0.0 |
-| APOLLO               |     5 |   0.0 | $   0.0 |
-| APOLLO               |     6 |   5.5 | $ 385.0 |
-| APOLLO               |     7 |  31.5 | $2205.0 |
-| APOLLO               |     8 |   5.5 | $ 385.0 |
-
-** Summary
-#+begin_src python :var figname="work_history_total.png" :results file :exports results
-#!/usr/bin/env python3
-import plots
-return (plots.plot_table(figname, False))
-#+end_src
-#+RESULTS:
-[[file:./work_history_total.png]]
-** Indara
-#+begin_src python :var figname="work_history_indara.png" :results file :exports results
-#!/usr/bin/env python3
-import plots
-return (plots.plot_table(figname, indaraize=True))
-#+end_src
-
-#+RESULTS:
-[[file:./work_history_indara.png]]
-** Zeynep
-#+begin_src python :var figname="work_history_zeynep.png" :results file :exports results
-#!/usr/bin/env python3
-import plots
-return (plots.plot_table(figname, zeynepize=True))
-#+end_src
-
-#+RESULTS:
-[[file:./work_history_zeynep.png]]
 * Hours
 :PROPERTIES:
 :VISIBILITY: children
 :END:
+** February 2021
+#+ATTR_HTML: :border 2 :frame none
+#+TBLNAME: 2021-02
+|---+---+------------+---------+-------------------------------+-----+-------|
+|   | D |       Time | Project | Task                          |     | Hours |
+|---+---+------------+---------+-------------------------------+-----+-------|
+| # | 1 |       12-2 | ETL     | Ethernet mac                  | MON |   2.0 |
+| # | 1 |        2-3 | L0MDT   | Bu Meeting                    | MON |   1.0 |
+| # | 1 |        3-4 | Tracker | Meeting with Tom etc          | MON |   1.0 |
+| # | 1 |        4-6 | ETL     | Ethernet mac                  | MON |   2.0 |
+| # |   |            |         |                               |     |       |
+| # | 2 |       9-11 | ETL     | Firmware; purchasing          | TUE |   2.0 |
+| # | 2 |      11-12 | L0MDT   | Purchase Fibers               | TUE |   1.0 |
+| # | 2 |   12-12:30 | --      | Chat with Eric                | TUE |   0.5 |
+| # | 2 | 12:30-2:30 | ETL     | PCB Orders; Firmware; Digikey | TUE |   2.0 |
+| # | 2 |        4-5 | Tracker | IPMC                          | TUE |   1.0 |
+| # |   |            |         |                               |     |       |
+| # |   |            |         |                               |     |       |
+|---+---+------------+---------+-------------------------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"February 2021"))::$7='(org-sbe subtract (a $$3))
 ** March 2021
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: 2021-03
@@ -1058,6 +1078,8 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |  6 |        2-3 | ME0      | Schematic updates; Review responses | FRI |   1.0 |
  | # |  6 |     3-4:30 | APOLLO   | IPMC                                | FRI |   1.0 |
  | # |    |            |          |                                     |     |       |
+ |---+----+------------+----------+-------------------------------------+-----+-------|
+ | # |    |            |          |                                     |     |       |
  | # |  9 |     9-9:30 | GE21     | Gitlab repo                         | MON |   0.5 |
  | # |  9 |    9:30-10 | GE11     | Gitlab repo                         | MON |   0.5 |
  | # |  9 |   10-12:30 | L0MDT    | Firmware updates                    | MON |   2.5 |
@@ -1074,6 +1096,48 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 10 |        2-3 | L0MDT    | Firmware updates                    | TUE |   2.0 |
  | # | 10 |     3-6:30 | ETL      | RB testing                          | TUE |   3.5 |
  | # | 10 |     6:30-7 | EMPHATIC | Tejasava                            | TUE |   0.5 |
+ | # |    |            |          |                                     |     |       |
+ | # | 11 |     9-9:30 | ETL      | Slides                              | WED |   0.5 |
+ | # | 11 | 9:30-10:30 | --       | Office moving                       | WED |   1.0 |
+ | # | 11 |   10:30-12 | L0MDT    | Firmware issues                     | WED |   1.5 |
+ | # | 11 |       12-1 | Tracker  | Meeting                             | WED |   1.0 |
+ | # | 11 |        1-2 | APOLLO   | IPMC Firmware updates               | WED |   1.0 |
+ | # | 11 |        3-5 | ETL      | Board testing; meeting              | WED |   2.0 |
+ | # |    |            |          |                                     |     |       |
+ | # | 12 |       9-11 | L0MDT    | meetings                            | THU |   2.0 |
+ | # | 12 |   11-11:30 | ETL      | Tejasava                            | THU |   0.5 |
+ | # | 12 |   11:30-12 | --       | Office setup (monitors)             | THU |   0.5 |
+ | # | 12 |   12-12:30 | L0MDT    | Firmware                            | THU |   0.5 |
+ | # | 12 |    12:30-1 | ETL      | Slides                              | THU |   0.5 |
+ | # | 12 |        1-2 | ETL      | KCU Setup                           | THU |   1.0 |
+ | # | 12 |     2-3:30 | ME0      | Chloe                               | THU |   1.5 |
+ | # | 12 |        4-5 | ME0      | Meeting                             | THU |   1.0 |
+ | # | 12 |     5:30-6 | ETL      | Slides w/ Chris+Daniel              | THU |   0.5 |
+ | # |    |            |          |                                     |     |       |
+ | # | 13 |   10-10:30 | ME0      | Chat w/ UCLA                        | FRI |   0.5 |
+ | # | 13 |   10:30-11 | ETL      | Daniel                              | FRI |   0.5 |
+ | # | 13 |   11-11:30 | APOLLO   | IPMC                                | FRI |   0.5 |
+ | # | 13 |   11:30-12 | GE11     | Metadata format                     | FRI |   0.5 |
+ | # | 13 |   11-11:30 | GE21     | Metadata format                     | FRI |   0.5 |
+ | # | 13 |       12-1 | --       | LUNCH                               | FRI |   1.0 |
+ | # | 13 |     1-1:30 | GE11     | Metadata format                     | FRI |   0.5 |
+ | # | 13 |     1:30-2 | GE21     | Metadata format                     | FRI |   0.5 |
+ | # | 13 |        2-3 | IPMC     | Firmware updates                    | FRI |   1.0 |
+ | # | 13 |        3-5 | ETL      | RB Testing                          | FRI |   2.0 |
+ | # |    |            |          |                                     |     |       |
+ |---+----+------------+----------+-------------------------------------+-----+-------|
+ | # |    |            |          |                                     |     |       |
+ | # | 16 |    9:30-10 | APOLLO   | Chat w/ Dan                         | MON |   0.5 |
+ | # | 16 |   10-11:30 | ETL      | VTRX+ I2C Debug                     | MON |   1.5 |
+ | # | 16 |    11:30-1 | L0MDT    | Firmware updates                    | MON |   1.5 |
+ | # | 16 |     1-1:30 | CSC      | Crate shipping                      | MON |   0.5 |
+ | # | 16 |     1:30-2 | L0MDT    | Firmware updates                    | MON |   0.5 |
+ | # | 16 |        2-3 | L0MDT    | Meeting                             | MON |   1.0 |
+ | # | 16 |     3-3:30 | APOLLO   | Chat w/ Dan                         | MON |   0.5 |
+ | # | 16 |     4-5:30 | ETL      | Mechanics & connectors              | MON |   1.5 |
+ | # | 16 |            |          |                                     | MON |       |
+ | # |    |            |          |                                     |     |       |
+ | # |    |            |          |                                     |     |       |
  | # |    |            |          |                                     |     |       |
  |---+----+------------+----------+-------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2021"))::$7='(org-sbe subtract (a $$3))
