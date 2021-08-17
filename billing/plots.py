@@ -8,7 +8,7 @@ import pprint
 from collections import OrderedDict
 
 
-def plot_table(figname, zeynepize=False, indaraize=False):
+def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
 
     month_begin = 13
     year_begin = 3000
@@ -44,6 +44,28 @@ def plot_table(figname, zeynepize=False, indaraize=False):
     #print(date_list)
 
     work = sum_tables.parse_projects()
+
+    meetings = 0
+    not_meetings = 0
+
+    # for year in work.keys():
+    #     for month in work[year].keys():
+    #         for prj in work[year][month].keys():
+    #             for day in work[year][month][prj]:
+
+    #                 is_meeting = False
+    #                 hours = work[year][month][prj][day]["hours"]
+    #                 description = work[year][month][prj][day]["description"].lower()
+
+    #                 for mkey in ["meeting", "chat", "discuss"]:
+    #                     if mkey in description:
+    #                         is_meeting = True
+    #                         print(description)
+
+    #                 if (is_meeting):
+    #                     meetings += hours
+    #                 else:
+    #                     not_meetings += hours
 
     # gather a list of the projects
     projects = {}
@@ -162,6 +184,23 @@ def plot_table(figname, zeynepize=False, indaraize=False):
 
         y = [zeynep, not_zeynep]
 
+    # for prj in projects:
+    #     print(prj)
+    #     print(projects[prj])
+
+    # if (meetingize):
+    #     meetings = [0 for j in range(len(y[0]))]
+    #     not_meetings = [0 for j in range(len(y[0]))]
+
+    #     for prj in projects:
+    #         for day in range(len(y[0])):
+    #             if (projects[prj][day]["
+    #                 zeynep[day] +=
+    #             else:
+    #                 not_zeynep[day] += projects[prj][day]
+
+    #     y = [zeynep, not_zeynep]
+
     if (normalize):
         for week in range(len(y[0])):
 
@@ -195,6 +234,10 @@ def plot_table(figname, zeynepize=False, indaraize=False):
         plt.stackplot(x, y, labels=t)
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
         plt.savefig(figname, bbox_inches="tight")
+
+    # print("meetings: %d hours" % meetings)
+    # print("not_meetings: %d hours" % not_meetings)
+    # print("fraction of time in meetings = %f" % (meetings/(meetings + not_meetings)))
 
     return "./%s" % figname
 

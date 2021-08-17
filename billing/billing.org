@@ -11,60 +11,69 @@ python plots.py
 
 #+RESULTS:
 | Project              | Month | Hours | Cost    |
+| CMS-ETL              |     2 |  19.0 | $1330.0 |
 | CMS-ETL              |     3 |  18.0 | $1260.0 |
 | CMS-ETL              |     4 |  17.5 | $1225.0 |
 | CMS-ETL              |     5 |  19.5 | $1365.0 |
 | CMS-ETL              |     6 |  21.0 | $1470.0 |
 | CMS-ETL              |     7 |  32.5 | $2275.0 |
-| CMS-ETL              |     8 |  25.0 | $1750.0 |
+| CMS-ETL              |     8 |  31.5 | $2205.0 |
+| ATLAS-MUON-PHASE2    |     2 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
 | ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
 | ATLAS-MUON-PHASE2    |     5 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
 | ATLAS-MUON-PHASE2    |     7 |  16.5 | $1155.0 |
-| ATLAS-MUON-PHASE2    |     8 |  26.5 | $1855.0 |
+| ATLAS-MUON-PHASE2    |     8 |  31.5 | $2205.0 |
+| CMS-PIXEL-DTC        |     2 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
 | CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     5 |  31.5 | $2205.0 |
 | CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
 | CMS-PIXEL-DTC        |     7 |   9.0 | $ 630.0 |
-| CMS-PIXEL-DTC        |     8 |   2.0 | $ 140.0 |
-| CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
-| CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
-| CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
-| CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
-| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
-| CMS-EMU-UPGRADE-ME0  |     8 |   7.5 | $ 525.0 |
+| CMS-PIXEL-DTC        |     8 |   3.0 | $ 210.0 |
+| CMS-EMU-UPGRADE-GE21 |     2 |   3.0 | $ 210.0 |
 | CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
 | CMS-EMU-UPGRADE-GE21 |     5 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
 | CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 210.0 |
-| CMS-EMU-UPGRADE-GE21 |     8 |   0.5 | $  35.0 |
+| CMS-EMU-UPGRADE-GE21 |     8 |   3.0 | $ 210.0 |
+| CMS-EMU-UPGRADE-ME0  |     2 |   7.5 | $ 525.0 |
+| CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
+| CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
+| CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
+| CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
+| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
+| CMS-EMU-UPGRADE-ME0  |     8 |  11.0 | $ 770.0 |
+| CMS-EMU-OPS-GE11     |     2 |   4.0 | $ 280.0 |
 | CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
 | CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
 | CMS-EMU-OPS-GE11     |     5 |   3.0 | $ 210.0 |
 | CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
 | CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 420.0 |
-| CMS-EMU-OPS-GE11     |     8 |   0.5 | $  35.0 |
+| CMS-EMU-OPS-GE11     |     8 |   3.0 | $ 210.0 |
+| EMPHATIC             |     2 |   0.0 | $   0.0 |
 | EMPHATIC             |     3 |   6.5 | $ 455.0 |
 | EMPHATIC             |     4 |   4.5 | $ 315.0 |
 | EMPHATIC             |     5 |   7.0 | $ 490.0 |
 | EMPHATIC             |     6 |  22.0 | $1540.0 |
 | EMPHATIC             |     7 |   6.5 | $ 455.0 |
 | EMPHATIC             |     8 |   1.0 | $  70.0 |
+| CMS-EMU-OPS-CSC      |     2 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     3 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-CSC      |     4 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     5 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-CSC      |     6 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 140.0 |
-| CMS-EMU-OPS-CSC      |     8 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-CSC      |     8 |   0.5 | $  35.0 |
+| APOLLO               |     2 |   0.0 | $   0.0 |
 | APOLLO               |     3 |   0.0 | $   0.0 |
 | APOLLO               |     4 |   0.0 | $   0.0 |
 | APOLLO               |     5 |   0.0 | $   0.0 |
 | APOLLO               |     6 |   5.5 | $ 385.0 |
 | APOLLO               |     7 |  31.5 | $2205.0 |
-| APOLLO               |     8 |   7.5 | $ 525.0 |
+| APOLLO               |     8 |   9.0 | $ 630.0 |
 
 ** Summary
 #+begin_src python :var figname="work_history_total.png" :results file :exports results
@@ -216,22 +225,113 @@ return (plots.plot_table(figname, zeynepize=True))
 ** February 2021
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: 2021-02
-|---+---+------------+---------+-------------------------------+-----+-------|
-|   | D |       Time | Project | Task                          |     | Hours |
-|---+---+------------+---------+-------------------------------+-----+-------|
-| # | 1 |       12-2 | ETL     | Ethernet mac                  | MON |   2.0 |
-| # | 1 |        2-3 | L0MDT   | Bu Meeting                    | MON |   1.0 |
-| # | 1 |        3-4 | Tracker | Meeting with Tom etc          | MON |   1.0 |
-| # | 1 |        4-6 | ETL     | Ethernet mac                  | MON |   2.0 |
-| # |   |            |         |                               |     |       |
-| # | 2 |       9-11 | ETL     | Firmware; purchasing          | TUE |   2.0 |
-| # | 2 |      11-12 | L0MDT   | Purchase Fibers               | TUE |   1.0 |
-| # | 2 |   12-12:30 | --      | Chat with Eric                | TUE |   0.5 |
-| # | 2 | 12:30-2:30 | ETL     | PCB Orders; Firmware; Digikey | TUE |   2.0 |
-| # | 2 |        4-5 | Tracker | IPMC                          | TUE |   1.0 |
-| # |   |            |         |                               |     |       |
-| # |   |            |         |                               |     |       |
-|---+---+------------+---------+-------------------------------+-----+-------|
+|---+----+-------------+---------+--------------------------------------+-----+-------|
+|   |  D |        Time | Project | Task                                 |     | Hours |
+|---+----+-------------+---------+--------------------------------------+-----+-------|
+| # |  1 |        12-2 | ETL     | Ethernet mac                         | MON |   2.0 |
+| # |  1 |         2-3 | L0MDT   | Bu Meeting                           | MON |   1.0 |
+| # |  1 |         3-4 | Tracker | Meeting with Tom etc                 | MON |   1.0 |
+| # |  1 |         4-6 | ETL     | Ethernet mac                         | MON |   2.0 |
+| # |    |             |         |                                      |     |       |
+| # |  2 |        9-11 | ETL     | Firmware; purchasing                 | TUE |   2.0 |
+| # |  2 |       11-12 | L0MDT   | Purchase Fibers                      | TUE |   1.0 |
+| # |  2 |    12-12:30 | --      | Chat with Eric                       | TUE |   0.5 |
+| # |  2 |  12:30-2:30 | ETL     | PCB Orders; Firmware; Digikey        | TUE |   2.0 |
+| # |  2 |         4-5 | Tracker | IPMC                                 | TUE |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # |  3 |        9-10 | Tracker | Meeting                              | WED |   1.0 |
+| # |  3 |        11-4 | Tracker | IPMC                                 | WED |   5.0 |
+| # |    |             |         |                                      |     |       |
+| # |  4 |      1-1:30 | GE21    | Accruals                             | THU |   0.5 |
+| # |  4 |      1:30-2 | ME0     | Accruals                             |     |   0.5 |
+| # |    |             |         |                                      |     |       |
+| # |  5 |        9-11 | Tracker | DAQ Meeting                          | FRI |   2.0 |
+| # |  5 |         2-3 | ME0     | Meeting w/ UCLA                      | FRI |   1.0 |
+| # |  5 |      3-4:30 | ETL     | Meet w/ Chris                        | FRI |   1.5 |
+| # |  5 |         1-2 | GE11    | Firmware                             | FRI |   1.0 |
+| # |  5 |      4:30-6 | GE11    | Firwmare                             | FRI |   1.5 |
+| # |    |             |         |                                      |     |       |
+|---+----+-------------+---------+--------------------------------------+-----+-------|
+| # |  8 |  9:30-10:30 | --      | ADMIN                                | MON |   1.0 |
+| # |  8 |    10:30-12 | --      | Billing                              | MON |   1.5 |
+| # |  8 |         2-3 | L0MDT   | Meeting                              | MON |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # |  9 |        12-4 | ETL     | Firmware updates; testing of trigger | TUE |   4.0 |
+| # |    |             |         |                                      |     |       |
+| # | 10 |        9-10 | Tracker | Meeting                              | WED |   1.0 |
+| # | 10 |       10-11 | Tracker | IPMC                                 | WED |   1.0 |
+| # | 10 |        12-1 | L0MDT   | Tube mapping meeting                 | WED |   1.0 |
+| # | 10 |      5-5:30 | ME0     | UCLA meeting                         | WED |   0.5 |
+| # | 10 |   5:30-6:30 | Tracker | IPMC                                 | WED |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # | 11 |        9-11 | L0MDT   | Meeting                              | THU |   2.0 |
+| # | 11 | 10:30-11:30 | GE21    | Meeting                              | THU |   1.0 |
+| # | 11 |         2-3 | ETL     | Meeting                              | THU |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # | 12 |        9-10 | Tracker | Meeting                              | FRI |   1.0 |
+| # | 12 |       10-11 | Tracker | IPMC                                 | FRI |   1.0 |
+| # | 12 |         2-3 | ME0     | Meeting                              | FRI |   1.0 |
+| # | 12 |        12-2 | --      | EDF LUNCH                            | FRI |   2.0 |
+| # |    |             |         |                                      |     |       |
+|---+----+-------------+---------+--------------------------------------+-----+-------|
+|   |    |             |         |                                      |     |       |
+| # | 15 |         9-5 | HOLIDAY |                                      | MON |   8.0 |
+| # |    |             |         |                                      |     |       |
+| # | 16 |        9-11 | L0MDT   | Soc Meeting                          | TUE |   2.0 |
+| # | 16 |  12:30-1:30 | ETL     | Reading proposal document            | TUE |   1.0 |
+| # | 16 |      3:30-4 | ETL     | Meet w/ Daniel & Chris               | TUE |   0.5 |
+| # |    |             |         |                                      |     |       |
+| # | 17 |     9-10:30 | Tracker | Meet w/ Zeynep                       | WED |   1.5 |
+| # | 17 |        12-3 | Tracker | IPMC                                 | WED |   3.0 |
+| # | 17 |         3-4 | GE11    | Laurent & Evaldas                    | WED |   1.0 |
+| # | 17 |      4-4:30 | GE21    | Laurent & Evaldas                    | WED |   0.5 |
+| # | 17 |   4:30-5:30 | ME0     | Firmware                             | WED |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # | 18 |       10-11 | L0MDT   | EE Meeting                           | THU |   1.0 |
+| # | 18 |     9:30-10 | Tracker | IPMC                                 | THU |   0.5 |
+| # | 18 |      9-9:30 | ME0     | Segment finding slides               | THU |   0.5 |
+| # | 18 |        11-1 | L0MDT   | Slides (axi clock domain)            | THU |   2.0 |
+| # | 18 |         1-2 | ETL     | Software discussion                  | THU |   1.0 |
+| # | 18 |      3-3:30 | GE11    | Laurent & Evaldas                    | THU |   0.5 |
+| # | 18 |      4-4:30 | ETL     | Software                             | THU |   0.5 |
+| # | 18 |      4:30-5 | ME0     | Firmware                             | THU |   0.5 |
+| # |    |             |         |                                      |     |       |
+| # | 19 |     9:30-10 | L0MDT   | Emails to Markus and Xueye           | FRI |   0.5 |
+| # | 19 |        10-1 | L0MDT   | Monitoring/Yaml/Tcl                  | FRI |   3.0 |
+| # | 19 |         1-2 | L0MDT   | AXI Control                          | FRI |   1.0 |
+| # | 19 |         2-3 | ME0     | UCLA Meeting                         | FRI |   1.0 |
+| # | 19 |         3-4 | L0MDT   | Chat w/ Dan                          | FRI |   1.0 |
+| # | 19 |         4-7 | L0MDT   | AXI                                  | FRI |   3.0 |
+| # | 19 |      8-8:30 | L0MDT   | AXI                                  | FRI |   0.5 |
+| # |    |             |         |                                      |     |       |
+|---+----+-------------+---------+--------------------------------------+-----+-------|
+| # |    |             |         |                                      |     |       |
+| # | 22 |    10-11:30 | L0MDT   | Yaml BD                              | MON |   1.5 |
+| # | 22 |     11:30-1 | L0MDT   | Chat w/ Eric                         | MON |   1.5 |
+| # | 22 |         1-7 | L0MDT   | Yaml BD                              | MON |   6.0 |
+| # |    |             |         |                                      |     |       |
+| # | 23 |       11-12 | L0MDT   | HOG Meeting                          | MON |   1.0 |
+| # | 23 |        12-1 | L0MDT   | Slides                               | MON |   1.0 |
+| # | 23 |         1-2 | L0MDT   | Slides                               | MON |   1.0 |
+| # | 23 |         2-5 | SICK    | Chiropractor                         | TUE |   3.0 |
+| # |    |             |         |                                      |     |       |
+| # | 24 |     9-10:30 | Tracker | Meeting                              | WED |   1.5 |
+| # | 24 |     10:30-5 | SICK    | Back problems :(                     | WED |   6.5 |
+| # |    |             |         |                                      |     |       |
+| # | 25 |     9-11:30 | L0MDT   | Firmware build                       | THU |   2.5 |
+| # | 25 |        12-3 | L0MDT   | Firmware build                       | THU |   3.0 |
+| # | 25 |         3-4 | Tracker | IPMC                                 | THU |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # | 26 |     9-11:30 | Tracker | Meeting; IPMC                        | FRI |   2.5 |
+| # | 26 |     11:30-2 | --      | LUNCH                                | FRI |   2.5 |
+| # | 26 |         2-5 | Tracker | IPMC                                 | FRI |   3.0 |
+| # | 26 |         5-6 | ETL     | Meet w/ Daniel + Chris               | FRI |   1.0 |
+| # | 26 |         4-5 | ME0     | UCLA meeting                         | FRI |   1.0 |
+| # |    |             |         |                                      |     |       |
+| # | 28 | 11:30-12:00 | GE21    | Accruals                             | SUN |   1.0 |
+| # | 28 | 12:00-12:30 | ME0     | Accruals                             | SUN |   0.5 |
+| # | 28 |     12:30-1 | ETL     | Slides                               | SUN |   0.5 |
+|---+----+-------------+---------+--------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"February 2021"))::$7='(org-sbe subtract (a $$3))
 ** March 2021
 #+ATTR_HTML: :border 2 :frame none
@@ -1135,8 +1235,13 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 16 |        2-3 | L0MDT    | Meeting                             | MON |   1.0 |
  | # | 16 |     3-3:30 | APOLLO   | Chat w/ Dan                         | MON |   0.5 |
  | # | 16 |     4-5:30 | ETL      | Mechanics & connectors              | MON |   1.5 |
- | # | 16 |            |          |                                     | MON |       |
  | # |    |            |          |                                     |     |       |
+ | # | 17 |       9-11 | L0MDT    | Firmware updates                    | TUE |   2.0 |
+ | # | 17 |      11-12 | ME0      | Meeting                             | TUE |   1.0 |
+ | # | 17 |       12-1 | ETL      | Connectors                          | TUE |   1.0 |
+ | # | 17 |     1-2:30 | GE21     |                                     | TUE |   1.5 |
+ | # | 17 |     2:30-4 | GE11     |                                     | TUE |   1.5 |
+ | # | 17 |        4-6 | ME0      | Meeting                             | TUE |   2.0 |
  | # |    |            |          |                                     |     |       |
  | # |    |            |          |                                     |     |       |
  |---+----+------------+----------+-------------------------------------+-----+-------|
