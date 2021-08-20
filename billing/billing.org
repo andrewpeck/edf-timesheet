@@ -1,5 +1,8 @@
 #+TITLE: Billing
 #+SETUPFILE: "../org.setup"
+
+https://vega.github.io/vega-lite/docs/stack.html
+
 * Visualization
 :PROPERTIES:
 :VISIBILITY: children
@@ -1239,10 +1242,30 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 17 |       9-11 | L0MDT    | Firmware updates                    | TUE |   2.0 |
  | # | 17 |      11-12 | ME0      | Meeting                             | TUE |   1.0 |
  | # | 17 |       12-1 | ETL      | Connectors                          | TUE |   1.0 |
- | # | 17 |     1-2:30 | GE21     |                                     | TUE |   1.5 |
- | # | 17 |     2:30-4 | GE11     |                                     | TUE |   1.5 |
+ | # | 17 |     1-2:30 | GE11     | Latency optimization                | TUE |   1.5 |
+ | # | 17 |     2:30-4 | GE11     | Latency optimization                | TUE |   1.5 |
  | # | 17 |        4-6 | ME0      | Meeting                             | TUE |   2.0 |
  | # |    |            |          |                                     |     |       |
+ | # | 18 |    9:30-10 | GE11     | Firmware repo                       | WED |   0.5 |
+ | # | 18 |   10-10:30 | GE21     | Firmware repo                       | WED |   1.0 |
+ | # | 18 |   10:30-11 | ME0      | Firmware repo                       | WED |   0.5 |
+ | # | 18 |      11-12 | ETL      | Debug w/ Daniel                     | WED |   1.0 |
+ | # | 18 |       12-1 | Tracker  | Meeting                             | WED |   1.0 |
+ | # | 18 |        1-2 | L0MDT    | Firmware                            | WED |   1.0 |
+ | # | 18 |        2-3 | ME0      | Apex/Hog issues                     | WED |   1.0 |
+ | # | 18 |        3-5 | ETL      | Debug w/ Daniel; Meeting            | WED |   2.0 |
+ | # |    |            |          |                                     |     |       |
+ | # | 19 |       9-10 | GE21     | Apex/Hog issues                     | THU |   1.0 |
+ | # | 19 |      10-11 | L0MDT    | Hog updates                         | THU |   1.0 |
+ | # | 19 |       11-2 | GE21     | Apex/Hog issues                     | THU |   3.0 |
+ | # | 19 |        2-4 | L0MDT    | Hog updates                         | THU |   2.0 |
+ | # | 19 |        4-5 | ME0      | Meeting                             | THU |   1.0 |
+ | # |    |            |          |                                     |     |       |
+ | # | 20 |       9-10 | L0MDT    | Hog updates                         | FRI |   1.0 |
+ | # | 20 |      10-11 | GE21     | Hog updates                         | FRI |   1.0 |
+ | # | 20 |      11-12 | GE11     | Hog updates                         | FRI |   1.0 |
+ | # | 20 |       12-1 | --       | LUNCH                               | FRI |   1.0 |
+ | # | 20 |        2-6 | ETL      | Firmware updates; Board debug       | FRI |   4.0 |
  | # |    |            |          |                                     |     |       |
  |---+----+------------+----------+-------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2021"))::$7='(org-sbe subtract (a $$3))
