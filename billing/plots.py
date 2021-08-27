@@ -7,6 +7,9 @@ import dateutil
 import pprint
 from collections import OrderedDict
 
+import altair as alt
+import pandas as pd
+#from vega_datasets import data
 
 def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
 
@@ -36,11 +39,12 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
     date_range = int((end_date - start_date).days / 7)
     date_list = []
     d = start_date
+    print(start_date)
 
     for x in range(date_range):
         d = (d + datetime.timedelta(weeks=1))
-        date_list.append("%d/%02d" % (d.month, d.day-d.day % 7 + 1))
-
+        #date_list.append("%d/%d/%02d" % (d.year, d.month, d.day % 7 +1))
+        date_list.append("%d/%d/%02d" % (d.year, d.month, (d.day) // 7))
     #print(date_list)
 
     work = sum_tables.parse_projects()
@@ -234,6 +238,26 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
         plt.stackplot(x, y, labels=t)
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
         plt.savefig(figname, bbox_inches="tight")
+        # print (date_range)
+        # print(len(x))
+        # print(len(y[0]))
+        # data = pd.DataFrame(
+        #     {
+        #         t[0]: y[0],
+        #         t[1]: y[1],
+        #         t[2]: y[1],
+        #         t[3]: y[2],
+        #         t[4]: y[3],
+        #         t[5]: y[4],
+        #         t[6]: y[5]
+        #     } #, index=x
+        #                           )
+        # ax = data.plot.area()
+
+        # print(data)
+        # chart = alt.Chart(data).mark_area().encode().show()
+        # chart.save(figname)
+
 
     # print("meetings: %d hours" % meetings)
     # print("not_meetings: %d hours" % not_meetings)
@@ -247,4 +271,4 @@ if __name__ == "__main__":
         print(__file__ + ' requires Python 3, while Python ' +
               str(sys.version[0] + ' was detected. Terminating. '))
         sys.exit(1)
-    plot_table("test.png", True)
+    plot_table("test.png")

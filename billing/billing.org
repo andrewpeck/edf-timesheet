@@ -1136,7 +1136,6 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |    |             |          |                             |     |       |
  |---+----+-------------+----------+-----------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"July 2021"))::$7='(org-sbe subtract (a $$3))
-
 ** August 2021
  #+ATTR_HTML: :border 2 :frame none
  #+TBLNAME: 2021-08
@@ -1266,6 +1265,42 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 20 |      11-12 | GE11     | Hog updates                         | FRI |   1.0 |
  | # | 20 |       12-1 | --       | LUNCH                               | FRI |   1.0 |
  | # | 20 |        2-6 | ETL      | Firmware updates; Board debug       | FRI |   4.0 |
+ | # |    |            |          |                                     |     |       |
+ |---+----+------------+----------+-------------------------------------+-----+-------|
+ | # |    |            |          |                                     |     |       |
+ | # | 23 |    9-10:30 | ETL      | Firmware                            | MON |   1.5 |
+ | # | 23 |   10:30-11 | GE21     | Firmware                            | MON |   0.5 |
+ | # | 23 |   11-11:30 | GE11     | Firmware                            | MON |   0.5 |
+ | # | 23 |    11:30-6 | ETL      | Firmware (DAQ+GBT-IC)               | MON |   6.5 |
+ | # |    |            |          |                                     |     |       |
+ | # | 24 |       9-11 | ETL      | DAQ testing                         | TUE |   2.0 |
+ | # | 24 |      11-12 | ME0      | Meeting                             | TUE |   1.0 |
+ | # | 24 |    12-2:00 | GE21     | Repository issues                   | TUE |   1.5 |
+ | # | 24 |  2:00-3:30 | ME0      | Repository issues                   | TUE |   1.0 |
+ | # | 24 |     3:30-4 | --       | Went to the bank                    | TUE |   0.5 |
+ | # | 24 |     4-4:30 | L0MDT    | Monthly report                      | TUE |   0.5 |
+ | # |    |            |          |                                     |     |       |
+ | # | 25 |            |          |                                     | WED |       |
+ | # | 25 |       9-10 | L0MDT    | Repository debug                    | WED |   2.0 |
+ | # | 25 |      10-11 | --       |                                     | WED |   1.0 |
+ | # | 25 |   11-11:30 | L0MDT    | Meeting slides                      | WED |   0.5 |
+ | # | 25 |    12-3:30 | L0MDT    | Firmware updates                    | WED |   3.5 |
+ | # | 25 |     3:30-6 | ETL      | Meeting; Firmware updates/testing   | WED |   2.5 |
+ | # |    |            |          |                                     |     |       |
+ | # | 26 |       9-12 | ME0      | OH Layout Updates, Review           | THU |   3.0 |
+ | # | 26 |       12-1 | L0MDT    | Firmware updates                    | THU |   1.0 |
+ | # | 26 |     1-1:30 | --       | Billing                             | THU |   0.5 |
+ | # | 27 |     1:30-2 | ETL      | Firmware                            | FRI |   0.5 |
+ | # | 26 |        2-3 | ME0      | Chloe                               | THU |   1.0 |
+ | # | 26 |  3:30-4:30 | ADMIN    | Frank Talk                          | THU |   1.0 |
+ | # |    |            |          |                                     |     |       |
+ | # | 27 |       9-10 | L0MDT    | Firmware                            | FRI |   1.0 |
+ | # | 27 |      10-11 | ETL      | Software work                       | FRI |   1.0 |
+ | # | 27 |      11-12 | DEVEL    | Scope demo                          | FRI |   1.0 |
+ | # | 27 |       12-1 | --       | LUNCH                               | FRI |   1.0 |
+ | # | 27 |        1-2 | ETL      | Meeting with Ted                    | FRI |   1.0 |
+ | # | 27 |        2-3 | ME0      | Chloe                               | FRI |   1.0 |
+ | # | 27 |        3-4 | APOLLO   | IPMC Meeting                        | FRI |   1.0 |
  | # |    |            |          |                                     |     |       |
  |---+----+------------+----------+-------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2021"))::$7='(org-sbe subtract (a $$3))

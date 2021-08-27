@@ -35,4 +35,12 @@ CMS-EMU-UPGRADE-GE21,0,0,1.00,4.00,1.00,0,0,Apex/Hog issues; Firmware repo; Hog 
 CMS-EMU-OPS-GE11,0,3.00,0.50,0,1.00,0,0,Firmware repo; Hog updates; Latency optimization
 CMS-EMU-OPS-CSC,0.50,0,0,0,0,0,0,Crate shipping
 ,23,24,25,26,27,28,29,
+APOLLO,0,0,0,0,1.00,0,0,IPMC Meeting
+ATLAS-MUON-PHASE2,0,0.50,6.00,1.00,1.00,0,0,Firmware; Firmware updates; Meeting slides; Monthly report; Repository debug
+CMS-ETL,8.00,2.00,2.50,0,2.50,0,0,DAQ testing; Firmware; Firmware (DAQ+GBT-IC); Firmware updates/testing; Meeting; Meeting with Ted; Software work
+CMS-EMU-UPGRADE-ME0,0,2.00,0,4.00,1.00,0,0,Chloe; Meeting; OH Layout Updates; Repository issues; Review
+CMS-EMU-UPGRADE-GE21,0.50,1.50,0,0,0,0,0,Firmware; Repository issues
+CMS-EMU-OPS-GE11,0.50,0,0,0,0,0,0,Firmware
+ADMIN,0,0,0,1.00,0,0,0,Frank Talk
+DEVEL,0,0,0,0,1.00,0,0,Scope demo
 ,30,31,1*,2*,3*,4*,5*,
