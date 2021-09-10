@@ -44,3 +44,7 @@ CMS-EMU-OPS-GE11,0.50,0,0,0,0,0,0,Firmware
 ADMIN,0,0,0,1.00,0,0,0,Frank Talk
 DEVEL,0,0,0,0,1.00,0,0,Scope demo
 ,30,31,1*,2*,3*,4*,5*,
+ATLAS-MUON-PHASE2,1.50,0,0,0,0,0,0,Firmware Merge; Measure cable trays; Meeting
+CMS-ETL,5.50,0,0,0,0,0,0,Firmware updates; Meeting; Slides
+VAC,0,8.00,8.00,0,0,0,0,Moving
+ADMIN,0,0,0,0.50,0,0,0,Billing

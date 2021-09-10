@@ -114,8 +114,12 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
             date += delta
 
             if (date.month != month):
+                if (year < 2021 or (year == 2021 and month < 7)):
+                    rate = 70
+                else:
+                    rate = 89
                 print("%30s, %5d,  %4.1f, $%6.1f" %
-                      (prj, month, monthsum, monthsum*70.0))
+                      (prj, month, monthsum, monthsum*rate))
 
     y = []
     t = []
