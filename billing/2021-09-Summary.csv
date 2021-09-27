@@ -1,6 +1,6 @@
 2021-09,Mo,Tu,We,Th,Fr,Sa,Su,Notes
 ,30*,31*,1,2,3,4,5,
-ATLAS-MUON-PHASE2,1.50,0,0,1.50,1.00,0,0,Cocotb; Firmware Merge; Gitlab review; Measure cable trays; Meeting
+ATLAS-MUON-PHASE2,1.50,0,0,1.50,1.00,0,0,Cocotb debug w/ priya; Firmware Merge; Gitlab review; Measure cable trays; Meeting
 CMS-ETL,5.50,0,0,1.00,0,0,0,Firmware updates; Meeting; Modules and HV; Slides
 VAC,0,8.00,8.00,0,0,0,0,Moving
 CMS-EMU-OPS-CSC,0,0,1.00,0,0,0,0,ALCT Cables Meeting
@@ -41,3 +41,8 @@ DEVEL,0.50,1.00,0,0.50,0,0,0,TWEPP
 SICK,2.00,0.50,0,0,0,0,0,Back pain break; Flu shot
 CMS-EMU-UPGRADE-GE21,0,0,0.50,1.50,0,0,0,Meeting; Reverse polarity
 ,27,28,29,30,1*,2*,3*,
+CMS-EMU-OPS-CSC,0.50,0,0,0,0,0,0,Email to Karunesh
+ATLAS-MUON-PHASE2,2.50,0,0,0,0,0,0,LpGBT/VTRX+ User Group (1/3); Meeting; Monthly report
+CMS-EMU-UPGRADE-ME0,1.50,0,0,0,0,0,0,LpGBT/VTRX+ User Group (1/3); Testbench
+CMS-ETL,2.50,0,0,0,0,0,0,Grounding; LpGBT/VTRX+ User Group (1/3); Meeting
+,0.50,0,0,0,0,0,0,
