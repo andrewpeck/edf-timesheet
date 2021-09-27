@@ -67,6 +67,7 @@ D,Time,Project,Task,Day,Hours
 11,2:30-5,Tracker,IPMC/APOLLO,FRI,2.5
 11,5-6,L0MDT,Firmware,FRI,1.0
 ,,,,,
+,,,,,
 14,9-10,L0MDT,Aldec tutorial,MON,1.0
 14,10-12:30,ETL,Meeting; Slides,MON,2.0
 14,12:30-1,--,LUNCH,MON,1.0
@@ -91,6 +92,7 @@ D,Time,Project,Task,Day,Hours
 17,2:30-5:30,Tracker,IPMC/ESM,THU,3.0
 ,,,,,
 18,9-5,HOLIDAY,Juneteenth,FRI,8.0
+,,,,,
 ,,,,,
 21,9-9:30,--,Email,MON,0.5
 21,9:30-10,Tracker,IPMC Firmware,MON,0.5

@@ -44,7 +44,13 @@ CMS-EMU-OPS-GE11,0.50,0,0,0,0,0,0,Firmware
 ADMIN,0,0,0,1.00,0,0,0,Frank Talk
 DEVEL,0,0,0,0,1.00,0,0,Scope demo
 ,30,31,1*,2*,3*,4*,5*,
-ATLAS-MUON-PHASE2,1.50,0,0,0,0,0,0,Firmware Merge; Measure cable trays; Meeting
-CMS-ETL,5.50,0,0,0,0,0,0,Firmware updates; Meeting; Slides
+ATLAS-MUON-PHASE2,1.50,0,0,1.50,1.00,0,0,Cocotb; Firmware Merge; Gitlab review; Measure cable trays; Meeting
+CMS-ETL,5.50,0,0,1.00,0,0,0,Firmware updates; Meeting; Modules and HV; Slides
 VAC,0,8.00,8.00,0,0,0,0,Moving
+CMS-EMU-OPS-CSC,0,0,1.00,0,0,0,0,ALCT Cables Meeting
 ADMIN,0,0,0,0.50,0,0,0,Billing
+CMS-EMU-OPS-GE11,0,0,0,1.00,0,0,0,Channel mapping
+CMS-EMU-UPGRADE-ME0,0,0,0,2.00,0,0,0,Meeting; Schematic review
+APOLLO,0,0,0,1.00,3.50,0,0,Documentation; IPMC; OpenIPMC Meeting + followup work
+CMS-PIXEL-DTC,0,0,0,0,1.00,0,0,Meeting
+DEVEL,0,0,0,0,2.00,0,0,Scope testing

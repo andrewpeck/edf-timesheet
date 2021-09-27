@@ -11,7 +11,8 @@ import altair as alt
 import pandas as pd
 #from vega_datasets import data
 
-def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
+def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
+               muonize=False, atlasize=False, etlize=False):
 
     month_begin = 13
     year_begin = 3000
@@ -179,6 +180,47 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
 
         y = [indara, not_indara]
 
+    if (muonize):
+        muon = [0 for j in range(len(y[0]))]
+        not_muon = [0 for j in range(len(y[0]))]
+
+        for prj in projects:
+            for day in range(len(y[0])):
+                if (prj in ["CMS-EMU-UPGRADE-ME0",
+                            "CMS-EMU-UPGRADE-GE21",
+                            "CMS-EMU-OPS-CSC", "CMS-EMU-OPS-GE11"]):
+                    muon[day] += projects[prj][day]
+                else:
+                    not_muon[day] += projects[prj][day]
+
+        y = [muon, not_muon]
+
+    if (etlize):
+        etl = [0 for j in range(len(y[0]))]
+        not_etl = [0 for j in range(len(y[0]))]
+
+        for prj in projects:
+            for day in range(len(y[0])):
+                if (prj in ["CMS-ETL"]):
+                    etl[day] += projects[prj][day]
+                else:
+                    not_etl[day] += projects[prj][day]
+
+        y = [etl, not_etl]
+
+    if (atlasize):
+        atlas = [0 for j in range(len(y[0]))]
+        not_atlas = [0 for j in range(len(y[0]))]
+
+        for prj in projects:
+            for day in range(len(y[0])):
+                if (prj in ["ATLAS-MUON-PHASE2"]):
+                    atlas[day] += projects[prj][day]
+                else:
+                    not_atlas[day] += projects[prj][day]
+
+        y = [atlas, not_atlas]
+
     if (zeynepize):
         zeynep = [0 for j in range(len(y[0]))]
         not_zeynep = [0 for j in range(len(y[0]))]
@@ -235,6 +277,18 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False):
         plt.savefig(figname, bbox_inches="tight")
     elif (zeynepize):
         plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep", "not zeynep"])
+        plt.legend(loc='upper left')
+        plt.savefig(figname, bbox_inches="tight")
+    elif (muonize):
+        plt.stackplot(x, muon, not_muon, labels=["muon", "not muon"])
+        plt.legend(loc='upper left')
+        plt.savefig(figname, bbox_inches="tight")
+    elif (atlasize):
+        plt.stackplot(x, atlas, not_atlas, labels=["atlas", "not atlas"])
+        plt.legend(loc='upper left')
+        plt.savefig(figname, bbox_inches="tight")
+    elif (etlize):
+        plt.stackplot(x, etl, not_etl, labels=["etl", "not etl"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     else:

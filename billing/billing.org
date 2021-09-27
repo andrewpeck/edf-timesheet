@@ -1,5 +1,6 @@
 #+TITLE: Billing
 #+SETUPFILE: "../org.setup"
+#+OPTIONS: toc:t
 
 https://vega.github.io/vega-lite/docs/stack.html
 
@@ -20,81 +21,89 @@ python plots.py
 | CMS-ETL              |     4 |  17.5 | $1225.0 |
 | CMS-ETL              |     5 |  19.5 | $1365.0 |
 | CMS-ETL              |     6 |  21.0 | $1470.0 |
-| CMS-ETL              |     7 |  32.5 | $2275.0 |
-| CMS-ETL              |     8 |  58.0 | $4060.0 |
-| CMS-ETL              |     9 |   0.0 | $   0.0 |
+| CMS-ETL              |     7 |  32.5 | $2892.5 |
+| CMS-ETL              |     8 |  59.0 | $5251.0 |
+| CMS-ETL              |     9 |   6.5 | $ 578.5 |
 | ATLAS-MUON-PHASE2    |     2 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
 | ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
 | ATLAS-MUON-PHASE2    |     5 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
-| ATLAS-MUON-PHASE2    |     7 |  16.5 | $1155.0 |
-| ATLAS-MUON-PHASE2    |     8 |  46.5 | $3255.0 |
-| ATLAS-MUON-PHASE2    |     9 |   0.0 | $   0.0 |
+| ATLAS-MUON-PHASE2    |     7 |  16.5 | $1468.5 |
+| ATLAS-MUON-PHASE2    |     8 |  46.5 | $4138.5 |
+| ATLAS-MUON-PHASE2    |     9 |   4.0 | $ 356.0 |
 | CMS-PIXEL-DTC        |     2 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
 | CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     5 |  31.5 | $2205.0 |
 | CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
-| CMS-PIXEL-DTC        |     7 |   9.0 | $ 630.0 |
-| CMS-PIXEL-DTC        |     8 |   4.0 | $ 280.0 |
-| CMS-PIXEL-DTC        |     9 |   0.0 | $   0.0 |
+| CMS-PIXEL-DTC        |     7 |   9.0 | $ 801.0 |
+| CMS-PIXEL-DTC        |     8 |   4.0 | $ 356.0 |
+| CMS-PIXEL-DTC        |     9 |   2.5 | $ 222.5 |
 | CMS-EMU-UPGRADE-GE21 |     2 |   3.0 | $ 210.0 |
 | CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
 | CMS-EMU-UPGRADE-GE21 |     5 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
-| CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 210.0 |
-| CMS-EMU-UPGRADE-GE21 |     8 |   9.5 | $ 665.0 |
+| CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 267.0 |
+| CMS-EMU-UPGRADE-GE21 |     8 |   9.5 | $ 845.5 |
 | CMS-EMU-UPGRADE-GE21 |     9 |   0.0 | $   0.0 |
 | CMS-EMU-UPGRADE-ME0  |     2 |   7.5 | $ 525.0 |
 | CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
 | CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
 | CMS-EMU-UPGRADE-ME0  |     5 |  23.5 | $1645.0 |
 | CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
-| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1260.0 |
-| CMS-EMU-UPGRADE-ME0  |     8 |  20.5 | $1435.0 |
-| CMS-EMU-UPGRADE-ME0  |     9 |   0.0 | $   0.0 |
+| CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1602.0 |
+| CMS-EMU-UPGRADE-ME0  |     8 |  20.5 | $1824.5 |
+| CMS-EMU-UPGRADE-ME0  |     9 |  15.5 | $1379.5 |
 | CMS-EMU-OPS-GE11     |     2 |   4.0 | $ 280.0 |
 | CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
 | CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
 | CMS-EMU-OPS-GE11     |     5 |   3.0 | $ 210.0 |
 | CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
-| CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 420.0 |
-| CMS-EMU-OPS-GE11     |     8 |   6.5 | $ 455.0 |
-| CMS-EMU-OPS-GE11     |     9 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 534.0 |
+| CMS-EMU-OPS-GE11     |     8 |   6.5 | $ 578.5 |
+| CMS-EMU-OPS-GE11     |     9 |   1.0 | $  89.0 |
 | EMPHATIC             |     2 |   0.0 | $   0.0 |
 | EMPHATIC             |     3 |   6.5 | $ 455.0 |
 | EMPHATIC             |     4 |   4.5 | $ 315.0 |
 | EMPHATIC             |     5 |   7.0 | $ 490.0 |
 | EMPHATIC             |     6 |  22.0 | $1540.0 |
-| EMPHATIC             |     7 |   6.5 | $ 455.0 |
-| EMPHATIC             |     8 |   1.0 | $  70.0 |
+| EMPHATIC             |     7 |   6.5 | $ 578.5 |
+| EMPHATIC             |     8 |   1.0 | $  89.0 |
 | EMPHATIC             |     9 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     2 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     3 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-CSC      |     4 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     5 |   0.5 | $  35.0 |
 | CMS-EMU-OPS-CSC      |     6 |   0.0 | $   0.0 |
-| CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 140.0 |
-| CMS-EMU-OPS-CSC      |     8 |   0.5 | $  35.0 |
-| CMS-EMU-OPS-CSC      |     9 |   0.0 | $   0.0 |
+| CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 178.0 |
+| CMS-EMU-OPS-CSC      |     8 |   0.5 | $  44.5 |
+| CMS-EMU-OPS-CSC      |     9 |   1.5 | $ 133.5 |
 | APOLLO               |     2 |   0.0 | $   0.0 |
 | APOLLO               |     3 |   0.0 | $   0.0 |
 | APOLLO               |     4 |   0.0 | $   0.0 |
 | APOLLO               |     5 |   0.0 | $   0.0 |
 | APOLLO               |     6 |   5.5 | $ 385.0 |
-| APOLLO               |     7 |  31.5 | $2205.0 |
-| APOLLO               |     8 |  10.0 | $ 700.0 |
-| APOLLO               |     9 |   0.0 | $   0.0 |
+| APOLLO               |     7 |  31.5 | $2803.5 |
+| APOLLO               |     8 |  10.0 | $ 890.0 |
+| APOLLO               |     9 |  10.0 | $ 890.0 |
 | DEVEL                |     2 |   0.0 | $   0.0 |
 | DEVEL                |     3 |   0.0 | $   0.0 |
 | DEVEL                |     4 |   0.0 | $   0.0 |
 | DEVEL                |     5 |   0.0 | $   0.0 |
 | DEVEL                |     6 |   0.0 | $   0.0 |
 | DEVEL                |     7 |   0.0 | $   0.0 |
-| DEVEL                |     8 |   1.0 | $  70.0 |
-| DEVEL                |     9 |   0.0 | $   0.0 |
+| DEVEL                |     8 |   1.0 | $  89.0 |
+| DEVEL                |     9 |   2.0 | $ 178.0 |
+|                      |     2 |   0.0 | $   0.0 |
+|                      |     3 |   0.0 | $   0.0 |
+|                      |     4 |   0.0 | $   0.0 |
+|                      |     5 |   0.0 | $   0.0 |
+|                      |     6 |   0.0 | $   0.0 |
+|                      |     7 |   0.0 | $   0.0 |
+|                      |     8 |   0.0 | $   0.0 |
+|                      |     9 |   1.0 | $  89.0 |
 
 ** Summary
 #+begin_src python :var figname="work_history_total.png" :results file :exports results
@@ -122,6 +131,33 @@ return (plots.plot_table(figname, zeynepize=True))
 
 #+RESULTS:
 [[file:./work_history_zeynep.png]]
+** Muon
+#+begin_src python :var figname="work_history_muon.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, muonize=True))
+#+end_src
+
+#+RESULTS:
+[[file:./work_history_muon.png]]
+** Atlas
+#+begin_src python :var figname="work_history_atlas.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, atlasize=True))
+#+end_src
+
+#+RESULTS:
+[[file:./work_history_atlas.png]]
+** ETL
+#+begin_src python :var figname="work_history_etl.png" :results file :exports results
+#!/usr/bin/env python3
+import plots
+return (plots.plot_table(figname, etlize=True))
+#+end_src
+
+#+RESULTS:
+[[file:./work_history_etl.png]]
 * Helpers :noexport:
 :PROPERTIES:
 :VISIBILITY: children
@@ -243,6 +279,7 @@ return (plots.plot_table(figname, zeynepize=True))
 :PROPERTIES:
 :VISIBILITY: children
 :END:
+** January 2021
 ** February 2021
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: 2021-02
@@ -903,6 +940,7 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 11 |   1:30-2:30 | EMPHATIC | Meet with Eric                                            | FRI |   1.0 |
  | # | 11 |      2:30-5 | Tracker  | IPMC/APOLLO                                               | FRI |   2.5 |
  | # | 11 |         5-6 | L0MDT    | Firmware                                                  | FRI |   1.0 |
+ | # |    |             |          |                                                           |     |       |
  |---+----+-------------+----------+-----------------------------------------------------------+-----+-------|
  |   |    |             |          |                                                           |     |       |
  | # | 14 |        9-10 | L0MDT    | Aldec tutorial                                            | MON |   1.0 |
@@ -929,6 +967,7 @@ return (plots.plot_table(figname, zeynepize=True))
  | # | 17 |   2:30-5:30 | Tracker  | IPMC/ESM                                                  | THU |   3.0 |
  | # |    |             |          |                                                           |     |       |
  | # | 18 |         9-5 | HOLIDAY  | Juneteenth                                                | FRI |   8.0 |
+ | # |    |             |          |                                                           |     |       |
  |---+----+-------------+----------+-----------------------------------------------------------+-----+-------|
  | # |    |             |          |                                                           |     |       |
  | # | 21 |      9-9:30 | --       | Email                                                     | MON |   0.5 |
@@ -1351,7 +1390,7 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |  2 |     9:30-10 | L0MDT   | Gitlab review                    | THU |   0.5 |
  | # |  2 |     9-10:00 | GE11    | Channel mapping                  | THU |   1.0 |
  | # |  2 |       10-11 | L0MDT   | Meeting                          | THU |   1.0 |
- | # |  2 |    11-12:30 | --      | Starry                           | THU |   1.0 |
+ | # |  2 |    11-12:30 | --      | Starry                           | THU |   1.5 |
  | # |  2 |  12:30-1:30 | ME0     | Schematic review                 | THU |   1.0 |
  | # |  2 |      1:30-2 | --      | Distractions, moving :(          | THU |   0.5 |
  | # |  2 |         2-3 | ETL     | Modules and HV                   | THU |   1.0 |
@@ -1375,10 +1414,10 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |  7 |       11-12 | L0MDT   | Hog meeting                      | TUE |   1.0 |
  | # |  7 |        12-4 | SICK    | Mental health                    | TUE |   4.0 |
  | # |  7 |      4-5:30 | ME0     | Chloe                            | TUE |   1.5 |
- | # |  7 |      5-5:30 | ME0     | Segment finding                  | TUE |   1.5 |
+ | # |  7 |      5-5:30 | ME0     | Segment finding                  | TUE |   0.5 |
  | # |    |             |         |                                  |     |       |
  | # |  8 |     9:30-10 | ETL     | Email                            | WED |   0.5 |
- | # |  8 |    10-12:30 | APOLLO  | IPMC Firmware                    | WED |   2.0 |
+ | # |  8 |    10-12:30 | APOLLO  | IPMC Firmware                    | WED |   2.5 |
  | # |  8 |     12:30-1 | Tracker | Meeting                          | WED |   0.5 |
  | # |  8 |         1-2 | APOLLO  | IPMC Firmware                    | WED |   1.0 |
  | # |  8 |      4-4:30 | ETL     | Email Caleb                      | WED |   0.5 |
@@ -1386,12 +1425,115 @@ return (plots.plot_table(figname, zeynepize=True))
  | # |  8 |      5:30-6 | ETL     | Stack height                     | WED |   0.5 |
  | # |    |             |         |                                  |     |       |
  | # |  9 |  9:30-10:30 | APOLLO  | IPMC Slides                      | THU |   1.0 |
- | # |  9 |    10:30-11 | --      |                                  | THU |   0.5 |
+ | # |  9 |    10:30-11 | APOLLO  | IPMC Firmware                    | THU |   0.5 |
  | # |  9 |     11-1:30 | ME0     | Fitting                          | THU |   2.5 |
- | # |  9 |   1:30-2:45 | ETL     | Chris + Daniel                   | THU |   1.0 |
- | # |  9 |         3-4 | APOLLO  | IPMC Meeting                     | THU |   1.0 |
- | # |  9 |         4-6 | ME0     | Fitting                          | THU |   2.0 |
+ | # |  9 |   1:30-2:45 | ETL     | Chris + Daniel                   | THU |  1.25 |
+ | # |  9 |      3-4:30 | APOLLO  | IPMC Meeting                     | THU |   1.5 |
+ | # |  9 |         5-6 | ME0     | Fitting                          | THU |   1.0 |
  | # |    |             |         |                                  |     |       |
  | # | 10 |        9-10 | Tracker | Meeting                          | FRI |   1.0 |
+ | # | 10 |       10-12 | ME0     | Fitting                          | FRI |   2.0 |
+ | # | 10 |        12-1 | --      | LUNCH                            | FRI |   1.0 |
+ | # | 10 |      1-2:30 | ME0     | Fitting                          | FRI |   1.5 |
+ | # | 10 |   2:30-3:30 | ME0     | Meeting                          | FRI |   1.0 |
+ | # | 10 |      3:30-4 | ME0     | Fitting                          | FRI |   0.5 |
+ | # | 10 |         4-5 | ME0     | Fitting                          | FRI |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ |---+----+-------------+---------+----------------------------------+-----+-------|
+ | # |    |             |         |                                  |     |       |
+ | # | 13 |  9:30-10:30 | APOLLO  | Meet with Eric+Dan               | MON |   1.0 |
+ | # | 13 |    10:30-12 | ETL     | Module tester                    | MON |   1.5 |
+ | # | 13 |     12:30-1 | ETL     | Firmware documentation           | MON |   0.5 |
+ | # | 13 |         1-2 | L0MDT   | Meeting                          | MON |   1.0 |
+ | # | 13 |         2-4 | ME0     | Fitting                          | MON |   2.0 |
+ | # | 13 |         4-5 | ME0     | Fitting                          | MON |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 14 |        9-10 | ME0     | Fitting                          | TUE |   1.0 |
+ | # | 14 |       10-11 | ADMIN   | Chat with Eric                   | TUE |   1.0 |
+ | # | 14 |    11-11:30 | ME0     | Fitting                          | TUE |   0.5 |
+ | # | 14 | 11:30-12:30 | --      | LUNCH                            | TUE |   1.0 |
+ | # | 14 |  12:30-1:30 | ME0     | Fitting                          | TUE |   1.0 |
+ | # | 14 |      1:30-2 | L0MDT   | Chat w/ Thiago                   | TUE |   0.5 |
+ | # | 14 |         2-4 | ETL     | RB work                          | TUE |   2.0 |
+ | # | 14 |         4-5 | ME0     | Chloe                            | TUE |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 15 |        9-10 | ME0     | Documentation                    | WED |   1.0 |
+ | # | 15 |    10-10:30 | L0MDT   | Fiber shopping                   | WED |   0.5 |
+ | # | 15 |    10:30-11 | ME0     | Documentation                    | WED |   0.5 |
+ | # | 15 |       11-12 | ETL     | Firmware debug/updates           | WED |   1.0 |
+ | # | 15 |        12-1 | Tracker | Meeting                          | WED |   1.0 |
+ | # | 15 |         1-4 | ETL     | Firmware debug/updates           | WED |   3.0 |
+ | # | 15 |      4-4:30 | ME0     | Documentation                    | WED |   0.5 |
+ | # | 15 |      4:30-5 | ETL     | Firmware debug/updates           | WED |   0.5 |
+ | # |    |             |         |                                  |     |       |
+ | # | 16 |     9:30-10 | L0MDT   | Fiber shopping                   | THU |   0.5 |
+ | # | 16 |       10-11 | L0MDT   | Meeting                          | THU |   1.0 |
+ | # | 16 |       11-12 | ETL     | Meeting                          | THU |   1.0 |
+ | # | 16 |        12-1 | --      | LUNCH                            | THU |   1.0 |
+ | # | 16 |      1-2:30 | ETL     | Firmware updates                 | THU |   1.5 |
+ | # | 16 |      2:30-3 | GE11    | Reverse polarity                 | THU |   0.5 |
+ | # | 16 |         3-4 | APOLLO  | OpenIPMC Meeting                 | THU |   1.0 |
+ | # | 16 |         4-5 | ME0     | Meeting                          | THU |   1.0 |
+ | # | 16 |         5-6 | APOLLO  | IPMC Firmware Updates            | THU |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 17 |        9-10 | --      | Mental Health Break              | FRI |   1.0 |
+ | # | 17 |       10-11 | GE21    | Clusterizer testing              | FRI |   1.0 |
+ | # | 17 |    11-11:30 | APOLLO  | IPMC chat                        | FRI |   0.5 |
+ | # | 17 |    11:30-12 | GE11    | Clusterizer testing              | FRI |   0.5 |
+ | # | 17 |    12-12:30 | ME0     | Clusterizer testing              | FRI |   0.5 |
+ | # | 17 |    12-12:30 | IPMC    | Chat w/ Dan                      | FRI |   0.5 |
+ | # | 17 |     12:30-1 | --      | Lunch w/ Dan                     | FRI |   0.5 |
+ | # | 17 |         1-2 | ETL     | PCB planning                     | FRI |   1.0 |
+ | # | 17 |         2-3 | GE11    | Strip mapping                    | FRI |   1.0 |
+ | # | 17 |      3-4:30 | ME0     | Chloe                            | FRI |   1.5 |
+ | # | 17 |   4:30-5:30 | GE11    | Strip mapping                    | FRI |   1.0 |
+ | # | 17 |      5:30-6 | GE11    | Strip mapping                    | FRI |   0.5 |
+ | # |    |             |         |                                  |     |       |
+ |---+----+-------------+---------+----------------------------------+-----+-------|
+ | # |    |             |         |                                  |     |       |
+ | # | 20 |      9-9:30 | ADMIN   | Billing                          | MON |   0.5 |
+ | # | 20 |     9:30-10 | GE11    | Firmware updates                 | MON |   0.5 |
+ | # | 20 |    10-10:30 | DEVEL   | TWEPP                            | MON |   0.5 |
+ | # | 20 |    10:30-12 | ETL     | Meeting                          | MON |   1.5 |
+ | # | 20 |    12-12:30 | L0MDT   | Order fibers                     | MON |   0.5 |
+ | # | 20 |     12:30-1 | --      | Exercise for my back             | MON |   0.5 |
+ | # | 20 |         1-2 | L0MDT   | Meeting                          | MON |   1.0 |
+ | # | 20 |         2-3 | APOLLO  | OpenIPMCs                        | MON |   1.0 |
+ | # | 20 |         3-5 | SICK    | Back pain break                  | MON |   2.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 21 |        9-10 | DEVEL   | TWEPP                            | TUE |   1.0 |
+ | # | 21 |       10-11 | ETL     | VTRX Requirements                | TUE |   1.0 |
+ | # | 21 |    11-12:30 | APOLLO  | OpenIPMC                         | TUE |   1.0 |
+ | # | 21 |  12:30-2:30 | ETL     | BPOL48V; Module tester;          | TUE |   1.5 |
+ | # | 21 |   2:30-3:30 | L0MDT   | Discussion w/ Priya              | TUE |   1.0 |
+ | # | 21 |      3:30-4 | SICK    | Flu shot                         | TUE |   0.5 |
+ | # | 21 |         4-5 | ADMIN   | Sexual harassment training       | TUE |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 22 |        9-11 | ETL     | Module tester                    | WED |   2.0 |
+ | # | 22 |       11-12 | L0MDT   | Fibers                           | WED |   1.0 |
+ | # | 22 |     12-1:30 | Tracker | Meeting                          | WED |   1.5 |
+ | # | 22 |   1:30-2:30 | ETL     | Module tester                    | WED |   1.0 |
+ | # | 22 |      2:30-3 | GE21    | Reverse polarity                 | WED |   0.5 |
+ | # | 22 |         3-4 | ETL     | Module tester                    | WED |   1.0 |
+ | # | 22 |      4-4:30 | ETL     | Meeting                          | WED |   0.5 |
+ | # | 22 |   4:30-5:30 | APOLLO  | IPMC Sensors Updates             | WED |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 23 |      9-9:30 | DEVEL   | TWEPP                            | THU |   0.5 |
+ | # | 23 |     9:30-11 | ETL     | Module tester                    | THU |   1.5 |
+ | # | 23 |    11-12:30 | GE21    | Meeting                          | THU |   1.0 |
+ | # | 23 |  12:30-1:30 | --      | Lunch with Eric+Indara           | THU |   1.0 |
+ | # | 23 |      1:30-2 | GE21    | Reverse polarity                 | THU |   0.5 |
+ | # | 23 |         2-3 | ETL     | Annual review                    | THU |   1.0 |
+ | # | 23 |         3-4 | APOLLO  | IPMC Meeting                     | THU |   1.0 |
+ | # | 23 |         4-5 | ME0     | Meeting                          | THU |   1.0 |
+ | # | 23 |         5-6 | L0MDT   | Firmware discussion              | THU |   1.0 |
+ | # |    |             |         |                                  |     |       |
+ | # | 24 |        9-10 | ETL     | Grounding                        | FRI |   1.0 |
+ | # | 24 |    10-12:30 | ETL     | Module tester                    | FRI |   2.5 |
+ | # | 24 |     12:30-1 | APOLLO  | OpenIPMC                         | FRI |   0.5 |
+ | # | 24 |      1-1:30 | --      | BBQ                              | FRI |   0.5 |
+ | # | 24 |   1:30-2:30 | ME0     | Testbench                        | FRI |   1.0 |
+ | # | 24 |      2:30-5 | ME0     | Chloe                            | FRI |   2.5 |
+ | # |    |             |         |                                  |     |       |
  |---+----+-------------+---------+----------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"September 2021"))::$7='(org-sbe subtract (a $$3))
