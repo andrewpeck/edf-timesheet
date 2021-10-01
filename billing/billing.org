@@ -1547,7 +1547,33 @@ return (plots.plot_table(figname, etlize=True))
  | # | 27 |   2:30-3:00 | ETL     | Grounding                        | MON |   0.5 |
  | # | 27 |      3-3:30 | L0MDT   | Monthly report                   | MON |   0.5 |
  | # | 27 |      3:30-4 | CSC     | Email to Karunesh                | MON |   0.5 |
- | # | 27 |      4-4:30 |         |                                  | MON |   0.5 |
+ | # | 27 |      4-4:30 | --      | ??                               | MON |   0.5 |
+ | # |    |             |         |                                  |     |       |
+ | # | 28 |      9-9:30 | ETL     | Grounding                        | TUE |   0.5 |
+ | # | 28 |     9:30-10 | ADMIN   | EDF Meeting                      | TUE |   0.5 |
+ | # | 28 |       10-11 | ETL     | Grounding meeting                | TUE |   1.0 |
+ | # | 28 |       11-12 | GE11    | USCMS Firmware Meeting           | TUE |   1.0 |
+ | # | 28 |        12-1 | GE21    | USCMS Firmware Meeting           | TUE |   1.0 |
+ | # | 28 |      2:30-4 | L0MDT   | LpGBT Firmware                   | TUE |   1.5 |
+ | # | 28 |      4-5:30 | ME0     | Chloe                            | TUE |   1.5 |
+ | # |    |             |         |                                  |     |       |
+ | # | 29 |        9-10 | L0MDT   | GBT-IC firmware updates          | WED |   1.0 |
+ | # | 29 |       10-11 | L0MDT   | Meeting                          | WED |   1.0 |
+ | # | 29 |       10-12 | L0MDT   | GBT-IC firmware updates          | WED |   1.0 |
+ | # | 29 |        12-1 | Tracker | Meeting                          | WED |   1.0 |
+ | # | 29 |         1-3 | L0MDT   | GBT-IC firwmare updates          | WED |   2.0 |
+ | # | 29 |         3-4 | --      |                                  | WED |   1.0 |
+ | # | 29 |      4-4:30 | GE21    | Meet with Indara                 | WED |   0.5 |
+ | # | 29 |      4:30-5 | ME0     | Meet with Indara                 | WED |   0.5 |
+ | # |    |             |         |                                  |     |       |
+ | # | 30 |       10-11 | L0MDT   | EE Meeting                       | THU |   1.0 |
+ | # | 30 |       11-12 | ETL     | Integration Meeting              | THU |   1.0 |
+ | # | 30 |        12-1 | --      | LUNCH                            | THU |   1.0 |
+ | # | 30 |         1-2 | L0MDT   | Start tweaks to CSM decoding     | THU |   1.0 |
+ | # | 30 |         2-3 | ETL     | Review slides                    | THU |   1.0 |
+ | # | 30 |         3-4 | APOLLO  | IPMC Meeting                     | THU |   1.0 |
+ | # | 30 |         4-5 | ME0     | Meeting                          | THU |   1.0 |
+ | # | 30 |      7-8:30 | ETL     | Review slides                    | THU |   1.5 |
  | # |    |             |         |                                  |     |       |
  |---+----+-------------+---------+----------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"September 2021"))::$7='(org-sbe subtract (a $$3))

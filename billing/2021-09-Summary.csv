@@ -42,7 +42,11 @@ SICK,2.00,0.50,0,0,0,0,0,Back pain break; Flu shot
 CMS-EMU-UPGRADE-GE21,0,0,0.50,1.50,0,0,0,Meeting; Reverse polarity
 ,27,28,29,30,1*,2*,3*,
 CMS-EMU-OPS-CSC,0.50,0,0,0,0,0,0,Email to Karunesh
-ATLAS-MUON-PHASE2,2.50,0,0,0,0,0,0,LpGBT/VTRX+ User Group (1/3); Meeting; Monthly report
-CMS-EMU-UPGRADE-ME0,1.50,0,0,0,0,0,0,LpGBT/VTRX+ User Group (1/3); Testbench
-CMS-ETL,2.50,0,0,0,0,0,0,Grounding; LpGBT/VTRX+ User Group (1/3); Meeting
-,0.50,0,0,0,0,0,0,
+ADMIN,0,0.50,0,0,0,0,0,EDF Meeting
+ATLAS-MUON-PHASE2,2.50,1.50,5.00,2.00,0,0,0,EE Meeting; GBT-IC firmware updates; GBT-IC firwmare updates; LpGBT Firmware; LpGBT/VTRX+ User Group (1/3); Meeting; Monthly report; Start tweaks to CSM decoding
+CMS-EMU-OPS-GE11,0,1.00,0,0,0,0,0,USCMS Firmware Meeting
+CMS-EMU-UPGRADE-ME0,1.50,1.50,0.50,1.00,0,0,0,Chloe; LpGBT/VTRX+ User Group (1/3); Meet with Indara; Meeting; Testbench
+CMS-ETL,2.50,1.50,0,3.50,0,0,0,Grounding; Grounding meeting; Integration Meeting; LpGBT/VTRX+ User Group (1/3); Meeting; Review slides
+APOLLO,0,0,0,1.00,0,0,0,IPMC Meeting
+CMS-PIXEL-DTC,0,0,1.00,0,0,0,0,Meeting
+CMS-EMU-UPGRADE-GE21,0,1.00,0.50,0,0,0,0,Meet with Indara; USCMS Firmware Meeting
