@@ -18,7 +18,15 @@
         (progn
           (next-line)
           (princ (format "Exporting table to %s.csv\n" name))
-          (org-table-export (format "%s.csv" name) "orgtbl-to-csv"))))))
+          (let ((csv-name (format "%s.csv" name)))
+            (org-table-export csv-name "orgtbl-to-csv")
+            (save-excursion
+                (find-file csv-name)
+                (goto-char (point-max))
+                (end-of-line)
+                (newline-and-indent)
+                (save-buffer)
+                )))))))
 
 (mapc (lambda (file)
         (find-file (expand-file-name file))
