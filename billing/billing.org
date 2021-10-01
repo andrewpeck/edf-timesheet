@@ -8,6 +8,10 @@ https://vega.github.io/vega-lite/docs/stack.html
 :PROPERTIES:
 :VISIBILITY: children
 :END:
+** GEM Accruals
+- August: https://docs.google.com/spreadsheets/d/1B-EwiV2WmX5rFvUxlLBul6KeHfr9NorBO5WAL_-y9NA/edit#gid=1142850913
+- September: https://docs.google.com/spreadsheets/d/1ocjefoiQf1zoSh3h46toA8zfR0ttFszijbPwtYTMIhg/edit#gid=1053913684
+- October:
 ** Accruals
 #+begin_src bash :exports results
 python plots.py
@@ -23,7 +27,7 @@ python plots.py
 | CMS-ETL              |     6 |  21.0 | $1470.0 |
 | CMS-ETL              |     7 |  32.5 | $2892.5 |
 | CMS-ETL              |     8 |  59.0 | $5251.0 |
-| CMS-ETL              |     9 |   6.5 | $ 578.5 |
+| CMS-ETL              |     9 |  38.8 | $3448.8 |
 | ATLAS-MUON-PHASE2    |     2 |  37.5 | $2625.0 |
 | ATLAS-MUON-PHASE2    |     3 |  60.5 | $4235.0 |
 | ATLAS-MUON-PHASE2    |     4 |  39.5 | $2765.0 |
@@ -31,7 +35,7 @@ python plots.py
 | ATLAS-MUON-PHASE2    |     6 |  24.0 | $1680.0 |
 | ATLAS-MUON-PHASE2    |     7 |  16.5 | $1468.5 |
 | ATLAS-MUON-PHASE2    |     8 |  46.5 | $4138.5 |
-| ATLAS-MUON-PHASE2    |     9 |   4.0 | $ 356.0 |
+| ATLAS-MUON-PHASE2    |     9 |  23.0 | $2047.0 |
 | CMS-PIXEL-DTC        |     2 |  28.0 | $1960.0 |
 | CMS-PIXEL-DTC        |     3 |  33.0 | $2310.0 |
 | CMS-PIXEL-DTC        |     4 |  28.0 | $1960.0 |
@@ -39,7 +43,7 @@ python plots.py
 | CMS-PIXEL-DTC        |     6 |  65.0 | $4550.0 |
 | CMS-PIXEL-DTC        |     7 |   9.0 | $ 801.0 |
 | CMS-PIXEL-DTC        |     8 |   4.0 | $ 356.0 |
-| CMS-PIXEL-DTC        |     9 |   2.5 | $ 222.5 |
+| CMS-PIXEL-DTC        |     9 |   6.5 | $ 578.5 |
 | CMS-EMU-UPGRADE-GE21 |     2 |   3.0 | $ 210.0 |
 | CMS-EMU-UPGRADE-GE21 |     3 |  10.5 | $ 735.0 |
 | CMS-EMU-UPGRADE-GE21 |     4 |   1.5 | $ 105.0 |
@@ -47,7 +51,7 @@ python plots.py
 | CMS-EMU-UPGRADE-GE21 |     6 |  16.0 | $1120.0 |
 | CMS-EMU-UPGRADE-GE21 |     7 |   3.0 | $ 267.0 |
 | CMS-EMU-UPGRADE-GE21 |     8 |   9.5 | $ 845.5 |
-| CMS-EMU-UPGRADE-GE21 |     9 |   0.0 | $   0.0 |
+| CMS-EMU-UPGRADE-GE21 |     9 |   4.5 | $ 400.5 |
 | CMS-EMU-UPGRADE-ME0  |     2 |   7.5 | $ 525.0 |
 | CMS-EMU-UPGRADE-ME0  |     3 |  12.5 | $ 875.0 |
 | CMS-EMU-UPGRADE-ME0  |     4 |  33.0 | $2310.0 |
@@ -55,7 +59,7 @@ python plots.py
 | CMS-EMU-UPGRADE-ME0  |     6 |   6.5 | $ 455.0 |
 | CMS-EMU-UPGRADE-ME0  |     7 |  18.0 | $1602.0 |
 | CMS-EMU-UPGRADE-ME0  |     8 |  20.5 | $1824.5 |
-| CMS-EMU-UPGRADE-ME0  |     9 |  15.5 | $1379.5 |
+| CMS-EMU-UPGRADE-ME0  |     9 |  34.0 | $3026.0 |
 | CMS-EMU-OPS-GE11     |     2 |   4.0 | $ 280.0 |
 | CMS-EMU-OPS-GE11     |     3 |  10.0 | $ 700.0 |
 | CMS-EMU-OPS-GE11     |     4 |   1.0 | $  70.0 |
@@ -63,7 +67,7 @@ python plots.py
 | CMS-EMU-OPS-GE11     |     6 |  13.5 | $ 945.0 |
 | CMS-EMU-OPS-GE11     |     7 |   6.0 | $ 534.0 |
 | CMS-EMU-OPS-GE11     |     8 |   6.5 | $ 578.5 |
-| CMS-EMU-OPS-GE11     |     9 |   1.0 | $  89.0 |
+| CMS-EMU-OPS-GE11     |     9 |   6.0 | $ 534.0 |
 | EMPHATIC             |     2 |   0.0 | $   0.0 |
 | EMPHATIC             |     3 |   6.5 | $ 455.0 |
 | EMPHATIC             |     4 |   4.5 | $ 315.0 |
@@ -79,7 +83,7 @@ python plots.py
 | CMS-EMU-OPS-CSC      |     6 |   0.0 | $   0.0 |
 | CMS-EMU-OPS-CSC      |     7 |   2.0 | $ 178.0 |
 | CMS-EMU-OPS-CSC      |     8 |   0.5 | $  44.5 |
-| CMS-EMU-OPS-CSC      |     9 |   1.5 | $ 133.5 |
+| CMS-EMU-OPS-CSC      |     9 |   2.0 | $ 178.0 |
 | APOLLO               |     2 |   0.0 | $   0.0 |
 | APOLLO               |     3 |   0.0 | $   0.0 |
 | APOLLO               |     4 |   0.0 | $   0.0 |
@@ -87,7 +91,7 @@ python plots.py
 | APOLLO               |     6 |   5.5 | $ 385.0 |
 | APOLLO               |     7 |  31.5 | $2803.5 |
 | APOLLO               |     8 |  10.0 | $ 890.0 |
-| APOLLO               |     9 |  10.0 | $ 890.0 |
+| APOLLO               |     9 |  20.0 | $1780.0 |
 | DEVEL                |     2 |   0.0 | $   0.0 |
 | DEVEL                |     3 |   0.0 | $   0.0 |
 | DEVEL                |     4 |   0.0 | $   0.0 |
@@ -95,15 +99,7 @@ python plots.py
 | DEVEL                |     6 |   0.0 | $   0.0 |
 | DEVEL                |     7 |   0.0 | $   0.0 |
 | DEVEL                |     8 |   1.0 | $  89.0 |
-| DEVEL                |     9 |   2.0 | $ 178.0 |
-|                      |     2 |   0.0 | $   0.0 |
-|                      |     3 |   0.0 | $   0.0 |
-|                      |     4 |   0.0 | $   0.0 |
-|                      |     5 |   0.0 | $   0.0 |
-|                      |     6 |   0.0 | $   0.0 |
-|                      |     7 |   0.0 | $   0.0 |
-|                      |     8 |   0.0 | $   0.0 |
-|                      |     9 |   1.0 | $  89.0 |
+| DEVEL                |     9 |   4.0 | $ 356.0 |
 
 ** Summary
 #+begin_src python :var figname="work_history_total.png" :results file :exports results
