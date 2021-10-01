@@ -1,18 +1,20 @@
-import sum_tables
 import sys
-import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
 import datetime
 import dateutil
-import pprint
-from collections import OrderedDict
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
 
-import altair as alt
-import pandas as pd
-#from vega_datasets import data
+import sum_tables
+
+# import pprint
+# from collections import OrderedDict
+# import altair as alt
+# import pandas as pd
+# from vega_datasets import data
 
 def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
                muonize=False, atlasize=False, etlize=False):
+    ""
 
     month_begin = 13
     year_begin = 3000
@@ -92,7 +94,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
             year = date.year
 
             # if its a new month, reset the sum
-            if (date.month != month):
+            if date.month != month:
                 monthsum = 0
 
             month = date.month
@@ -104,23 +106,23 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
             if prj in work[year][month]:
                 if day in work[year][month][prj]:
-                    if ("hours" in work[year][month][prj][day]):
+                    if "hours" in work[year][month][prj][day]:
                         amt = work[year][month][prj][day]["hours"]
                         weeksum += amt
                         monthsum += amt
 
-            if (weekday == 6):
+            if weekday == 6:
                 projects[prj].append(weeksum)
 
             date += delta
 
-            if (date.month != month):
+            if date.month != month:
                 if (year < 2021 or (year == 2021 and month < 7)):
                     rate = 70
                 else:
                     rate = 89
                 print("%30s, %5d,  %4.1f, $%6.1f" %
-                      (prj, month, monthsum, monthsum*rate))
+                      (prj, month, monthsum, monthsum * rate))
 
     y = []
     t = []
@@ -141,31 +143,30 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
                 busy[i] = 1
 
     weeks_to_pop = 0
-    for i in range(len(busy)-1, -1, -1):
-        if (busy[i] == 1):
+    for i in range(len(busy) - 1, -1, -1):
+        if busy[i] == 1:
             break
-        else:
-            weeks_to_pop += 1
+        weeks_to_pop += 1
 
-    #print(weeks_to_pop)
-    if (weeks_to_pop > 0):
+    # print(weeks_to_pop)
+    if weeks_to_pop > 0:
         for i in range(weeks_to_pop):
             x.pop()
             for i in range(len(y)):
                 y[i].pop()
 
-    #for i in x:
-    #    sum_tables.princ("%s " % i)
-    #sum_tables.princ("\n")
+    # for i in x:
+    #     sum_tables.princ("%s " % i)
+    # sum_tables.princ("\n")
 
-    #for i in y:
-    #    for j in i:
-    #        sum_tables.princ("%4.1f " % j)
-    #    sum_tables.princ("\n")
+    # for i in y:
+    #     for j in i:
+    #         sum_tables.princ("%4.1f " % j)
+    #     sum_tables.princ("\n")
 
     normalize = True
 
-    if (indaraize):
+    if indaraize:
         indara = [0 for j in range(len(y[0]))]
         not_indara = [0 for j in range(len(y[0]))]
 
@@ -180,7 +181,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
         y = [indara, not_indara]
 
-    if (muonize):
+    if muonize:
         muon = [0 for j in range(len(y[0]))]
         not_muon = [0 for j in range(len(y[0]))]
 
@@ -195,39 +196,39 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
         y = [muon, not_muon]
 
-    if (etlize):
+    if etlize:
         etl = [0 for j in range(len(y[0]))]
         not_etl = [0 for j in range(len(y[0]))]
 
         for prj in projects:
             for day in range(len(y[0])):
-                if (prj in ["CMS-ETL"]):
+                if prj in ["CMS-ETL"]:
                     etl[day] += projects[prj][day]
                 else:
                     not_etl[day] += projects[prj][day]
 
         y = [etl, not_etl]
 
-    if (atlasize):
+    if atlasize:
         atlas = [0 for j in range(len(y[0]))]
         not_atlas = [0 for j in range(len(y[0]))]
 
         for prj in projects:
             for day in range(len(y[0])):
-                if (prj in ["ATLAS-MUON-PHASE2"]):
+                if prj in ["ATLAS-MUON-PHASE2"]:
                     atlas[day] += projects[prj][day]
                 else:
                     not_atlas[day] += projects[prj][day]
 
         y = [atlas, not_atlas]
 
-    if (zeynepize):
+    if zeynepize:
         zeynep = [0 for j in range(len(y[0]))]
         not_zeynep = [0 for j in range(len(y[0]))]
 
         for prj in projects:
             for day in range(len(y[0])):
-                if (prj in ["CMS-PIXEL-DTC", "APOLLO"]):
+                if prj in ["CMS-PIXEL-DTC", "APOLLO"]:
                     zeynep[day] += projects[prj][day]
                 else:
                     not_zeynep[day] += projects[prj][day]
@@ -251,7 +252,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
     #     y = [zeynep, not_zeynep]
 
-    if (normalize):
+    if normalize:
         for week in range(len(y[0])):
 
             sum = 0
@@ -270,24 +271,24 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     plt.margins(x=0)
     plt.margins(y=0)
 
-    if (indaraize):
+    if indaraize:
         plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"],
-                      colors = ["#008080","#abcdef"])
+                      colors = ["#008080", "#abcdef"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
-    elif (zeynepize):
+    elif zeynepize:
         plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep", "not zeynep"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
-    elif (muonize):
+    elif muonize:
         plt.stackplot(x, muon, not_muon, labels=["muon", "not muon"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
-    elif (atlasize):
+    elif atlasize:
         plt.stackplot(x, atlas, not_atlas, labels=["atlas", "not atlas"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
-    elif (etlize):
+    elif etlize:
         plt.stackplot(x, etl, not_etl, labels=["etl", "not etl"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
@@ -316,7 +317,6 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         # chart = alt.Chart(data).mark_area().encode().show()
         # chart.save(figname)
 
-
     # print("meetings: %d hours" % meetings)
     # print("not_meetings: %d hours" % not_meetings)
     # print("fraction of time in meetings = %f" % (meetings/(meetings + not_meetings)))
@@ -326,7 +326,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
 if __name__ == "__main__":
     if sys.version_info < (3, 0, 0):
-        print(__file__ + ' requires Python 3, while Python ' +
-              str(sys.version[0] + ' was detected. Terminating. '))
+        print(__file__ + ' requires Python 3, while Python '
+              + str(sys.version[0] + ' was detected. Terminating. '))
         sys.exit(1)
     plot_table("test.png")

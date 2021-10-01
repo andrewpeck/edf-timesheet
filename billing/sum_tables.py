@@ -57,20 +57,21 @@ def csv_to_dict(file):
 
         table = csv.reader(csvfile, delimiter=",")
         for row in table:
-            if is_float(row[5]):
-                day = int(row[0])
-                project = substitute_project_name(row[2].upper())
-                description = row[3]
-                hours = float(row[5])
+            if (len(row) > 0):
+                if is_float(row[5]):
+                    day = int(row[0])
+                    project = substitute_project_name(row[2].upper())
+                    description = row[3]
+                    hours = float(row[5])
 
-                if project not in projects:
-                    projects[project] = OrderedDict()
+                    if project not in projects:
+                        projects[project] = OrderedDict()
 
-                if day not in projects[project]:
-                    projects[project][day] = {"hours": 0.0, "description": ""}
+                    if day not in projects[project]:
+                        projects[project][day] = {"hours": 0.0, "description": ""}
 
-                projects[project][day]["hours"] += hours
-                projects[project][day]["description"] += description + "; "
+                    projects[project][day]["hours"] += hours
+                    projects[project][day]["description"] += description + "; "
 
         return projects
 
