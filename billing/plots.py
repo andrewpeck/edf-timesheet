@@ -294,6 +294,9 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         plt.savefig(figname, bbox_inches="tight")
     else:
         # Basic stacked area chart.
+        print(len(x))
+        print(len(y))
+
         plt.stackplot(x, y, labels=t)
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
         plt.savefig(figname, bbox_inches="tight")
