@@ -44,10 +44,11 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     d = start_date
     print(start_date)
 
-    for x in range(date_range):
+    for x in range(date_range+1):
         d = (d + datetime.timedelta(weeks=1))
         #date_list.append("%d/%d/%02d" % (d.year, d.month, d.day % 7 +1))
         date_list.append("%d/%d/%02d" % (d.year, d.month, (d.day) // 7))
+
     #print(date_list)
 
     work = sum_tables.parse_projects()
@@ -133,6 +134,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         y.append(projects[prj])
         t.append(prj)
     x = date_list  # range(len(y[0]))
+    #x = range(len(y[0]))
 
     # pop off empty weeks at the end
     busy = []
@@ -273,7 +275,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
 
     if indaraize:
         plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"],
-                      colors = ["#008080", "#abcdef"])
+                      colors=["#008080", "#abcdef"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif zeynepize:
@@ -294,8 +296,10 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         plt.savefig(figname, bbox_inches="tight")
     else:
         # Basic stacked area chart.
+        print(x)
+        print(y[0])
         print(len(x))
-        print(len(y))
+        print(len(y[0]))
 
         plt.stackplot(x, y, labels=t)
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)

@@ -20,13 +20,14 @@
           (princ (format "Exporting table to %s.csv\n" name))
           (let ((csv-name (format "%s.csv" name)))
             (org-table-export csv-name "orgtbl-to-csv")
+            ;; add a newline at the end of each table to circumvent a bug in the
+            ;; database reader
             (save-excursion
                 (find-file csv-name)
                 (goto-char (point-max))
                 (end-of-line)
                 (newline-and-indent)
-                (save-buffer)
-                )))))))
+                (save-buffer))))))))
 
 (mapc (lambda (file)
         (find-file (expand-file-name file))
