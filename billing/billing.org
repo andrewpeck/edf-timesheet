@@ -282,11 +282,11 @@ return (plots.plot_table(figname, etlize=True))
 
 *** https://emacs.stackexchange.com/questions/7375/can-i-format-cells-in-an-org-mode-table-differently-depending-on-a-formula
 ** Local Variables :noexport:
-# eval: (make-variable-buffer-local 'after-save-hook)
+# eval: ; (make-variable-buffer-local 'after-save-hook)
 # Local Variables:
 # fill-column: 120
-# eval: (add-hook 'after-save-hook #'org-html-export-to-html nil 'local)
-# eval: (ap/nowrap)
+# eval: ; (add-hook 'after-save-hook #'org-html-export-to-html nil 'local)
+# eval: ; (ap/nowrap)
 # End:
 * Hours
 :PROPERTIES:
