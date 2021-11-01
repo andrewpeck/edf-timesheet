@@ -13,7 +13,7 @@ https://vega.github.io/vega-lite/docs/stack.html
 ** GEM Accruals
 - August: https://docs.google.com/spreadsheets/d/1B-EwiV2WmX5rFvUxlLBul6KeHfr9NorBO5WAL_-y9NA/edit#gid=1142850913
 - September: https://docs.google.com/spreadsheets/d/1ocjefoiQf1zoSh3h46toA8zfR0ttFszijbPwtYTMIhg/edit#gid=1053913684
-- October:
+- October: https://docs.google.com/spreadsheets/d/1M9Ex0YfOghWgiXYLqMrIEjMlZM0rhfetmB-aJHOuW3o/edit#gid=1511255941
 ** Accruals
 #+begin_src bash :exports results
 python plots.py
