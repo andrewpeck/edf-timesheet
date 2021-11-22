@@ -3,6 +3,7 @@ import datetime
 import dateutil
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
+from statistics import mean
 
 import sum_tables
 
@@ -137,12 +138,14 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     #x = range(len(y[0]))
 
     # pop off empty weeks at the end
+    #
     busy = []
     for i in range(len(x)):
         busy.append(0)
         for prj in y:
-            if prj[i] > 0:
-                busy[i] = 1
+            if (0 <= i < len(prj)):
+                if prj[i] > 0:
+                    busy[i] = 1
 
     weeks_to_pop = 0
     for i in range(len(busy) - 1, -1, -1):
@@ -274,24 +277,34 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     plt.margins(y=0)
 
     if indaraize:
-        plt.stackplot(x, indara, not_indara, labels=["indara", "not indara"],
+        x = x[0:len(indara)]
+        xmean = (mean(indara))
+        plt.stackplot(x, indara, not_indara, labels=["indara = %0.2f" % xmean, "not indara"],
                       colors=["#008080", "#abcdef"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif zeynepize:
-        plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep", "not zeynep"])
+        x = x[0:len(zeynep)]
+        xmean = (mean(zeynep))
+        plt.stackplot(x, zeynep, not_zeynep, labels=["zeynep = %0.2f" % xmean, "not zeynep"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif muonize:
-        plt.stackplot(x, muon, not_muon, labels=["muon", "not muon"])
+        x = x[0:len(muon)]
+        xmean = (mean(muon))
+        plt.stackplot(x, muon, not_muon, labels=["muon = %0.2f" % xmean, "not muon"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif atlasize:
-        plt.stackplot(x, atlas, not_atlas, labels=["atlas", "not atlas"])
+        x = x[0:len(atlas)]
+        xmean = (mean(atlas))
+        plt.stackplot(x, atlas, not_atlas, labels=["atlas = %0.2f" % xmean, "not atlas"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     elif etlize:
-        plt.stackplot(x, etl, not_etl, labels=["etl", "not etl"])
+        x = x[0:len(etl)]
+        xmean = (mean(etl))
+        plt.stackplot(x, etl, not_etl, labels=["etl = %0.2f" % xmean, "not etl"])
         plt.legend(loc='upper left')
         plt.savefig(figname, bbox_inches="tight")
     else:
@@ -300,6 +313,8 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         print(y[0])
         print(len(x))
         print(len(y[0]))
+
+        x = x[0:len(y[0])]
 
         plt.stackplot(x, y, labels=t)
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
