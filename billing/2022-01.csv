@@ -39,4 +39,16 @@ D,Time,Project,Task,Day,Hours
 12,1-4,L0MDT,Firmware; PDR,WED,3.0
 12,4-4:30,CSC,Email Jaebak,WED,0.5
 ,,,,,
+13,9-10,L0MDT,DAQ Integration,THU,3.0
+13,10-12,L0MDT,PDR,THU,2.0
+13,12-4,L0MDT,DAQ Integration,THU,4.0
+13,4-5,ME0,Meeting,THU,1.0
+,,,,,
+14,9-10,L0MDT,DAQ Integration,FRI,1.0
+14,10-10:30,GE11,Hog upgrade,FRI,1.0
+14,10:30-11:30,GE21,Hog upgrade,FRI,1.0
+14,11:30-1,--,EDF Lunch,FRI,1.5
+14,1-2,L0MDT,DAQ Integration,FRI,1.0
+14,2-5,L0MDT,Hog documentation,FRI,3.0
+,,,,,
 

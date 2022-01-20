@@ -24,6 +24,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     delta = datetime.timedelta(days=1)
 
     for file in sum_tables.get_csv_files():
+        print(file)
         d = datetime.datetime.strptime(file.replace(".csv", ""), "%Y-%m")
         month = d.month
         year = d.year
@@ -31,7 +32,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
             month_begin = month
             year_begin = year
             start_date = d
-        if (month > month_end and year >= year_end):
+        if (year > year_end) or (month > month_end and year >= year_end):
             month_end = month
             year_end = year
             end_date = d + dateutil.relativedelta.relativedelta(day=31)
@@ -44,6 +45,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     date_list = []
     d = start_date
     print(start_date)
+    print(end_date)
 
     for x in range(date_range+1):
         d = (d + datetime.timedelta(weeks=1))
@@ -85,7 +87,8 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
                     if (prj not in ["SICK", "VAC", "--", "ADMIN", "HOLIDAY"]):
                         projects[prj] = []
 
-    print("%30s, Month, Hours, Cost" % "Project")
+    f = open("accruals.txt","w+")
+    f.write("%30s, Year, Month, Hours, Cost\n" % "Project")
     for prj in projects:
 
         date = start_date
@@ -119,12 +122,14 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
             date += delta
 
             if date.month != month:
+
                 if (year < 2021 or (year == 2021 and month < 7)):
                     rate = 70
                 else:
                     rate = 89
-                print("%30s, %5d,  %4.1f, $%6.1f" %
-                      (prj, month, monthsum, monthsum * rate))
+
+                f.write("%30s, %4d, %5d,  %4.1f, $%6.1f\n" %
+                      (prj, year, month, monthsum, monthsum * rate))
 
     y = []
     t = []
