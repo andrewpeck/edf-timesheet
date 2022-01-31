@@ -2066,86 +2066,119 @@ return (plots.plot_table(figname, etlize=True))
 ** January 2022
  #+ATTR_HTML: :border 2 :frame none
  #+TBLNAME: 2022-01
- |---+----+-------------+----------+------------------+-----+-------|
- |   |  D |        Time | Project  | Task             | Day | Hours |
- |---+----+-------------+----------+------------------+-----+-------|
- | # |    |             |          |                  |     |       |
- | # |  3 |         9-5 | VACATION | Day off          | MON |   8.0 |
- | # |    |             |          |                  |     |       |
- | # |  4 |        9-10 | ADMIN    | Email cleanup    | TUE |   1.0 |
- | # |  4 |       10-11 | ME0      | Meeting          | TUE |   1.0 |
- | # |  4 |       11-12 | ADMIN    | EDF Chat         | TUE |   1.0 |
- | # |  4 |     12-4:30 | L0MDT    | Timing; Felix TX | TUE |   4.0 |
- | # |    |             |          |                  |     |       |
- | # |  5 |        12-4 | L0MDT    | Firmware         | WED |   4.0 |
- | # |    |             |          |                  |     |       |
- | # |  6 | 10:30-12:30 | L0MDT    | Firmware         | THU |   1.5 |
- | # |  6 |  12:30-1:30 | L0MDT    | PDR              | THU |   1.0 |
- | # |  6 |   1:30-3:00 | ADMIN    | Furniture        | THU |   1.5 |
- | # |  6 |         3-5 | L0MDT    | Firmware         | THU |   2.0 |
- | # |    |             |          |                  |     |       |
- | # |  7 |     9:30-11 | L0MDT    | Firmware         | FRI |   1.5 |
- | # |  7 |         1-5 | L0MDT    | Firmware; PDR    | FRI |   3.0 |
- | # |    |             |          |                  |     |       |
- |---+----+-------------+----------+------------------+-----+-------|
- | # |    |             |          |                  |     |       |
- | # | 10 |     9:30-10 | L0MDT    | Firmware         | MON |   0.5 |
- | # | 10 |       10-11 | L0MDT    | PDR              | MON |   1.0 |
- | # | 10 |       11-12 | ETL      | Meeting          | MON |   1.0 |
- | # | 10 |        12-1 | CSC      | Email Sicheng    | MON |   1.0 |
- | # | 10 |      1-3:30 | L0MDT    | PDR              | MON |   2.5 |
- | # | 10 |   3:30-4:30 | ME0      | Chloe            | MON |   1.0 |
- | # |    |             |          |                  |     |       |
- | # | 11 |    10-10:30 | L0MDT    | Hog Meeting      | TUE |   0.5 |
- | # | 11 | 10:30-11:30 | ME0      | Firmware meeting | TUE |   0.5 |
- | # | 11 |    11:30-12 | --       | Walk to work     | TUE |   0.5 |
- | # | 11 |        12-2 | L0MDT    | Firmware         | TUE |   2.0 |
- | # | 11 |         2-3 | APOLLO   | IPMC Updates     | TUE |   0.5 |
- | # | 11 |         3-5 | L0MDT    | PDR              | TUE |   2.0 |
- | # |    |             |          |                  |     |       |
- | # | 12 |        9-10 | L0MDT    | Firmware         | WED |   1.0 |
- | # | 12 |       10-11 | L0MDT    | Meeting          | WED |   1.0 |
- | # | 12 |       11-12 | L0MDT    | PDR              | WED |   1.0 |
- | # | 12 |        12-1 | --       | Lunch with Eric  | WED |   1.0 |
- | # | 12 |         1-4 | L0MDT    | Firmware; PDR    | WED |   3.0 |
- | # | 12 |      4-4:30 | CSC      | Email Jaebak     | WED |   0.5 |
- | # |    |             |          |                  |     |       |
- | # | 13 |        9-10 | L0MDT    | DAQ Integration  | THU |   3.0 |
- | # | 13 |       10-12 | L0MDT    | PDR              | THU |   2.0 |
- | # | 13 |        12-4 | L0MDT    | DAQ Integration  | THU |   4.0 |
- | # | 13 |         4-5 | ME0      | Meeting          | THU |   1.0 |
- | # |    |             |          |                  |     |       |
- | # | 14 |        9-10 | L0MDT    | DAQ Integration  | FRI |   1.0 |
- | # | 14 |    10-10:30 | GE11     | Hog upgrade      | FRI |   1.0 |
- | # | 14 | 10:30-11:30 | GE21     | Hog upgrade      | FRI |   1.0 |
- | # | 14 |     11:30-1 | --       | EDF Lunch        | FRI |   1.5 |
- | # | 14 |         1-2 | L0MDT    | DAQ Integration  | FRI |   1.0 |
- | # | 14 |         2-5 | L0MDT    | Hog              | FRI |   3.0 |
- | # |    |             |          |                  |     |       |
- | # | 17 |         9-5 | HOLIDAY  | MLK              | MON |   8.0 |
- | # |    |             |          |                  |     |       |
- | # | 18 |     9:30-10 | L0MDT    | Hog              | TUE |   0.5 |
- | # | 18 |       10-11 | ME0      | Meeting          | TUE |   1.0 |
- | # | 18 |    11-12:30 | L0MDT    | Hog              | TUE |   1.5 |
- | # | 18 |     12:30-1 | GE11     | VTRX RSSI        | TUE |   0.5 |
- | # | 18 |      1-2:30 | L0MDT    | Meeting          | TUE |   1.5 |
- | # | 18 |   2:30-4:30 | ETL      | Mockup           | TUE |   2.0 |
- | # |    |             |          |                  |     |       |
- | # | 19 |        9-12 | L0MDT    | Firmware         | WED |   3.0 |
- | # | 19 |    12-12:30 | L0MDT    | PDR              | WED |   0.5 |
- | # | 19 |     12:30-1 | Tracker  | Meeting          | WED |   0.5 |
- | # | 19 |         2-3 | ETL      | Meeting          | WED |   1.0 |
- | # | 19 |         3-5 | --       | Indara           | WED |   2.0 |
- | # | 19 |         5-6 | L0MDT    | PDR              | WED |   1.0 |
- | # |    |             |          |                  |     |       |
- | # | 20 |        9-10 | L0MDT    | PDR              | THU |   2.0 |
- | # | 20 |       10-11 | L0MDT    | Firmware         | THU |   1.0 |
- | # | 20 |       11-12 | ETL      | Meeting          | THU |   1.0 |
- | # | 20 |             |          |                  | THU |       |
- | # | 20 |         4-5 | ME0      | Meeting          | THU |   1.0 |
- | # |    |             |          |                  |     |       |
- | # |    |             |          |                  |     |       |
- |---+----+-------------+----------+------------------+-----+-------|
+ |---+----+-------------+----------+-------------------------+-----+-------|
+ |   |  D |        Time | Project  | Task                    | Day | Hours |
+ |---+----+-------------+----------+-------------------------+-----+-------|
+ | # |    |             |          |                         |     |       |
+ | # |  3 |         9-5 | VACATION | Day off                 | MON |   8.0 |
+ | # |    |             |          |                         |     |       |
+ | # |  4 |        9-10 | ADMIN    | Email cleanup           | TUE |   1.0 |
+ | # |  4 |       10-11 | ME0      | Meeting                 | TUE |   1.0 |
+ | # |  4 |       11-12 | ADMIN    | EDF Chat                | TUE |   1.0 |
+ | # |  4 |     12-4:30 | L0MDT    | Timing; Felix TX        | TUE |   4.5 |
+ | # |    |             |          |                         |     |       |
+ | # |  5 |        12-4 | L0MDT    | Firmware                | WED |   4.0 |
+ | # |    |             |          |                         |     |       |
+ | # |  6 | 10:30-12:30 | L0MDT    | Firmware                | THU |   2.0 |
+ | # |  6 |  12:30-1:30 | L0MDT    | PDR                     | THU |   1.0 |
+ | # |  6 |   1:30-3:00 | ADMIN    | Furniture               | THU |   1.5 |
+ | # |  6 |         3-5 | L0MDT    | Firmware                | THU |   2.0 |
+ | # |    |             |          |                         |     |       |
+ | # |  7 |     9:30-11 | L0MDT    | Firmware                | FRI |   1.5 |
+ | # |  7 |         1-5 | L0MDT    | Firmware; PDR           | FRI |   4.0 |
+ | # |    |             |          |                         |     |       |
+ |---+----+-------------+----------+-------------------------+-----+-------|
+ | # |    |             |          |                         |     |       |
+ | # | 10 |     9:30-10 | L0MDT    | Firmware                | MON |   0.5 |
+ | # | 10 |       10-11 | L0MDT    | PDR                     | MON |   1.0 |
+ | # | 10 |       11-12 | ETL      | Meeting                 | MON |   1.0 |
+ | # | 10 |        12-1 | CSC      | Email Sicheng           | MON |   1.0 |
+ | # | 10 |      1-3:30 | L0MDT    | PDR                     | MON |   2.5 |
+ | # | 10 |   3:30-4:30 | ME0      | Chloe                   | MON |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 11 |    10-10:30 | L0MDT    | Hog Meeting             | TUE |   0.5 |
+ | # | 11 | 10:30-11:30 | ME0      | Firmware meeting        | TUE |   1.0 |
+ | # | 11 |    11:30-12 | --       | Walk to work            | TUE |   0.5 |
+ | # | 11 |        12-2 | L0MDT    | Firmware                | TUE |   2.0 |
+ | # | 11 |         2-3 | APOLLO   | IPMC Updates            | TUE |   1.0 |
+ | # | 11 |         3-5 | L0MDT    | PDR                     | TUE |   2.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 12 |        9-10 | L0MDT    | Firmware                | WED |   1.0 |
+ | # | 12 |       10-11 | L0MDT    | Meeting                 | WED |   1.0 |
+ | # | 12 |       11-12 | L0MDT    | PDR                     | WED |   1.0 |
+ | # | 12 |        12-1 | --       | Lunch with Eric         | WED |   1.0 |
+ | # | 12 |         1-4 | L0MDT    | Firmware; PDR           | WED |   3.0 |
+ | # | 12 |      4-4:30 | CSC      | Email Jaebak            | WED |   0.5 |
+ | # |    |             |          |                         |     |       |
+ | # | 13 |        9-10 | L0MDT    | DAQ Integration         | THU |   1.0 |
+ | # | 13 |       10-12 | L0MDT    | PDR                     | THU |   2.0 |
+ | # | 13 |        12-4 | L0MDT    | DAQ Integration         | THU |   4.0 |
+ | # | 13 |         4-5 | ME0      | Meeting                 | THU |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 14 |        9-10 | L0MDT    | DAQ Integration         | FRI |   1.0 |
+ | # | 14 |    10-10:30 | GE11     | Hog upgrade             | FRI |   0.5 |
+ | # | 14 | 10:30-11:30 | GE21     | Hog upgrade             | FRI |   1.0 |
+ | # | 14 |     11:30-1 | --       | EDF Lunch               | FRI |   1.5 |
+ | # | 14 |         1-2 | L0MDT    | DAQ Integration         | FRI |   1.0 |
+ | # | 14 |         2-5 | L0MDT    | Hog                     | FRI |   3.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 17 |         9-5 | HOLIDAY  | MLK                     | MON |   8.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 18 |     9:30-10 | L0MDT    | Hog                     | TUE |   0.5 |
+ | # | 18 |       10-11 | ME0      | Meeting                 | TUE |   1.0 |
+ | # | 18 |    11-12:30 | L0MDT    | Hog                     | TUE |   1.5 |
+ | # | 18 |     12:30-1 | GE11     | VTRX RSSI               | TUE |   0.5 |
+ | # | 18 |      1-2:30 | L0MDT    | Meeting                 | TUE |   1.5 |
+ | # | 18 |   2:30-4:30 | ETL      | Mockup                  | TUE |   2.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 19 |        9-12 | L0MDT    | Firmware                | WED |   3.0 |
+ | # | 19 |    12-12:30 | L0MDT    | PDR                     | WED |   0.5 |
+ | # | 19 |     12:30-1 | Tracker  | Meeting                 | WED |   0.5 |
+ | # | 19 |         2-3 | ETL      | Meeting                 | WED |   1.0 |
+ | # | 19 |         3-5 | --       | Indara                  | WED |   2.0 |
+ | # | 19 |         5-6 | L0MDT    | PDR                     | WED |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 20 |        9-10 | L0MDT    | PDR                     | THU |   1.0 |
+ | # | 20 |       10-11 | L0MDT    | Firmware                | THU |   1.0 |
+ | # | 20 |       11-12 | ETL      | Meeting                 | THU |   1.0 |
+ | # | 20 |        12-2 | ETL      | Moving lab              | THU |   2.0 |
+ | # | 20 |         2-3 | GE11     | 4Gb links               | THU |   1.0 |
+ | # | 20 |      3-4:30 | APOLLO   | OpenIPMC                | THU |   1.5 |
+ | # | 20 |         4-5 | ME0      | Meeting                 | THU |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 21 |         9-5 | VACATION |                         | FRI |   8.0 |
+ | # |    |             |          |                         |     |       |
+ |---+----+-------------+----------+-------------------------+-----+-------|
+ | # |    |             |          |                         |     |       |
+ | # | 24 |         9-5 | VACATION |                         | MON |   8.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 25 |        9-10 | --       | Email catchup           | TUE |   1.0 |
+ | # | 25 |       10-11 | ME0      | Meeting                 | TUE |   1.0 |
+ | # | 25 |        11-1 | L0MDT    | PDR                     | TUE |   2.0 |
+ | # | 25 |         1-2 | GE11     | 4Gb links               | TUE |   1.0 |
+ | # | 25 |         3-4 | GE11     | 4Gb links               | TUE |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 26 |      8-9:30 | GE11     | 4Gb links               | WED |   1.5 |
+ | # | 26 |       10-11 | L0MDT    | FELIX PDR               | WED |   1.0 |
+ | # | 26 |       11-12 | ETL      | Meeting                 | WED |   1.0 |
+ | # | 26 |        12-1 | GE21     | Firmware update         | WED |   1.0 |
+ | # | 26 |      1:30-4 | ETL      | Mockup                  | WED |   2.5 |
+ | # | 26 |         4-8 | L0MDT    | FELIX PDR               | WED |   4.0 |
+ | # | 26 |         8-9 | CSC      | ALCT / ODMB integration | WED |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 27 |         8-2 | L0MDT    | PDR                     | THU |   6.0 |
+ | # | 27 |         2-3 | CSC      | ALCT / ODMB integration | THU |   1.0 |
+ | # | 27 |         3-4 | GE21     | Firmware                | THU |   1.0 |
+ | # | 27 |         4-5 | ME0      | Meeting                 | THU |   1.0 |
+ | # |    |             |          |                         |     |       |
+ | # | 28 |     9:30-10 | GE11     | Firmware                | FRI |   0.5 |
+ | # | 28 |       10-11 | CSC      | ALCT / ODMB integration | FRI |   1.0 |
+ | # | 28 |       11-12 | CSC      | ALCT / ODMB integration | FRI |   1.0 |
+ | # | 28 |        12-1 | ETL      | Meet with Daniel        | FRI |   1.0 |
+ | # | 28 |         1-3 | CSC      | ALCT / ODMB integration | FRI |   2.0 |
+ | # | 28 |         3-4 | ETL      | Mechanical work         | FRI |   1.0 |
+ | # |    |             |          |                         |     |       |
+ |---+----+-------------+----------+-------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"January 2022"))::$7='(org-sbe subtract (a $$3))
 
 
