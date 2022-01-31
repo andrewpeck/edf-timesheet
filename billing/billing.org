@@ -267,7 +267,7 @@ return (plots.plot_table(figname, etlize=True))
     ("October"   10)
     ("November"  11)
     ("December"  12)
-    (t -1)))
+    (_ -1)))
 
 ;; org-get-outline-path t
 (let* ((heading (split-string path " " t))
