@@ -106,4 +106,9 @@ D,Time,Project,Task,Day,Hours
 28,1-3,CSC,ALCT / ODMB integration,FRI,2.0
 28,3-4,ETL,Mechanical work,FRI,1.0
 ,,,,,
+,,,,,
+31,9-10:30,L0MDT,PDR Pretalk,MON,1.5
+31,10:30-1,ETL,Meeting,MON,2.5
+31,1-2,ETL,Followup work,MON,1.0
+,,,,,
 

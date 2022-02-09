@@ -1,4 +1,4 @@
-D,Time,Project,Task,,Hours
+D,Time,Project,Task,Day,Hours
 ,,,,,
 1,8:30-9:30,ETL,Slides for Ted,MON,1.0
 1,9:30-10:30,L0MDT,Cocotb,,1.0

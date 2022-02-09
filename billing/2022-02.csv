@@ -1,0 +1,45 @@
+D,Time,Project,Task,Day,Hours
+,,,,,
+1,8-12:30,L0MDT,PDR,TUE,4.5
+1,12:30-2,APOLLO,IPMC updates,TUE,1.5
+1,2-3,GE11,Firmware update,TUE,1.0
+,,,,,
+2,9-10,L0MDT,Firmware,WED,1.0
+2,10-10:30,GE11,VFAT Taskforce,WED,0.5
+2,10:30-11,GE21,VFAT Taskforce,WED,0.5
+2,11-12,GE11,DDR Firmware,WED,1.0
+2,12-12:30,GE21,DDR Firmware,WED,0.5
+2,12:30-2:30,ETL,Mockup with students,WED,2.0
+2,2:30-4,ME0,Chloe,WED,1.5
+2,4-7,ETL,Meeting + followup,WED,3.0
+2,7-8,GE11,DDR Firmware,WED,1.0
+,,,,,
+3,9-10,GE11,DDR Firmware,THU,1.0
+3,10-11,GE21,Phase 2 Meeting,THU,1.0
+3,11-12,APOLLO,MPI CM Meeting,THU,1.0
+3,11-12,ETL,Integration meeting,THU,1.0
+3,12-1,GE11,DDR Firmware,THU,1.0
+3,1-2,GE21,DDR Firmware,THU,1.0
+3,2-2:30,APOLLO,Adam,THU,0.5
+3,2:30-3,--,Lunch,THU,0.5
+3,3-4,ME0,Meeting,THU,1.0
+,,,,,
+4,9-10,Tracker,Meeting,FRI,1.0
+4,10-11,GE11,DDR Firmware,FRI,1.0
+4,11-12,GE21,DDR Firmware,FRI,1.0
+4,11-12,ETL,Mockup orders,FRI,1.0
+4,2-3,GE11,DDR Firmware,FRI,1.0
+4,4-5,GE21,DDR Firmware,FRI,1.0
+,,,,,
+,,,,,
+7,9-9:30,ADMIN,Email,MON,0.5
+7,9:30-11,ADMIN,EDF Meeting,MON,1.5
+7,11-12,--,Lunch,MON,1.0
+7,12-1,ME0,Chloe,MON,1.0
+7,2-6,ETL,Mockup,MON,4.0
+,,,,,
+9,10-11,ME0,Meeting,WED,1.0
+9,4-6,CSC,ODMB Integration,WED,2.0
+9,11-4,ETL,Mockup,WED,5.0
+,,,,,
+

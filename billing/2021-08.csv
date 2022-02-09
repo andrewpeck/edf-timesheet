@@ -80,7 +80,7 @@ D,Time,Project,Task,Day,Hours
 13,12-1,--,LUNCH,FRI,1.0
 13,1-1:30,GE11,Metadata format,FRI,0.5
 13,1:30-2,GE21,Metadata format,FRI,0.5
-13,2-3,IPMC,Firmware updates,FRI,1.0
+13,2-3,Tracker,Firmware updates,FRI,1.0
 13,3-5,ETL,RB Testing,FRI,2.0
 ,,,,,
 ,,,,,

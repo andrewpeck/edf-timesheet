@@ -1,28 +1,5 @@
                        Project, Year, Month, Hours, Cost
-                       CMS-ETL, 2021,     2,  19.0, $1330.0
-                       CMS-ETL, 2021,     3,  18.0, $1260.0
-                       CMS-ETL, 2021,     4,  17.5, $1225.0
-                       CMS-ETL, 2021,     5,  19.5, $1365.0
-                       CMS-ETL, 2021,     6,  21.0, $1470.0
-                       CMS-ETL, 2021,     7,  32.5, $2892.5
-                       CMS-ETL, 2021,     8,  59.0, $5251.0
-                       CMS-ETL, 2021,     9,  38.8, $3448.8
-                       CMS-ETL, 2021,    10,  24.0, $2136.0
-                       CMS-ETL, 2021,    11,  25.5, $2269.5
-                       CMS-ETL, 2021,    12,   6.5, $ 578.5
-                       CMS-ETL, 2022,     1,  11.5, $1023.5
-             ATLAS-MUON-PHASE2, 2021,     2,  37.5, $2625.0
-             ATLAS-MUON-PHASE2, 2021,     3,  60.5, $4235.0
-             ATLAS-MUON-PHASE2, 2021,     4,  39.5, $2765.0
-             ATLAS-MUON-PHASE2, 2021,     5,  37.5, $2625.0
-             ATLAS-MUON-PHASE2, 2021,     6,  24.0, $1680.0
-             ATLAS-MUON-PHASE2, 2021,     7,  16.5, $1468.5
-             ATLAS-MUON-PHASE2, 2021,     8,  46.5, $4138.5
-             ATLAS-MUON-PHASE2, 2021,     9,  25.0, $2225.0
-             ATLAS-MUON-PHASE2, 2021,    10,  48.5, $4316.5
-             ATLAS-MUON-PHASE2, 2021,    11,  56.5, $5028.5
-             ATLAS-MUON-PHASE2, 2021,    12,  50.5, $4494.5
-             ATLAS-MUON-PHASE2, 2022,     1,  69.5, $6185.5
+                 CMS-PIXEL-DTC, 2021,     1,  22.0, $1540.0
                  CMS-PIXEL-DTC, 2021,     2,  28.0, $1960.0
                  CMS-PIXEL-DTC, 2021,     3,  33.0, $2310.0
                  CMS-PIXEL-DTC, 2021,     4,  28.0, $1960.0
@@ -35,78 +12,22 @@
                  CMS-PIXEL-DTC, 2021,    11,   7.5, $ 667.5
                  CMS-PIXEL-DTC, 2021,    12,   3.0, $ 267.0
                  CMS-PIXEL-DTC, 2022,     1,   0.5, $  44.5
-          CMS-EMU-UPGRADE-GE21, 2021,     2,   3.0, $ 210.0
-          CMS-EMU-UPGRADE-GE21, 2021,     3,  10.5, $ 735.0
-          CMS-EMU-UPGRADE-GE21, 2021,     4,   1.5, $ 105.0
-          CMS-EMU-UPGRADE-GE21, 2021,     5,  10.5, $ 735.0
-          CMS-EMU-UPGRADE-GE21, 2021,     6,  16.0, $1120.0
-          CMS-EMU-UPGRADE-GE21, 2021,     7,   3.0, $ 267.0
-          CMS-EMU-UPGRADE-GE21, 2021,     8,   9.5, $ 845.5
-          CMS-EMU-UPGRADE-GE21, 2021,     9,   4.5, $ 400.5
-          CMS-EMU-UPGRADE-GE21, 2021,    10,   4.0, $ 356.0
-          CMS-EMU-UPGRADE-GE21, 2021,    11,   2.5, $ 222.5
-          CMS-EMU-UPGRADE-GE21, 2021,    12,  17.0, $1513.0
-          CMS-EMU-UPGRADE-GE21, 2022,     1,   3.0, $ 267.0
-           CMS-EMU-UPGRADE-ME0, 2021,     2,   7.5, $ 525.0
-           CMS-EMU-UPGRADE-ME0, 2021,     3,  12.5, $ 875.0
-           CMS-EMU-UPGRADE-ME0, 2021,     4,  33.0, $2310.0
-           CMS-EMU-UPGRADE-ME0, 2021,     5,  23.5, $1645.0
-           CMS-EMU-UPGRADE-ME0, 2021,     6,   6.5, $ 455.0
-           CMS-EMU-UPGRADE-ME0, 2021,     7,  18.0, $1602.0
-           CMS-EMU-UPGRADE-ME0, 2021,     8,  20.5, $1824.5
-           CMS-EMU-UPGRADE-ME0, 2021,     9,  34.0, $3026.0
-           CMS-EMU-UPGRADE-ME0, 2021,    10,  15.5, $1379.5
-           CMS-EMU-UPGRADE-ME0, 2021,    11,  17.5, $1557.5
-           CMS-EMU-UPGRADE-ME0, 2021,    12,   5.5, $ 489.5
-           CMS-EMU-UPGRADE-ME0, 2022,     1,   7.5, $ 667.5
-              CMS-EMU-OPS-GE11, 2021,     2,   4.0, $ 280.0
-              CMS-EMU-OPS-GE11, 2021,     3,  10.0, $ 700.0
-              CMS-EMU-OPS-GE11, 2021,     4,   1.0, $  70.0
-              CMS-EMU-OPS-GE11, 2021,     5,   3.0, $ 210.0
-              CMS-EMU-OPS-GE11, 2021,     6,  13.5, $ 945.0
-              CMS-EMU-OPS-GE11, 2021,     7,   6.0, $ 534.0
-              CMS-EMU-OPS-GE11, 2021,     8,   6.5, $ 578.5
-              CMS-EMU-OPS-GE11, 2021,     9,   6.0, $ 534.0
-              CMS-EMU-OPS-GE11, 2021,    10,   0.5, $  44.5
-              CMS-EMU-OPS-GE11, 2021,    11,   6.0, $ 534.0
-              CMS-EMU-OPS-GE11, 2021,    12,  12.0, $1068.0
-              CMS-EMU-OPS-GE11, 2022,     1,   6.0, $ 534.0
-                      EMPHATIC, 2021,     2,   0.0, $   0.0
-                      EMPHATIC, 2021,     3,   6.5, $ 455.0
-                      EMPHATIC, 2021,     4,   4.5, $ 315.0
-                      EMPHATIC, 2021,     5,   7.0, $ 490.0
-                      EMPHATIC, 2021,     6,  22.0, $1540.0
-                      EMPHATIC, 2021,     7,   6.5, $ 578.5
-                      EMPHATIC, 2021,     8,   1.0, $  89.0
-                      EMPHATIC, 2021,     9,   0.0, $   0.0
-                      EMPHATIC, 2021,    10,   0.0, $   0.0
-                      EMPHATIC, 2021,    11,   2.0, $ 178.0
-                      EMPHATIC, 2021,    12,   0.0, $   0.0
-                      EMPHATIC, 2022,     1,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,     2,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,     3,   0.5, $  35.0
-               CMS-EMU-OPS-CSC, 2021,     4,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,     5,   0.5, $  35.0
-               CMS-EMU-OPS-CSC, 2021,     6,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,     7,   2.0, $ 178.0
-               CMS-EMU-OPS-CSC, 2021,     8,   0.5, $  44.5
-               CMS-EMU-OPS-CSC, 2021,     9,   2.0, $ 178.0
-               CMS-EMU-OPS-CSC, 2021,    10,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,    11,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2021,    12,   0.0, $   0.0
-               CMS-EMU-OPS-CSC, 2022,     1,   7.5, $ 667.5
-                        APOLLO, 2021,     2,   0.0, $   0.0
-                        APOLLO, 2021,     3,   0.0, $   0.0
-                        APOLLO, 2021,     4,   0.0, $   0.0
-                        APOLLO, 2021,     5,   0.0, $   0.0
-                        APOLLO, 2021,     6,   5.5, $ 385.0
-                        APOLLO, 2021,     7,  31.5, $2803.5
-                        APOLLO, 2021,     8,  10.0, $ 890.0
-                        APOLLO, 2021,     9,  20.0, $1780.0
-                        APOLLO, 2021,    10,   6.0, $ 534.0
-                        APOLLO, 2021,    11,   0.0, $   0.0
-                        APOLLO, 2021,    12,   1.0, $  89.0
-                        APOLLO, 2022,     1,   2.0, $ 178.0
+                 CMS-PIXEL-DTC, 2022,     2,   1.0, $  89.0
+                       CMS-ETL, 2021,     1,  59.5, $4165.0
+                       CMS-ETL, 2021,     2,  19.0, $1330.0
+                       CMS-ETL, 2021,     3,  17.0, $1190.0
+                       CMS-ETL, 2021,     4,  17.5, $1225.0
+                       CMS-ETL, 2021,     5,  19.5, $1365.0
+                       CMS-ETL, 2021,     6,  21.0, $1470.0
+                       CMS-ETL, 2021,     7,  32.5, $2892.5
+                       CMS-ETL, 2021,     8,  59.0, $5251.0
+                       CMS-ETL, 2021,     9,  38.8, $3448.8
+                       CMS-ETL, 2021,    10,  24.0, $2136.0
+                       CMS-ETL, 2021,    11,  25.5, $2269.5
+                       CMS-ETL, 2021,    12,   6.5, $ 578.5
+                       CMS-ETL, 2022,     1,  16.0, $1424.0
+                       CMS-ETL, 2022,     2,  16.0, $1424.0
+                         DEVEL, 2021,     1,   1.0, $  70.0
                          DEVEL, 2021,     2,   0.0, $   0.0
                          DEVEL, 2021,     3,   0.0, $   0.0
                          DEVEL, 2021,     4,   0.0, $   0.0
@@ -119,6 +40,106 @@
                          DEVEL, 2021,    11,   2.5, $ 222.5
                          DEVEL, 2021,    12,   9.0, $ 801.0
                          DEVEL, 2022,     1,   0.0, $   0.0
+                         DEVEL, 2022,     2,   0.0, $   0.0
+             ATLAS-MUON-PHASE2, 2021,     1,  21.0, $1470.0
+             ATLAS-MUON-PHASE2, 2021,     2,  37.5, $2625.0
+             ATLAS-MUON-PHASE2, 2021,     3,  60.5, $4235.0
+             ATLAS-MUON-PHASE2, 2021,     4,  39.5, $2765.0
+             ATLAS-MUON-PHASE2, 2021,     5,  37.5, $2625.0
+             ATLAS-MUON-PHASE2, 2021,     6,  24.0, $1680.0
+             ATLAS-MUON-PHASE2, 2021,     7,  16.5, $1468.5
+             ATLAS-MUON-PHASE2, 2021,     8,  46.5, $4138.5
+             ATLAS-MUON-PHASE2, 2021,     9,  25.0, $2225.0
+             ATLAS-MUON-PHASE2, 2021,    10,  48.5, $4316.5
+             ATLAS-MUON-PHASE2, 2021,    11,  56.5, $5028.5
+             ATLAS-MUON-PHASE2, 2021,    12,  50.5, $4494.5
+             ATLAS-MUON-PHASE2, 2022,     1,  70.0, $6230.0
+             ATLAS-MUON-PHASE2, 2022,     2,   5.5, $ 489.5
+           CMS-EMU-UPGRADE-ME0, 2021,     1,   8.0, $ 560.0
+           CMS-EMU-UPGRADE-ME0, 2021,     2,   7.5, $ 525.0
+           CMS-EMU-UPGRADE-ME0, 2021,     3,  12.5, $ 875.0
+           CMS-EMU-UPGRADE-ME0, 2021,     4,  33.0, $2310.0
+           CMS-EMU-UPGRADE-ME0, 2021,     5,  23.5, $1645.0
+           CMS-EMU-UPGRADE-ME0, 2021,     6,   6.5, $ 455.0
+           CMS-EMU-UPGRADE-ME0, 2021,     7,  18.0, $1602.0
+           CMS-EMU-UPGRADE-ME0, 2021,     8,  20.5, $1824.5
+           CMS-EMU-UPGRADE-ME0, 2021,     9,  34.0, $3026.0
+           CMS-EMU-UPGRADE-ME0, 2021,    10,  15.5, $1379.5
+           CMS-EMU-UPGRADE-ME0, 2021,    11,  17.5, $1557.5
+           CMS-EMU-UPGRADE-ME0, 2021,    12,   5.5, $ 489.5
+           CMS-EMU-UPGRADE-ME0, 2022,     1,   8.0, $ 712.0
+           CMS-EMU-UPGRADE-ME0, 2022,     2,   4.5, $ 400.5
+          CMS-EMU-UPGRADE-GE21, 2021,     1,   6.5, $ 455.0
+          CMS-EMU-UPGRADE-GE21, 2021,     2,   3.0, $ 210.0
+          CMS-EMU-UPGRADE-GE21, 2021,     3,  10.5, $ 735.0
+          CMS-EMU-UPGRADE-GE21, 2021,     4,   1.5, $ 105.0
+          CMS-EMU-UPGRADE-GE21, 2021,     5,  10.5, $ 735.0
+          CMS-EMU-UPGRADE-GE21, 2021,     6,  16.0, $1120.0
+          CMS-EMU-UPGRADE-GE21, 2021,     7,   3.0, $ 267.0
+          CMS-EMU-UPGRADE-GE21, 2021,     8,   9.5, $ 845.5
+          CMS-EMU-UPGRADE-GE21, 2021,     9,   4.5, $ 400.5
+          CMS-EMU-UPGRADE-GE21, 2021,    10,   4.0, $ 356.0
+          CMS-EMU-UPGRADE-GE21, 2021,    11,   2.5, $ 222.5
+          CMS-EMU-UPGRADE-GE21, 2021,    12,  17.0, $1513.0
+          CMS-EMU-UPGRADE-GE21, 2022,     1,   3.0, $ 267.0
+          CMS-EMU-UPGRADE-GE21, 2022,     2,   5.0, $ 445.0
+              CMS-EMU-OPS-GE11, 2021,     1,   4.0, $ 280.0
+              CMS-EMU-OPS-GE11, 2021,     2,   4.0, $ 280.0
+              CMS-EMU-OPS-GE11, 2021,     3,  10.0, $ 700.0
+              CMS-EMU-OPS-GE11, 2021,     4,   1.0, $  70.0
+              CMS-EMU-OPS-GE11, 2021,     5,   3.0, $ 210.0
+              CMS-EMU-OPS-GE11, 2021,     6,  13.5, $ 945.0
+              CMS-EMU-OPS-GE11, 2021,     7,   6.0, $ 534.0
+              CMS-EMU-OPS-GE11, 2021,     8,   6.5, $ 578.5
+              CMS-EMU-OPS-GE11, 2021,     9,   6.0, $ 534.0
+              CMS-EMU-OPS-GE11, 2021,    10,   0.5, $  44.5
+              CMS-EMU-OPS-GE11, 2021,    11,   6.0, $ 534.0
+              CMS-EMU-OPS-GE11, 2021,    12,  12.0, $1068.0
+              CMS-EMU-OPS-GE11, 2022,     1,   6.0, $ 534.0
+              CMS-EMU-OPS-GE11, 2022,     2,   7.5, $ 667.5
+                      EMPHATIC, 2021,     1,   0.0, $   0.0
+                      EMPHATIC, 2021,     2,   0.0, $   0.0
+                      EMPHATIC, 2021,     3,   6.5, $ 455.0
+                      EMPHATIC, 2021,     4,   4.5, $ 315.0
+                      EMPHATIC, 2021,     5,   7.0, $ 490.0
+                      EMPHATIC, 2021,     6,  22.0, $1540.0
+                      EMPHATIC, 2021,     7,   6.5, $ 578.5
+                      EMPHATIC, 2021,     8,   1.0, $  89.0
+                      EMPHATIC, 2021,     9,   0.0, $   0.0
+                      EMPHATIC, 2021,    10,   0.0, $   0.0
+                      EMPHATIC, 2021,    11,   2.0, $ 178.0
+                      EMPHATIC, 2021,    12,   0.0, $   0.0
+                      EMPHATIC, 2022,     1,   0.0, $   0.0
+                      EMPHATIC, 2022,     2,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,     1,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,     2,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,     3,   0.5, $  35.0
+               CMS-EMU-OPS-CSC, 2021,     4,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,     5,   0.5, $  35.0
+               CMS-EMU-OPS-CSC, 2021,     6,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,     7,   2.0, $ 178.0
+               CMS-EMU-OPS-CSC, 2021,     8,   0.5, $  44.5
+               CMS-EMU-OPS-CSC, 2021,     9,   2.0, $ 178.0
+               CMS-EMU-OPS-CSC, 2021,    10,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,    11,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2021,    12,   0.0, $   0.0
+               CMS-EMU-OPS-CSC, 2022,     1,   7.5, $ 667.5
+               CMS-EMU-OPS-CSC, 2022,     2,   2.0, $ 178.0
+                        APOLLO, 2021,     1,   0.0, $   0.0
+                        APOLLO, 2021,     2,   0.0, $   0.0
+                        APOLLO, 2021,     3,   0.0, $   0.0
+                        APOLLO, 2021,     4,   0.0, $   0.0
+                        APOLLO, 2021,     5,   0.0, $   0.0
+                        APOLLO, 2021,     6,   5.5, $ 385.0
+                        APOLLO, 2021,     7,  31.5, $2803.5
+                        APOLLO, 2021,     8,  10.0, $ 890.0
+                        APOLLO, 2021,     9,  20.0, $1780.0
+                        APOLLO, 2021,    10,   6.0, $ 534.0
+                        APOLLO, 2021,    11,   0.0, $   0.0
+                        APOLLO, 2021,    12,   1.0, $  89.0
+                        APOLLO, 2022,     1,   2.5, $ 222.5
+                        APOLLO, 2022,     2,   3.0, $ 267.0
+              SCOTT-LAB-CAMERA, 2021,     1,   0.0, $   0.0
               SCOTT-LAB-CAMERA, 2021,     2,   0.0, $   0.0
               SCOTT-LAB-CAMERA, 2021,     3,   0.0, $   0.0
               SCOTT-LAB-CAMERA, 2021,     4,   0.0, $   0.0
@@ -131,3 +152,4 @@
               SCOTT-LAB-CAMERA, 2021,    11,   1.0, $  89.0
               SCOTT-LAB-CAMERA, 2021,    12,   0.0, $   0.0
               SCOTT-LAB-CAMERA, 2022,     1,   0.0, $   0.0
+              SCOTT-LAB-CAMERA, 2022,     2,   0.0, $   0.0

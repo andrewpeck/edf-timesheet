@@ -25,7 +25,7 @@ D,Time,Project,Task,Day,Hours
 6,9-5,HOLIDAY,,MON,8.0
 ,,,,,
 7,9:30-10,CSC,ALCT voltage drop,TUE,0.5
-7,10-10:30,ATLAS,Firmware,TUE,0.5
+7,10-10:30,L0MDT,Firmware,TUE,0.5
 7,10:30-11,ADMIN,Billing/monthly reporting,TUE,0.5
 7,11-12,L0MDT,Hog meeting,TUE,1.0
 7,12-4,SICK,Mental health,TUE,4.0
@@ -96,7 +96,7 @@ D,Time,Project,Task,Day,Hours
 17,11-11:30,APOLLO,IPMC chat,FRI,0.5
 17,11:30-12,GE11,Clusterizer testing,FRI,0.5
 17,12-12:30,ME0,Clusterizer testing,FRI,0.5
-17,12-12:30,IPMC,Chat w/ Dan,FRI,0.5
+17,12-12:30,Tracker,Chat w/ Dan,FRI,0.5
 17,12:30-1,--,Lunch w/ Dan,FRI,0.5
 17,1-2,ETL,PCB planning,FRI,1.0
 17,2-3,GE11,Strip mapping,FRI,1.0

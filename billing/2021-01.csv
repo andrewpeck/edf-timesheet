@@ -1,0 +1,136 @@
+D,Time,Project,Task,,Hours
+,,,,,
+4,9-5,VACATION,Christmas,MON,8.0
+,,,,,
+5,10-10:30,ADMIN,Email catchup,TUE,0.5
+5,10:30-11:30,ADMIN,Billing,TUE,1.0
+5,11:30-12,ADMIN,Timesheet,TUE,0.5
+5,12-4,SICK,Pain,TUE,4.0
+,,,,,
+6,9-10,Tracker,Meeting,WED,1.0
+6,10-10:30,--,Emphatic,WED,0.5
+6,11:30-12:30,ETL,Firmware,WED,1.0
+6,10:30-11:30,DEVEL,VHDL-LS,WED,1.0
+6,12:30-1,L0MDT,Hog,WED,0.5
+6,1-1:30,ETL,Firmware (Ipbus),WED,0.5
+6,1:30-2:30,L0MDT,Hog,WED,1.0
+6,3-5,ETL,Firmware (Ipbus),WED,2.0
+,,,,,
+7,10-11:30,Tracker,TCLink,THU,1.5
+7,12:30-1,Tracker,TCLink,THU,0.5
+7,1-2,ETL,PCB Received,THU,1.0
+7,2-2:30,L0MDT,Regmap call with Guillermo,THU,0.5
+7,3-6,ETL,Ethernet firmware,THU,3.0
+,,,,,
+8,9-10,Tracker,Meeting,FRI,1.0
+8,1-2,ETL,Firmware,FRI,1.0
+8,2-3,ME0,Meeting,FRI,1.0
+8,3-4,Tracker,,FRI,1.0
+8,4-4:30,ETL,Firmware,FRI,0.5
+,,,,,
+,,,,,
+11,11-12,L0MDT,Meeting + emails,MON,1.0
+11,12-1:30,ETL,PCBs + emails,MON,1.5
+11,2-3,L0MDT,BU Meeting,MON,1.0
+11,3-4:30,ETL,Firmware,MON,1.5
+,,,,,
+12,10:30-11,L0MDT,Hog documentation,TUE,0.5
+12,11-12,Tracker,Meet with Dan,TUE,1.0
+12,12-12:30,ETL,PCB Version Control,TUE,0.5
+12,2-3:30,ETL,Meeting + emails,TUE,1.5
+12,1:30-2,ME0,Repo configuration,TUE,0.5
+12,4-6,ETL,Firmware,TUE,2.0
+,,,,,
+13,9-10,Tracker,Meeting,WED,1.0
+13,10-11,GE21,Repo config,WED,1.0
+13,1-1:30,ETL,Soldering,WED,0.5
+13,1:30-2,GE21,Repo config,WED,0.5
+13,2-2:30,ETL,Meet with Chris,WED,0.5
+13,3:30-4:30,GE21,Repo config,WED,1.0
+13,4:30-6,ETL,Firmware,WED,1.5
+,,,,,
+14,9:30-10,ETL,Firmware,THU,0.5
+14,10-11,L0MDT,Meeting,THU,1.0
+14,11-12,ETL,Firmware,THU,1.0
+14,12-1,ME0,Repository,THU,1.0
+14,1-2,ETL,Firmware,THU,1.0
+14,2-3,ETL,Meeting,THU,1.0
+14,3-4,ETL,Firmware,THU,1.0
+14,4-5,Tracker,Meeting,THU,1.0
+14,5-6,ETL,Firmware,THU,1.0
+,,,,,
+15,10-11,GE21,Repository,FRI,1.0
+15,11-12,ETL,Firmware,FRI,1.0
+15,1-2,L0MDT,Meet w/ Dan + Adam,FRI,1.0
+15,2-3,ME0,Meeting,FRI,1.0
+15,3-6,ETL,Firmware,FRI,3.0
+15,6-7,ETL,Firmware,,
+,,,,,
+,,,,,
+18,9-5,HOLIDAY,,MON,8.0
+,,,,,
+19,9-10,Tracker,Meeting (EMP),TUE,1.0
+19,10-11,Tracker,Meeting (Jeroen),TUE,1.0
+19,11-12,ETL,Firmware,TUE,1.0
+19,12-3:30,ETL,Emulator Meeting,TUE,3.5
+19,5:30-6:30,ETL,Firmware,TUE,1.0
+,,,,,
+20,9-11,Tracker,Meeting,WED,2.0
+20,11-12,L0MDT,Meeting,WED,1.0
+20,10-11,ETL,Firmware,WED,1.0
+20,12-2,ETL,Firmware,WED,2.0
+20,2:30-3,ME0,Meeting w/ Indara,WED,0.5
+20,3-5,ETL,Firmware + Software,WED,2.0
+20,5-7,ETL,Firmware + Software,WED,2.0
+,,,,,
+21,9-11,L0MDT,Meeting,THU,2.0
+21,11-1,SICK,Doctor's visit,THU,2.0
+21,1-6,ETL,Firmware + meeting,THU,5.0
+21,6-6:30,Tracker,IPMC,THU,0.5
+,,,,,
+22,9-10,Tracker,Meeting,FRI,1.0
+22,1:30-3,ETL,Firmware + meeting,FRI,1.5
+22,3-4,ME0,Meeting,FRI,1.0
+22,4-7,ETL,Firmware,FRI,3.0
+,,,,,
+,,,,,
+25,9-11,L0MDT,Meeting (Markus),MON,2.0
+25,11-12,L0MDT,Meeting (Hog),MON,1.0
+25,12-1,ME0,Meeting (Evaldas),MON,1.0
+25,1:30-2,ETL,Firmware,MON,0.5
+25,2-3,L0MDT,Meeting (Group),MON,1.0
+25,3-3:30,ETL,Lab Tour,MON,0.5
+25,3:30-4,Tracker,Lab Tour,MON,1.0
+25,4-6,ETL,SCA Firmware,MON,2.0
+,,,,,
+26,9-10,L0MDT,Shopping,TUE,1.0
+26,8-9,ETL,Firmware updates,TUE,1.0
+26,10-11:30,Tracker,IPMC,TUE,1.5
+26,11:30-12:30,L0MDT,Email to Frans,TUE,1.0
+26,1-2,L0MDT,Meet with Dan + Eric,TUE,1.0
+26,2-3:30,GE21,Repo configuration,TUE,3.0
+26,3:30-5,GE11,Repo configuration,TUE,3.0
+,,,,,
+27,9-10:30,Tracker,Meeting,WED,1.5
+27,11-12,L0MDT,Meeting (Tube mapping),WED,1.0
+27,12-12:30,ETL,Linpol test,WED,0.5
+27,12:30-1:30,ETL,Loopback test,WED,1.0
+27,1:30-2:30,GE11,Meeting (USGEM),WED,1.0
+27,2:30-4,Tracker,IPMC,WED,1.5
+27,4:30-5,ME0,FEAST/BPOL,WED,0.5
+27,5-6,ETL,"Chris, slides",WED,1.0
+,,,,,
+28,9-11:30,L0MDT,Meeting,THU,2.5
+28,12-12:30,ME0,Firmware,THU,0.5
+28,12:30-1,ETL,Slides,THU,0.5
+28,4-5,ETL,Ozgur,THU,1.0
+,,,,,
+29,8-9,Tracker,Meeting,FRI,1.0
+29,9-10,Tracker,Meeting,FRI,1.0
+29,11-1,--,EDF Lunch,FRI,2.0
+29,1-2,Tracker,IPMC,FRI,1.0
+29,2-3,ME0,Meeting (UCLA),FRI,1.0
+29,3-4,L0MDT,Meeting (Dan),FRI,1.0
+29,4-5:30,ETL,Meeting,FRI,1.5
+,,,,,
+
