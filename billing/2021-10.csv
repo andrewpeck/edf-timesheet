@@ -26,15 +26,15 @@ D,Time,Project,Task,Day,Hours
 5,2-3,ETL,FIFO Updates,TUE,1.0
 5,3-5,ETL,Mechanical chat w/ Daniel,TUE,2.0
 ,,,,,
-6,9-5,VAC,Vacation,WED,8.0
+6,9-5,VACATION,Vacation,WED,8.0
 ,,,,,
-7,9-5,VAC,Vacation,THU,8.0
+7,9-5,VACATION,Vacation,THU,8.0
 ,,,,,
-8,9-5,VAC,Vacation,FRI,8.0
+8,9-5,VACATION,Vacation,FRI,8.0
 ,,,,,
-11,9-5,VAC,Vacation,MON,8.0
+11,9-5,VACATION,Vacation,MON,8.0
 ,,,,,
-12,9-5,VAC,Vacation,TUE,8.0
+12,9-5,VACATION,Vacation,TUE,8.0
 ,,,,,
 13,9-9:30,GE21,Meeting,WED,0.5
 13,9:30-10,ME0,Meeting,WED,0.5

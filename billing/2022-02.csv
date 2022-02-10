@@ -38,8 +38,24 @@ D,Time,Project,Task,Day,Hours
 7,12-1,ME0,Chloe,MON,1.0
 7,2-6,ETL,Mockup,MON,4.0
 ,,,,,
-9,10-11,ME0,Meeting,WED,1.0
-9,4-6,CSC,ODMB Integration,WED,2.0
-9,11-4,ETL,Mockup,WED,5.0
+8,10-11,ME0,Meeting,TUE,1.0
+8,4-6,CSC,ODMB Integration,TUE,2.0
+8,11-4,ETL,Mockup,TUE,5.0
+,,,,,
+9,9-10,GE21,Firmware (DDR),WED,1.0
+9,10-11,ETL,Meet with Daniel,WED,1.0
+9,11:30-12:30,APOLLO,Networking issues / IPMC,WED,1.0
+9,12:30-1,Tracker,Meeting,WED,0.5
+9,12:30-1:30,APOLLO,Networking issues / IPMC,WED,1.0
+9,2-6,SICK,Muscle spasm,WED,4.0
+,,,,,
+10,9-10:30,CSC,ODMB Meeting,THU,1.5
+10,10:30-11,ETL,Meeting,THU,0.5
+10,11-11:30,CSC,Meet with Eric,THU,0.5
+10,11:30-12,L0MDT,Meet with Eric,THU,0.5
+10,12-1:30,GE11,Firmware (4 Gbps),THU,1.5
+10,1:30-3:00,CSC,ODMB Review,THU,1.5
+10,3-4,APOLLO,IPMC Meeting,THU,1.0
+10,4-5,ME0,Meeting,THU,1.0
 ,,,,,
 
