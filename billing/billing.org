@@ -4,80 +4,96 @@
 
 * Notes :noexport:
 
-https://gauss.bu.edu/redmine/projects/edf-database/repository/changes/user_scripts/load_csv_table.pl
-
-https://vega.github.io/vega-lite/docs/stack.html
-
-- 23% Tracker
-- 24% GEMs
-- 28% L0MDT
-- 21% ETL
+- EDF Database Script: https://gauss.bu.edu/redmine/projects/edf-database/repository/changes/user_scripts/load_csv_table.pl
 
 * Visualization
 :PROPERTIES:
 :VISIBILITY: children
 :END:
-** Cumulative Project Distribution
+** Project Distributions
+*** Meetings vs. Not Meetings
 #+begin_src emacs-lisp :exports both :results output
-(let ((org-table-data ()))
-
-  (save-excursion
-    (dolist (table (append
-                    (mapcar (lambda (x) (format "2021-%02d" x)) (number-sequence 1 12)) ;; 2021
-                    (mapcar (lambda (x) (format "2022-%02d" x)) (number-sequence 1  2)) ;; 2022
-                    ))
-      (goto-char (point-min))
-      (search-forward (concat "#+" "TBLNAME: " table))
-      (setq org-table-data
-            (append org-table-data
-                    (org-table-to-lisp
-                     (buffer-substring-no-properties
-                      (org-table-begin) (org-table-end)))))))
-
-  ;; ;;;  remove hlines and the first line (heading)
-  ;; (print org-table-data)
-  (setq org-table-data
-        (cl-remove-if (lambda (a) (equal 'hline a))
-                      org-table-data))
-
-  ;; plot once with everything included
-  (plot-monthly-work-chart org-table-data)
-
-
-  ;; plot again with only billable items
-  (princ "\n\n\n")
-  (setq org-table-data
-        (cl-remove-if
-         (lambda (a)
-           (member (upcase (nth 3 a)) '("VACATION" "HOLIDAY" "SICK" "ADMIN" "VAC" "DEVEL")))
-         org-table-data))
-
-  (plot-monthly-work-chart org-table-data))
-
-
+;(get-work-data-in-date-range "Cumulative Work" 2021 01 2022 02 t)
+(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02 t)
+(plot-work-chart-in-date-range "Cumulative Meetings" 2021 01 2022 02 t t)
+(plot-work-chart-in-date-range "Cumulative Meetings (Detailed)" 2021 01 2022 02 t t t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
+---------------------------------------------------------------------------
+Cumulative Work
+---------------------------------------------------------------------------
+
+
 Hours   %Tot             Project
 --------------------------------
-  1.00    0%     SCOTT-LAB-CAMERA
- 18.50    0%                  CSC ++
- 18.50    0%                DEVEL ++
- 31.00    1%                ADMIN +++
- 49.50    2%             EMPHATIC +++++
- 81.00    3%                 SICK ++++++++
- 82.50    3%               APOLLO ++++++++
- 87.50    3%                 GE11 ++++++++
- 97.50    4%                 GE21 +++++++++
-152.00    6%              HOLIDAY ++++++++++++++
-181.00    7%             VACATION +++++++++++++++++
-215.50    9%                  ME0 ++++++++++++++++++++
-245.50   10%              TRACKER +++++++++++++++++++++++
-374.25   16%                  ETL +++++++++++++++++++++++++++++++++++
-539.50   23%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   1.00    0%     SCOTT-LAB-CAMERA
+  18.50    1%                  CSC ++
+  49.50    2%             EMPHATIC +++++
+  82.50    4%               APOLLO ++++++++
+  88.50    5%                 GE11 ++++++++
+  98.00    5%                 GE21 +++++++++
+ 215.50   12%                  ME0 ++++++++++++++++++++
+ 245.50   14%              TRACKER +++++++++++++++++++++++
+ 374.25   21%                  ETL +++++++++++++++++++++++++++++++++++
+ 542.00   31%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-2285.25
+1715.25
+---------------------------------------------------------------------------
+Cumulative Meetings
+---------------------------------------------------------------------------
+
+
+Hours   %Tot      Project
+--------------------------------
+ 676.25   39%       MEETING +++++++++++++++++++++++++++++++++
+1039.00   60%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+1715.25
+---------------------------------------------------------------------------
+Cumulative Meetings (Detailed)
+---------------------------------------------------------------------------
+
+
+Hours   %Tot                       Project
+--------------------------------
+   1.00    0%     SCOTT-LAB-CAMERA - MEETING
+   8.00    0%                 GE11 - MEETING +
+   9.00    0%                CSC - REAL WORK +
+   9.50    0%                  CSC - MEETING +
+  16.50    0%             EMPHATIC - MEETING +++
+  18.00    1%                 GE21 - MEETING +++
+  25.00    1%               APOLLO - MEETING ++++
+  33.00    1%           EMPHATIC - REAL WORK +++++
+  57.50    3%             APOLLO - REAL WORK +++++++++
+  80.00    4%               GE21 - REAL WORK ++++++++++++
+  80.50    4%               GE11 - REAL WORK ++++++++++++
+  92.00    5%                  ME0 - MEETING ++++++++++++++
+ 108.00    6%              TRACKER - MEETING ++++++++++++++++
+ 123.50    7%                ME0 - REAL WORK +++++++++++++++++++
+ 137.50    8%            TRACKER - REAL WORK +++++++++++++++++++++
+ 185.25   10%                  ETL - MEETING ++++++++++++++++++++++++++++
+ 189.00   11%                ETL - REAL WORK +++++++++++++++++++++++++++++
+ 213.00   12%                L0MDT - MEETING ++++++++++++++++++++++++++++++++
+ 329.00   19%              L0MDT - REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+1715.25
+#+end_example
+
+*** Cumulative Work
+
+#+begin_src emacs-lisp :exports both :results output
+(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02)
+(princ "\n")
+(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02 t)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+---------------------------------------------------------------------------
+Cumulative Work
+---------------------------------------------------------------------------
 
 
 Hours   %Tot             Project
@@ -86,32 +102,115 @@ Hours   %Tot             Project
  18.50    1%                  CSC ++
  49.50    2%             EMPHATIC +++++
  82.50    4%               APOLLO ++++++++
- 87.50    4%                 GE11 ++++++++
- 97.50    5%                 GE21 +++++++++
+ 88.50    4%                 GE11 ++++++++
+ 98.00    5%                 GE21 +++++++++
 215.50   11%                  ME0 ++++++++++++++++++++
 245.50   13%              TRACKER +++++++++++++++++++++++
 374.25   20%                  ETL +++++++++++++++++++++++++++++++++++
-539.50   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+542.00   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1821.75
+1825.75
+---------------------------------------------------------------------------
+Cumulative Work
+---------------------------------------------------------------------------
+Hours   %Tot             Project
+--------------------------------
+  1.00    0%     SCOTT-LAB-CAMERA
+ 18.50    0%                  CSC ++
+ 18.50    0%                DEVEL ++
+ 33.00    1%                ADMIN +++
+ 49.50    2%             EMPHATIC +++++
+ 81.00    3%                 SICK +++++++
+ 82.50    3%               APOLLO ++++++++
+ 88.50    3%                 GE11 ++++++++
+ 98.00    4%                 GE21 +++++++++
+152.00    6%              HOLIDAY ++++++++++++++
+181.00    7%             VACATION +++++++++++++++++
+215.50    9%                  ME0 ++++++++++++++++++++
+245.50   10%              TRACKER +++++++++++++++++++++++
+374.25   16%                  ETL +++++++++++++++++++++++++++++++++++
+542.00   23%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+2291.25
 #+end_example
 
-** GEM Accruals
+*** 2021 Work
 
-|----------------+---------------------------------------------------------------------------------------------------------|
-| 2021 August    | https://docs.google.com/spreadsheets/d/1B-EwiV2WmX5rFvUxlLBul6KeHfr9NorBO5WAL_-y9NA/edit#gid=1142850913 |
-| 2021 September | https://docs.google.com/spreadsheets/d/1ocjefoiQf1zoSh3h46toA8zfR0ttFszijbPwtYTMIhg/edit#gid=1053913684 |
-| 2021 October   | https://docs.google.com/spreadsheets/d/1M9Ex0YfOghWgiXYLqMrIEjMlZM0rhfetmB-aJHOuW3o/edit#gid=1511255941 |
-| 2021 November  | https://docs.google.com/spreadsheets/d/19Bptd0hrk5NygeUWDNbLGMyAlTSPzu9uB03zX17SEyk/edit#gid=918923275  |
-| 2021 December  | https://docs.google.com/spreadsheets/d/1ZiukrJ-etDgG5tPXIjatgspfcJGS6RmscoLx_WZI98o/edit#gid=938217840  |
-| 2022 January   | https://docs.google.com/spreadsheets/d/19l8IQrF-k94dgKQt96BDtDHHMP8ZtamEpXO8dLmdn7w/edit#gid=1295694596 |
-| 2022 February  |                                                                                                         |
-|----------------+---------------------------------------------------------------------------------------------------------|
+#+begin_src emacs-lisp :exports both :results output
+(print-work-chart-in-date-range "2021 Work" 2021 01 2021 12 t)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+---------------------------------------------------------------------------
+2021 Work
+---------------------------------------------------------------------------
+Hours   %Tot             Project
+--------------------------------
+  1.00    0%     SCOTT-LAB-CAMERA
+  5.50    0%                  CSC +
+ 18.50    0%                DEVEL ++
+ 25.50    1%                ADMIN +++
+ 49.50    2%             EMPHATIC +++++
+ 72.50    3%                 GE11 ++++++++
+ 74.00    3%               APOLLO ++++++++
+ 77.00    3%                 SICK ++++++++
+ 88.50    4%                 GE21 ++++++++++
+144.00    6%              HOLIDAY ++++++++++++++++
+157.00    7%             VACATION +++++++++++++++++
+202.00    9%                  ME0 ++++++++++++++++++++++
+243.50   11%              TRACKER ++++++++++++++++++++++++++
+340.75   16%                  ETL +++++++++++++++++++++++++++++++++++++
+463.50   22%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+2065.75
+#+end_example
+
+*** 2022 Work
+
+#+begin_src emacs-lisp :exports both :results output
+(print-work-chart-in-date-range "2022 Work" 2022 01 2022 02 t)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+---------------------------------------------------------------------------
+2022 Work
+---------------------------------------------------------------------------
+Hours   %Tot     Project
+--------------------------------
+  2.00    0%      TRACKER +
+  4.00    1%         SICK +++
+  5.50    2%        ADMIN ++++
+  8.00    3%      HOLIDAY +++++
+  8.50    3%       APOLLO ++++++
+  9.00    4%         GE21 ++++++
+ 13.00    5%          CSC +++++++++
+ 13.50    6%          ME0 +++++++++
+ 15.00    6%         GE11 ++++++++++
+ 24.00   10%     VACATION ++++++++++++++++
+ 33.50   15%          ETL ++++++++++++++++++++++
+ 76.00   34%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+219.50
+#+end_example
+
+** GEM Accruals :noexport:
+
+*** Accruals Spreadsheets
+- [[https://docs.google.com/spreadsheets/d/1B-EwiV2WmX5rFvUxlLBul6KeHfr9NorBO5WAL_-y9NA/edit#gid=1142850913][2021 August]]
+- [[https://docs.google.com/spreadsheets/d/1ocjefoiQf1zoSh3h46toA8zfR0ttFszijbPwtYTMIhg/edit#gid=1053913684][2021 September]]
+- [[https://docs.google.com/spreadsheets/d/1M9Ex0YfOghWgiXYLqMrIEjMlZM0rhfetmB-aJHOuW3o/edit#gid=1511255941][2021 October]]
+- [[https://docs.google.com/spreadsheets/d/19Bptd0hrk5NygeUWDNbLGMyAlTSPzu9uB03zX17SEyk/edit#gid=918923275][2021 November]]
+- [[https://docs.google.com/spreadsheets/d/1ZiukrJ-etDgG5tPXIjatgspfcJGS6RmscoLx_WZI98o/edit#gid=938217840][2021 December]]
+- [[https://docs.google.com/spreadsheets/d/19l8IQrF-k94dgKQt96BDtDHHMP8ZtamEpXO8dLmdn7w/edit#gid=1295694596][2022 January]]
+- 2022 February
 
 #+begin_src sh :results output table :exports results :hlines yes
 cat accruals.txt | grep EMU-UPGRADE
 #+end_src 
 
+*** Accruals
 #+RESULTS:
 | CMS-EMU-UPGRADE-GE21 | 2021 |  2 |  3.0 | $ 210.0 |
 | CMS-EMU-UPGRADE-GE21 | 2021 |  3 | 10.5 | $ 735.0 |
@@ -197,7 +296,7 @@ return (plots.plot_table(figname, etlize=True))
 
 #+RESULTS:
 [[file:./work_history_etl.png]]
-* Helpers
+* Helpers :noexport:
 :PROPERTIES:
 :VISIBILITY: children
 :END:
@@ -287,133 +386,7 @@ return (plots.plot_table(figname, etlize=True))
   a)
 #+END_SRC
 
-** Plotting
-#+begin_src elisp
-;; (defun filter-work-chart (data) )
-
-(defun filter-work-chart (data) (cl-remove-if (lambda (a) (string= "" (car a)))
-  (cdr (mapcar (lambda (x) (list (upcase (nth 3 x )) (if (stringp (nth 6 x))
-  (string-to-number (nth 6 x)) (nth 6 x)))) data))))
-
-
-(defun plot-chart (data keyword valword &optional normalize sort)
-"Simple function to plot an ascii bar chart.
-
-It accepts DATA in the form of an alist of the form '((KEY . VAL) (KEY . VAL) (KEY . VAL)) and will
-produce a bar chart where for each key val is summed.
-
-NORMALIZE will normalize the bar chart to some number of ASCII symbols.
-
-SORT to non-nill will sort the list. "
-
-  (let ((totals ())
-        (ht (make-hash-table :test 'equal)))
-
-    (dolist (row data 't)
-      (let ((key (nth 0 row))
-            (val (nth 1 row)))
-        (when (and (> val 0) (numberp val))
-          (puthash key (+ val (gethash key ht 0)) ht))))
-
-    (maphash (lambda (key value)
-               (setq totals (cons (list key value) totals))) ht)
-
-    ;; sort in increasing date order
-    (when sort
-      (setq totals (sort totals (lambda (a b) (< (cadr a) (cadr b))))))
-
-    ;; find max value for normalization
-    (setq max-val (apply #'max (mapcar (lambda (a) (float (car (cdr a)))) totals)))
-
-    ;; Get the total for percentages
-    (setq sum (apply #'+ (mapcar (lambda (a) (float (car (cdr a)))) totals)))
-
-    (if (< max-val normalize) (setq normalize max-val))
-
-    (princ (format "%5s   %4s %19s\n" keyword "%Tot" valword))
-    (princ (format "%s\n" (make-string 32 ?-)))
-    (dolist (item totals)
-      (let* ((key (car item))
-             (count (cadr item))
-             (count-normal (if normalize (* normalize (/ count max-val)) count))
-             (percent (* 100 (/ count sum))))
-        (when (not (equal key "--"))
-          (princ (format "%5.1f   %2d%% %20s %s\n" count percent key
-                         (make-string (round count-normal) ?+))))))
-    (princ (format "%s\n" (make-string 32 ?-)))
-    (princ (format "%5.1f" sum))))
-
-(defun plot-monthly-work-chart (data)
-  (plot-chart
-  (filter-work-chart data) "Hours" "Project" 50 t) )
-
-;; (defun plot-monthly-work-chart (data &optional normalize)
-;;   (let ((totals ())
-;;         (ht (make-hash-table :test 'equal)))
-
-;;     (dolist (row data 't)
-;;       (let ((day      (nth 1 row))
-;;             (times    (nth 2 row))
-;;             (project  (upcase (nth 3 row)))
-;;             (task     (nth 4 row))
-;;             (wkday    (nth 5 row))
-;;             (hours    (nth 6 row)))
-;;         (let ((hours (if (stringp hours) (string-to-number hours) hours)))
-;;           (when (and (> hours 0) (numberp hours))
-;;             (puthash project (+ hours (gethash project ht 0)) ht)))))
-
-;;     (maphash (lambda (key value)
-;;                (setq totals (cons (list key value) totals))) ht)
-
-;;     ;; sort in increasing date order
-;;     (setq totals (sort totals (lambda (a b) (< (cadr a) (cadr b)))))
-
-;;     ;; find max value for normalization
-;;     (setq max-val (apply #'max (mapcar (lambda (a) (float (car (cdr a)))) totals)))
-
-;;     (setq sum (apply #'+ (mapcar (lambda (a) (float (car (cdr a)))) totals)))
-
-;;     (princ (format "%5s   %4s %19s\n" "Hours" "%Tot" "Project"))
-;;     (princ (format "%s\n" (make-string 32 ?-)))
-;;     (dolist (item totals)
-;;       (let* ((key (car item))
-;;              (count (cadr item))
-;;              (count-normal (if normalize (* 75 (/ count max-val)) count))
-;;              (percent (* 100 (/ count sum))))
-;;         (when (not (equal key "--"))
-;;           (princ (format "%5.1f   %2d%% %20s %s\n" count percent key
-;;                          (make-string (round count-normal) ?+)))))))
-;;   (princ (format "%s\n" (make-string 32 ?-)))
-;;   (princ (format "%5.1f" sum))
-;;   )
-
-
-#+end_src
-
-#+RESULTS:
-: plot-monthly-work-chart
-
-** Lisp function to export org mode tables to CSVs
-#+begin_src elisp :exports code :results none
-;; tables to export should be annotated with a '#+TBLNAME:' or '#+NAME:'
-;; files will be named as name.csv
-(require 'org)
-(require 'org-table)
-
-(defun org-table-export-all ()
-  "Export to CSV all named tables in current org mode file"
-  (interactive)
-  (show-all)
-  (let ((case-fold-search t))
-    (while (search-forward-regexp "#\\(\\+TBLNAME: \\|\\+NAME: \\)\\(.*\\)" nil t)
-      (let ((name (match-string-no-properties 2)))
-        (progn
-          (next-line)
-          (org-table-export (format "%s.csv" name) "orgtbl-to-csv"))))))
-#+end_src
-
-*** https://emacs.stackexchange.com/questions/7375/can-i-format-cells-in-an-org-mode-table-differently-depending-on-a-formula
-* Hours
+* Hours :noexport:
 :PROPERTIES:
 :VISIBILITY: children
 :END:
@@ -2728,70 +2701,85 @@ Hours   %Tot     Project
 ** February 2022
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: 2022-02
-|---+----+-------------+---------+--------------------------+-----+-------|
-|   |  D |        Time | Project | Task                     | Day | Hours |
-|---+----+-------------+---------+--------------------------+-----+-------|
-|   |    |             |         |                          |     |       |
-| # |  1 |     8-12:30 | L0MDT   | PDR                      | TUE |   4.5 |
-| # |  1 |     12:30-2 | APOLLO  | IPMC updates             | TUE |   1.5 |
-| # |  1 |         2-3 | GE11    | Firmware update          | TUE |   1.0 |
-| # |    |             |         |                          |     |       |
-| # |  2 |        9-10 | L0MDT   | Firmware                 | WED |   1.0 |
-| # |  2 |    10-10:30 | GE11    | VFAT Taskforce           | WED |   0.5 |
-| # |  2 |    10:30-11 | GE21    | VFAT Taskforce           | WED |   0.5 |
-| # |  2 |       11-12 | GE11    | DDR Firmware             | WED |   1.0 |
-| # |  2 |    12-12:30 | GE21    | DDR Firmware             | WED |   0.5 |
-| # |  2 |  12:30-2:30 | ETL     | Mockup with students     | WED |   2.0 |
-| # |  2 |      2:30-4 | ME0     | Chloe                    | WED |   1.5 |
-| # |  2 |         4-7 | ETL     | Meeting + followup       | WED |   3.0 |
-| # |  2 |         7-8 | GE11    | DDR Firmware             | WED |   1.0 |
-| # |    |             |         |                          |     |       |
-| # |  3 |        9-10 | GE11    | DDR Firmware             | THU |   1.0 |
-| # |  3 |       10-11 | GE21    | Phase 2 Meeting          | THU |   1.0 |
-| # |  3 |       11-12 | APOLLO  | MPI CM Meeting           | THU |   1.0 |
-| # |  3 |       11-12 | ETL     | Integration meeting      | THU |   1.0 |
-| # |  3 |        12-1 | GE11    | DDR Firmware             | THU |   1.0 |
-| # |  3 |         1-2 | GE21    | DDR Firmware             | THU |   1.0 |
-| # |  3 |      2-2:30 | APOLLO  | Adam                     | THU |   0.5 |
-| # |  3 |      2:30-3 | --      | Lunch                    | THU |   0.5 |
-| # |  3 |         3-4 | ME0     | Meeting                  | THU |   1.0 |
-| # |    |             |         |                          |     |       |
-| # |  4 |        9-10 | Tracker | Meeting                  | FRI |   1.0 |
-| # |  4 |       10-11 | GE11    | DDR Firmware             | FRI |   1.0 |
-| # |  4 |       11-12 | GE21    | DDR Firmware             | FRI |   1.0 |
-| # |  4 |       11-12 | ETL     | Mockup orders            | FRI |   1.0 |
-| # |  4 |         2-3 | GE11    | DDR Firmware             | FRI |   1.0 |
-| # |  4 |         4-5 | GE21    | DDR Firmware             | FRI |   1.0 |
-| # |    |             |         |                          |     |       |
-|---+----+-------------+---------+--------------------------+-----+-------|
-| # |    |             |         |                          |     |       |
-| # |  7 |      9-9:30 | ADMIN   | Email                    | MON |   0.5 |
-| # |  7 |     9:30-11 | ADMIN   | EDF Meeting              | MON |   1.5 |
-| # |  7 |       11-12 | --      | Lunch                    | MON |   1.0 |
-| # |  7 |        12-1 | ME0     | Chloe                    | MON |   1.0 |
-| # |  7 |         2-6 | ETL     | Mockup                   | MON |   4.0 |
-| # |    |             |         |                          |     |       |
-| # |  8 |       10-11 | ME0     | Meeting                  | TUE |   1.0 |
-| # |  8 |         4-6 | CSC     | ODMB Integration         | TUE |   2.0 |
-| # |  8 |        11-4 | ETL     | Mockup                   | TUE |   5.0 |
-| # |    |             |         |                          |     |       |
-| # |  9 |        9-10 | GE21    | Firmware (DDR)           | WED |   1.0 |
-| # |  9 |       10-11 | ETL     | Meet with Daniel         | WED |   1.0 |
-| # |  9 | 11:30-12:30 | APOLLO  | Networking issues / IPMC | WED |   1.0 |
-| # |  9 |     12:30-1 | Tracker | Meeting                  | WED |   0.5 |
-| # |  9 |  12:30-1:30 | APOLLO  | Networking issues / IPMC | WED |   1.0 |
-| # |  9 |         2-6 | SICK    | Muscle spasm             | WED |   4.0 |
-| # |    |             |         |                          |     |       |
-| # | 10 |     9-10:30 | CSC     | ODMB Meeting             | THU |   1.5 |
-| # | 10 |    10:30-11 | ETL     | Meeting                  | THU |   0.5 |
-| # | 10 |    11-11:30 | CSC     | Meet with Eric           | THU |   0.5 |
-| # | 10 |    11:30-12 | L0MDT   | Meet with Eric           | THU |   0.5 |
-| # | 10 |     12-1:30 | GE11    | Firmware (4 Gbps)        | THU |   1.5 |
-| # | 10 |   1:30-3:00 | CSC     | ODMB Review              | THU |   1.5 |
-| # | 10 |         3-4 | APOLLO  | IPMC Meeting             | THU |   1.0 |
-| # | 10 |         4-5 | ME0     | Meeting                  | THU |   1.0 |
-| # |    |             |         |                          |     |       |
-|---+----+-------------+---------+--------------------------+-----+-------|
+|---+----+-------------+----------+--------------------------+-----+-------|
+|   |  D |        Time | Project  | Task                     | Day | Hours |
+|---+----+-------------+----------+--------------------------+-----+-------|
+|   |    |             |          |                          |     |       |
+| # |  1 |     8-12:30 | L0MDT    | PDR                      | TUE |   4.5 |
+| # |  1 |     12:30-2 | APOLLO   | IPMC updates             | TUE |   1.5 |
+| # |  1 |         2-3 | GE11     | Firmware update          | TUE |   1.0 |
+| # |    |             |          |                          |     |       |
+| # |  2 |        9-10 | L0MDT    | Firmware                 | WED |   1.0 |
+| # |  2 |    10-10:30 | GE11     | VFAT Taskforce           | WED |   0.5 |
+| # |  2 |    10:30-11 | GE21     | VFAT Taskforce           | WED |   0.5 |
+| # |  2 |       11-12 | GE11     | DDR Firmware             | WED |   1.0 |
+| # |  2 |    12-12:30 | GE21     | DDR Firmware             | WED |   0.5 |
+| # |  2 |  12:30-2:30 | ETL      | Mockup with students     | WED |   2.0 |
+| # |  2 |      2:30-4 | ME0      | Chloe                    | WED |   1.5 |
+| # |  2 |         4-7 | ETL      | Meeting + followup       | WED |   3.0 |
+| # |  2 |         7-8 | GE11     | DDR Firmware             | WED |   1.0 |
+| # |    |             |          |                          |     |       |
+| # |  3 |        9-10 | GE11     | DDR Firmware             | THU |   1.0 |
+| # |  3 |       10-11 | GE21     | Phase 2 Meeting          | THU |   1.0 |
+| # |  3 |       11-12 | APOLLO   | MPI CM Meeting           | THU |   1.0 |
+| # |  3 |       11-12 | ETL      | Integration meeting      | THU |   1.0 |
+| # |  3 |        12-1 | GE11     | DDR Firmware             | THU |   1.0 |
+| # |  3 |         1-2 | GE21     | DDR Firmware             | THU |   1.0 |
+| # |  3 |      2-2:30 | APOLLO   | Adam                     | THU |   0.5 |
+| # |  3 |      2:30-3 | --       | Lunch                    | THU |   0.5 |
+| # |  3 |         3-4 | ME0      | Meeting                  | THU |   1.0 |
+| # |    |             |          |                          |     |       |
+| # |  4 |        9-10 | Tracker  | Meeting                  | FRI |   1.0 |
+| # |  4 |       10-11 | GE11     | DDR Firmware             | FRI |   1.0 |
+| # |  4 |       11-12 | GE21     | DDR Firmware             | FRI |   1.0 |
+| # |  4 |       11-12 | ETL      | Mockup orders            | FRI |   1.0 |
+| # |  4 |         2-3 | GE11     | DDR Firmware             | FRI |   1.0 |
+| # |  4 |         4-5 | GE21     | DDR Firmware             | FRI |   1.0 |
+| # |    |             |          |                          |     |       |
+|---+----+-------------+----------+--------------------------+-----+-------|
+| # |    |             |          |                          |     |       |
+| # |  7 |      9-9:30 | ADMIN    | Email                    | MON |   0.5 |
+| # |  7 |     9:30-11 | ADMIN    | EDF Meeting              | MON |   1.5 |
+| # |  7 |       11-12 | --       | Lunch                    | MON |   1.0 |
+| # |  7 |        12-1 | ME0      | Chloe                    | MON |   1.0 |
+| # |  7 |         2-6 | ETL      | Mockup                   | MON |   4.0 |
+| # |    |             |          |                          |     |       |
+| # |  8 |       10-11 | ME0      | Meeting                  | TUE |   1.0 |
+| # |  8 |         4-6 | CSC      | ODMB Integration         | TUE |   2.0 |
+| # |  8 |        11-4 | ETL      | Mockup                   | TUE |   5.0 |
+| # |    |             |          |                          |     |       |
+| # |  9 |        9-10 | GE21     | Firmware (DDR)           | WED |   1.0 |
+| # |  9 |       10-11 | ETL      | Meet with Daniel         | WED |   1.0 |
+| # |  9 | 11:30-12:30 | APOLLO   | Networking issues / IPMC | WED |   1.0 |
+| # |  9 |     12:30-1 | Tracker  | Meeting                  | WED |   0.5 |
+| # |  9 |  12:30-1:30 | APOLLO   | Networking issues / IPMC | WED |   1.0 |
+| # |  9 |         2-6 | SICK     | Muscle spasm             | WED |   4.0 |
+| # |    |             |          |                          |     |       |
+| # | 10 |     9-10:30 | CSC      | ODMB Meeting             | THU |   1.5 |
+| # | 10 |    10:30-11 | ETL      | Meeting                  | THU |   0.5 |
+| # | 10 |    11-11:30 | CSC      | Meet with Eric           | THU |   0.5 |
+| # | 10 |    11:30-12 | L0MDT    | Meet with Eric           | THU |   0.5 |
+| # | 10 |     12-1:30 | GE11     | Firmware (4 Gbps)        | THU |   1.5 |
+| # | 10 |   1:30-3:00 | CSC      | ODMB Review              | THU |   1.5 |
+| # | 10 |         3-4 | APOLLO   | IPMC Meeting             | THU |   1.0 |
+| # | 10 |         4-5 | ME0      | Meeting                  | THU |   1.0 |
+| # |    |             |          |                          |     |       |
+| # | 11 |     9-10:00 | GE11     | Firmware                 | FRI |   1.0 |
+| # | 11 |    10-10:30 | GE21     | Firmware                 | FRI |   0.5 |
+| # | 11 |    10:30-12 | L0MDT    | DAQ Integration          | FRI |   1.5 |
+| # | 11 |        12-2 | ADMIN    | EDF Meeting + Lunch      | FRI |   2.0 |
+| # | 11 |         2-3 | L0MDT    | DAQ Integration          | FRI |   1.0 |
+| # | 11 |         3-5 | --       | Indara                   | SAT |   2.0 |
+| # |    |             |          |                          |     |       |
+| # | 14 |         9-5 | VACATION |                          | MON |   8.0 |
+| # | 15 |         9-5 | VACATION |                          | MON |   8.0 |
+| # |    |             |          |                          |     |       |
+| # | 16 |        9-12 | ADMIN    | EDF Meeting              | WED |   3.0 |
+| # | 16 |         1-2 | ETL      | Meeting                  | WED |   1.0 |
+| # | 16 |         2-3 | ADMIN    | EDF Meeting              | WED |   1.0 |
+| # | 16 |         3-4 | GE11     | Firmware (DDR)           | WED |   1.0 |
+| # | 16 |         4-5 | ETL      | Meeting                  | WED |   1.0 |
+|---+----+-------------+----------+--------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"February 2022"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-02
@@ -2800,20 +2788,21 @@ Hours   %Tot     Project
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot    Project
+Hours   %Tot     Project
 --------------------------------
-  1.50    2%     TRACKER ++
-  2.00    3%       ADMIN ++
-  4.00    6%        SICK ++++
-  5.50    8%         CSC ++++++
-  5.50    8%         ME0 ++++++
-  6.00    9%        GE21 ++++++
-  6.00    9%      APOLLO ++++++
-  6.00    9%       L0MDT ++++++
-  9.00   13%        GE11 +++++++++
- 17.50   27%         ETL ++++++++++++++++++
+   1.50    1%      TRACKER ++
+   4.00    4%         SICK ++++
+   5.50    5%          CSC ++++++
+   5.50    5%          ME0 ++++++
+   6.00    6%       APOLLO ++++++
+   6.50    6%         GE21 ++++++
+   8.00    8%        ADMIN ++++++++
+   8.50    8%        L0MDT ++++++++
+  11.00   11%         GE11 +++++++++++
+  16.00   16%     VACATION ++++++++++++++++
+  19.50   20%          ETL ++++++++++++++++++++
 --------------------------------
- 64.50
+ 95.50
 #+end_example
 
 * Local Variables :noexport:
