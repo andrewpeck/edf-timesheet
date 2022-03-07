@@ -265,14 +265,14 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     if normalize:
         for week in range(len(y[0])):
 
-            sum = 0
+            week_sum = 0
 
             for prj in range(len(y)):
-                sum += y[prj][week]
+                week_sum += y[prj][week]
 
             for prj in range(len(y)):
-                if sum > 0:
-                    y[prj][week] = y[prj][week]/sum
+                if week_sum > 0:
+                    y[prj][week] = y[prj][week]/week_sum
 
     plt.xticks(rotation=75, ha='right')
 
@@ -280,6 +280,9 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
     fontP.set_size('x-small')
     plt.margins(x=0)
     plt.margins(y=0)
+    #plt.style.use("seaborn")
+    #plt.xkcd()
+    #plt.style.use("ggplot")
 
     if indaraize:
         x = x[0:len(indara)]
@@ -322,6 +325,7 @@ def plot_table(figname, meetingize=False, zeynepize=False, indaraize=False,
         x = x[0:len(y[0])]
 
         plt.stackplot(x, y, labels=t)
+        plt.style.use("seaborn-colorblind")
         plt.legend(bbox_to_anchor=(1.48, 0.9), loc='upper right', prop=fontP)
         plt.savefig(figname, bbox_inches="tight")
         # print (date_range)

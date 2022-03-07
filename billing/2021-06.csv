@@ -7,7 +7,7 @@ D,Time,Project,Task,Day,Hours
 2,9-10,Tracker,Meeting,WED,1.0
 2,10-12:30,EMPHATIC,Firmware,WED,2.0
 2,1-2,Tracker,IPMC Updates,WED,1.0
-2,2-3:30,ME0,Meet with Chloe,WED,1.5
+2,2-3:30,ME0SF,Meet with Chloe,WED,1.5
 2,3:30-4,GE21,Firmware timing closure,WED,0.5
 2,4-5,ETL,Meeting,WED,1.0
 2,5-6,GE21,Firmware timing closure,WED,1.0
@@ -82,7 +82,7 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 16,9-12,Tracker,IPMC/ESM,WED,3.0
 16,1-3,Tracker,IPMC/ESM,WED,2.0
-16,3-4,ME0,Chloe,WED,1.0
+16,3-4,ME0SF,Chloe,WED,1.0
 16,4-6,Tracker,IPMC/ESM,WED,2.0
 ,,,,,
 17,9-11:30,L0MDT,Meeting,THU,2.5
@@ -108,7 +108,7 @@ D,Time,Project,Task,Day,Hours
 22,1-2,Tracker,IPMC,TUE,1.0
 22,2-3,GE21,Trigger Firmware Testing,TUE,1.0
 22,3-4,GE11,Trigger Firmware Testing,TUE,1.0
-22,4-6,ME0,Chloe,TUE,2.0
+22,4-6,ME0SF,Chloe,TUE,2.0
 ,,,,,
 23,9-10:30,Tracker,Meeting,WED,1.5
 23,10:30-11:30,GE21,Trigger Firmware Testing,WED,1.0
@@ -119,7 +119,7 @@ D,Time,Project,Task,Day,Hours
 24,10-2,Tracker,IPMC,THU,4.0
 24,2-3,GE11,Firmware,THU,2.0
 24,3-4,ETL,Firmware,THU,1.0
-24,4-5,ME0,Meeting,THU,1.0
+24,4-5,ME0OH,Meeting,THU,1.0
 24,5-6,L0MDT,HOG,THU,1.0
 ,,,,,
 25,9-10,Tracker,Meeting,FRI,1.0
@@ -140,7 +140,7 @@ D,Time,Project,Task,Day,Hours
 29,9-9:30,ETL,Chat w/ Eric,TUE,0.5
 29,9:30-10,APOLLO,Chat w/ Eric,TUE,0.5
 29,10-11,GE11,Firmware,TUE,1.0
-29,11-12,ME0,Meeting,TUE,1.0
+29,11-12,ME0BE,Meeting,TUE,1.0
 29,12-1,ETL,Chat with Indara + Daniel,TUE,1.0
 29,1-2,GE11,Firmware,TUE,1.0
 29,2-3,APOLLO,Chat w/ Eric + Dan,TUE,1.0

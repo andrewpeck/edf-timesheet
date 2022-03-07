@@ -11,7 +11,7 @@ D,Time,Project,Task,Day,Hours
 2,10-11,L0MDT,Meeting,THU,1.0
 2,11-2,DEVEL,Cleanup EDF,THU,3.0
 2,2-4,L0MDT,Firmware,THU,2.0
-2,4-5,ME0,Meeting,THU,1.0
+2,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 3,9-10,Tracker,Meeting,FRI,1.0
 3,10-12,L0MDT,Firmware,FRI,1.0
@@ -38,12 +38,12 @@ D,Time,Project,Task,Day,Hours
 9,11-12,ETL,Meeting,THU,1.0
 9,12-1,--,Lunch w/ Eric,THU,1.0
 9,3-4,APOLLO,IPMC Meeting,THU,1.0
-9,4-5,ME0,Meeting,THU,1.0
-9,5-5:30,ME0,Pinout check,THU,0.5
+9,4-5,ME0OH,Meeting,THU,1.0
+9,5-5:30,ME0OH,Pinout check,THU,0.5
 ,,,,,
 10,9-12,L0MDT,Schematic review,FRI,3.0
 10,12-1,--,EDF Lunch,FRI,1.0
-10,2:30-3:30,ME0,Chloe,FRI,1.0
+10,2:30-3:30,ME0SF,Chloe,FRI,1.0
 10,3:30-4:30,L0MDT,Schematic review,FRI,1.0
 ,,,,,
 11,12-5,L0MDT,Schematic review,SAT,6.0
@@ -75,7 +75,7 @@ D,Time,Project,Task,Day,Hours
 16,1-2,L0MDT,Firmware (TAR/HPS split),THU,1.0
 16,2-3,L0MDT,Firmware,THU,1.0
 16,3-4,ETL,Meet with Daniel,THU,1.0
-16,4-5,ME0,Meeting,THU,1.0
+16,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 17,9-10:00,ME0,Phase2 Planning,FRI,1.0
 17,10-11:30,GE21,Phase2 Planning,FRI,1.5

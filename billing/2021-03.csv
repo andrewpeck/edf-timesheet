@@ -4,7 +4,7 @@ D,Time,Project,Task,Day,Hours
 1,9:30-10:30,L0MDT,Cocotb,,1.0
 1,10:30-12,ETL,Meeting,MON,1.5
 1,12-1,Tracker,IPMC work,MON,1.0
-1,1:30-2,ME0,Segment finding,MON,0.5
+1,1:30-2,ME0SF,Segment finding,MON,0.5
 1,2-2:30,L0MDT,Meeting with John,MON,0.5
 1,5-6,L0MDT,Cocotb,MON,1.0
 1,6-6:30,GE21,Cocotb,MON,0.5
@@ -20,18 +20,18 @@ D,Time,Project,Task,Day,Hours
 3,1:30-2,EMPHATIC,Chat with Eric,WED,0.5
 3,2-4,L0MDT,Slides,WED,2.0
 3,4-5,ETL,Meeting,WED,1.0
-3,5-7,ME0,Chat with Chloe,WED,2.0
+3,5-7,ME0SF,Chat with Chloe,WED,2.0
 3,8:30-9,EMPHATIC,Code review,WED,0.5
 ,,,,,
 4,9-11:30,L0MDT,Meeting,THU,2.5
 4,11:30-12,EMPHATIC,Code review,THU,0.5
-4,3-4,ME0,Chat with Evaldas,THU,1.0
+4,3-4,ME0BE,Chat with Evaldas,THU,1.0
 4,4-5,GE21,Chat with Evaldas,THU,1.0
 4,5-6,GE11,Chat with Evaldas,THU,1.0
 ,,,,,
 5,10:30-11:30,Tracker,IPMC,FRI,1.0
 5,12:30-2:30,EMPHATIC,Firmware review + Meeting,FRI,2.0
-5,2:30-4,ME0,Meeting,FRI,1.5
+5,2:30-4,ME0OH,Meeting,FRI,1.5
 5,6-7,GE11,Testbench,FRI,1.0
 5,7-8,L0MDT,Cocotb,FRI,1.0
 5,8-8:30,GE11,Firmware testing,FRI,0.5
@@ -50,7 +50,7 @@ D,Time,Project,Task,Day,Hours
 10,1:30-3:30,SICK,Chiropractor,WED,2.0
 10,3:30-4,Tracker,USB Boot/chat with Dan,WED,0.5
 10,4:30-5,ETL,Chat with Daniel,WED,0.5
-10,5-6:00,ME0,Hog testing,WED,1.0
+10,5-6:00,ME0BE,Hog testing,WED,1.0
 ,,,,,
 11,9-11,L0MDT,Meeting,THU,2.0
 11,11-12,GE21,Cluster building,THU,1.0
@@ -63,7 +63,7 @@ D,Time,Project,Task,Day,Hours
 12,11:30-12:30,--,Lunch,FRI,1.0
 12,12:30-1,Tracker,IPMC,FRI,0.5
 12,1-2,ETL,LPGBT issues :(,FRI,1.0
-12,2-3,ME0,Meeting,FRI,1.0
+12,2-3,ME0OH,Meeting,FRI,1.0
 12,3-4,Tracker,IPMC / YAML chat with Dan,FRI,1.0
 12,4-5,ETL,"LPGBT issues, fusing & board repair",FRI,1.0
 ,,,,,
@@ -102,8 +102,8 @@ D,Time,Project,Task,Day,Hours
 19,9-10,L0MDT,FELIX Meeting,FRI,1.0
 19,10-11:30,Tracker,Meeting; IPMC chat,FRI,1.5
 19,11:30-12,GE21,Firmware testing,FRI,0.5
-19,12-1:30,ME0,Firmware,FRI,1.5
-19,2-3,ME0,GEM Meeting,FRI,1.0
+19,12-1:30,ME0BE,Firmware,FRI,1.5
+19,2-3,ME0OH,GEM Meeting,FRI,1.0
 19,3-3:30,CSC,Email to Alex Dorsett,FRI,0.5
 19,3-7,ETL,"Computer setup, test stand setup, CI setup",FRI,4.0
 ,,,,,
@@ -121,7 +121,7 @@ D,Time,Project,Task,Day,Hours
 23,1-1:30,GE11,Firmware integration,TUE,0.5
 23,2-3,GE11,"Firmware integration, repo setup",TUE,1.0
 23,3-4,GE21,"Firmware integration, repo setup",TUE,1.0
-23,4:30-5:30,ME0,Chat with Joseph,TUE,1.0
+23,4:30-5:30,ME0OH,Chat with Joseph,TUE,1.0
 23,7:30-8,ETL,Email to Indara,TUE,0.5
 ,,,,,
 24,9-11,Tracker,Backend Meeting,WED,2.0
@@ -140,7 +140,7 @@ D,Time,Project,Task,Day,Hours
 26,9-11,L0MDT,Meeting; Spybuffers,FRI,2.0
 26,11-12,--,EDF Lunch,FRI,1.0
 26,12-2,L0MDT,Meeting,FRI,2.0
-26,2-3,ME0,Meeting,FRI,1.0
+26,2-3,ME0OH,Meeting,FRI,1.0
 26,3-5:30,L0MDT,Spybuffers; firmware builds,FRI,2.5
 26,10-11,L0MDT,Spybuffers; firmware builds,FRI,1.0
 ,,,,,
@@ -157,7 +157,7 @@ D,Time,Project,Task,Day,Hours
 30,12-1,L0MDT,Firmware,TUE,1.0
 30,1-1:30,GE11,Firmware updates & repo,TUE,0.5
 30,1:30-2,GE21,Firmware updates & repo,TUE,0.5
-30,4-5,ME0,Chat with Chloe,TUE,1.0
+30,4-5,ME0SF,Chat with Chloe,TUE,1.0
 30,7-9,L0MDT,Debugging XML to VHDL,TUE,2.0
 ,,,,,
 31,9-1,Tracker,"Meeting, IPMC makefile + shelf testing",WED,4.0

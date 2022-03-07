@@ -8,7 +8,7 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 3,9-10,ETL,Link format,TUE,1.0
 3,10-11,--,Office moving,TUE,1.0
-3,11-12,ME0,Meeting,TUE,1.0
+3,11-12,ME0BE,Meeting,TUE,1.0
 3,12-1,--,LUNCH,TUE,1.0
 3,1-6,ETL,Readout board schematic,TUE,5.0
 3,6-7,ETL,Managers,TUE,1.0
@@ -17,7 +17,7 @@ D,Time,Project,Task,Day,Hours
 4,11-12,L0MDT,Firmware updates,WED,1.0
 4,12-1,Tracker,Meeting,WED,1.0
 4,1-2,L0MDT,Firmware updates,WED,1.0
-4,2-3:30,ME0,Chloe,WED,1.5
+4,2-3:30,ME0SF,Chloe,WED,1.5
 4,3:30-4,L0MDT,Firmware updates,WED,0.5
 4,4-6:00,ETL,Meeting,WED,2.0
 ,,,,,
@@ -34,7 +34,7 @@ D,Time,Project,Task,Day,Hours
 6,11-12,APOLLO,IPMC,FRI,1.0
 6,12-1,--,LUNCH,FRI,1.0
 6,1-2,L0MDT,Firmware updates,FRI,1.0
-6,2-3,ME0,Schematic updates; Review responses,FRI,1.0
+6,2-3,ME0OH,Schematic updates; Review responses,FRI,1.0
 6,3-4:30,APOLLO,IPMC,FRI,1.0
 ,,,,,
 ,,,,,
@@ -48,7 +48,7 @@ D,Time,Project,Task,Day,Hours
 10,9:30-10,APOLLO,IPMC,TUE,0.5
 10,10-10:30,ETL,Slides,TUE,0.5
 10,10:30-11,ETL,Slides,TUE,0.5
-10,11-12:30,ME0,Meeting,TUE,1.5
+10,11-12:30,ME0BE,Meeting,TUE,1.5
 10,12:30-1:30,APOLLO,Power outage,TUE,1.0
 10,1:30-2,L0MDT,Firmware updates,TUE,0.5
 10,2-3,L0MDT,Firmware updates,TUE,2.0
@@ -68,11 +68,11 @@ D,Time,Project,Task,Day,Hours
 12,12-12:30,L0MDT,Firmware,THU,0.5
 12,12:30-1,ETL,Slides,THU,0.5
 12,1-2,ETL,KCU Setup,THU,1.0
-12,2-3:30,ME0,Chloe,THU,1.5
-12,4-5,ME0,Meeting,THU,1.0
+12,2-3:30,ME0SF,Chloe,THU,1.5
+12,4-5,ME0OH,Meeting,THU,1.0
 12,5:30-6,ETL,Slides w/ Chris+Daniel,THU,0.5
 ,,,,,
-13,10-10:30,ME0,Chat w/ UCLA,FRI,0.5
+13,10-10:30,ME0OH,Chat w/ UCLA,FRI,0.5
 13,10:30-11,ETL,Daniel,FRI,0.5
 13,11-11:30,APOLLO,IPMC,FRI,0.5
 13,11:30-12,GE11,Metadata format,FRI,0.5
@@ -94,26 +94,26 @@ D,Time,Project,Task,Day,Hours
 16,4-5:30,ETL,Mechanics & connectors,MON,1.5
 ,,,,,
 17,9-11,L0MDT,Firmware updates,TUE,2.0
-17,11-12,ME0,Meeting,TUE,1.0
+17,11-12,ME0BE,Meeting,TUE,1.0
 17,12-1,ETL,Connectors,TUE,1.0
 17,1-2:30,GE11,Latency optimization,TUE,1.5
 17,2:30-4,GE11,Latency optimization,TUE,1.5
-17,4-6,ME0,Meeting,TUE,2.0
+17,4-6,ME0OH,Meeting,TUE,2.0
 ,,,,,
 18,9:30-10,GE11,Firmware repo,WED,0.5
 18,10-10:30,GE21,Firmware repo,WED,1.0
-18,10:30-11,ME0,Firmware repo,WED,0.5
+18,10:30-11,ME0BE,Firmware repo,WED,0.5
 18,11-12,ETL,Debug w/ Daniel,WED,1.0
 18,12-1,Tracker,Meeting,WED,1.0
 18,1-2,L0MDT,Firmware,WED,1.0
-18,2-3,ME0,Apex/Hog issues,WED,1.0
+18,2-3,ME0BE,Apex/Hog issues,WED,1.0
 18,3-5,ETL,Debug w/ Daniel; Meeting,WED,2.0
 ,,,,,
 19,9-10,GE21,Apex/Hog issues,THU,1.0
 19,10-11,L0MDT,Hog updates,THU,1.0
 19,11-2,GE21,Apex/Hog issues,THU,3.0
 19,2-4,L0MDT,Hog updates,THU,2.0
-19,4-5,ME0,Meeting,THU,1.0
+19,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 20,9-10,L0MDT,Hog updates,FRI,1.0
 20,10-11,GE21,Hog updates,FRI,1.0
@@ -128,9 +128,9 @@ D,Time,Project,Task,Day,Hours
 23,11:30-6,ETL,Firmware (DAQ+GBT-IC),MON,6.5
 ,,,,,
 24,9-11,ETL,DAQ testing,TUE,2.0
-24,11-12,ME0,Meeting,TUE,1.0
+24,11-12,ME0BE,Meeting,TUE,1.0
 24,12-2:00,GE21,Repository issues,TUE,1.5
-24,2:00-3:30,ME0,Repository issues,TUE,1.0
+24,2:00-3:30,ME0BE,Repository issues,TUE,1.0
 24,3:30-4,--,Went to the bank,TUE,0.5
 24,4-4:30,L0MDT,Monthly report,TUE,0.5
 ,,,,,
@@ -141,11 +141,11 @@ D,Time,Project,Task,Day,Hours
 25,12-3:30,L0MDT,Firmware updates,WED,3.5
 25,3:30-6,ETL,Meeting; Firmware updates/testing,WED,2.5
 ,,,,,
-26,9-12,ME0,"OH Layout Updates, Review",THU,3.0
+26,9-12,ME0OH,"OH Layout Updates, Review",THU,3.0
 26,12-1,L0MDT,Firmware updates,THU,1.0
 26,1-1:30,--,Billing,THU,0.5
 27,1:30-2,ETL,Firmware,FRI,0.5
-26,2-3,ME0,Chloe,THU,1.0
+26,2-3,ME0SF,Chloe,THU,1.0
 26,3:30-4:30,ADMIN,Frank Talk,THU,1.0
 ,,,,,
 27,9-10,L0MDT,Firmware,FRI,1.0
@@ -153,7 +153,7 @@ D,Time,Project,Task,Day,Hours
 27,11-12,DEVEL,Scope demo,FRI,1.0
 27,12-1,--,LUNCH,FRI,1.0
 27,1-2,ETL,Meeting with Ted,FRI,1.0
-27,2-3,ME0,Chloe,FRI,1.0
+27,2-3,ME0SF,Chloe,FRI,1.0
 27,3-4,APOLLO,IPMC Meeting,FRI,1.0
 ,,,,,
 ,,,,,
