@@ -137,7 +137,33 @@ D,Time,Project,Task,Day,Hours
 25,4-5,APOLLO,IPMC firmware test,FRI,1.0
 ,,,,,
 ,,,,,
-28,9-12,ETL,"Meeting, slides",MON,3.0
+28,9-1,ETL,Meeting; slides,MON,4.0
+28,1-2,L0MDT,Meeting,MON,1.0
+28,2-4,--,Kaitlins dog,MON,2.0
+28,4:30-5,ETL,Firmware,MON,0.5
 ,,,,,
+29,9-9:30,ETL,Firmware,TUE,0.5
+29,9:30-10:30,CSC,ODMB Review,TUE,1.0
+29,10:30-11,L0MDT,Repository,TUE,0.5
+29,11-11:30,GE11,Loopback firmware,TUE,0.5
+29,11:30-12:30,L0MDT,Update project generator,TUE,1.0
+29,12:30-1:00,--,LUNCH,TUE,0.5
+29,1:00-3,APOLLO,AXI Regmap,TUE,1.5
+29,3-4,ADMIN,Meet with Panos,TUE,1.0
+29,4-4:30,ME0SF,Chloe,TUE,0.5
+29,4:30-5,APOLLO,AXI Regmap,TUE,0.5
+29,6:30-7,ME0,Accruals,TUE,0.5
+,,,,,
+30,9-2:30,L0MDT,Thiago visit,WED,5.5
+30,2:30-3,--,Break,WED,0.5
+30,3-4:30,ETL,So Young,WED,1.5
+30,5-6,APOLLO,SM Gerbers; IPMC,WED,1.0
+,,,,,
+31,9-9:30,--,??,THU,0.5
+31,9:30-10,L0MDT,Repository,THU,0.5
+31,10-11,L0MDT,Meeting,THU,1.0
+31,11-12,ETL,Meet with Indara,THU,1.0
+31,12-3,APOLLO,Rev 1 Repair,THU,2.0
+31,3-4,APOLLO,IPMC Meeting,THU,1.0
 ,,,,,
 

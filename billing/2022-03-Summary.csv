@@ -34,5 +34,11 @@ APOLLO,0,5.00,1.00,5.00,3.00,0,0,IPMC Firmware update; IPMC dongle; IPMC firmwar
 VAC,8.00,0,0,0,0,0,0,Vacation
 CMS-PIXEL-DTC,0,0,0.50,0,0,0,0,Meeting
 ,28,29,30,31,1*,2*,3*,
-CMS-ETL,3.00,0,0,0,0,0,0,Meeting; slides
+CMS-ETL,4.50,0.50,1.50,1.00,7.00,0,0,Firmware; MT Schematic; Meet with Indara; Meeting; So Young; slides
+CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Accruals; Chloe
+CMS-EMU-OPS-GE11,0,0.50,0,0,0,0,0,Loopback firmware
+ADMIN,0,1.00,0,0,0,0,0,Meet with Panos
+APOLLO,0,2.00,1.00,3.00,0,0,0,AXI Regmap; IPMC; IPMC Meeting; Rev 1 Repair; SM Gerbers
+ATLAS-MUON-PHASE2,1.00,1.50,5.50,1.50,0,0,0,Meeting; Repository; Thiago visit; Update project generator
+CMS-EMU-OPS-CSC,0,1.00,0,0,0,0,0,ODMB Review
 

@@ -1,0 +1,109 @@
+D,Time,Project,Task,Day,Hours
+,,,,,
+1,9-12,ETL,MT Schematic,FRI,3.0
+1,1-5,ETL,MT Schematic,FRI,4.0
+,,,,,
+,,,,,
+4,9-1,ETL,MT Schematic,MON,4.0
+4,1-2,L0MDT,Meeting,MON,1.0
+4,1-4,ETL,MT Schematic,MON,3.0
+,,,,,
+5,9-10,CSC,ODMB Review,TUE,1.0
+5,10-11,L0MDT,Hog meeting,TUE,1.0
+5,11-12,ME0BE,Firmware meeting,TUE,1.0
+,,,,,
+6,9-12,ETL,FW/SW Updates,WED,3.0
+6,12-3,ETL,FW/SW Updates,WED,3.0
+6,3-5,ETL,MT Schematic,WED,2.0
+,,,,,
+7,9-10,ETL,FW/SW Updates,THU,1.0
+7,10-11,L0MDT,EE Meeting,THU,1.0
+7,11-1,ETL,FW/SW Updates,THU,2.0
+7,1-3,ETL,Meetings,THU,2.0
+7,3-5,VAC,Vacation,THU,2.0
+,,,,,
+8,9-5,VAC,Vacation,FRI,8.0
+,,,,,
+,,,,,
+11,9-5,VAC,Vacation,MON,8.0
+12,9-5,VAC,Vacation,TUE,8.0
+13,9-5,VAC,Vacation,WED,8.0
+14,9-5,VAC,Vacation,THU,8.0
+15,9-5,VAC,Vacation,FRI,8.0
+,,,,,
+,,,,,
+18,9-5,HOLIDAY,Patriot\'s Day,MON,8.0
+,,,,,
+19,9-10:30,ADMIN,Talk with Dan,TUE,1.5
+19,10:30-11,ADMIN,Dig through email,TUE,0.5
+19,11-11:30,ETL,Email to mike,TUE,0.5
+19,11:30-12,ADMIN,Help zeynep,TUE,0.5
+19,12-12:30,ADMIN,edf-help,TUE,0.5
+19,12-1:00,--,LUNCH,TUE,1.0
+19,1:30-3,ETL,Clock distribution,TUE,1.5
+19,3:30-5,ME0,Firmware,TUE,1.5
+19,5-5:30,ETL,DAQ slides,TUE,0.5
+,,,,,
+20,9:30-10,GE21,Cluster DAQ,WED,0.5
+20,10-11,ME0BE,Cluster DAQ,WED,1.0
+20,11-12,L0MDT,AXI Regmap updates,WED,1.0
+20,12-3,ETL,Firmware update,WED,3.0
+20,3-4,--,Shindig,WED,1.0
+20,4-5,ETL,Meeting,WED,1.0
+,,,,,
+21,9-9:30,L0MDT,AXI regmap updates,THU,0.5
+21,9:30-10,L0MDT,Meet with Guillermo,THU,0.5
+21,10-11,L0MDT,Meeting,THU,1.0
+21,11-12,ETL,Meeting,THU,1.0
+21,12-2,ETL,Firmware,THU,2.0
+21,3-4,APOLLO,IPMC Meeting,THU,1.0
+21,4-5,ME0OH,Hardware meeting,THU,1.0
+21,5-6,ETL,BU Meeting,THU,1.0
+,,,,,
+22,9-9:30,ETL,ETROC Firmware,FRI,0.5
+22,9:30-11,ADMIN,EDF Meeting,FRI,1.5
+22,11-11:30,ETL,ETROC Firmware,FRI,0.5
+22,11:30-12:30,--,EDF Lunch,FRI,1.0
+22,12:30-1,ETL,ETROC Firmware,FRI,0.5
+22,1-3,ME0SF,Test bench work,FRI,2.0
+22,3-3:30,ADMIN,,FRI,0.5
+22,3:30-4:30,ETL,ETROC Firmware,FRI,1.0
+,,,,,
+,,,,,
+25,9-9:30,ADMIN,Email,MON,0.5
+25,9:30-10:30,ADMIN,EDF Meeting,MON,1.0
+25,10:30-12:30,SICK,MRI,MON,2.0
+25,12:30-1,GE11,S-bit DAQ,MON,0.5
+25,1-2,L0MDT,BU Meeting,MON,1.0
+25,2-5,L0MDT,De-rot repository,MON,3.0
+,,,,,
+26,9-10,ADMIN,EDF Meeting,TUE,1.0
+26,10-11:30,SICK,Doctors appt,TUE,1.5
+26,11:30-1,ADMIN,EDF Lunch,TUE,1.5
+26,1-2,L0MDT,C2C Zynq,TUE,1.0
+26,2-4,L0MDT,C2C Zynq,TUE,2.0
+,,,,,
+27,9-11,L0MDT,C2C Zynq,WED,2.0
+27,11-12,ETL,Giacomo,WED,1.0
+27,12-12:30,L0MDT,C2C Zynq,WED,0.5
+27,12:30-1:30,ADMIN,EDF Meeting,WED,1.0
+27,1:30-4:30,L0MDT,C2C Zynq,WED,3.0
+,,,,,
+28,9-9:30,GE11,OH Firmware,THU,0.5
+28,9:30-10,GE21,OH Firmware,THU,0.5
+28,10-11,L0MDT,EE Meeting,THU,1.0
+28,11-12,ETL,Integration meeting,THU,1.0
+28,12-1,L0MDT,C2C Zynq,THU,1.0
+28,1-2:30,--,Break,THU,1.5
+28,2:30-3,ETL,Firmware updates,THU,0.5
+28,4-5,ME0,Meeting,THU,1.0
+,,,,,
+29,9-10,ETL,Firmware updates,FRI,1.0
+29,10-11:30,APOLLO,AXI Regmap,FRI,1.5
+29,11:30-12,L0MDT,C2C Zynq,FRI,0.5
+29,12-1:30,--,Lunch + haircut,FRI,1.5
+29,1:30-2,ETL,Emulator,FRI,0.5
+29,2-2:30,ME0SF,Chloe,FRI,0.5
+29,2:30-5,ETL,DAQ Firmware,FRI,2.5
+,,,,,
+

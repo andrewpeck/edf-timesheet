@@ -1643,7 +1643,6 @@
 | 2022-03-25 |           4-5 | APOLLO           | IPMC firmware test                                        | FRI |   1.0 |   |
 | 2022-03-28 |           9-1 | ETL              | Meeting; slides                                           | MON |   4.0 |   |
 | 2022-03-28 |           1-2 | L0MDT            | Meeting                                                   | MON |   1.0 |   |
-| 2022-03-28 |           2-4 | ADMIN            | Kaitlin's dog                                             | MON |   2.0 |   |
 | 2022-03-28 |        4:30-5 | ETL              | Firmware                                                  | MON |   0.5 |   |
 | 2022-03-29 |        9-9:30 | ETL              | Firmware                                                  | TUE |   0.5 |   |
 | 2022-03-29 |    9:30-10:30 | CSC              | ODMB Review                                               | TUE |   1.0 |   |
@@ -1655,6 +1654,95 @@
 | 2022-03-29 |        4-4:30 | ME0SF            | Chloe                                                     | TUE |   0.5 |   |
 | 2022-03-29 |        4:30-5 | APOLLO           | AXI Regmap                                                | TUE |   0.5 |   |
 | 2022-03-29 |        6:30-7 | ME0              | Accruals                                                  | TUE |   0.5 |   |
+| 2022-03-30 |        9-2:30 | L0MDT            | Thiago visit                                              | WED |   5.5 |   |
+| 2022-03-30 |        3-4:30 | ETL              | So Young                                                  | WED |   1.5 |   |
+| 2022-03-30 |           5-6 | APOLLO           | SM Gerbers; IPMC                                          | WED |   1.0 |   |
+| 2022-03-31 |       9:30-10 | L0MDT            | Repository                                                | THU |   0.5 |   |
+| 2022-03-31 |         10-11 | L0MDT            | Meeting                                                   | THU |   1.0 |   |
+| 2022-03-31 |         11-12 | ETL              | Meet with Indara                                          | THU |   1.0 |   |
+| 2022-03-31 |          12-3 | APOLLO           | Rev 1 Repair                                              | THU |   2.0 |   |
+| 2022-03-31 |           3-4 | APOLLO           | IPMC Meeting                                              | THU |   1.0 |   |
+| 2022-04-01 |          9-12 | ETL              | MT Schematic                                              | FRI |   3.0 |   |
+| 2022-04-01 |           1-5 | ETL              | MT Schematic                                              | FRI |   4.0 |   |
+| 2022-04-04 |           9-1 | ETL              | MT Schematic                                              | MON |   4.0 |   |
+| 2022-04-04 |           1-2 | L0MDT            | Meeting                                                   | MON |   1.0 |   |
+| 2022-04-04 |           1-4 | ETL              | MT Schematic                                              | MON |   3.0 |   |
+| 2022-04-05 |          9-10 | CSC              | ODMB Review                                               | TUE |   1.0 |   |
+| 2022-04-05 |         10-11 | L0MDT            | Hog meeting                                               | TUE |   1.0 |   |
+| 2022-04-05 |         11-12 | ME0BE            | Firmware meeting                                          | TUE |   1.0 |   |
+| 2022-04-06 |          9-12 | ETL              | FW/SW Updates                                             | WED |   3.0 |   |
+| 2022-04-06 |          12-3 | ETL              | FW/SW Updates                                             | WED |   3.0 |   |
+| 2022-04-06 |           3-5 | ETL              | MT Schematic                                              | WED |   2.0 |   |
+| 2022-04-07 |          9-10 | ETL              | FW/SW Updates                                             | THU |   1.0 |   |
+| 2022-04-07 |         10-11 | L0MDT            | EE Meeting                                                | THU |   1.0 |   |
+| 2022-04-07 |          11-1 | ETL              | FW/SW Updates                                             | THU |   2.0 |   |
+| 2022-04-07 |           1-3 | ETL              | Meetings                                                  | THU |   2.0 |   |
+| 2022-04-07 |           3-5 | VAC              | Vacation                                                  | THU |   2.0 |   |
+| 2022-04-08 |           9-5 | VAC              | Vacation                                                  | FRI |   8.0 |   |
+| 2022-04-11 |           9-5 | VAC              | Vacation                                                  | MON |   8.0 |   |
+| 2022-04-12 |           9-5 | VAC              | Vacation                                                  | TUE |   8.0 |   |
+| 2022-04-13 |           9-5 | VAC              | Vacation                                                  | WED |   8.0 |   |
+| 2022-04-14 |           9-5 | VAC              | Vacation                                                  | THU |   8.0 |   |
+| 2022-04-15 |           9-5 | VAC              | Vacation                                                  | FRI |   8.0 |   |
+| 2022-04-18 |           9-5 | HOLIDAY          | Patriot\'s Day                                            | MON |   8.0 |   |
+| 2022-04-19 |       9-10:30 | ADMIN            | Talk with Dan                                             | TUE |   1.5 |   |
+| 2022-04-19 |      10:30-11 | ADMIN            | Dig through email                                         | TUE |   0.5 |   |
+| 2022-04-19 |      11-11:30 | ETL              | Email to mike                                             | TUE |   0.5 |   |
+| 2022-04-19 |      11:30-12 | ADMIN            | Help zeynep                                               | TUE |   0.5 |   |
+| 2022-04-19 |      12-12:30 | ADMIN            | edf-help                                                  | TUE |   0.5 |   |
+| 2022-04-19 |        1:30-3 | ETL              | Clock distribution                                        | TUE |   1.5 |   |
+| 2022-04-19 |        3:30-5 | ME0              | Firmware                                                  | TUE |   1.5 |   |
+| 2022-04-19 |        5-5:30 | ETL              | DAQ slides                                                | TUE |   0.5 |   |
+| 2022-04-20 |       9:30-10 | GE21             | Cluster DAQ                                               | WED |   0.5 |   |
+| 2022-04-20 |         10-11 | ME0BE            | Cluster DAQ                                               | WED |   1.0 |   |
+| 2022-04-20 |         11-12 | L0MDT            | AXI Regmap updates                                        | WED |   1.0 |   |
+| 2022-04-20 |          12-3 | ETL              | Firmware update                                           | WED |   3.0 |   |
+| 2022-04-20 |           4-5 | ETL              | Meeting                                                   | WED |   1.0 |   |
+| 2022-04-21 |        9-9:30 | L0MDT            | AXI regmap updates                                        | THU |   0.5 |   |
+| 2022-04-21 |       9:30-10 | L0MDT            | Meet with Guillermo                                       | THU |   0.5 |   |
+| 2022-04-21 |         10-11 | L0MDT            | Meeting                                                   | THU |   1.0 |   |
+| 2022-04-21 |         11-12 | ETL              | Meeting                                                   | THU |   1.0 |   |
+| 2022-04-21 |          12-2 | ETL              | Firmware                                                  | THU |   2.0 |   |
+| 2022-04-21 |           3-4 | APOLLO           | IPMC Meeting                                              | THU |   1.0 |   |
+| 2022-04-21 |           4-5 | ME0OH            | Hardware meeting                                          | THU |   1.0 |   |
+| 2022-04-21 |           5-6 | ETL              | BU Meeting                                                | THU |   1.0 |   |
+| 2022-04-22 |        9-9:30 | ETL              | ETROC Firmware                                            | FRI |   0.5 |   |
+| 2022-04-22 |       9:30-11 | ADMIN            | EDF Meeting                                               | FRI |   1.5 |   |
+| 2022-04-22 |      11-11:30 | ETL              | ETROC Firmware                                            | FRI |   0.5 |   |
+| 2022-04-22 |       12:30-1 | ETL              | ETROC Firmware                                            | FRI |   0.5 |   |
+| 2022-04-22 |           1-3 | ME0SF            | Test bench work                                           | FRI |   2.0 |   |
+| 2022-04-22 |        3-3:30 | ADMIN            |                                                           | FRI |   0.5 |   |
+| 2022-04-22 |     3:30-4:30 | ETL              | ETROC Firmware                                            | FRI |   1.0 |   |
+| 2022-04-25 |        9-9:30 | ADMIN            | Email                                                     | MON |   0.5 |   |
+| 2022-04-25 |    9:30-10:30 | ADMIN            | EDF Meeting                                               | MON |   1.0 |   |
+| 2022-04-25 |   10:30-12:30 | SICK             | MRI                                                       | MON |   2.0 |   |
+| 2022-04-25 |       12:30-1 | GE11             | S-bit DAQ                                                 | MON |   0.5 |   |
+| 2022-04-25 |           1-2 | L0MDT            | BU Meeting                                                | MON |   1.0 |   |
+| 2022-04-25 |           2-5 | L0MDT            | De-rot repository                                         | MON |   3.0 |   |
+| 2022-04-26 |          9-10 | ADMIN            | EDF Meeting                                               | TUE |   1.0 |   |
+| 2022-04-26 |      10-11:30 | SICK             | Doctors appt                                              | TUE |   1.5 |   |
+| 2022-04-26 |       11:30-1 | ADMIN            | EDF Lunch                                                 | TUE |   1.5 |   |
+| 2022-04-26 |           1-2 | L0MDT            | C2C Zynq                                                  | TUE |   1.0 |   |
+| 2022-04-26 |           2-4 | L0MDT            | C2C Zynq                                                  | TUE |   2.0 |   |
+| 2022-04-27 |          9-11 | L0MDT            | C2C Zynq                                                  | WED |   2.0 |   |
+| 2022-04-27 |         11-12 | ETL              | Giacomo                                                   | WED |   1.0 |   |
+| 2022-04-27 |      12-12:30 | L0MDT            | C2C Zynq                                                  | WED |   0.5 |   |
+| 2022-04-27 |    12:30-1:30 | ADMIN            | EDF Meeting                                               | WED |   1.0 |   |
+| 2022-04-27 |     1:30-4:30 | L0MDT            | C2C Zynq                                                  | WED |   3.0 |   |
+| 2022-04-28 |        9-9:30 | GE11             | OH Firmware                                               | THU |   0.5 |   |
+| 2022-04-28 |       9:30-10 | GE21             | OH Firmware                                               | THU |   0.5 |   |
+| 2022-04-28 |         10-11 | L0MDT            | EE Meeting                                                | THU |   1.0 |   |
+| 2022-04-28 |         11-12 | ETL              | Integration meeting                                       | THU |   1.0 |   |
+| 2022-04-28 |          12-1 | L0MDT            | C2C Zynq                                                  | THU |   1.0 |   |
+| 2022-04-28 |        2:30-3 | ETL              | Firmware updates                                          | THU |   0.5 |   |
+| 2022-04-28 |           4-5 | ME0              | Meeting                                                   | THU |   1.0 |   |
+| 2022-04-29 |          9-10 | ETL              | Firmware updates                                          | FRI |   1.0 |   |
+| 2022-04-29 |      10-11:30 | APOLLO           | AXI Regmap                                                | FRI |   1.5 |   |
+| 2022-04-29 |      11:30-12 | L0MDT            | C2C Zynq                                                  | FRI |   0.5 |   |
+| 2022-04-29 |        1:30-2 | ETL              | Emulator                                                  | FRI |   0.5 |   |
+| 2022-04-29 |        2-2:30 | ME0SF            | Chloe                                                     | FRI |   0.5 |   |
+| 2022-04-29 |        2:30-5 | ETL              | DAQ Firmware                                              | FRI |   2.5 |   |
+| 2022-05-02 |           9-5 | VAC              | Vacation                                                  | MON |   8.0 |   |
 
 *** Create Table
 #+begin_src sqlite :db billing.db :var orgtable=conglomerate :colnames no :results none
@@ -1844,7 +1932,7 @@ def flatten_list (a):
   return functools.reduce(lambda x, y:x + '''", "''' + y,a)
 
 # a list of super-projects to plot
-labels = ('L0MDT', 'ETL', 'APOLLO', 'GE21', 'GE11', 'ME0OH', 'ME0SF', 'OTHER')
+labels = ('L0MDT', 'ETL', 'APOLLO', 'GE21', 'GE11', 'ME0OH', 'ME0SF', 'OTHER', 'CSC')
 
 # a lookup between "superprojects" and the constituent projects that should be plotted
 lookups = {
@@ -1852,7 +1940,7 @@ lookups = {
   'ETL': ("ETL",),
   'GEX1': ("GE11", "GE21"),
   'GE21': ("GE21",),
-  'CSC': ("CSC",),
+  'CSC': ("CSC", "ODMB"),
   'GAPS': ("GAPS",),
   'GE11': ("GE11",),
   'ME0OH': ("ME0", "ME0OH"),
@@ -2000,9 +2088,9 @@ print(cur.execute('''select SUM(Hours) from hours where Project in ("L0MDT") and
 ** Project Distributions
 *** Meetings vs. Not Meetings
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02 :short t)
-(plot-work-chart-in-date-range "Cumulative Meetings" 2021 01 2022 02 :short t :meetings t)
-(plot-work-chart-in-date-range "Cumulative Meetings (Detailed)" 2021 01 2022 02 :short t :meetings t :meetings-detailed t)
+(plot-work-chart-in-date-range "Cumulative Work" :short t)
+(plot-work-chart-in-date-range "Cumulative Meetings" :short t :meetings t)
+(plot-work-chart-in-date-range "Cumulative Meetings (Detailed)" :short t :meetings t :meetings-detailed t)
 #+end_src
 
 #+RESULTS:
@@ -2012,32 +2100,37 @@ print(cur.execute('''select SUM(Hours) from hours where Project in ("L0MDT") and
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-   4.00    0%                  ME0
-  19.50    1%                  CSC ++
-  37.00    2%                ME0BE +++
-  49.50    2%             EMPHATIC +++++
-  74.50    4%                ME0OH +++++++
-  92.50    5%                 GE11 ++++++++
-  98.00    5%               APOLLO +++++++++
- 103.00    5%                 GE21 +++++++++
- 107.00    6%                ME0SF ++++++++++
- 244.50   13%              TRACKER ++++++++++++++++++++++
- 387.75   21%                  ETL ++++++++++++++++++++++++++++++++++++
- 546.00   30%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   8.00    0%             VACATION +
+   8.00    0%                  ME0 +
+  27.00    1%                  CSC ++
+  40.00    2%                ME0BE ++++
+  49.50    2%             EMPHATIC ++++
+  75.50    3%                ME0OH +++++++
+ 108.50    5%                ME0SF ++++++++++
+ 109.00    5%                 GE11 ++++++++++
+ 120.50    6%                 GE21 +++++++++++
+ 125.50    6%               APOLLO +++++++++++
+ 245.50   12%              TRACKER ++++++++++++++++++++++
+ 432.75   22%                  ETL ++++++++++++++++++++++++++++++++++++++
+ 563.50   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1764.25
+1914.25
 
 
 Hours   %Tot      Project
 --------------------------------
- 735.25   41%       MEETING ++++++++++++++++++++++++++++++++++++
-1029.00   58%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 780.25   40%       MEETING ++++++++++++++++++++++++++++++++++
+1134.00   59%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1764.25
+1914.25
 
 
 Hours   %Tot                                                                  Project
 --------------------------------
+   0.50    0%                                             LOOPBACK FIRMWARE - REAL WORK
+   0.50    0%                                            PROGRAMMING SCRIPT - REAL WORK
+   0.50    0%                                        C2C WRAPPER GENERATION - REAL WORK
+   0.50    0%                                             MT SPECIFICATIONS - REAL WORK
    0.50    0%                                                          ADAM - REAL WORK
    0.50    0%                                                     VTRX RSSI - REAL WORK
    0.50    0%                                                  PINOUT CHECK - REAL WORK
@@ -2083,6 +2176,16 @@ Hours   %Tot                                                                  Pr
    0.50    0%                                                     SOLDERING - REAL WORK
    0.50    0%                                           PCB VERSION CONTROL - REAL WORK
    0.50    0%                                             HOG DOCUMENTATION - REAL WORK
+   1.00    0%                                                      SO YOUNG - REAL WORK
+   1.00    0%                                      UPDATE PROJECT GENERATOR - REAL WORK
+   1.00    0%                                            IPMC FIRMWARE TEST - REAL WORK
+   1.00    0%                                                    DDR S-BITS - REAL WORK
+   1.00    0%                                         IPMC DONGLE, SHIPPING - REAL WORK
+   1.00    0%                                                      SCHEDULE - REAL WORK
+   1.00    0%                                                   DATAFORMATS - REAL WORK
+   1.00    0%                                             FIRMWARE (TIMING) - REAL WORK
+   1.00    0%                                                SPECIFICATIONS - REAL WORK
+   1.00    0%                                                       IPMC FW - REAL WORK
    1.00    0%                                                  IPMC TESTING - REAL WORK
    1.00    0%                                                       PEMNUTS - REAL WORK
    1.00    0%                                                VFAT TASKFORCE - REAL WORK
@@ -2100,7 +2203,6 @@ Hours   %Tot                                                                  Pr
    1.00    0%                                              SLOPE MULTIPLIER - REAL WORK
    1.00    0%                                            MULTIPLIER TESTING - REAL WORK
    1.00    0%                                    WRITE PIPELINED MULTIPLIER - REAL WORK
-   1.00    0%                                          IPMC FIRMWARE UPDATE - REAL WORK
    1.00    0%                                                     RB TESTER - REAL WORK
    1.00    0%                                                  FIFO UPDATES - REAL WORK
    1.00    0%                                       TESTBENCH UPDATES/DEBUG - REAL WORK
@@ -2171,6 +2273,9 @@ Hours   %Tot                                                                  Pr
    1.00    0%                                                      SHOPPING - REAL WORK
    1.00    0%                                                               - REAL WORK
    1.00    0%                                                  PCB RECEIVED - REAL WORK
+   1.50    0%                             REVERSE ENGINEERING DOCUMENTATION - REAL WORK
+   1.50    0%                                FIRMWARE UPDATE; DOCUMENTATION - REAL WORK
+   1.50    0%                                   TEST STAND; FIRMWARE UPDATE - REAL WORK
    1.50    0%                                             FIRMWARE (4 GBPS) - REAL WORK
    1.50    0%                                                   HOG UPGRADE - REAL WORK
    1.50    0%                                                  AFTERPULSING - REAL WORK
@@ -2199,8 +2304,11 @@ Hours   %Tot                                                                  Pr
    1.50    0%                                                     CSM SETUP - REAL WORK
    1.50    0%                                                      FIRWMARE - REAL WORK
    1.50    0%                                                      LAB TOUR - REAL WORK
+   2.00    0%                                                    AXI REGMAP - REAL WORK
+   2.00    0%                                      EMULATOR VERSION CONTROL - REAL WORK
+   2.00    0%                                             ISERDES PLACEMENT - REAL WORK
+   2.00    0%                                          LAB WORK WITH DANIEL - REAL WORK
    2.00    0%                                      CLUSTERING INVESTIGATION - REAL WORK
-   2.00    0%                                                ETROC FIRMWARE - REAL WORK
    2.00    0%                                      NETWORKING ISSUES / IPMC - REAL WORK
    2.00    0%                                              ODMB INTEGRATION - REAL WORK
    2.00    0%                                                    MOVING LAB - REAL WORK
@@ -2232,17 +2340,16 @@ Hours   %Tot                                                                  Pr
    2.00    0%                                     MODULE PCB; GITLAB ISSUES - REAL WORK
    2.00    0%                                         DEBUGGING XML TO VHDL - REAL WORK
    2.00    0%                              FIRMWARE INTEGRATION, REPO SETUP - REAL WORK
-   2.00    0%                                              TEST STAND SETUP - REAL WORK
    2.00    0%                                             LAURENT & EVALDAS - REAL WORK
    2.00    0%                                 PCB ORDERS; FIRMWARE; DIGIKEY - REAL WORK
    2.00    0%                                          FIRMWARE; PURCHASING - REAL WORK
    2.00    0%                                                  SCA FIRMWARE - REAL WORK
-   2.00    0%                                                    REPOSITORY - REAL WORK
    2.00    0%                                                        TCLINK - REAL WORK
+   2.50    0%                                                  MGT LOOPBACK - REAL WORK +
+   2.50    0%                                                    TEST STAND - REAL WORK +
    2.50    0%                                               PHASE2 PLANNING - REAL WORK +
    2.50    0%                                            TIMING CONSTRAINTS - REAL WORK +
    2.50    0%                                                     OH TIMING - REAL WORK +
-   2.50    0%                                               FIRMWARE UPDATE - REAL WORK +
    2.50    0%                                                 STRIP MAPPING - REAL WORK +
    2.50    0%                                             REPOSITORY ISSUES - REAL WORK +
    2.50    0%                                SW DEBUGGING; FIRMWARE UPDATES - REAL WORK +
@@ -2250,13 +2357,15 @@ Hours   %Tot                                                                  Pr
    2.50    0%                                          APOLLO DOCUMENTATION - REAL WORK +
    2.50    0%                                           IPMC CI; IPMC BUILD - REAL WORK +
    2.50    0%                                                     TESTBENCH - REAL WORK +
-   2.50    0%                                                             ME0 - MEETING +
+   2.50    0%                                                    REPOSITORY - REAL WORK +
    2.50    0%                                                   REPO CONFIG - REAL WORK +
    2.50    0%                                              FIRMWARE (IPBUS) - REAL WORK +
+   3.00    0%                                                     HOG FIXES - REAL WORK +
    3.00    0%                                 IPMC WORK; IPMC DOCUMENTATION - REAL WORK +
    3.00    0%                                                FIRMWARE (DDR) - REAL WORK +
    3.00    0%                                               FIRMWARE TIMING - REAL WORK +
    3.00    0%                                   PAT_UNIX_MUX + TB DEBUGGING - REAL WORK +
+   3.00    0%                                          IPMC FIRMWARE UPDATE - REAL WORK +
    3.00    0%                                                WORK W/ DANIEL - REAL WORK +
    3.00    0%                                       GBT-IC FIRMWARE UPDATES - REAL WORK +
    3.00    0%                                  LPGBT/VTRX+ USER GROUP (1/3) - REAL WORK +
@@ -2271,12 +2380,15 @@ Hours   %Tot                                                                  Pr
    3.00    0%                                                SEGMENT FINDER - REAL WORK +
    3.00    0%                                        SPYBUFFERS; REPO MERGE - REAL WORK +
    3.00    0%                                           MONITORING/YAML/TCL - REAL WORK +
+   3.50    0%                                                   CLUSTER DAQ - REAL WORK +
    3.50    0%                                                 DOCUMENTATION - REAL WORK +
    3.50    0%                                             SCHEMATIC UPDATES - REAL WORK +
    3.50    0%                                                  DAQ FIRMWARE - REAL WORK +
    3.50    0%            SPYBUFFERS, AXI INFRASTRUCTURE, REPOSITORY UPDATES - REAL WORK +
    3.50    0%                                   SPYBUFFERS; FIRMWARE BUILDS - REAL WORK +
    3.50    0%                                                           AXI - REAL WORK +
+   4.00    0%                                            FIRMWARE PLACEMENT - REAL WORK +
+   4.00    0%                                         FIRMWARE (NEW SORTER) - REAL WORK +
    4.00    0%                                        MULTIPLIER INTEGRATION - REAL WORK +
    4.00    0%                             DAQ INTEGRATION; FIRMWARE UPDATES - REAL WORK +
    4.00    0%                                 FIRMWARE UPDATES; BOARD DEBUG - REAL WORK +
@@ -2297,144 +2409,153 @@ Hours   %Tot                                                                  Pr
    4.50    0%                                                 READOUT BOARD - REAL WORK +
    4.50    0%                                              RADTEST FIRMWARE - REAL WORK +
    4.50    0%                                                 ASIAGO LAYOUT - REAL WORK +
+   5.00    0%                                   IPMC FIRMWARE UPDATE / TEST - REAL WORK +
+   5.00    0%                                                   REV2A DEBUG - REAL WORK +
    5.00    0%                                                TRIMMING DEBUG - REAL WORK +
    5.00    0%                                               APEX/HOG ISSUES - REAL WORK +
    5.00    0%                                                 I2C DEBUGGING - REAL WORK +
+   5.00    0%                                              TEST STAND SETUP - REAL WORK +
    5.00    0%                                           YAML INFRASTRUCTURE - REAL WORK +
-   5.50    0%                                                      SPEC DOC - REAL WORK +
+   5.50    0%                                                  THIAGO VISIT - REAL WORK +
    5.50    0%                                                  GBT FIRMWARE - REAL WORK +
    5.50    0%                                                    RB TESTING - REAL WORK +
    5.50    0%                                               APOLLO ETHERNET - REAL WORK +
-   5.50    0%                                                      TEJASAVA - REAL WORK +
    5.50    0%                                                FIRMWARE BUILD - REAL WORK +
+   5.50    0%                                                             ME0 - MEETING +
    6.00    0%                                                     S-BIT DAQ - REAL WORK +
+   6.00    0%                                                ETROC FIRMWARE - REAL WORK +
    6.00    0%                                       ALCT / ODMB INTEGRATION - REAL WORK +
+   6.00    0%                                                      TEJASAVA - REAL WORK +
    6.00    0%                                             VISIT WITH THIAGO - REAL WORK +
    6.00    0%                                             ETHERNET FIRMWARE - REAL WORK +
+   6.50    0%                                                      SPEC DOC - REAL WORK +
    6.50    0%                                         FIRMWARE (DAQ+GBT-IC) - REAL WORK +
    6.50    0%                                            REPO CONFIGURATION - REAL WORK +
    7.00    0%                                           FIRMWARE/GIT ISSUES - REAL WORK ++
+   7.00    0%                                               FIRMWARE UPDATE - REAL WORK ++
    7.00    0%                                       READOUT BOARD SCHEMATIC - REAL WORK ++
    7.00    0%                                                        COCOTB - REAL WORK ++
    7.50    0%                                                       YAML BD - REAL WORK ++
    7.50    0%                                                           HOG - REAL WORK ++
-   8.00    0%                                                   HOG UPDATES - REAL WORK ++
+   8.00    0%                                                      VACATION - REAL WORK ++
    8.00    0%                                                            GE11 - MEETING ++
    8.50    0%                                                 IPMC FIRMWARE - REAL WORK ++
    9.00    0%                                               REGMAP SOFTWARE - REAL WORK ++
+   9.00    0%                                                   HOG UPDATES - REAL WORK ++
    9.50    0%                                                  DDR FIRMWARE - REAL WORK ++
    9.50    0%                                               DAQ INTEGRATION - REAL WORK ++
    9.50    0%                                                 MODULE TESTER - REAL WORK ++
    9.50    0%                                              FIRMWARE TESTING - REAL WORK ++
-  10.50    0%                                                             CSC - MEETING ++
-  11.00    0%                                                  SOC WORKSHOP - REAL WORK +++
+  11.00    0%                                                  SOC WORKSHOP - REAL WORK ++
   13.00    0%                                                    SPYBUFFERS - REAL WORK +++
   14.00    0%                                                       FITTING - REAL WORK +++
-  14.50    0%                                                  IPMC UPDATES - REAL WORK +++
+  16.50    0%                                                  IPMC UPDATES - REAL WORK ++++
   16.50    0%                                                        EMPHATIC - MEETING ++++
-  18.00    1%                                                            GE21 - MEETING ++++
+  18.00    0%                                                             CSC - MEETING ++++
+  19.50    1%                                                            GE21 - MEETING ++++
   21.50    1%                                                      IPMC/ESM - REAL WORK +++++
-  24.50    1%                                                           ME0BE - MEETING ++++++
-  29.50    1%                                                          APOLLO - MEETING +++++++
-  54.50    3%                                                           ME0OH - MEETING +++++++++++++
-  56.00    3%                                                           ME0SF - MEETING +++++++++++++
-  60.50    3%                                              FIRMWARE UPDATES - REAL WORK ++++++++++++++
-  76.00    4%                                                          IPMC - REAL WORK ++++++++++++++++++
- 107.00    6%                                                         TRACKER - MEETING +++++++++++++++++++++++++
- 190.25   10%                                                             ETL - MEETING ++++++++++++++++++++++++++++++++++++++++++++
- 207.00   11%                                                      FIRMWARE - REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++
- 217.00   12%                                                           L0MDT - MEETING ++++++++++++++++++++++++++++++++++++++++++++++++++
+  25.50    1%                                                           ME0BE - MEETING ++++++
+  32.00    1%                                                          APOLLO - MEETING +++++++
+  55.50    2%                                                           ME0OH - MEETING ++++++++++++
+  57.50    3%                                                           ME0SF - MEETING +++++++++++++
+  64.00    3%                                              FIRMWARE UPDATES - REAL WORK ++++++++++++++
+  79.00    4%                                                          IPMC - REAL WORK +++++++++++++++++
+ 108.00    5%                                                         TRACKER - MEETING ++++++++++++++++++++++++
+ 206.75   10%                                                             ETL - MEETING ++++++++++++++++++++++++++++++++++++++++++++++
+ 219.50   11%                                                      FIRMWARE - REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++
+ 226.50   11%                                                           L0MDT - MEETING ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1764.25
+1914.25
 #+end_example
 
 *** Cumulative Work
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02)
+(plot-work-chart-in-date-range "Cumulative Work")
 (princ "\n")
-(plot-work-chart-in-date-range "Cumulative Work" 2021 01 2022 02 :short t)
+(plot-work-chart-in-date-range "Cumulative Work" :short t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
----------------------------------------------------------------------------
-Cumulative Work
----------------------------------------------------------------------------
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-  18.50    0%                  CSC ++
+   8.00    0%                  ME0 +
   18.50    0%                DEVEL ++
-  38.00    1%                ADMIN +++
-  49.50    2%             EMPHATIC +++++
+  27.00    1%                  CSC ++
+  40.00    1%                ME0BE ++++
+  44.00    1%                ADMIN ++++
+  49.50    2%             EMPHATIC ++++
+  75.50    3%                ME0OH +++++++
   81.00    3%                 SICK +++++++
-  82.50    3%               APOLLO ++++++++
-  90.50    4%                 GE11 ++++++++
- 101.00    4%                 GE21 +++++++++
- 160.00    7%              HOLIDAY +++++++++++++++
- 197.00    8%             VACATION ++++++++++++++++++
- 219.50    9%                  ME0 ++++++++++++++++++++
- 245.50   10%              TRACKER +++++++++++++++++++++++
- 386.75   17%                  ETL ++++++++++++++++++++++++++++++++++++
- 544.00   24%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 108.50    4%                ME0SF ++++++++++
+ 109.00    4%                 GE11 ++++++++++
+ 120.50    4%                 GE21 +++++++++++
+ 125.50    5%               APOLLO +++++++++++
+ 160.00    6%              HOLIDAY ++++++++++++++
+ 207.00    8%             VACATION ++++++++++++++++++
+ 246.50   10%              TRACKER ++++++++++++++++++++++
+ 432.75   17%                  ETL ++++++++++++++++++++++++++++++++++++++
+ 563.50   23%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-2233.25
+2417.75
 
----------------------------------------------------------------------------
-Cumulative Work
----------------------------------------------------------------------------
 
 
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-  18.50    1%                  CSC ++
-  49.50    2%             EMPHATIC +++++
-  82.50    4%               APOLLO ++++++++
-  90.50    5%                 GE11 ++++++++
- 101.00    5%                 GE21 +++++++++
- 219.50   12%                  ME0 ++++++++++++++++++++
- 245.50   14%              TRACKER +++++++++++++++++++++++
- 386.75   22%                  ETL ++++++++++++++++++++++++++++++++++++
- 544.00   31%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   8.00    0%             VACATION +
+   8.00    0%                  ME0 +
+  27.00    1%                  CSC ++
+  40.00    2%                ME0BE ++++
+  49.50    2%             EMPHATIC ++++
+  75.50    3%                ME0OH +++++++
+ 108.50    5%                ME0SF ++++++++++
+ 109.00    5%                 GE11 ++++++++++
+ 120.50    6%                 GE21 +++++++++++
+ 125.50    6%               APOLLO +++++++++++
+ 245.50   12%              TRACKER ++++++++++++++++++++++
+ 432.75   22%                  ETL ++++++++++++++++++++++++++++++++++++++
+ 563.50   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1738.75
+1914.25
 #+end_example
 
 *** Past 6 Months
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "2021 Work" 2021 8 2022 02 :short t)
+(plot-work-chart-in-date-range "2021 Work" :start-year 2021 :start-month 8 :end-year 2022 :end-month 02 :short t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
----------------------------------------------------------------------------
-2021 Work
----------------------------------------------------------------------------
 
 
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-  18.00    1%                  CSC ++
-  38.50    3%             EMPHATIC +++++
-  71.50    5%                 GE11 +++++++++
-  79.50    6%                 GE21 ++++++++++
-  82.50    6%               APOLLO +++++++++++
- 134.50   10%              TRACKER +++++++++++++++++
- 158.50   12%                  ME0 +++++++++++++++++++++
- 272.75   21%                  ETL +++++++++++++++++++++++++++++++++++
- 385.50   31%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   1.50    0%                  ME0
+   3.00    0%             EMPHATIC
+  16.50    1%                  CSC +++
+  20.00    2%                ME0BE +++
+  29.00    3%              TRACKER +++++
+  30.00    3%                ME0OH +++++
+  51.00    6%                 GE11 ++++++++
+  52.00    6%                 GE21 ++++++++
+  58.00    6%               APOLLO +++++++++
+  62.00    7%                ME0SF ++++++++++
+ 200.75   24%                  ETL ++++++++++++++++++++++++++++++++
+ 309.50   37%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1242.25
+834.25
 #+end_example
 
 *** 2021 Work
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "2021 Work" 2021 01 2021 12 :short t)
+(plot-work-chart-in-date-range "2021 Work" :start-year 2021 :start-month 01 :end-year 2021 :end-month 12 :short t)
 #+end_src
 
 #+RESULTS:
@@ -2466,30 +2587,29 @@ Hours   %Tot             Project
 *** 2022 Work
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "2022 Work" 2022 01 2022 02 :short t)
+(plot-work-chart-in-date-range "2022 Work" :start-year 2022 :start-month 01 :short t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
----------------------------------------------------------------------------
-2022 Work
----------------------------------------------------------------------------
+
+
 Hours   %Tot     Project
 --------------------------------
-  2.00    0%      TRACKER +
-  4.00    1%         SICK +++
-  5.50    2%        ADMIN ++++
-  8.00    3%      HOLIDAY +++++
-  8.50    3%       APOLLO ++++++
-  9.00    4%         GE21 ++++++
- 13.00    5%          CSC +++++++++
- 13.50    6%          ME0 +++++++++
- 15.00    6%         GE11 ++++++++++
- 24.00   10%     VACATION ++++++++++++++++
- 33.50   15%          ETL ++++++++++++++++++++++
- 76.00   34%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   3.00    0%      TRACKER ++
+   4.00    1%          ME0 ++
+   7.00    1%        ME0SF ++++
+   8.00    2%     VACATION ++++
+   8.00    2%        ME0OH ++++
+  10.00    2%        ME0BE +++++
+  21.50    5%          CSC +++++++++++
+  32.00    8%         GE21 ++++++++++++++++
+  36.50    9%         GE11 ++++++++++++++++++
+  51.50   13%       APOLLO ++++++++++++++++++++++++++
+  92.00   24%          ETL ++++++++++++++++++++++++++++++++++++++++++++++
+ 100.00   26%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-219.50
+373.50
 #+end_example
 
 *** Monthly
@@ -5342,7 +5462,7 @@ Hours   %Tot     Project
 | # |    |             |          |                                    |     |       |
 | # | 28 |         9-1 | ETL      | Meeting; slides                    | MON |   4.0 |
 | # | 28 |         1-2 | L0MDT    | Meeting                            | MON |   1.0 |
-| # | 28 |         2-4 | ADMIN    | Kaitlin's dog                      | MON |   2.0 |
+| # | 28 |         2-4 | --       | Kaitlins dog                       | MON |   2.0 |
 | # | 28 |      4:30-5 | ETL      | Firmware                           | MON |   0.5 |
 | # |    |             |          |                                    |     |       |
 | # | 29 |      9-9:30 | ETL      | Firmware                           | TUE |   0.5 |
@@ -5357,9 +5477,17 @@ Hours   %Tot     Project
 | # | 29 |      4:30-5 | APOLLO   | AXI Regmap                         | TUE |   0.5 |
 | # | 29 |      6:30-7 | ME0      | Accruals                           | TUE |   0.5 |
 | # |    |             |          |                                    |     |       |
-| # | 30 |             |          |                                    |     |       |
+| # | 30 |      9-2:30 | L0MDT    | Thiago visit                       | WED |   5.5 |
+| # | 30 |      2:30-3 | --       | Break                              | WED |   0.5 |
+| # | 30 |      3-4:30 | ETL      | So Young                           | WED |   1.5 |
+| # | 30 |         5-6 | APOLLO   | SM Gerbers; IPMC                   | WED |   1.0 |
 | # |    |             |          |                                    |     |       |
-| # | 31 |             |          |                                    |     |       |
+| # | 31 |      9-9:30 | --       | ??                                 | THU |   0.5 |
+| # | 31 |     9:30-10 | L0MDT    | Repository                         | THU |   0.5 |
+| # | 31 |       10-11 | L0MDT    | Meeting                            | THU |   1.0 |
+| # | 31 |       11-12 | ETL      | Meet with Indara                   | THU |   1.0 |
+| # | 31 |        12-3 | APOLLO   | Rev 1 Repair                       | THU |   2.0 |
+| # | 31 |         3-4 | APOLLO   | IPMC Meeting                       | THU |   1.0 |
 | # |    |             |          |                                    |     |       |
 |---+----+-------------+----------+------------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"March 2022"))::$7='(org-sbe subtract (a $$3))
@@ -5374,19 +5502,210 @@ Hours   %Tot     Project
 --------------------------------
    1.00    0%      TRACKER +
    1.00    0%        ME0OH +
-   1.00    0%        ME0SF +
+   1.50    0%        ME0SF ++
+   3.00    1%        ADMIN +++
    3.00    1%        ME0BE +++
-   4.50    2%          ME0 ++++
-   5.00    2%        ADMIN +++++
-   7.50    4%          CSC +++++++
-  12.00    7%        L0MDT ++++++++++++
+   4.00    2%          ME0 ++++
+   7.50    4%          CSC ++++++++
   16.50    9%         GE11 ++++++++++++++++
+  17.50   10%        L0MDT ++++++++++++++++++
   17.50   10%         GE21 ++++++++++++++++++
   18.00   10%     VACATION ++++++++++++++++++
-  27.50   16%       APOLLO ++++++++++++++++++++++++++++
-  44.00   26%          ETL ++++++++++++++++++++++++++++++++++++++++++++
+  27.50   15%       APOLLO ++++++++++++++++++++++++++++
+  45.00   25%          ETL +++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-167.00
+174.00
+#+end_example
+
+** April 2022
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+#+TBLNAME: 2022-04
+|---+----+-------------+---------+---------------------+-----+-------|
+|   |  D |        Time | Project | Task                | Day | Hours |
+|---+----+-------------+---------+---------------------+-----+-------|
+| # |    |             |         |                     |     |       |
+| # |  1 |        9-12 | ETL     | MT Schematic        | FRI |   3.0 |
+| # |  1 |         1-5 | ETL     | MT Schematic        | FRI |   4.0 |
+| # |    |             |         |                     |     |       |
+|---+----+-------------+---------+---------------------+-----+-------|
+| # |    |             |         |                     |     |       |
+| # |  4 |         9-1 | ETL     | MT Schematic        | MON |   4.0 |
+| # |  4 |         1-2 | L0MDT   | Meeting             | MON |   1.0 |
+| # |  4 |         1-4 | ETL     | MT Schematic        | MON |   3.0 |
+| # |    |             |         |                     |     |       |
+| # |  5 |        9-10 | CSC     | ODMB Review         | TUE |   1.0 |
+| # |  5 |       10-11 | L0MDT   | Hog meeting         | TUE |   1.0 |
+| # |  5 |       11-12 | ME0BE   | Firmware meeting    | TUE |   1.0 |
+| # |    |             |         |                     |     |       |
+| # |  6 |        9-12 | ETL     | FW/SW Updates       | WED |   3.0 |
+| # |  6 |        12-3 | ETL     | FW/SW Updates       | WED |   3.0 |
+| # |  6 |         3-5 | ETL     | MT Schematic        | WED |   2.0 |
+| # |    |             |         |                     |     |       |
+| # |  7 |        9-10 | ETL     | FW/SW Updates       | THU |   1.0 |
+| # |  7 |       10-11 | L0MDT   | EE Meeting          | THU |   1.0 |
+| # |  7 |        11-1 | ETL     | FW/SW Updates       | THU |   2.0 |
+| # |  7 |         1-3 | ETL     | Meetings            | THU |   2.0 |
+| # |  7 |         3-5 | VAC     | Vacation            | THU |   2.0 |
+| # |    |             |         |                     |     |       |
+| # |  8 |         9-5 | VAC     | Vacation            | FRI |   8.0 |
+| # |    |             |         |                     |     |       |
+|---+----+-------------+---------+---------------------+-----+-------|
+| # |    |             |         |                     |     |       |
+| # | 11 |         9-5 | VAC     | Vacation            | MON |   8.0 |
+| # | 12 |         9-5 | VAC     | Vacation            | TUE |   8.0 |
+| # | 13 |         9-5 | VAC     | Vacation            | WED |   8.0 |
+| # | 14 |         9-5 | VAC     | Vacation            | THU |   8.0 |
+| # | 15 |         9-5 | VAC     | Vacation            | FRI |   8.0 |
+| # |    |             |         |                     |     |       |
+|---+----+-------------+---------+---------------------+-----+-------|
+| # |    |             |         |                     |     |       |
+| # | 18 |         9-5 | HOLIDAY | Patriot\'s Day      | MON |   8.0 |
+| # |    |             |         |                     |     |       |
+| # | 19 |     9-10:30 | ADMIN   | Talk with Dan       | TUE |   1.5 |
+| # | 19 |    10:30-11 | ADMIN   | Dig through email   | TUE |   0.5 |
+| # | 19 |    11-11:30 | ETL     | Email to mike       | TUE |   0.5 |
+| # | 19 |    11:30-12 | ADMIN   | Help zeynep         | TUE |   0.5 |
+| # | 19 |    12-12:30 | ADMIN   | edf-help            | TUE |   0.5 |
+| # | 19 |     12-1:00 | --      | LUNCH               | TUE |   1.0 |
+| # | 19 |      1:30-3 | ETL     | Clock distribution  | TUE |   1.5 |
+| # | 19 |      3:30-5 | ME0     | Firmware            | TUE |   1.5 |
+| # | 19 |      5-5:30 | ETL     | DAQ slides          | TUE |   0.5 |
+| # |    |             |         |                     |     |       |
+| # | 20 |     9:30-10 | GE21    | Cluster DAQ         | WED |   0.5 |
+| # | 20 |       10-11 | ME0BE   | Cluster DAQ         | WED |   1.0 |
+| # | 20 |       11-12 | L0MDT   | AXI Regmap updates  | WED |   1.0 |
+| # | 20 |        12-3 | ETL     | Firmware update     | WED |   3.0 |
+| # | 20 |         3-4 | --      | Shindig             | WED |   1.0 |
+| # | 20 |         4-5 | ETL     | Meeting             | WED |   1.0 |
+| # |    |             |         |                     |     |       |
+| # | 21 |      9-9:30 | L0MDT   | AXI regmap updates  | THU |   0.5 |
+| # | 21 |     9:30-10 | L0MDT   | Meet with Guillermo | THU |   0.5 |
+| # | 21 |       10-11 | L0MDT   | Meeting             | THU |   1.0 |
+| # | 21 |       11-12 | ETL     | Meeting             | THU |   1.0 |
+| # | 21 |        12-2 | ETL     | Firmware            | THU |   2.0 |
+| # | 21 |         3-4 | APOLLO  | IPMC Meeting        | THU |   1.0 |
+| # | 21 |         4-5 | ME0OH   | Hardware meeting    | THU |   1.0 |
+| # | 21 |         5-6 | ETL     | BU Meeting          | THU |   1.0 |
+| # |    |             |         |                     |     |       |
+| # | 22 |      9-9:30 | ETL     | ETROC Firmware      | FRI |   0.5 |
+| # | 22 |     9:30-11 | ADMIN   | EDF Meeting         | FRI |   1.5 |
+| # | 22 |    11-11:30 | ETL     | ETROC Firmware      | FRI |   0.5 |
+| # | 22 | 11:30-12:30 | --      | EDF Lunch           | FRI |   1.0 |
+| # | 22 |     12:30-1 | ETL     | ETROC Firmware      | FRI |   0.5 |
+| # | 22 |         1-3 | ME0SF   | Test bench work     | FRI |   2.0 |
+| # | 22 |      3-3:30 | ADMIN   |                     | FRI |   0.5 |
+| # | 22 |   3:30-4:30 | ETL     | ETROC Firmware      | FRI |   1.0 |
+| # |    |             |         |                     |     |       |
+|---+----+-------------+---------+---------------------+-----+-------|
+|   |    |             |         |                     |     |       |
+| # | 25 |      9-9:30 | ADMIN   | Email               | MON |   0.5 |
+| # | 25 |  9:30-10:30 | ADMIN   | EDF Meeting         | MON |   1.0 |
+| # | 25 | 10:30-12:30 | SICK    | MRI                 | MON |   2.0 |
+| # | 25 |     12:30-1 | GE11    | S-bit DAQ           | MON |   0.5 |
+| # | 25 |         1-2 | L0MDT   | BU Meeting          | MON |   1.0 |
+| # | 25 |         2-5 | L0MDT   | De-rot repository   | MON |   3.0 |
+| # |    |             |         |                     |     |       |
+| # | 26 |        9-10 | ADMIN   | EDF Meeting         | TUE |   1.0 |
+| # | 26 |    10-11:30 | SICK    | Doctors appt        | TUE |   1.5 |
+| # | 26 |     11:30-1 | ADMIN   | EDF Lunch           | TUE |   1.5 |
+| # | 26 |         1-2 | L0MDT   | C2C Zynq            | TUE |   1.0 |
+| # | 26 |         2-4 | L0MDT   | C2C Zynq            | TUE |   2.0 |
+| # |    |             |         |                     |     |       |
+| # | 27 |        9-11 | L0MDT   | C2C Zynq            | WED |   2.0 |
+| # | 27 |       11-12 | ETL     | Giacomo             | WED |   1.0 |
+| # | 27 |    12-12:30 | L0MDT   | C2C Zynq            | WED |   0.5 |
+| # | 27 |  12:30-1:30 | ADMIN   | EDF Meeting         | WED |   1.0 |
+| # | 27 |   1:30-4:30 | L0MDT   | C2C Zynq            | WED |   3.0 |
+| # |    |             |         |                     |     |       |
+| # | 28 |      9-9:30 | GE11    | OH Firmware         | THU |   0.5 |
+| # | 28 |     9:30-10 | GE21    | OH Firmware         | THU |   0.5 |
+| # | 28 |       10-11 | L0MDT   | EE Meeting          | THU |   1.0 |
+| # | 28 |       11-12 | ETL     | Integration meeting | THU |   1.0 |
+| # | 28 |        12-1 | L0MDT   | C2C Zynq            | THU |   1.0 |
+| # | 28 |      1-2:30 | --      | Break               | THU |   1.5 |
+| # | 28 |      2:30-3 | ETL     | Firmware updates    | THU |   0.5 |
+| # | 28 |         4-5 | ME0     | Meeting             | THU |   1.0 |
+| # |    |             |         |                     |     |       |
+| # | 29 |        9-10 | ETL     | Firmware updates    | FRI |   1.0 |
+| # | 29 |    10-11:30 | APOLLO  | AXI Regmap          | FRI |   1.5 |
+| # | 29 |    11:30-12 | L0MDT   | C2C Zynq            | FRI |   0.5 |
+| # | 29 |     12-1:30 | --      | Lunch + haircut     | FRI |   1.5 |
+| # | 29 |      1:30-2 | ETL     | Emulator            | FRI |   0.5 |
+| # | 29 |      2-2:30 | ME0SF   | Chloe               | FRI |   0.5 |
+| # | 29 |      2:30-5 | ETL     | DAQ Firmware        | FRI |   2.5 |
+| # |    |             |         |                     |     |       |
+|---+----+-------------+---------+---------------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"April 2022"))::$7='(org-sbe subtract (a $$3))
+
+#+begin_src emacs-lisp :exports results :results output :var data=2022-04
+(plot-monthly-work-chart data)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Hours   %Tot     Project
+--------------------------------
+   0.50    0%         GE21
+   1.00    0%        ME0OH +
+   1.00    0%       APOLLO +
+   1.00    0%         ODMB +
+   1.50    1%          ME0 ++
+   2.00    1%        ME0SF ++
+   2.00    1%        ME0BE ++
+   4.50    3%        ADMIN ++++
+   6.00    5%        L0MDT ++++++
+   8.00    6%      HOLIDAY ++++++++
+  39.00   32%          ETL +++++++++++++++++++++++++++++++++++++++
+  50.00   41%     VACATION ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+119.50
+#+end_example
+
+** May 2022
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+#+TBLNAME: 2022-05
+|---+---+---------+---------+-------------+-----+-------|
+|   | D |    Time | Project | Task        | Day | Hours |
+|---+---+---------+---------+-------------+-----+-------|
+| # | 2 |     9-5 | VAC     | Vacation    | MON |   8.0 |
+| # |   |         |         |             |     |       |
+| # | 3 | 9:30-10 | ADMIN   | Billing     | TUE |   0.5 |
+| # | 3 |   10-11 | L0MDT   | Hog meeting | TUE |   1.0 |
+| # | 3 |   11-12 | ME0BE   | Meeting     | TUE |   1.0 |
+| # | 3 |    12-1 | ADMIN   | Panos lunch | TUE |   1.0 |
+| # | 3 |         |         |             | TUE |       |
+| # |   |         |         |             |     |       |
+|---+---+---------+---------+-------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"May 2022"))::$7='(org-sbe subtract (a $$3))
+
+#+begin_src emacs-lisp :exports results :results output :var data=2022-04
+(plot-monthly-work-chart data)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Hours   %Tot     Project
+--------------------------------
+   0.50    0%         GE21
+   1.00    0%        ME0OH +
+   1.00    0%       APOLLO +
+   1.00    0%         ODMB +
+   1.50    1%          ME0 ++
+   2.00    1%        ME0SF ++
+   2.00    1%        ME0BE ++
+   4.50    3%        ADMIN ++++
+   6.00    5%        L0MDT ++++++
+   8.00    6%      HOLIDAY ++++++++
+  39.00   32%          ETL +++++++++++++++++++++++++++++++++++++++
+  50.00   41%     VACATION ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+119.50
 #+end_example
 
 * Billing
