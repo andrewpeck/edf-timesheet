@@ -10,8 +10,36 @@ SICK,2.00,1.50,0,0,0,0,0,Doctors appt; MRI
 CMS-EMU-OPS-GE11,0.50,0,0,0.50,0,0,0,OH Firmware; S-bit DAQ
 ,2,3,4,5,6,7,8,
 VAC,8.00,0,0,0,0,0,0,Vacation
+ADMIN,0,1.50,0,0,0,0,0,Billing; Panos lunch
+ATLAS-MUON-PHASE2,0,1.00,1.00,3.00,2.00,0,0,Firmware; Hog meeting; Slides
+CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Meeting
+CMS-ETL,0,0.50,4.00,3.00,0.00,0,0,Bolek; Emulator Firmware; Firmware; MT Schematic; Meet w/ Indara; Meeting
+APOLLO,0,4.00,0,0,0,0,0,Meet with Panos
+SICK,0,0,2.00,0,4.00,0,0,Doctors appt
 ,9,10,11,12,13,14,15,
+ADMIN,0,0,0,0.50,0,0,0,Talk to Eric
+ATLAS-MUON-PHASE2,1.00,1.50,0,1.00,0,0,0,Meeting; Slides
+CMS-EMU-UPGRADE-ME0,0,1.00,1.00,1.50,1.00,0,0,Chloe; KCU Firmware; Meeting; Workshop
+CMS-ETL,4.00,3.00,1.00,2.50,3.00,0,0,DAQ Meeting; DAQ link counting; DAQ rates; Firmware; Firmware update; Firmware updates; HV Mux; Integration meeting; Lab w/ daniel; Meet w/ Ted
+SICK,2.00,0,0,0,0,0,0,
+CMS-EMU-UPGRADE-GE21,0,1.00,0,0.50,0,0,0,KCU Firmware
+CMS-EMU-OPS-GE11,0,1.00,0,0.50,0,0,0,KCU Firmware
+CMS-EMU-OPS-CSC,0,0,0,0,0.50,0,0,Kaitlyn
 ,16,17,18,19,20,21,22,
+VAC,0,0,0,0,5.00,0,0,Vacation
+ATLAS-MUON-PHASE2,0.50,3.00,3.00,0,0,0,0,Slides; Workshop
+CMS-EMU-UPGRADE-ME0,1.00,0.50,0,1.00,1.50,0,0,Hardware meeting; KCU105; Meeting
+CMS-ETL,2.00,0,0,4.00,0,0,0,BV distribution; Documentation; Integration meeting; Meeting; Specs
+SICK,0,2.00,5.00,0,0,0,0,Back pain; Doctor's appt
+CMS-EMU-UPGRADE-GE21,1.00,2.00,0,0,0,0,0,KCU105
+CMS-EMU-OPS-GE11,1.00,0.50,0,0,0,0,0,KCU105
 ,23,24,25,26,27,28,29,
+VAC,8.00,8.00,0,0,0,0,0,Vacation
+ATLAS-MUON-PHASE2,0,0,4.50,3.50,2.00,0,0,Firmware updates; Meet with Dan; Meet with Eric; Meet with Guillermo; Update build; Update flavors; Update flavors script
+CMS-EMU-UPGRADE-ME0,0,0,1.00,1.00,1.50,0,0,Firmware meeting; Meeting
+CMS-ETL,0,0,0,1.00,1.00,0,0,Integration meeting; Meeting
 ,30,31,1*,2*,3*,4*,5*,
+ADMIN,0,0.50,0,0,0,0,0,Email cleanup
+CMS-ETL,0,5.00,0,0,0,0,0,Module questions; Module tester schematic
+HOLIDAY,8.00,0,0,0,0,0,0,Memorial Day
 
