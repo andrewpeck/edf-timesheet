@@ -41,7 +41,7 @@ D,Time,Project,Task,Day,Hours
 19,12-12:30,ADMIN,edf-help,TUE,0.5
 19,12-1:00,--,LUNCH,TUE,1.0
 19,1:30-3,ETL,Clock distribution,TUE,1.5
-19,3:30-5,ME0,Firmware,TUE,1.5
+19,3:30-5,ME0BE,Firmware,TUE,1.5
 19,5-5:30,ETL,DAQ slides,TUE,0.5
 ,,,,,
 20,9:30-10,GE21,Cluster DAQ,WED,0.5
@@ -96,7 +96,7 @@ D,Time,Project,Task,Day,Hours
 28,12-1,L0MDT,C2C Zynq,THU,1.0
 28,1-2:30,--,Break,THU,1.5
 28,2:30-3,ETL,Firmware updates,THU,0.5
-28,4-5,ME0,Meeting,THU,1.0
+28,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 29,9-10,ETL,Firmware updates,FRI,1.0
 29,10-11:30,APOLLO,AXI Regmap,FRI,1.5

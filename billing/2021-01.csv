@@ -84,7 +84,7 @@ D,Time,Project,Task,,Hours
 20,5-7,ETL,Firmware + Software,WED,2.0
 ,,,,,
 21,9-11,L0MDT,Meeting,THU,2.0
-21,11-1,SICK,Doctor's visit,THU,2.0
+21,11-1,SICK,Doctor\'s visit,THU,2.0
 21,1-6,ETL,Firmware + meeting,THU,5.0
 21,6-6:30,Tracker,IPMC,THU,0.5
 ,,,,,

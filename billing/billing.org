@@ -2652,28 +2652,25 @@ Hours   %Tot             Project
 
 #+RESULTS:
 #+begin_example
----------------------------------------------------------------------------
-2021 Work
----------------------------------------------------------------------------
+
+
 Hours   %Tot             Project
 --------------------------------
-  1.00    0%     SCOTT-LAB-CAMERA
-  5.50    0%                  CSC +
- 18.50    0%                DEVEL ++
- 25.50    1%                ADMIN +++
- 49.50    2%             EMPHATIC +++++
- 72.50    3%                 GE11 ++++++++
- 74.00    3%               APOLLO ++++++++
- 77.00    3%                 SICK ++++++++
- 88.50    4%                 GE21 ++++++++++
-144.00    6%              HOLIDAY ++++++++++++++++
-157.00    7%             VACATION +++++++++++++++++
-202.00    9%                  ME0 ++++++++++++++++++++++
-243.50   11%              TRACKER ++++++++++++++++++++++++++
-340.75   16%                  ETL +++++++++++++++++++++++++++++++++++++
-463.50   22%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   1.00    0%     SCOTT-LAB-CAMERA
+   4.00    0%                  ME0
+   5.50    0%                  CSC +
+  29.00    1%                ME0BE +++
+  49.50    3%             EMPHATIC +++++
+  67.50    4%                ME0OH +++++++
+  72.50    4%                 GE11 ++++++++
+  74.00    4%               APOLLO ++++++++
+  88.50    5%                 GE21 ++++++++++
+ 101.50    6%                ME0SF +++++++++++
+ 242.50   15%              TRACKER ++++++++++++++++++++++++++
+ 340.75   22%                  ETL +++++++++++++++++++++++++++++++++++++
+ 463.50   30%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-2065.75
+1539.75
 #+end_example
 
 *** 2022 Work
@@ -2686,64 +2683,108 @@ Hours   %Tot             Project
 #+begin_example
 
 
-Hours   %Tot     Project
+Hours   %Tot    Project
 --------------------------------
-   3.00    0%      TRACKER ++
-   4.00    1%          ME0 ++
-   7.00    1%        ME0SF ++++
-   8.00    2%     VACATION ++++
-   8.00    2%        ME0OH ++++
-  10.00    2%        ME0BE +++++
-  21.50    5%          CSC +++++++++++
-  32.00    8%         GE21 ++++++++++++++++
-  36.50    9%         GE11 ++++++++++++++++++
-  51.50   13%       APOLLO ++++++++++++++++++++++++++
-  92.00   24%          ETL ++++++++++++++++++++++++++++++++++++++++++++++
- 100.00   26%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+   3.00    0%     TRACKER +
+  14.50    2%       ME0OH ++++
+  18.00    3%       ME0SF +++++
+  22.50    3%       ME0BE ++++++
+  23.00    3%         CSC ++++++
+  39.00    6%        GE21 ++++++++++
+  43.50    7%        GE11 +++++++++++
+  62.75   10%      APOLLO ++++++++++++++++
+ 156.50   27%       L0MDT ++++++++++++++++++++++++++++++++++++++++
+ 194.00   33%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-373.50
+576.75
 #+end_example
 
 *** Monthly
 #+begin_src elisp :results output
-(print (bin-data (filter-timesheet-for-hours
-                  (get-work-data-in-date-range "L0MDT" :projects '("L0MDT")))
-                 :sort '> :normalize nil))
+;; (print (bin-data (filter-timesheet-for-hours
+;;                   (get-work-data-in-date-range "L0MDT" :projects '("L0MDT")))
+;;                  :sort '> :normalize nil))
 
 ;(print (bin-data '(( 10 25) (11 22) (10 1))))
 
 ;(print (bin-data (get-work-data-in-date-range "L0MDT" :projects '("L0MDT"))))
 ;(plot-monthly-histogram "Monthly" (get-work-data-in-date-range "L0MDT" :projects '("L0MDT")))
-(plot-monthly-histogram "Monthly" (get-work-data-in-date-range "ETL" :projects '("ETL")))
-;(plot-monthly-histogram "Monthly" (get-work-data-in-date-range "APOLLO" :projects '("APOLLO")))
-;(plot-monthly-histogram "Monthly" (get-work-data-in-date-range "ME0" :projects '("ME0")))
+(plot-monthly-histogram "ETL" (get-work-data-in-date-range "ETL" :projects '("ETL")))
+(plot-monthly-histogram "Apollo" (get-work-data-in-date-range "APOLLO" :projects '("APOLLO" "TRACKER")))
+(plot-monthly-histogram "ME0" (get-work-data-in-date-range "ME0" :projects '("ME0" "ME0SF" "ME0BE" "ME0OH")))
 #+end_src
 
 #+RESULTS:
 #+begin_example
-
-(("2022-01" 70.0) ("2021-03" 60.5) ("2021-11" 56.5) ("2021-12" 50.5) ("2021-10" 48.5) ("2021-08" 46.5) ("2021-04" 39.5) ("2021-05" 37.5) ("2021-02" 37.5) ("2021-09" 25.0) ("2021-06" 24.0) ("2022-04" 21.0) ("2021-01" 20.5) ("2022-03" 19.0) ("2021-07" 16.5) ("2022-02" 12.5) ("2022-05" 8.5))
-Monthly   %Tot      Month
+  ETL   %Tot      Month
 --------------------------------
-  15.50    3%     2022-05 +++++++++++++
-  46.50    9%     2022-04 +++++++++++++++++++++++++++++++++++++++
-  46.50    9%     2022-03 +++++++++++++++++++++++++++++++++++++++
-  31.00    6%     2022-02 ++++++++++++++++++++++++++
-  16.00    3%     2022-01 ++++++++++++++
+  20.00    3%     2022-06 +++++++++++++++++
+  34.00    6%     2022-05 +++++++++++++++++++++++++++++
+  46.50    8%     2022-04 +++++++++++++++++++++++++++++++++++++++
+  46.50    8%     2022-03 +++++++++++++++++++++++++++++++++++++++
+  31.00    5%     2022-02 ++++++++++++++++++++++++++
+  16.00    2%     2022-01 ++++++++++++++
    6.50    1%     2021-12 ++++++
-  25.50    5%     2021-11 ++++++++++++++++++++++
+  25.50    4%     2021-11 ++++++++++++++++++++++
   24.00    4%     2021-10 ++++++++++++++++++++
   38.75    7%     2021-09 +++++++++++++++++++++++++++++++++
   59.00   11%     2021-08 ++++++++++++++++++++++++++++++++++++++++++++++++++
   32.50    6%     2021-07 ++++++++++++++++++++++++++++
-  21.00    4%     2021-06 ++++++++++++++++++
+  21.00    3%     2021-06 ++++++++++++++++++
   19.50    3%     2021-05 +++++++++++++++++
   17.50    3%     2021-04 +++++++++++++++
   18.00    3%     2021-03 +++++++++++++++
   19.00    3%     2021-02 ++++++++++++++++
-  58.50   11%     2021-01 ++++++++++++++++++++++++++++++++++++++++++++++++++
+  58.50   10%     2021-01 ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-495.25
+533.75
+
+Apollo   %Tot      Month
+--------------------------------
+   0.75    0%     2022-06 +
+   4.00    1%     2022-05 +++
+   2.50    0%     2022-04 ++
+  32.50    8%     2022-03 +++++++++++++++++++++++
+  23.00    6%     2022-02 ++++++++++++++++
+   3.00    0%     2022-01 ++
+   4.00    1%     2021-12 +++
+   7.50    1%     2021-11 +++++
+  12.00    3%     2021-10 +++++++++
+  26.50    6%     2021-09 +++++++++++++++++++
+  14.00    3%     2021-08 ++++++++++
+  40.50   10%     2021-07 +++++++++++++++++++++++++++++
+  70.50   18%     2021-06 ++++++++++++++++++++++++++++++++++++++++++++++++++
+  31.50    8%     2021-05 ++++++++++++++++++++++
+  28.00    7%     2021-04 ++++++++++++++++++++
+  33.00    8%     2021-03 +++++++++++++++++++++++
+  28.00    7%     2021-02 ++++++++++++++++++++
+  21.00    5%     2021-01 +++++++++++++++
+--------------------------------
+382.25
+
+  ME0   %Tot      Month
+--------------------------------
+   5.00    1%     2022-06 +++++
+  13.00    5%     2022-05 +++++++++++++
+   8.00    3%     2022-04 ++++++++
+   9.50    3%     2022-03 ++++++++++
+  12.50    4%     2022-02 ++++++++++++
+   8.00    3%     2022-01 ++++++++
+   5.50    2%     2021-12 ++++++
+  17.50    6%     2021-11 ++++++++++++++++++
+  15.50    6%     2021-10 ++++++++++++++++
+  34.00   13%     2021-09 ++++++++++++++++++++++++++++++++++
+  20.50    7%     2021-08 ++++++++++++++++++++
+  18.00    7%     2021-07 ++++++++++++++++++
+   6.50    2%     2021-06 ++++++
+  23.50    9%     2021-05 ++++++++++++++++++++++++
+  33.00   12%     2021-04 +++++++++++++++++++++++++++++++++
+  12.50    4%     2021-03 ++++++++++++
+   7.50    2%     2021-02 ++++++++
+   7.00    2%     2021-01 +++++++
+--------------------------------
+257.00
+
 #+end_example
 
 ** GEM Accruals :noexport:
@@ -3073,7 +3114,7 @@ return (plots.plot_table(figname, etlize=True))
 | # | 20 |         5-7 | ETL      | Firmware + Software        | WED |   2.0 |
 | # |    |             |          |                            |     |       |
 | # | 21 |        9-11 | L0MDT    | Meeting                    | THU |   2.0 |
-| # | 21 |        11-1 | SICK     | Doctor's visit             | THU |   2.0 |
+| # | 21 |        11-1 | SICK     | Doctor\'s visit            | THU |   2.0 |
 | # | 21 |         1-6 | ETL      | Firmware + meeting         | THU |   5.0 |
 | # | 21 |      6-6:30 | Tracker  | IPMC                       | THU |   0.5 |
 | # |    |             |          |                            |     |       |
@@ -4597,7 +4638,7 @@ Hours   %Tot     Project
 | # | 29 |         1-3 | L0MDT    | GBT-IC firwmare updates          | WED |   2.0 |
 | # | 29 |         3-4 | --       |                                  | WED |   1.0 |
 | # | 29 |      4-4:30 | GE21     | Meet with Indara                 | WED |   0.5 |
-| # | 29 |      4:30-5 | ME0      | Meet with Indara                 | WED |   0.5 |
+| # | 29 |      4:30-5 | ME0BE    | Meet with Indara                 | WED |   0.5 |
 | # |    |             |          |                                  |     |       |
 | # | 30 |        9-10 | L0MDT    | Work on CSM testbench            | THU |   1.0 |
 | # | 30 |       10-11 | L0MDT    | EE Meeting                       | THU |   1.0 |
@@ -5083,7 +5124,7 @@ Hours   %Tot             Project
 | # | 16 |         3-4 | ETL     | Meet with Daniel            | THU |   1.0 |
 | # | 16 |         4-5 | ME0OH   | Meeting                     | THU |   1.0 |
 | # |    |             |         |                             |     |       |
-| # | 17 |     9-10:00 | ME0     | Phase2 Planning             | FRI |   1.0 |
+| # | 17 |     9-10:00 | ME0BE   | Phase2 Planning             | FRI |   1.0 |
 | # | 17 |    10-11:30 | GE21    | Phase2 Planning             | FRI |   1.5 |
 | # | 17 | 11:30-12:30 | --      | LUNCH                       | FRI |   1.0 |
 | # | 17 |  12:30-1:30 | GE11    | Firmware                    | FRI |   1.0 |
@@ -5483,19 +5524,19 @@ Hours   %Tot     Project
 | # |  2 |     8:30-10 | --       | Break                              | WED |   1.5 |
 | # |  2 |       10-11 | GE11     | Firmware                           | WED |   1.0 |
 | # |  2 |       11-12 | GE11     | Firmware                           | WED |   1.0 |
-| # |  2 |    12-12:30 | ME0      | DPG Meeting                        | WED |   0.5 |
+| # |  2 |    12-12:30 | ME0SF    | DPG Meeting                        | WED |   0.5 |
 | # |  2 |     12:30-1 | APOLLO   | Tejasava                           | WED |   0.5 |
 | # |  2 |         1-2 | GE21     | Firmware                           | WED |   1.0 |
 | # |  2 |   2:30-5:30 | ETL      | Meeting with Sergey; Group Meeting | WED |   3.0 |
 | # |    |             |          |                                    |     |       |
 | # |  3 |         7-8 | GE21     | Firmware (new sorter)              | THU |   1.0 |
 | # |  3 |         8-9 | GE11     | Firmware (new sorter)              | THU |   1.0 |
-| # |  3 |        9-10 | ME0      | Firmware (new sorter)              | THU |   1.0 |
+| # |  3 |        9-10 | ME0BE    | Firmware (new sorter)              | THU |   1.0 |
 | # |  3 |       10-11 | L0MDT    | Meeting                            | THU |   1.0 |
 | # |  3 |    11-12:30 | GE21     | Meeting                            | THU |   1.5 |
 | # |  3 |         1-2 | GE21     | Firmware (new sorter)              | THU |   1.0 |
 | # |  3 |         3-4 | ETL      | Test stand                         | THU |   1.0 |
-| # |  3 |         4-5 | ME0      | Meeting                            | THU |   1.0 |
+| # |  3 |         4-5 | ME0OH    | Meeting                            | THU |   1.0 |
 | # |    |             |          |                                    |     |       |
 | # |  4 |        9-10 | VACATION | Katherine                          | FRI |   1.0 |
 | # |  4 |       10-11 | ADMIN    | Meet with Eric                     | FRI |   1.0 |
@@ -5508,7 +5549,7 @@ Hours   %Tot     Project
 | # |    |             |          |                                    |     |       |
 | # |  7 |         9-5 | VACATION | Katherine                          | MON |   8.0 |
 | # |    |             |          |                                    |     |       |
-| # |  8 |       11-12 | ME0      | Firmware meeting                   | TUE |   1.0 |
+| # |  8 |       11-12 | ME0BE    | Firmware meeting                   | TUE |   1.0 |
 | # |  8 |        12-3 | ETL      | Test stand setup                   | TUE |   3.0 |
 | # |  8 |         3-4 | GE21     | Firmware updates                   | TUE |   1.0 |
 | # |  8 |         4-5 | GE11     | Firmware updates                   | TUE |   1.0 |
@@ -5625,7 +5666,7 @@ Hours   %Tot     Project
 | # | 29 |         3-4 | ADMIN    | Meet with Panos                    | TUE |   1.0 |
 | # | 29 |      4-4:30 | ME0SF    | Chloe                              | TUE |   0.5 |
 | # | 29 |      4:30-5 | APOLLO   | AXI Regmap                         | TUE |   0.5 |
-| # | 29 |      6:30-7 | ME0      | Accruals                           | TUE |   0.5 |
+| # | 29 |      6:30-7 | ME0OH    | Accruals                           | TUE |   0.5 |
 | # |    |             |          |                                    |     |       |
 | # | 30 |      9-2:30 | L0MDT    | Thiago visit                       | WED |   5.5 |
 | # | 30 |      2:30-3 | --       | Break                              | WED |   0.5 |
@@ -5721,7 +5762,7 @@ Hours   %Tot     Project
 | # | 19 |    12-12:30 | ADMIN   | edf-help            | TUE |   0.5 |
 | # | 19 |     12-1:00 | --      | LUNCH               | TUE |   1.0 |
 | # | 19 |      1:30-3 | ETL     | Clock distribution  | TUE |   1.5 |
-| # | 19 |      3:30-5 | ME0     | Firmware            | TUE |   1.5 |
+| # | 19 |      3:30-5 | ME0BE   | Firmware            | TUE |   1.5 |
 | # | 19 |      5-5:30 | ETL     | DAQ slides          | TUE |   0.5 |
 | # |    |             |         |                     |     |       |
 | # | 20 |     9:30-10 | GE21    | Cluster DAQ         | WED |   0.5 |
@@ -5777,7 +5818,7 @@ Hours   %Tot     Project
 | # | 28 |        12-1 | L0MDT   | C2C Zynq            | THU |   1.0 |
 | # | 28 |      1-2:30 | --      | Break               | THU |   1.5 |
 | # | 28 |      2:30-3 | ETL     | Firmware updates    | THU |   0.5 |
-| # | 28 |         4-5 | ME0     | Meeting             | THU |   1.0 |
+| # | 28 |         4-5 | ME0OH   | Meeting             | THU |   1.0 |
 | # |    |             |         |                     |     |       |
 | # | 29 |        9-10 | ETL     | Firmware updates    | FRI |   1.0 |
 | # | 29 |    10-11:30 | APOLLO  | AXI Regmap          | FRI |   1.5 |
@@ -5864,20 +5905,20 @@ Hours   %Tot     Project
 | # | 10 |      10-11 | L0MDT   | Slides                  | TUE |   1.0 |
 | # | 10 |   11-11:30 | ETL     | Firmware update         | TUE |   0.5 |
 | # | 10 |       12-1 | GE21    | KCU Firmware            | TUE |   1.0 |
-| # | 10 |        1-2 | ME0     | KCU Firmware            | TUE |   1.0 |
+| # | 10 |        1-2 | ME0BE   | KCU Firmware            | TUE |   1.0 |
 | # | 10 |        2-3 | GE11    | KCU Firmware            | TUE |   1.0 |
 | # | 10 |        3-5 | ETL     | Meet w/ Ted             | TUE |   2.0 |
 | # |    |            |         |                         |     |       |
 | # | 11 |       9-10 | --      | Breakfast               | WED |   1.0 |
 | # | 11 |      10-11 | ETL     | DAQ link counting       | WED |   1.0 |
-| # | 11 |      11-12 | ME0     | Workshop                | WED |   1.0 |
+| # | 11 |      11-12 | ME0BE   | Workshop                | WED |   1.0 |
 | # |    |            |         |                         |     |       |
 | # | 12 |     9-9:30 | ADMIN   | Talk to Eric            | THU |   0.5 |
 | # | 12 |    9:30-10 | ETL     | Firmware                | THU |   0.5 |
 | # | 12 |      10-11 | L0MDT   | Meeting                 | THU |   1.0 |
 | # | 12 |      11-12 | ETL     | Integration meeting     | THU |   1.0 |
 | # | 12 |   12-12:30 | GE21    | KCU Firmware            | THU |   0.5 |
-| # | 12 |    12:30-1 | ME0     | KCU Firmware            | THU |   0.5 |
+| # | 12 |    12:30-1 | ME0BE   | KCU Firmware            | THU |   0.5 |
 | # | 12 |     1-1:30 | GE11    | KCU Firmware            | THU |   0.5 |
 | # | 12 |        3-4 | ETL     | HV Mux                  | THU |   1.0 |
 | # | 12 |        4-5 | ME0OH   | Meeting                 | THU |   1.0 |
@@ -5898,13 +5939,13 @@ Hours   %Tot     Project
 | # | 16 |   12-12:30 | ETL     | BV distribution         | MON |   0.5 |
 | # | 16 |        2-3 | GE21    | KCU105                  | MON |   1.0 |
 | # | 16 |        3-4 | GE11    | KCU105                  | MON |   1.0 |
-| # | 16 |        4-5 | ME0     | KCU105                  | MON |   1.0 |
+| # | 16 |        4-5 | ME0BE   | KCU105                  | MON |   1.0 |
 | # |    |            |         |                         |     |       |
 | # | 17 |       9-12 | L0MDT   | Workshop                | MON |   3.0 |
-| # | 17 |        1-3 | SICK    | Doctor's appt           | TUE |   2.0 |
+| # | 17 |        1-3 | SICK    | Doctor\'s appt          | TUE |   2.0 |
 | # | 17 |     3-3:30 | GE21    | KCU105                  | TUE |   2.0 |
 | # | 17 |     3:30-4 | GE11    | KCU105                  | TUE |   0.5 |
-| # | 17 |     4-4:30 | ME0     | KCU105                  | TUE |   0.5 |
+| # | 17 |     4-4:30 | ME0BE   | KCU105                  | TUE |   0.5 |
 | # |    |            |         |                         |     |       |
 | # | 18 |       8-11 | L0MDT   | Workshop                | WED |   3.0 |
 | # | 18 |       12-5 | SICK    | Back pain               | WED |   5.0 |
@@ -6004,12 +6045,39 @@ Hours   %Tot     Project
 | # | 2 |    1-1:30 | L0MDT   | Talk with Eric                    | THU |   0.5 |
 | # | 2 |    1:30-3 | ETL     | MT board                          | THU |   1.5 |
 | # | 2 |    3:15-4 | APOLLO  | IPMC Meeting                      | THU |  0.75 |
-| # | 2 |       4-5 | ME0     | Meeting                           | THU |   1.0 |
+| # | 2 |       4-5 | ME0OH   | Meeting                           | THU |   1.0 |
 | # |   |           |         |                                   |     |       |
 | # | 3 |      9-12 | ETL     | MT board                          | FRI |   3.0 |
 | # | 3 |      12-1 | ETL     | Module PCB                        | FRI |   1.0 |
 | # | 3 |    1:30-3 | ME0SF   | Meet w/ Jade                      | FRI |   1.5 |
 | # | 3 |       3-5 | ETL     | Module PCB                        | FRI |   2.0 |
+| # |   |           |         |                                   |     |       |
+| # | 6 |      9-10 | ETL     | Module PCB                        | MON |   1.0 |
+| # | 6 |      10-3 | L0MDT   | Verena + Stephane                 | MON |   5.0 |
+| # | 6 |       3-4 | ETL     | Module PCB                        | MON |   1.0 |
+| # | 6 |       4-5 | ETL     | Meet w/ So Young                  | MON |   1.0 |
+| # |   |           |         |                                   |     |       |
+| # | 7 |      9-11 | ETL     | Module PCB                        | TUE |   1.0 |
+| # | 7 |     11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
+| # | 7 |   12-1:30 | GE21    | Cluster finding                   | TUE |   1.5 |
+| # | 7 | 1:30-3:30 | GE11    | Cluster finding                   | TUE |   2.0 |
+| # | 7 |    3:30-5 | ADMIN   | Meet w/ Ed                        | TUE |   1.5 |
+| # | 7 |    5-6:30 | ETL     | Meet w/ So Young                  | TUE |   1.5 |
+| # | 7 | 6:30-7:30 | GE21    | Cluster finding                   | TUE |   1.0 |
+| # | 7 | 7:30-8:30 | GE11    | Cluster finding                   | TUE |   1.0 |
+| # |   |           |         |                                   | TUE |       |
+| # | 8 |   9-10:30 | ETL     | Answer Mike\'s queries            | WED |   1.0 |
+| # | 8 |  10:30-12 | ME0SF   | Jade                              | WED |   1.5 |
+| # | 8 |      12-1 | --      | Errand (Klugii)                   | WED |   1.0 |
+| # | 8 |    1-3:30 | APOLLO  | IPMC                              | WED |   2.0 |
+| # | 8 |    4-5:30 | ETL     | BU Meeting                        | WED |   1.5 |
+| # |   |           |         |                                   |     |       |
+| # | 9 |      9-10 | GE11    | Cluster finding                   | THU |   1.0 |
+| # | 9 |     10-11 | L0MDT   | Meeting                           | THU |   1.0 |
+| # | 9 |      11-1 | ETL     | Lab w/ So young                   | THU |   3.0 |
+| # | 9 |       1-3 | ETL     | Firmware update                   | THU |   2.0 |
+| # | 9 |       3-4 | GE11    | Cluster finding                   | THU |   1.0 |
+| # | 9 |       4-5 | GE21    | Cluster finding                   | THU |   1.0 |
 | # |   |           |         |                                   |     |       |
 |---+---+-----------+---------+-----------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"June 2022"))::$7='(org-sbe subtract (a $$3))
@@ -6058,7 +6126,7 @@ Hours   %Tot    Project
 |------------+--------+---------+-----------------------------+-----+-------|
 |            |        |         |                             |     |       |
 | 2022-02-01 |  10-11 | ETL     | Test stand                  | TUE |   1.0 |
-| 2022-02-01 |  11-12 | ME0     | Firmware                    | TUE |   1.0 |
+| 2022-02-01 |  11-12 | ME0BE   | Firmware                    | TUE |   1.0 |
 | 2022-02-01 |   12-1 | GE21    | Firmware                    | TUE |   0.5 |
 | 2022-02-01 |    1-2 | GE11    | Firmware                    | TUE |   0.5 |
 | 2022-02-01 |    2-3 | ADMIN   | Meet with Eric              | TUE |   1.0 |

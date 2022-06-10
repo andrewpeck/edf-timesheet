@@ -14,19 +14,19 @@ D,Time,Project,Task,Day,Hours
 2,8:30-10,--,Break,WED,1.5
 2,10-11,GE11,Firmware,WED,1.0
 2,11-12,GE11,Firmware,WED,1.0
-2,12-12:30,ME0,DPG Meeting,WED,0.5
+2,12-12:30,ME0SF,DPG Meeting,WED,0.5
 2,12:30-1,APOLLO,Tejasava,WED,0.5
 2,1-2,GE21,Firmware,WED,1.0
 2,2:30-5:30,ETL,Meeting with Sergey; Group Meeting,WED,3.0
 ,,,,,
 3,7-8,GE21,Firmware (new sorter),THU,1.0
 3,8-9,GE11,Firmware (new sorter),THU,1.0
-3,9-10,ME0,Firmware (new sorter),THU,1.0
+3,9-10,ME0BE,Firmware (new sorter),THU,1.0
 3,10-11,L0MDT,Meeting,THU,1.0
 3,11-12:30,GE21,Meeting,THU,1.5
 3,1-2,GE21,Firmware (new sorter),THU,1.0
 3,3-4,ETL,Test stand,THU,1.0
-3,4-5,ME0,Meeting,THU,1.0
+3,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 4,9-10,VACATION,Katherine,FRI,1.0
 4,10-11,ADMIN,Meet with Eric,FRI,1.0
@@ -38,7 +38,7 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 7,9-5,VACATION,Katherine,MON,8.0
 ,,,,,
-8,11-12,ME0,Firmware meeting,TUE,1.0
+8,11-12,ME0BE,Firmware meeting,TUE,1.0
 8,12-3,ETL,Test stand setup,TUE,3.0
 8,3-4,GE21,Firmware updates,TUE,1.0
 8,4-5,GE11,Firmware updates,TUE,1.0
@@ -152,7 +152,7 @@ D,Time,Project,Task,Day,Hours
 29,3-4,ADMIN,Meet with Panos,TUE,1.0
 29,4-4:30,ME0SF,Chloe,TUE,0.5
 29,4:30-5,APOLLO,AXI Regmap,TUE,0.5
-29,6:30-7,ME0,Accruals,TUE,0.5
+29,6:30-7,ME0OH,Accruals,TUE,0.5
 ,,,,,
 30,9-2:30,L0MDT,Thiago visit,WED,5.5
 30,2:30-3,--,Break,WED,0.5
