@@ -18,4 +18,5 @@ df.plot.area(x="Date")
 
 plt.title('EDF Work')
 plt.legend(bbox_to_anchor=(1.0, 1.0))
+plt.savefig('timesheet.svg')
 plt.show()
