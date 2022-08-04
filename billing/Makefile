@@ -16,6 +16,9 @@ summary_tables_html: summary_tables
 #@scp summary_tables.html ohm:~/public_html/notes/hours.html
 	@scp *-*Summary.csv ohm:~/billing/
 
+summary:
+	@awk -f timesheets.awk 20[0-9][0-9]-[0-9][0-9].csv
+
 clean:
 	rm *.csv
 	rm summary_tables.org

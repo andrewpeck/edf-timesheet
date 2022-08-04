@@ -1,6 +1,89 @@
 D,Time,Project,Task,Day,Hours
+,,,,,
+1,8-10:30,L0MDT,CSM review,FRI,2.5
+1,9-5,VAC,July 4th vacation,FRI,8.0
+,,,,,
+,,,,,
 4,9-5,Holiday,July 4th,MON,8.0
 ,,,,,
 5,9-5,VAC,July 4th,TUE,8.0
+,,,,,
+6,9-5,ETL,Workshop,WED,8.0
+,,,,,
+7,9-5,ETL,Workshop,THU,8.0
+,,,,,
+8,9-5,ETL,Workshop,FRI,8.0
+,,,,,
+,,,,,
+11,9-11,ME0SF,Segment finder,MON,2.0
+11,11-1,ADMIN,Meeting,MON,2.0
+11,1-2,L0MDT,Meeting,MON,1.0
+11,2-5,ADMIN,Admin,MON,3.0
+11,5-7,ME0SF,Segment Finder,MON,2.0
+,,,,,
+12,9-11,ETL,Module tester,TUE,2.0
+12,11-12,ME0BE,Meeting,TUE,1.0
+12,12-2,ADMIN,Meeting,TUE,2.0
+12,2-3,ADMIN,Meeting,TUE,1.0
+12,3-5,ETL,Lab; Bias voltage,TUE,2.0
+,,,,,
+13,9-12,ETL,Parts orders,WED,3.0
+13,12-1,ME0SF,Segment finder,WED,1.0
+13,1-2,ADMIN,Meeting,WED,1.0
+13,2-3,ETL,Mechanics,WED,1.0
+13,3-3:30,GE21,Firmware,WED,0.5
+13,3:30-5:00,ETL,Meeting,WED,1.5
+13,5-5:30,APOLLO,OpenIPMC,WED,0.5
+,,,,,
+14,9-10,ETL,Module tester,THU,1.0
+14,10-11,L0MDT,Meeting,THU,1.0
+14,11-1,ETL,Mechanics,THU,2.0
+14,3-4,ME0SF,Segment finder,THU,1.0
+14,4-5,ME0SF,Meeting,THU,1.0
+,,,,,
+15,9-10,ETL,Bias voltage,FRI,1.0
+15,10-5,SICK,Break,FRI,7.0
+,,,,,
+,,,,,
+18,9-10,ME0SF,Segment finder,MON,1.0
+18,10-12,ETL,"Bias voltage, readout board",MON,2.0
+18,12-5,SICK,Recovering,MON,5.0
+,,,,,
+19,9:30-10,ME0SF,Segment finder,TUE,0.5
+19,10-11,ETL,Module assembly,TUE,1.0
+19,11:30-6,SICK,Recovering,TUE,6.5
+,,,,,
+20,9-10:30,ETL,BV,WED,1.5
+20,10:30-11,ETL,BV,WED,0.5
+20,12-6,SICK,Recovering,WED,6.0
+,,,,,
+21,9-1,ETL,BV,THU,4.0
+21,1-1:30,ME0SF,Segment finder,THU,0.5
+21,12-3:30,SICK,Recovering,WED,3.5
+,,,,,
+22,9-10,ME0SF,Segment finder,FRI,1.0
+22,10-12,ETL,BV; RB,FRI,2.0
+22,12-5,SICK,Recovering,FRI,5.0
+,,,,,
+,,,,,
+25,10-11,ME0SF,Segment finder,MON,1.0
+25,10:30-12,ETL,BV; RB,MON,1.5
+25,12-5:30,SICK,Recovering,MON,5.5
+,,,,,
+,,,,,
+26,9-10,ME0SF,Segment finder,TUE,1.0
+26,10-12,ETL,Mockup; BV,TUE,2.0
+26,12-12:30,APOLLO,IPMC,TUE,0.5
+,,,,,
+27,9-10,ME0SF,Segment finder,WED,1.0
+27,10-11,ETL,Meeting,WED,1.0
+27,11-12,ETL,RB,WED,1.0
+,,,,,
+28,10-11,ME0SF,Segment finder,THU,1.0
+28,11-1,ETL,RB,THU,2.0
+28,1-2,ADMIN,Artemis,THU,1.0
+,,,,,
+29,9:30-10:30,ME0SF,Segment finder,FRI,1.0
+29,10:30-12:30,ETL,RB,FRI,2.0
 ,,,,,
 
