@@ -6028,123 +6028,166 @@ Hours   %Tot     Project
 :END:
 #+ATTR_HTML: :border 2 :frame none
 #+TBLNAME: 2022-06
-|---+----+------------+---------+-----------------------------------+-----+-------|
-|   |  D |       Time | Project | Task                              | Day | Hours |
-|---+----+------------+---------+-----------------------------------+-----+-------|
-| # |  1 |       9-10 | SICK    | Physical therapist                | WED |   1.0 |
-| # |  1 |   10-10:30 | ADMIN   | Talk to Dan                       | WED |   0.5 |
-| # |  1 |    10:30-1 | ETL     | Module tester schematic           | WED |   2.5 |
-| # |  1 |     1-2:30 | ME0SF   | Meet with students                | WED |   1.5 |
-| # |  1 |  2:30-3:30 | ETL     | Meet w/ Indara + SY               | WED |   1.0 |
-| # |  1 |  3:30-5:30 | ETL     | Module schematic; mounting scheme | WED |   2.0 |
-| # |    |            |         |                                   |     |       |
-| # |  2 |        8-9 | ETL     | DAQ Meeting                       | THU |   1.0 |
-| # |  2 |       9-10 | GE11    | Duplicate clusters                | THU |   1.0 |
-| # |  2 |      10-11 | L0MDT   | Meeting                           | THU |   1.0 |
-| # |  2 |   11-11:30 | L0MDT   | Requirements doc                  | THU |   0.5 |
-| # |  2 |   11:30-12 | ETL     | MT board                          | THU |   0.5 |
-| # |  2 |       12-1 | --      | LUNCH                             | THU |   1.0 |
-| # |  2 |     1-1:30 | L0MDT   | Talk with Eric                    | THU |   0.5 |
-| # |  2 |     1:30-3 | ETL     | MT board                          | THU |   1.5 |
-| # |  2 |     3:15-4 | APOLLO  | IPMC Meeting                      | THU |  0.75 |
-| # |  2 |        4-5 | ME0OH   | Meeting                           | THU |   1.0 |
-| # |    |            |         |                                   |     |       |
-| # |  3 |       9-12 | ETL     | MT board                          | FRI |   3.0 |
-| # |  3 |       12-1 | ETL     | Module PCB                        | FRI |   1.0 |
-| # |  3 |     1:30-3 | ME0SF   | Meet w/ Jade                      | FRI |   1.5 |
-| # |  3 |        3-5 | ETL     | Module PCB                        | FRI |   2.0 |
-| # |    |            |         |                                   |     |       |
-| # |  6 |       9-10 | ETL     | Module PCB                        | MON |   1.0 |
-| # |  6 |       10-3 | L0MDT   | Verena + Stephane                 | MON |   5.0 |
-| # |  6 |        3-4 | ETL     | Module PCB                        | MON |   1.0 |
-| # |  6 |        4-5 | ETL     | Meet w/ So Young                  | MON |   1.0 |
-| # |    |            |         |                                   |     |       |
-| # |  7 |       9-11 | ETL     | Module PCB                        | TUE |   2.0 |
-| # |  7 |      11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
-| # |  7 |    12-1:30 | GE21    | Cluster finding                   | TUE |   1.5 |
-| # |  7 |  1:30-3:30 | GE11    | Cluster finding                   | TUE |   2.0 |
-| # |  7 |     3:30-5 | ADMIN   | Meet w/ Ed                        | TUE |   1.5 |
-| # |  7 |     5-6:30 | ETL     | Meet w/ So Young                  | TUE |   1.5 |
-| # |  7 |  6:30-7:30 | GE21    | Cluster finding                   | TUE |   1.0 |
-| # |  7 |  7:30-8:30 | GE11    | Cluster finding                   | TUE |   1.0 |
-| # |    |            |         |                                   |     |       |
-| # |  8 |    9-10:30 | ETL     | Answer Mike\'s queries            | WED |   1.5 |
-| # |  8 |   10:30-12 | ME0SF   | Jade                              | WED |   1.5 |
-| # |  8 |       12-1 | --      | Errand (Klugii)                   | WED |   1.0 |
-| # |  8 |     1-3:30 | APOLLO  | IPMC                              | WED |   2.5 |
-| # |  8 |     4-5:30 | ETL     | BU Meeting                        | WED |   1.5 |
-| # |    |            |         |                                   |     |       |
-| # |  9 |       9-10 | GE11    | Cluster finding                   | THU |   1.0 |
-| # |  9 |      10-11 | L0MDT   | Meeting                           | THU |   1.0 |
-| # |  9 |       11-1 | ETL     | Lab w/ So young                   | THU |   2.0 |
-| # |  9 |        1-3 | ETL     | Firmware update                   | THU |   2.0 |
-| # |  9 |        3-4 | GE11    | Cluster finding                   | THU |   1.0 |
-| # |  9 |        4-5 | GE21    | Cluster finding                   | THU |   1.0 |
-| # |    |            |         |                                   |     |       |
-| # | 10 |       9-10 | L0MDT   | Meeting (off-cycle)               | FRI |   1.0 |
-| # | 10 |      10-11 | GE21    | Cluster finding                   | FRI |   1.0 |
-| # | 10 |       12-1 | GE11    | Cluster finding                   | FRI |   1.0 |
-| # | 10 |        1-5 | ETL     | Firmware + sw debug               | FRI |   4.0 |
-| # |    |            |         |                                   |     |       |
-|---+----+------------+---------+-----------------------------------+-----+-------|
-| # |    |            |         |                                   |     |       |
-| # | 13 |       9-10 | ETL     | Firmware debug                    | MON |   1.0 |
-| # | 13 |   10-10:30 | ADMIN   | Email                             | MON |   0.5 |
-| # | 13 |   10:30-12 | ETL     | Firmware debug                    | MON |   1.5 |
-| # | 13 |    12:30-1 | --      | Lunch                             | MON |   0.5 |
-| # | 13 |        1-3 | ETL     | Meetings                          | MON |   2.0 |
-| # | 13 |     3-3:30 | ETL     | Firmware debug                    | MON |   0.5 |
-| # |    |            |         |                                   |     |       |
-| # | 14 |    9:30-10 | GE21    | Firmware                          | TUE |   0.5 |
-| # | 14 |      10-11 | ETL     | Firmware                          | TUE |   1.0 |
-| # | 14 |      11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
-| # | 14 |    12:30-1 | ME0SF   | Jade                              | TUE |   0.5 |
-| # | 14 |        1-2 | ETL     | Meeting                           | TUE |   1.0 |
-| # | 14 |     2:00-3 | ETL     | Firmware debug                    | TUE |   1.0 |
-| # | 14 |     3-4:30 | --      | Personal time                     | TUE |   1.5 |
-| # |    |            |         |                                   |     |       |
-| # | 15 |       9-10 | GE21    | Firmware                          | WED |   1.0 |
-| # | 15 |      10-11 | ETL     | So Young                          | WED |   1.0 |
-| # | 15 |    11-2:30 | APOLLO  | IPMC Updates / DHCP               | WED |   3.5 |
-| # | 15 |     2:30-3 | ME0SF   | Jade                              | WED |   0.5 |
-| # | 15 |     3-4:45 | ETL     | Meeting                           | WED |  1.75 |
-| # | 15 |     6-6:30 | Apollo  | IPMC Debug                        | WED |   0.5 |
-| # |    |            |         |                                   |     |       |
-| # | 16 |       9-10 | ETL     | Maria                             | THU |   1.0 |
-| # | 16 |      10-11 | APOLLO  | IPMC Updates                      | THU |   1.0 |
-| # | 16 |      11-12 | ETL     | Work w/ Daniel                    | THU |   1.0 |
-| # | 16 | 12:30-1:30 | --      | Personal business                 | THU |   1.0 |
-| # | 16 |     1:30-3 | ADMIN   | Computer issues                   | THU |   1.5 |
-| # | 16 |     3-3:30 | ETL     | So Young                          | THU |   0.5 |
-| # |    |            |         |                                   |     |       |
-| # | 17 |        9-5 | HOLIDAY | Juneteenth                        | FRI |   8.0 |
-| # | 17 |   10-11:30 | ETL     | System test meeting               | FRI |   1.5 |
-| # |    |            |         |                                   |     |       |
-|---+----+------------+---------+-----------------------------------+-----+-------|
-| # |    |            |         |                                   |     |       |
-| # | 20 |     9-9:30 | ADMIN   | Billing; Email                    | MON |   0.5 |
-| # | 20 | 9:30-10:00 | ETL     | Maria                             | MON |   0.5 |
-| # | 20 |   10-10:30 | ETL     | Jade                              | MON |   0.5 |
-| # | 20 |       12-1 | --      | LUNCH                             | MON |   1.0 |
-| # | 20 |        1-2 | L0MDT   | Meeting                           | MON |   1.0 |
-| # | 20 |     2-2:30 | ADMIN   | Meet w/ Eric                      | MON |   0.5 |
-| # | 20 |  2:30-3:30 | ETL     | So Young                          | MON |   1.0 |
-| # | 20 |     3:30-5 | APOLLO  | IPMC Updates                      | MON |   1.5 |
-| # |    |            |         |                                   |     |       |
-| # | 21 |    9:30-10 | ETL     | MT schematic                      | TUE |   0.5 |
-| # | 21 |   10:30-11 | GE11    | Cluster finding                   | TUE |   0.5 |
-| # | 21 |      11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
-| # | 21 |    12:30-1 | ETL     | So Young                          | TUE |   0.5 |
-| # | 21 |     1-1:30 | ETL     | MT schematic                      | TUE |   0.5 |
-| # | 21 |     2-2:30 | ME0SF   | Jade                              | TUE |   0.5 |
-| # | 21 |     2:30-3 | ETL     | Maria                             | TUE |   0.5 |
-| # | 21 |     3:30-4 | ETL     | Daniel                            | TUE |   0.5 |
-| # |    |            |         |                                   |     |       |
-| # | 22 |       9-10 | ETL     | Emulator firmware                 | WED |   1.0 |
-| # | 22 |      10-11 | ADMIN   | EDF Meeting                       | WED |   1.0 |
-| # | 22 |            |         |                                   | WED |       |
-| # |    |            |         |                                   |     |       |
-|---+----+------------+---------+-----------------------------------+-----+-------|
+|---+----+-------------+---------+-----------------------------------+-----+-------|
+|   |  D |        Time | Project | Task                              | Day | Hours |
+|---+----+-------------+---------+-----------------------------------+-----+-------|
+| # |  1 |        9-10 | SICK    | Physical therapist                | WED |   1.0 |
+| # |  1 |    10-10:30 | ADMIN   | Talk to Dan                       | WED |   0.5 |
+| # |  1 |     10:30-1 | ETL     | Module tester schematic           | WED |   2.5 |
+| # |  1 |      1-2:30 | ME0SF   | Meet with students                | WED |   1.5 |
+| # |  1 |   2:30-3:30 | ETL     | Meet w/ Indara + SY               | WED |   1.0 |
+| # |  1 |   3:30-5:30 | ETL     | Module schematic; mounting scheme | WED |   2.0 |
+| # |    |             |         |                                   |     |       |
+| # |  2 |         8-9 | ETL     | DAQ Meeting                       | THU |   1.0 |
+| # |  2 |        9-10 | GE11    | Duplicate clusters                | THU |   1.0 |
+| # |  2 |       10-11 | L0MDT   | Meeting                           | THU |   1.0 |
+| # |  2 |    11-11:30 | L0MDT   | Requirements doc                  | THU |   0.5 |
+| # |  2 |    11:30-12 | ETL     | MT board                          | THU |   0.5 |
+| # |  2 |        12-1 | --      | LUNCH                             | THU |   1.0 |
+| # |  2 |      1-1:30 | L0MDT   | Talk with Eric                    | THU |   0.5 |
+| # |  2 |      1:30-3 | ETL     | MT board                          | THU |   1.5 |
+| # |  2 |      3:15-4 | APOLLO  | IPMC Meeting                      | THU |  0.75 |
+| # |  2 |         4-5 | ME0OH   | Meeting                           | THU |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # |  3 |        9-12 | ETL     | MT board                          | FRI |   3.0 |
+| # |  3 |        12-1 | ETL     | Module PCB                        | FRI |   1.0 |
+| # |  3 |      1:30-3 | ME0SF   | Meet w/ Jade                      | FRI |   1.5 |
+| # |  3 |         3-5 | ETL     | Module PCB                        | FRI |   2.0 |
+| # |    |             |         |                                   |     |       |
+| # |  6 |        9-10 | ETL     | Module PCB                        | MON |   1.0 |
+| # |  6 |        10-3 | L0MDT   | Verena + Stephane                 | MON |   5.0 |
+| # |  6 |         3-4 | ETL     | Module PCB                        | MON |   1.0 |
+| # |  6 |         4-5 | ETL     | Meet w/ So Young                  | MON |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # |  7 |        9-11 | ETL     | Module PCB                        | TUE |   2.0 |
+| # |  7 |       11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
+| # |  7 |     12-1:30 | GE21    | Cluster finding                   | TUE |   1.5 |
+| # |  7 |   1:30-3:30 | GE11    | Cluster finding                   | TUE |   2.0 |
+| # |  7 |      3:30-5 | ADMIN   | Meet w/ Ed                        | TUE |   1.5 |
+| # |  7 |      5-6:30 | ETL     | Meet w/ So Young                  | TUE |   1.5 |
+| # |  7 |   6:30-7:30 | GE21    | Cluster finding                   | TUE |   1.0 |
+| # |  7 |   7:30-8:30 | GE11    | Cluster finding                   | TUE |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # |  8 |     9-10:30 | ETL     | Answer Mike\'s queries            | WED |   1.5 |
+| # |  8 |    10:30-12 | ME0SF   | Jade                              | WED |   1.5 |
+| # |  8 |        12-1 | --      | Errand (Klugii)                   | WED |   1.0 |
+| # |  8 |      1-3:30 | APOLLO  | IPMC                              | WED |   2.5 |
+| # |  8 |      4-5:30 | ETL     | BU Meeting                        | WED |   1.5 |
+| # |    |             |         |                                   |     |       |
+| # |  9 |        9-10 | GE11    | Cluster finding                   | THU |   1.0 |
+| # |  9 |       10-11 | L0MDT   | Meeting                           | THU |   1.0 |
+| # |  9 |        11-1 | ETL     | Lab w/ So young                   | THU |   2.0 |
+| # |  9 |         1-3 | ETL     | Firmware update                   | THU |   2.0 |
+| # |  9 |         3-4 | GE11    | Cluster finding                   | THU |   1.0 |
+| # |  9 |         4-5 | GE21    | Cluster finding                   | THU |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # | 10 |        9-10 | L0MDT   | Meeting (off-cycle)               | FRI |   1.0 |
+| # | 10 |       10-11 | GE21    | Cluster finding                   | FRI |   1.0 |
+| # | 10 |        12-1 | GE11    | Cluster finding                   | FRI |   1.0 |
+| # | 10 |         1-5 | ETL     | Firmware + sw debug               | FRI |   4.0 |
+| # |    |             |         |                                   |     |       |
+|---+----+-------------+---------+-----------------------------------+-----+-------|
+| # |    |             |         |                                   |     |       |
+| # | 13 |        9-10 | ETL     | Firmware debug                    | MON |   1.0 |
+| # | 13 |    10-10:30 | ADMIN   | Email                             | MON |   0.5 |
+| # | 13 |    10:30-12 | ETL     | Firmware debug                    | MON |   1.5 |
+| # | 13 |     12:30-1 | --      | Lunch                             | MON |   0.5 |
+| # | 13 |         1-3 | ETL     | Meetings                          | MON |   2.0 |
+| # | 13 |      3-3:30 | ETL     | Firmware debug                    | MON |   0.5 |
+| # |    |             |         |                                   |     |       |
+| # | 14 |     9:30-10 | GE21    | Firmware                          | TUE |   0.5 |
+| # | 14 |       10-11 | ETL     | Firmware                          | TUE |   1.0 |
+| # | 14 |       11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
+| # | 14 |     12:30-1 | ME0SF   | Jade                              | TUE |   0.5 |
+| # | 14 |         1-2 | ETL     | Meeting                           | TUE |   1.0 |
+| # | 14 |      2:00-3 | ETL     | Firmware debug                    | TUE |   1.0 |
+| # | 14 |      3-4:30 | --      | Personal time                     | TUE |   1.5 |
+| # |    |             |         |                                   |     |       |
+| # | 15 |        9-10 | GE21    | Firmware                          | WED |   1.0 |
+| # | 15 |       10-11 | ETL     | So Young                          | WED |   1.0 |
+| # | 15 |     11-2:30 | APOLLO  | IPMC Updates / DHCP               | WED |   3.5 |
+| # | 15 |      2:30-3 | ME0SF   | Jade                              | WED |   0.5 |
+| # | 15 |      3-4:45 | ETL     | Meeting                           | WED |  1.75 |
+| # | 15 |      6-6:30 | Apollo  | IPMC Debug                        | WED |   0.5 |
+| # |    |             |         |                                   |     |       |
+| # | 16 |        9-10 | ETL     | Maria                             | THU |   1.0 |
+| # | 16 |       10-11 | APOLLO  | IPMC Updates                      | THU |   1.0 |
+| # | 16 |       11-12 | ETL     | Work w/ Daniel                    | THU |   1.0 |
+| # | 16 |  12:30-1:30 | --      | Personal business                 | THU |   1.0 |
+| # | 16 |      1:30-3 | ADMIN   | Computer issues                   | THU |   1.5 |
+| # | 16 |      3-3:30 | ETL     | So Young                          | THU |   0.5 |
+| # |    |             |         |                                   |     |       |
+| # | 17 |         9-5 | HOLIDAY | Juneteenth                        | FRI |   8.0 |
+| # | 17 |    10-11:30 | ETL     | System test meeting               | FRI |   1.5 |
+| # |    |             |         |                                   |     |       |
+|---+----+-------------+---------+-----------------------------------+-----+-------|
+| # |    |             |         |                                   |     |       |
+| # | 20 |      9-9:30 | ADMIN   | Billing; Email                    | MON |   0.5 |
+| # | 20 |  9:30-10:00 | ETL     | Maria                             | MON |   0.5 |
+| # | 20 |    10-10:30 | ETL     | Jade                              | MON |   0.5 |
+| # | 20 |        12-1 | --      | LUNCH                             | MON |   1.0 |
+| # | 20 |         1-2 | L0MDT   | Meeting                           | MON |   1.0 |
+| # | 20 |      2-2:30 | ADMIN   | Meet w/ Eric                      | MON |   0.5 |
+| # | 20 |   2:30-3:30 | ETL     | So Young                          | MON |   1.0 |
+| # | 20 |      3:30-5 | APOLLO  | IPMC Updates                      | MON |   1.5 |
+| # |    |             |         |                                   |     |       |
+| # | 21 |     9:30-10 | ETL     | MT schematic                      | TUE |   0.5 |
+| # | 21 |    10:30-11 | GE11    | Cluster finding                   | TUE |   0.5 |
+| # | 21 |       11-12 | ME0BE   | Meeting                           | TUE |   1.0 |
+| # | 21 |     12:30-1 | ETL     | So Young                          | TUE |   0.5 |
+| # | 21 |      1-1:30 | ETL     | MT schematic                      | TUE |   0.5 |
+| # | 21 |      2-2:30 | ME0SF   | Jade                              | TUE |   0.5 |
+| # | 21 |      2:30-3 | ETL     | Maria                             | TUE |   0.5 |
+| # | 21 |      3:30-4 | ETL     | Daniel                            | TUE |   0.5 |
+| # |    |             |         |                                   |     |       |
+| # | 22 |        9-10 | ETL     | Emulator firmware                 | WED |   1.0 |
+| # | 22 |       10-11 | ADMIN   | EDF Meeting                       | WED |   1.0 |
+| # | 22 |        11-2 | ETL     | MT schematic                      | WED |   3.0 |
+| # | 22 |         3-4 | ETL     | Meet w/ Caleb                     | WED |   1.0 |
+| # | 22 |         4-5 | ETL     | BU Meeting                        | WED |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # | 23 |        9-10 | APOLLO  | IPMC updates                      | THU |   1.0 |
+| # | 23 |       10-11 | L0MDT   | Meeting                           | THU |   1.0 |
+| # | 23 |     11-1:30 | ETL     | MT schematic                      | THU |   2.5 |
+| # | 23 |         2-3 | --      | Personal time                     | THU |   1.0 |
+| # | 23 |      3:30-4 | ME0SF   | Jade                              | THU |   0.5 |
+| # | 23 |         4-5 | ME0OH   | Meeting                           | THU |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # | 24 |        9-10 | APOLLO  | IPMC                              | FRI |   1.0 |
+| # | 24 |       10-12 | ETL     | MT schematic                      | FRI |   2.0 |
+| # | 24 |        12-3 | L0MDT   | CSM review                        | FRI |   3.0 |
+| # | 24 |         3-6 | --      | BBQ                               | FRI |   3.0 |
+| # |    |             |         |                                   |     |       |
+|---+----+-------------+---------+-----------------------------------+-----+-------|
+| # |    |             |         |                                   |     |       |
+| # | 27 |        9-11 | ETL     | HPTD Meeting                      | MON |   2.0 |
+| # | 27 |    11-11:30 | L0MDT   | Monthly summary                   | MON |   0.5 |
+| # | 27 | 11:30-12:30 | ADMIN   | Chat w/ Eric                      | MON |   1.0 |
+| # | 27 |     12:30-1 | L0MDT   | CSM chat w/ Eric                  | MON |   0.5 |
+| # | 27 |         1-2 | L0MDT   | Meeting                           | MON |   1.0 |
+| # | 27 |      3:30-4 | ETL     | DDMTD w/ Daniel                   | MON |   0.5 |
+| # | 27 |      4-4:30 | ETL     | Maria                             | MON |   0.5 |
+| # |    |             |         |                                   |     |       |
+| # | 28 |        9-10 | L0MDT   | CSM review                        | TUE |   1.0 |
+| # | 28 |    10-10:30 | ETL     | Hog meeting                       | TUE |   0.5 |
+| # | 28 |    10:30-11 | L0MDT   | Hog meeting                       | TUE |   0.5 |
+| # | 28 |       11-12 | ME0BE   | FW meeting                        | TUE |   1.0 |
+| # | 28 |        12-3 | --      | Back pain                         | TUE |   3.0 |
+| # | 28 |         3-4 | ETL     | Meet w/ Daniel                    | TUE |   1.0 |
+| # |    |             |         |                                   |     |       |
+| # |    |             |         |                                   |     |       |
+| # | 29 |         9-5 | VAC     | Day off                           | WED |   8.0 |
+| # |    |             |         |                                   |     |       |
+| # | 30 |      9-9:30 | GE11    | Trigger primitives                | THU |   0.5 |
+| # | 30 |       10-11 | L0MDT   | Meeting                           | THU |   1.0 |
+| # | 30 |       11-12 | ETL     | BV connector                      | THU |   1.0 |
+| # | 30 |        12-1 | --      | Lunch                             | THU |   1.0 |
+| # | 30 |      1-1:30 | GE21    | Firmware Repository               | THU |   0.5 |
+| # | 30 |      2-3:30 | ETL     | Workshop prep                     | THU |   1.5 |
+| # | 30 |         4-5 | ME0OH   | Meeting                           | THU |   1.0 |
+| # | 30 |      5-5:30 | ETL     | BV connector                      | THU |   0.5 |
+| # |    |             |         |                                   |     |       |
+|---+----+-------------+---------+-----------------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"June 2022"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-06
@@ -6153,20 +6196,66 @@ Hours   %Tot     Project
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot    Project
+Hours   %Tot     Project
 --------------------------------
-   0.50    2%       ADMIN
-   0.75    3%      APOLLO +
-   1.00    4%         ME0 +
-   1.00    4%        GE11 +
-   1.00    4%        SICK +
-   2.00    8%       L0MDT ++
-   3.00   12%       ME0SF +++
-  14.50   58%         ETL ++++++++++++++
+   1.00    0%         SICK +
+   3.00    1%        ME0OH ++
+   4.00    2%        ME0BE +++
+   6.50    3%         GE21 +++++
+   6.50    3%        ME0SF +++++
+   7.00    4%        ADMIN +++++
+   8.00    4%     VACATION ++++++
+   8.00    4%      HOLIDAY ++++++
+   8.00    4%         GE11 ++++++
+  11.75    7%       APOLLO ++++++++
+  18.50   11%        L0MDT +++++++++++++
+  69.25   41%          ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
- 24.75
+165.50
 #+end_example
 
+*** July 2022
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+#+TBLNAME: 2022-07
+|---+---+---------+---------+-------------------+-----+-------|
+|   | D |    Time | Project | Task              | Day | Hours |
+|---+---+---------+---------+-------------------+-----+-------|
+| # |   |         |         |                   |     |       |
+| # | 1 | 8-10:30 | L0MDT   | CSM review        | FRI |   2.5 |
+| # | 1 |     9-5 | VAC     | July 4th vacation | FRI |   8.0 |
+| # |   |         |         |                   |     |       |
+| # | 4 |     9-5 | Holiday | July 4th          | MON |   8.0 |
+| # |   |         |         |                   |     |       |
+| # | 5 |     9-5 | VAC     | July 4th          | TUE |   8.0 |
+| # |   |         |         |                   |     |       |
+|---+---+---------+---------+-------------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"July 2022"))::$7='(org-sbe subtract (a $$3))
+
+#+begin_src emacs-lisp :exports results :results output :var data=2022-07
+(plot-monthly-work-chart data)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Hours   %Tot    Project
+--------------------------------
+   1.00    0%        SICK +
+   2.00    1%       ME0OH ++
+   3.00    2%       ME0BE ++
+   6.00    4%        GE21 +++++
+   6.00    4%       ADMIN +++++
+   6.50    4%       ME0SF +++++
+   7.50    5%        GE11 ++++++
+   8.00    5%     HOLIDAY ++++++
+  11.75    8%      APOLLO ++++++++++
+  14.00   10%       L0MDT +++++++++++
+  61.75   44%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------
+137.50
+#+end_example
 * Billing
 #+begin_src elisp :var data=2022-03 year=2022 month=02 :hlines yes :exports both
 ;; (orgtbl-to-unicode
