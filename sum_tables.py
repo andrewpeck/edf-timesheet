@@ -12,7 +12,7 @@ ONEDAY = datetime.timedelta(days=1)
 
 def get_csv_files():
     "Get a list of CSV files matching the date format e.g. 2021-09.csv"
-    res = [f for f in os.listdir("./") if re.search(r'.[0-9]+-[0-9]+\.csv$', f)]
+    res = [f for f in os.listdir("./csv/") if re.search(r'.[0-9]+-[0-9]+\.csv$', f)]
     res.sort()
     return res
 
@@ -223,7 +223,7 @@ def parse_projects():
         if (year not in projects):
             projects[year] = OrderedDict()
 
-        projects[year][month] = csv_to_dict(file)
+        projects[year][month] = csv_to_dict("csv/" + file)
 
     return projects
 

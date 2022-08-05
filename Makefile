@@ -10,11 +10,11 @@ export_org_tables:
 	@mv *.csv csv/
 
 db_tables: sum_tables.py
-	@mv *.csv csv/
 	@python sum_tables.py > summary_tables.org
 	@bash ./beautify_table.sh summary_tables.org
 	@cat summary_tables.org
 	@bash export_org_tables.sh summary_tables.org
+	@mv *.csv csv/
 	@scp csv/*-*Summary.csv ohm:~/billing/
 
 # summary_tables_html: summary_tables

@@ -1,0 +1,41 @@
+2022-01,Mo,Tu,We,Th,Fr,Sa,Su,Notes
+,27*,28*,29*,30*,31*,1,2,
+,3,4,5,6,7,8,9,
+VAC,8.00,0,0,0,0,0,0,Day off
+ADMIN,0,2.00,0,1.50,0,0,0,EDF Chat; Email cleanup; Furniture
+CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Meeting
+ATLAS-MUON-PHASE2,0,4.50,4.00,5.00,5.50,0,0,Felix TX; Firmware; PDR; Timing
+,10,11,12,13,14,15,16,
+CMS-EMU-UPGRADE-ME0,1.00,1.00,0,1.00,0,0,0,Chloe; Firmware meeting; Meeting
+ATLAS-MUON-PHASE2,4.00,4.50,6.00,7.00,5.00,0,0,DAQ Integration; Firmware; Hog; Hog Meeting; Meeting; PDR
+CMS-ETL,1.00,0,0,0,0,0,0,Meeting
+CMS-EMU-OPS-CSC,1.00,0,0.50,0,0,0,0,Email Jaebak; Email Sicheng
+APOLLO,0,1.00,0,0,0,0,0,IPMC Updates
+CMS-EMU-OPS-GE11,0,0,0,0,0.50,0,0,Hog upgrade
+CMS-EMU-UPGRADE-GE21,0,0,0,0,1.00,0,0,Hog upgrade
+,17,18,19,20,21,22,23,
+VAC,0,0,0,0,8.00,0,0,
+CMS-EMU-UPGRADE-ME0,0,1.00,0,1.00,0,0,0,Meeting
+ATLAS-MUON-PHASE2,0,3.50,4.50,2.00,0,0,0,Firmware; Hog; Meeting; PDR
+CMS-ETL,0,2.00,1.00,3.00,0,0,0,Meeting; Mockup; Moving lab
+APOLLO,0,0,0,1.50,0,0,0,OpenIPMC
+CMS-EMU-OPS-GE11,0,0.50,0,1.00,0,0,0,4Gb links; VTRX RSSI
+HOLIDAY,8.00,0,0,0,0,0,0,MLK
+CMS-PIXEL-DTC,0,0,0.50,0,0,0,0,Meeting
+,24,25,26,27,28,29,30,
+VAC,8.00,0,0,0,0,0,0,
+CMS-EMU-UPGRADE-ME0,0,1.00,0,1.00,0,0,0,Meeting
+ATLAS-MUON-PHASE2,0,2.00,5.00,6.00,0,0,0,FELIX PDR; PDR
+CMS-ETL,0,0,3.50,0,2.00,0,0,Mechanical work; Meet with Daniel; Meeting; Mockup
+CMS-EMU-OPS-CSC,0,0,1.00,1.00,4.00,0,0,ALCT / ODMB integration
+CMS-EMU-OPS-GE11,0,2.00,1.50,0,0.50,0,0,4Gb links; Firmware
+CMS-EMU-UPGRADE-GE21,0,0,1.00,1.00,0,0,0,Firmware; Firmware update
+,31,1*,2*,3*,4*,5*,6*,
+ATLAS-MUON-PHASE2,1.50,4.50,1.00,0,0,0,0,Firmware; PDR; PDR Pretalk
+CMS-ETL,3.50,0,5.00,1.00,1.00,0,0,Followup work; Integration meeting; Meeting; Meeting + followup; Mockup orders; Mockup with students
+APOLLO,0,1.50,0,1.50,0,0,0,Adam; IPMC updates; MPI CM Meeting
+CMS-EMU-OPS-GE11,0,1.00,2.50,2.00,2.00,0,0,DDR Firmware; Firmware update; VFAT Taskforce
+CMS-EMU-UPGRADE-GE21,0,0,1.00,2.00,2.00,0,0,DDR Firmware; Phase2 Meeting; VFAT Taskforce
+CMS-EMU-UPGRADE-ME0,0,0,1.50,1.00,0,0,0,Chloe; Meeting
+CMS-PIXEL-DTC,0,0,0,0,1.00,0,0,Meeting
+
