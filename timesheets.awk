@@ -38,6 +38,7 @@ BEGIN {
 
       sum_by_prj_yy[prj][year] += $HOURS
       sum_by_yy[year] += $HOURS
+      sum_by_yy_prj[year][prj] += $HOURS
 
       sum_by_yy_mm[year][month] += $HOURS
 
@@ -51,7 +52,23 @@ function print_title (title) {
   printf("-----------------------------------------------------\n")
 }
 
+function print_heading (array, outfile) {
+  pipe = "tee " outfile
+  s = ""
+  s = s sprintf("Date")
+  for (prj in array) {
+    s = s sprintf("\t%8s", prj)
+  }
+  s = s sprintf("\n")
+  printf(s) | pipe
+  close(pipe)
+}
+
 END {
+
+  ################################################################################
+  #
+  ################################################################################
 
   print_title("Monthly Accruals")
   sortcmd="sort -t'\t' -n -k1"
@@ -64,12 +81,20 @@ END {
   }
   close(sortcmd)
 
+  ################################################################################
+  #
+  ################################################################################
+
   print_title("Total by Project")
   sortcmd="sort -t'\t' -n -k2"
   for (key in sum_by_prj) {
     printf("%10s \t %5.1f \t %4.1f\%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
   }
   close(sortcmd)
+
+  ################################################################################
+  #
+  ################################################################################
 
   print_title("Total by Month")
   sortcmd="sort -t'\t' -n -k1"
@@ -80,24 +105,49 @@ END {
   }
   close(sortcmd)
 
+  ################################################################################
+  #
+  ################################################################################
+
   print_title("Yearly Accruals")
   sortcmd="sort -t'\t' -n -k1"
   for (prj in sum_by_prj_yy) {
     for (year in sum_by_prj_yy[prj]) {
-      printf("%10s\t%4d\t%6.2f hours \t %4.1f\%\n", prj, year, sum_by_prj_yy[prj][year], sum_by_prj_yy[prj][year]/sum_by_yy[year]*100) | sortcmd
+      printf("%10s\t%4d\t%6.2f hours \t %4.1f\%\n",
+             prj, year, sum_by_prj_yy[prj][year],
+             sum_by_prj_yy[prj][year]/sum_by_yy[year]*100) | sortcmd
     }
   }
   close(sortcmd)
+
+  ################################################################################
+  # Yearly histogram
+  ################################################################################
+
+  outfile = "yearly_histo.txt"
+  sortcmd="sort -t'\t' -n -k1 | tee -a " outfile
+  print_heading(sum_by_prj, outfile)
+  for (year in sum_by_yy_prj) {
+    s = ""
+    s = s sprintf("%4d    ", year)
+    for (prj in sum_by_prj) {
+      hrs = sum_by_yy_prj[year][prj]/sum_by_yy[year]
+      s = s sprintf("\t%8.3f", hrs)
+    }
+    s = s sprintf("\n")
+    printf("%s", s) | sortcmd
+  }
+  close(sortcmd)
+
+  ################################################################################
+  # Monthly histogram
+  ################################################################################
 
   print_title("Monthly Stack")
   outfile = "monthly_histo.txt"
   sortcmd="sort -t'\t' -n -k1 | tee -a " outfile
 
-  printf("Date") > outfile
-  for (prj in sum_by_prj) {
-    printf("\t%8s", prj) > outfile
-  }
-  printf("\n") > outfile
+  print_heading(sum_by_prj, outfile)
 
   for (year in sum_by_yy_mm_prj) {
     for (month in sum_by_yy_mm_prj[year]) {

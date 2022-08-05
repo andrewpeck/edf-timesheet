@@ -4,4 +4,6 @@ This is my timesheet for work in the BU EDF.
 
 [[file:pi_chart.png]]
 
-[[file:timesheet.svg]]
+[[file:timesheetmonthly.svg]]
+
+[[file:timesheetyearly.svg]]
