@@ -18,7 +18,7 @@
 #+begin_src emacs-lisp :exports both :results output
 (plot-work-chart-in-date-range "Cumulative Work" :short t)
 (plot-work-chart-in-date-range "Cumulative Meetings" :short t :meetings t)
-(plot-work-chart-in-date-range "Cumulative Meetings (Detailed)" :short t :meetings t :meetings-detailed t)
+;; (plot-work-chart-in-date-range "Cumulative Meetings (Detailed)" :short t :meetings t :meetings-detailed t)
 #+end_src
 
 #+RESULTS:
@@ -28,427 +28,59 @@
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-   8.00    0%             VACATION +
-   8.00    0%                  ME0 +
-  27.00    1%                  CSC ++
-  40.00    2%                ME0BE ++++
+   4.50    0%                  ME0
+  28.50    1%                  CSC ++
   49.50    2%             EMPHATIC ++++
-  75.50    3%                ME0OH +++++++
- 108.50    5%                ME0SF ++++++++++
- 109.00    5%                 GE11 ++++++++++
- 120.50    6%                 GE21 +++++++++++
- 125.50    6%               APOLLO +++++++++++
- 245.50   12%              TRACKER ++++++++++++++++++++++
- 432.75   22%                  ETL ++++++++++++++++++++++++++++++++++++++
- 563.50   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+  58.00    2%                ME0BE ++++
+  84.00    3%                ME0OH +++++++
+ 121.00    5%                 GE11 +++++++++
+ 133.00    5%                 GE21 ++++++++++
+ 138.00    6%                ME0SF +++++++++++
+ 148.75    6%               APOLLO ++++++++++++
+ 245.50   10%              TRACKER +++++++++++++++++++
+ 636.00   27%                L0MDT +++++++++++++++++++++++++++++++++++++++++++++++++
+ 645.00   28%                  ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1914.25
+2292.75
 
 
 Hours   %Tot      Project
 --------------------------------
- 780.25   40%       MEETING ++++++++++++++++++++++++++++++++++
-1134.00   59%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 891.75   38%       MEETING ++++++++++++++++++++++++++++++++
+1401.00   61%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1914.25
-
-
-Hours   %Tot                                                                  Project
---------------------------------
-   0.50    0%                                             LOOPBACK FIRMWARE - REAL WORK
-   0.50    0%                                            PROGRAMMING SCRIPT - REAL WORK
-   0.50    0%                                        C2C WRAPPER GENERATION - REAL WORK
-   0.50    0%                                             MT SPECIFICATIONS - REAL WORK
-   0.50    0%                                                          ADAM - REAL WORK
-   0.50    0%                                                     VTRX RSSI - REAL WORK
-   0.50    0%                                                  PINOUT CHECK - REAL WORK
-   0.50    0%                                                         DEBUG - REAL WORK
-   0.50    0%                                                      DEBUG XO - REAL WORK
-   0.50    0%                                                REGMAP UPDATES - REAL WORK
-   0.50    0%                                                    DOE REPORT - REAL WORK
-   0.50    0%                                                  ORDER FIBERS - REAL WORK
-   0.50    0%                                        FIRMWARE DOCUMENTATION - REAL WORK
-   0.50    0%                                                  STACK HEIGHT - REAL WORK
-   0.50    0%                                             ALCT VOLTAGE DROP - REAL WORK
-   0.50    0%                                                FIRMWARE MERGE - REAL WORK
-   0.50    0%                                                CRATE SHIPPING - REAL WORK
-   0.50    0%                                                        DANIEL - REAL WORK
-   0.50    0%                                        POWER ADAPTER ASSEMBLY - REAL WORK
-   0.50    0%                                             CLUSTER FORMAT DN - REAL WORK
-   0.50    0%                                               ERIC + TEJASAVA - REAL WORK
-   0.50    0%                                           GITLAB MAINTAINENCE - REAL WORK
-   0.50    0%                                                 TRENZ SUPPORT - REAL WORK
-   0.50    0%                                      TEMPERATURE MEASUREMENTS - REAL WORK
-   0.50    0%                                                     FPGA HUNT - REAL WORK
-   0.50    0%                                                DEBUGGING HELP - REAL WORK
-   0.50    0%                                                         VTRX+ - REAL WORK
-   0.50    0%                                                       STACKUP - REAL WORK
-   0.50    0%                                              RB PO + SHIPPING - REAL WORK
-   0.50    0%                                                   FAB QUERIES - REAL WORK
-   0.50    0%                                        SOLDERING IPMC DONGLES - REAL WORK
-   0.50    0%                                         TCDS2 / FIRMWARE JUNK - REAL WORK
-   0.50    0%                                            LOOKING FOR SHEETS - REAL WORK
-   0.50    0%                                             IPMC DONGLE PARTS - REAL WORK
-   0.50    0%                                          FIRMWARE INTEGRATION - REAL WORK
-   0.50    0%                                            ORDERS, INTERRUPTS - REAL WORK
-   0.50    0%                                                    INTERRUPTS - REAL WORK
-   0.50    0%                                                          YAML - REAL WORK
-   0.50    0%                                               REPOSITORY WORK - REAL WORK
-   0.50    0%                                        FIRMWARE STRIP MAPPING - REAL WORK
-   0.50    0%                                              ASSEMBLY QUERIES - REAL WORK
-   0.50    0%                                              IPMC DEVELOPMENT - REAL WORK
-   0.50    0%                                              SKYPE INTERRUPTS - REAL WORK
-   0.50    0%                                                      SOFTWARE - REAL WORK
-   0.50    0%                                                    FEAST/BPOL - REAL WORK
-   0.50    0%                                                   LINPOL TEST - REAL WORK
-   0.50    0%                                                     SOLDERING - REAL WORK
-   0.50    0%                                           PCB VERSION CONTROL - REAL WORK
-   0.50    0%                                             HOG DOCUMENTATION - REAL WORK
-   1.00    0%                                                      SO YOUNG - REAL WORK
-   1.00    0%                                      UPDATE PROJECT GENERATOR - REAL WORK
-   1.00    0%                                            IPMC FIRMWARE TEST - REAL WORK
-   1.00    0%                                                    DDR S-BITS - REAL WORK
-   1.00    0%                                         IPMC DONGLE, SHIPPING - REAL WORK
-   1.00    0%                                                      SCHEDULE - REAL WORK
-   1.00    0%                                                   DATAFORMATS - REAL WORK
-   1.00    0%                                             FIRMWARE (TIMING) - REAL WORK
-   1.00    0%                                                SPECIFICATIONS - REAL WORK
-   1.00    0%                                                       IPMC FW - REAL WORK
-   1.00    0%                                                  IPMC TESTING - REAL WORK
-   1.00    0%                                                       PEMNUTS - REAL WORK
-   1.00    0%                                                VFAT TASKFORCE - REAL WORK
-   1.00    0%                                                 FOLLOWUP WORK - REAL WORK
-   1.00    0%                                               MECHANICAL WORK - REAL WORK
-   1.00    0%                                            FIRMWARE (4G LINK) - REAL WORK
-   1.00    0%                                      FIRMWARE (TAR/HPS SPLIT) - REAL WORK
-   1.00    0%                                                   MGT UPDATES - REAL WORK
-   1.00    0%                                               CLOCKING UPDATE - REAL WORK
-   1.00    0%                                                      WORKSHOP - REAL WORK
-   1.00    0%                                                IPMC FW UPDATE - REAL WORK
-   1.00    0%                                                     BASEPLATE - REAL WORK
-   1.00    0%                                                SCOTT-LAB-CAMERA - MEETING
-   1.00    0%                                                   PCB UPDATES - REAL WORK
-   1.00    0%                                              SLOPE MULTIPLIER - REAL WORK
-   1.00    0%                                            MULTIPLIER TESTING - REAL WORK
-   1.00    0%                                    WRITE PIPELINED MULTIPLIER - REAL WORK
-   1.00    0%                                                     RB TESTER - REAL WORK
-   1.00    0%                                                  FIFO UPDATES - REAL WORK
-   1.00    0%                                       TESTBENCH UPDATES/DEBUG - REAL WORK
-   1.00    0%                                  START TWEAKS TO CSM DECODING - REAL WORK
-   1.00    0%                                         WORK ON CSM TESTBENCH - REAL WORK
-   1.00    0%                                           FIRMWARE DISCUSSION - REAL WORK
-   1.00    0%                                          IPMC SENSORS UPDATES - REAL WORK
-   1.00    0%                                                        FIBERS - REAL WORK
-   1.00    0%                                           DISCUSSION W/ PRIYA - REAL WORK
-   1.00    0%                                             VTRX REQUIREMENTS - REAL WORK
-   1.00    0%                                                     OPENIPMCS - REAL WORK
-   1.00    0%                                                  PCB PLANNING - REAL WORK
-   1.00    0%                                                FIBER SHOPPING - REAL WORK
-   1.00    0%                                         COCOTB DEBUG W/ PRIYA - REAL WORK
-   1.00    0%                                                MODULES AND HV - REAL WORK
-   1.00    0%                                               CHANNEL MAPPING - REAL WORK
-   1.00    0%                                                 SOFTWARE WORK - REAL WORK
-   1.00    0%                                                MONTHLY REPORT - REAL WORK
-   1.00    0%                                               DEBUG W/ DANIEL - REAL WORK
-   1.00    0%                                                    CONNECTORS - REAL WORK
-   1.00    0%                                                     KCU SETUP - REAL WORK
-   1.00    0%                                                  POWER OUTAGE - REAL WORK
-   1.00    0%                                                   GITLAB REPO - REAL WORK
-   1.00    0%                                                   LINK FORMAT - REAL WORK
-   1.00    0%                                                 REGMAP UPDATE - REAL WORK
-   1.00    0%                                   POWER ADAPTER ASSEMBLY+TEST - REAL WORK
-   1.00    0%                                            PCB IMPORT TESTING - REAL WORK
-   1.00    0%                                        REPOSITORY MAINTENANCE - REAL WORK
-   1.00    0%                                         POWER ADAPTER; ORDERS - REAL WORK
-   1.00    0%                                                ALDEC TUTORIAL - REAL WORK
-   1.00    0%                                                     DEBUGGING - REAL WORK
-   1.00    0%                                                   BOARD DEBUG - REAL WORK
-   1.00    0%                                                  SEM FIRMWARE - REAL WORK
-   1.00    0%                                                 PRBS FIRMWARE - REAL WORK
-   1.00    0%                                              DEBUGGING W/ DAN - REAL WORK
-   1.00    0%                                              RB DOCUMENTATION - REAL WORK
-   1.00    0%                                               IPMC COLD RESET - REAL WORK
-   1.00    0%                                           FIRMWARE; CI CONFIG - REAL WORK
-   1.00    0%                                    FAB QUERIES; I2C W/ DANIEL - REAL WORK
-   1.00    0%                                            IPMC BUILD UPDATES - REAL WORK
-   1.00    0%                                      IPMC CABLE / PROGRAMMING - REAL WORK
-   1.00    0%                                      ASIAGO SCHEMATIC UPDATES - REAL WORK
-   1.00    0%                                         LAYOUT COMPUTER SETUP - REAL WORK
-   1.00    0%                                              IPMC PROGRAMMING - REAL WORK
-   1.00    0%                                                  MODULE SHIMS - REAL WORK
-   1.00    0%                                      SEGMENT FINDING FIRMWARE - REAL WORK
-   1.00    0%                                            IPMC LINKER ISSUES - REAL WORK
-   1.00    0%                                                 GITLAB ISSUES - REAL WORK
-   1.00    0%                                            IPMC SHELF TESTING - REAL WORK
-   1.00    0%                                       FIRMWARE UPDATES & REPO - REAL WORK
-   1.00    0%                                          PROJECT BUILD ISSUES - REAL WORK
-   1.00    0%                               IPMC, NEW ADAPTER DONGLE FOR V1 - REAL WORK
-   1.00    0%                                    IPMC ADAPTER PCB, ORDERING - REAL WORK
-   1.00    0%                                          TRIGGER LINK TESTING - REAL WORK
-   1.00    0%                                          HELP CHARLIE W/ IPBB - REAL WORK
-   1.00    0%                                             FIRMWARE REBASING - REAL WORK
-   1.00    0%                                          YAML SLAVES FIRMWARE - REAL WORK
-   1.00    0%                                  READOUT DISCUSSION WITH ERIC - REAL WORK
-   1.00    0%                           LPGBT ISSUES, FUSING & BOARD REPAIR - REAL WORK
-   1.00    0%                                               LPGBT ISSUES :( - REAL WORK
-   1.00    0%                                                   HOG TESTING - REAL WORK
-   1.00    0%                                               SEGMENT FINDING - REAL WORK
-   1.00    0%                                                   AXI CONTROL - REAL WORK
-   1.00    0%                                           SOFTWARE DISCUSSION - REAL WORK
-   1.00    0%                                     READING PROPOSAL DOCUMENT - REAL WORK
-   1.00    0%                                               PURCHASE FIBERS - REAL WORK
-   1.00    0%                                                 LOOPBACK TEST - REAL WORK
-   1.00    0%                                                      SHOPPING - REAL WORK
-   1.00    0%                                                               - REAL WORK
-   1.00    0%                                                  PCB RECEIVED - REAL WORK
-   1.50    0%                             REVERSE ENGINEERING DOCUMENTATION - REAL WORK
-   1.50    0%                                FIRMWARE UPDATE; DOCUMENTATION - REAL WORK
-   1.50    0%                                   TEST STAND; FIRMWARE UPDATE - REAL WORK
-   1.50    0%                                             FIRMWARE (4 GBPS) - REAL WORK
-   1.50    0%                                                   HOG UPGRADE - REAL WORK
-   1.50    0%                                                  AFTERPULSING - REAL WORK
-   1.50    0%                                                RUNNING FIBERS - REAL WORK
-   1.50    0%                                                    HOG UPDATE - REAL WORK
-   1.50    0%                                             LPGBT V1 FIRMWARE - REAL WORK
-   1.50    0%                                                LPGBT FIRMWARE - REAL WORK
-   1.50    0%                                       BPOL48V; MODULE TESTER; - REAL WORK
-   1.50    0%                                              REVERSE POLARITY - REAL WORK
-   1.50    0%                                        MECHANICS & CONNECTORS - REAL WORK
-   1.50    0%                                               VTRX+ I2C DEBUG - REAL WORK
-   1.50    0%                                               FIRMWARE ISSUES - REAL WORK
-   1.50    0%                                            REPOSITORY UPDATES - REAL WORK
-   1.50    0%                                              WORK WITH DANIEL - REAL WORK
-   1.50    0%                                   FIRMWARE UPDATES; DEBUGGING - REAL WORK
-   1.50    0%                               FIRMWARE REPO; FIRMWARE UPDATES - REAL WORK
-   1.50    0%                                       FIRMWARE TIMING CLOSURE - REAL WORK
-   1.50    0%                                     FIRMWARE UPDATES & REPORT - REAL WORK
-   1.50    0%                                                LAYOUT UPDATES - REAL WORK
-   1.50    0%                                          TMR FIRMWARE UPDATES - REAL WORK
-   1.50    0%                                            SPECIFICATIONS DOC - REAL WORK
-   1.50    0%                                    LAYOUT + SCHEMATIC UPDATES - REAL WORK
-   1.50    0%                               IPMC, UPDATE FIRMWARE, MAKEFILE - REAL WORK
-   1.50    0%                              PROJECT BUILDS, SPYBUFFERS, YAML - REAL WORK
-   1.50    0%                                              CLUSTER BUILDING - REAL WORK
-   1.50    0%                                                     CSM SETUP - REAL WORK
-   1.50    0%                                                      FIRWMARE - REAL WORK
-   1.50    0%                                                      LAB TOUR - REAL WORK
-   2.00    0%                                                    AXI REGMAP - REAL WORK
-   2.00    0%                                      EMULATOR VERSION CONTROL - REAL WORK
-   2.00    0%                                             ISERDES PLACEMENT - REAL WORK
-   2.00    0%                                          LAB WORK WITH DANIEL - REAL WORK
-   2.00    0%                                      CLUSTERING INVESTIGATION - REAL WORK
-   2.00    0%                                      NETWORKING ISSUES / IPMC - REAL WORK
-   2.00    0%                                              ODMB INTEGRATION - REAL WORK
-   2.00    0%                                                    MOVING LAB - REAL WORK
-   2.00    0%                                                   4G FIRMWARE - REAL WORK
-   2.00    0%                                                   DAQ UPDATES - REAL WORK
-   2.00    0%                                                REDUCE LATENCY - REAL WORK
-   2.00    0%                                       GBT-IC FIRWMARE UPDATES - REAL WORK
-   2.00    0%                                           CLUSTERIZER TESTING - REAL WORK
-   2.00    0%                                                       RB WORK - REAL WORK
-   2.00    0%                                              REPOSITORY DEBUG - REAL WORK
-   2.00    0%                                                   DAQ TESTING - REAL WORK
-   2.00    0%                                                 FIRMWARE REPO - REAL WORK
-   2.00    0%                                               METADATA FORMAT - REAL WORK
-   2.00    0%                                         IPMC FIRMWARE UPDATES - REAL WORK
-   2.00    0%                                                  SW DEBUGGING - REAL WORK
-   2.00    0%                                                   WORK IN LAB - REAL WORK
-   2.00    0%                                              AXI REGISTER MAP - REAL WORK
-   2.00    0%                                                ASIAGO RELEASE - REAL WORK
-   2.00    0%                                                 POWER ADAPTER - REAL WORK
-   2.00    0%                                                        LINPOL - REAL WORK
-   2.00    0%                                            WORK WITH TEJASAVA - REAL WORK
-   2.00    0%                                             IPBUS DAQ READOUT - REAL WORK
-   2.00    0%                           ETHERNET FIRMWARE; REPOSITORY SETUP - REAL WORK
-   2.00    0%                                                 COCOTB ISSUES - REAL WORK
-   2.00    0%                      TEMPERATURE MEASUREMENTS; HARDWARE DEBUG - REAL WORK
-   2.00    0%                                       HARDWARE SPECIFICATIONS - REAL WORK
-   2.00    0%                                     ASIAGO SCHEMATIC + LAYOUT - REAL WORK
-   2.00    0%                                SPYBUFFERS, REPOSITORY UPDATES - REAL WORK
-   2.00    0%                                     MODULE PCB; GITLAB ISSUES - REAL WORK
-   2.00    0%                                         DEBUGGING XML TO VHDL - REAL WORK
-   2.00    0%                              FIRMWARE INTEGRATION, REPO SETUP - REAL WORK
-   2.00    0%                                             LAURENT & EVALDAS - REAL WORK
-   2.00    0%                                 PCB ORDERS; FIRMWARE; DIGIKEY - REAL WORK
-   2.00    0%                                          FIRMWARE; PURCHASING - REAL WORK
-   2.00    0%                                                  SCA FIRMWARE - REAL WORK
-   2.00    0%                                                        TCLINK - REAL WORK
-   2.50    0%                                                  MGT LOOPBACK - REAL WORK +
-   2.50    0%                                                    TEST STAND - REAL WORK +
-   2.50    0%                                               PHASE2 PLANNING - REAL WORK +
-   2.50    0%                                            TIMING CONSTRAINTS - REAL WORK +
-   2.50    0%                                                     OH TIMING - REAL WORK +
-   2.50    0%                                                 STRIP MAPPING - REAL WORK +
-   2.50    0%                                             REPOSITORY ISSUES - REAL WORK +
-   2.50    0%                                SW DEBUGGING; FIRMWARE UPDATES - REAL WORK +
-   2.50    0%                                                   IPMC/APOLLO - REAL WORK +
-   2.50    0%                                          APOLLO DOCUMENTATION - REAL WORK +
-   2.50    0%                                           IPMC CI; IPMC BUILD - REAL WORK +
-   2.50    0%                                                     TESTBENCH - REAL WORK +
-   2.50    0%                                                    REPOSITORY - REAL WORK +
-   2.50    0%                                                   REPO CONFIG - REAL WORK +
-   2.50    0%                                              FIRMWARE (IPBUS) - REAL WORK +
-   3.00    0%                                                     HOG FIXES - REAL WORK +
-   3.00    0%                                 IPMC WORK; IPMC DOCUMENTATION - REAL WORK +
-   3.00    0%                                                FIRMWARE (DDR) - REAL WORK +
-   3.00    0%                                               FIRMWARE TIMING - REAL WORK +
-   3.00    0%                                   PAT_UNIX_MUX + TB DEBUGGING - REAL WORK +
-   3.00    0%                                          IPMC FIRMWARE UPDATE - REAL WORK +
-   3.00    0%                                                WORK W/ DANIEL - REAL WORK +
-   3.00    0%                                       GBT-IC FIRMWARE UPDATES - REAL WORK +
-   3.00    0%                                  LPGBT/VTRX+ USER GROUP (1/3) - REAL WORK +
-   3.00    0%                                                     GROUNDING - REAL WORK +
-   3.00    0%                                                      OPENIPMC - REAL WORK +
-   3.00    0%                                          LATENCY OPTIMIZATION - REAL WORK +
-   3.00    0%                                                        REGMAP - REAL WORK +
-   3.00    0%                                                EMULATOR BOARD - REAL WORK +
-   3.00    0%                                                  HOG TUTORIAL - REAL WORK +
-   3.00    0%                                                  TMR FIRMWARE - REAL WORK +
-   3.00    0%                                                        LAYOUT - REAL WORK +
-   3.00    0%                                                SEGMENT FINDER - REAL WORK +
-   3.00    0%                                        SPYBUFFERS; REPO MERGE - REAL WORK +
-   3.00    0%                                           MONITORING/YAML/TCL - REAL WORK +
-   3.50    0%                                                   CLUSTER DAQ - REAL WORK +
-   3.50    0%                                                 DOCUMENTATION - REAL WORK +
-   3.50    0%                                             SCHEMATIC UPDATES - REAL WORK +
-   3.50    0%                                                  DAQ FIRMWARE - REAL WORK +
-   3.50    0%            SPYBUFFERS, AXI INFRASTRUCTURE, REPOSITORY UPDATES - REAL WORK +
-   3.50    0%                                   SPYBUFFERS; FIRMWARE BUILDS - REAL WORK +
-   3.50    0%                                                           AXI - REAL WORK +
-   4.00    0%                                            FIRMWARE PLACEMENT - REAL WORK +
-   4.00    0%                                         FIRMWARE (NEW SORTER) - REAL WORK +
-   4.00    0%                                        MULTIPLIER INTEGRATION - REAL WORK +
-   4.00    0%                             DAQ INTEGRATION; FIRMWARE UPDATES - REAL WORK +
-   4.00    0%                                 FIRMWARE UPDATES; BOARD DEBUG - REAL WORK +
-   4.00    0%                                                     LAB SETUP - REAL WORK +
-   4.00    0%                                      TRIGGER FIRMWARE TESTING - REAL WORK +
-   4.00    0%     ETHERNET FIRMWARE; DOCUMENTATION; EVAL BOARD SETUP + TEST - REAL WORK +
-   4.00    0%                                      POWER ADAPTER; LAB SETUP - REAL WORK +
-   4.00    0%                                                    MODULE PCB - REAL WORK +
-   4.00    0%                                         FIRMWARE BUILD SYSTEM - REAL WORK +
-   4.00    0%                    COMPUTER SETUP, TEST STAND SETUP, CI SETUP - REAL WORK +
-   4.00    0%                                                     IPMC WORK - REAL WORK +
-   4.00    0%                          FIRMWARE UPDATES; TESTING OF TRIGGER - REAL WORK +
-   4.00    0%                                                  ETHERNET MAC - REAL WORK +
-   4.00    0%                                           FIRMWARE + SOFTWARE - REAL WORK +
-   4.50    0%                                                     4GB LINKS - REAL WORK +
-   4.50    0%                                              TIMING; FELIX TX - REAL WORK +
-   4.50    0%                                        FIRMWARE DEBUG/UPDATES - REAL WORK +
-   4.50    0%                                                 READOUT BOARD - REAL WORK +
-   4.50    0%                                              RADTEST FIRMWARE - REAL WORK +
-   4.50    0%                                                 ASIAGO LAYOUT - REAL WORK +
-   5.00    0%                                   IPMC FIRMWARE UPDATE / TEST - REAL WORK +
-   5.00    0%                                                   REV2A DEBUG - REAL WORK +
-   5.00    0%                                                TRIMMING DEBUG - REAL WORK +
-   5.00    0%                                               APEX/HOG ISSUES - REAL WORK +
-   5.00    0%                                                 I2C DEBUGGING - REAL WORK +
-   5.00    0%                                              TEST STAND SETUP - REAL WORK +
-   5.00    0%                                           YAML INFRASTRUCTURE - REAL WORK +
-   5.50    0%                                                  THIAGO VISIT - REAL WORK +
-   5.50    0%                                                  GBT FIRMWARE - REAL WORK +
-   5.50    0%                                                    RB TESTING - REAL WORK +
-   5.50    0%                                               APOLLO ETHERNET - REAL WORK +
-   5.50    0%                                                FIRMWARE BUILD - REAL WORK +
-   5.50    0%                                                             ME0 - MEETING +
-   6.00    0%                                                     S-BIT DAQ - REAL WORK +
-   6.00    0%                                                ETROC FIRMWARE - REAL WORK +
-   6.00    0%                                       ALCT / ODMB INTEGRATION - REAL WORK +
-   6.00    0%                                                      TEJASAVA - REAL WORK +
-   6.00    0%                                             VISIT WITH THIAGO - REAL WORK +
-   6.00    0%                                             ETHERNET FIRMWARE - REAL WORK +
-   6.50    0%                                                      SPEC DOC - REAL WORK +
-   6.50    0%                                         FIRMWARE (DAQ+GBT-IC) - REAL WORK +
-   6.50    0%                                            REPO CONFIGURATION - REAL WORK +
-   7.00    0%                                           FIRMWARE/GIT ISSUES - REAL WORK ++
-   7.00    0%                                               FIRMWARE UPDATE - REAL WORK ++
-   7.00    0%                                       READOUT BOARD SCHEMATIC - REAL WORK ++
-   7.00    0%                                                        COCOTB - REAL WORK ++
-   7.50    0%                                                       YAML BD - REAL WORK ++
-   7.50    0%                                                           HOG - REAL WORK ++
-   8.00    0%                                                      VACATION - REAL WORK ++
-   8.00    0%                                                            GE11 - MEETING ++
-   8.50    0%                                                 IPMC FIRMWARE - REAL WORK ++
-   9.00    0%                                               REGMAP SOFTWARE - REAL WORK ++
-   9.00    0%                                                   HOG UPDATES - REAL WORK ++
-   9.50    0%                                                  DDR FIRMWARE - REAL WORK ++
-   9.50    0%                                               DAQ INTEGRATION - REAL WORK ++
-   9.50    0%                                                 MODULE TESTER - REAL WORK ++
-   9.50    0%                                              FIRMWARE TESTING - REAL WORK ++
-  11.00    0%                                                  SOC WORKSHOP - REAL WORK ++
-  13.00    0%                                                    SPYBUFFERS - REAL WORK +++
-  14.00    0%                                                       FITTING - REAL WORK +++
-  16.50    0%                                                  IPMC UPDATES - REAL WORK ++++
-  16.50    0%                                                        EMPHATIC - MEETING ++++
-  18.00    0%                                                             CSC - MEETING ++++
-  19.50    1%                                                            GE21 - MEETING ++++
-  21.50    1%                                                      IPMC/ESM - REAL WORK +++++
-  25.50    1%                                                           ME0BE - MEETING ++++++
-  32.00    1%                                                          APOLLO - MEETING +++++++
-  55.50    2%                                                           ME0OH - MEETING ++++++++++++
-  57.50    3%                                                           ME0SF - MEETING +++++++++++++
-  64.00    3%                                              FIRMWARE UPDATES - REAL WORK ++++++++++++++
-  79.00    4%                                                          IPMC - REAL WORK +++++++++++++++++
- 108.00    5%                                                         TRACKER - MEETING ++++++++++++++++++++++++
- 206.75   10%                                                             ETL - MEETING ++++++++++++++++++++++++++++++++++++++++++++++
- 219.50   11%                                                      FIRMWARE - REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++
- 226.50   11%                                                           L0MDT - MEETING ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-1914.25
+2292.75
 #+end_example
 
 *** Cumulative Work
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "Cumulative Work")
-(princ "\n")
+;; (plot-work-chart-in-date-range "Cumulative Work")
+;; (princ "\n")
 (plot-work-chart-in-date-range "Cumulative Work" :short t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot             Project
---------------------------------
-   1.00    0%     SCOTT-LAB-CAMERA
-   8.00    0%                  ME0 +
-  18.50    0%                DEVEL ++
-  27.00    1%                  CSC ++
-  40.00    1%                ME0BE ++++
-  44.00    1%                ADMIN ++++
-  49.50    2%             EMPHATIC ++++
-  75.50    3%                ME0OH +++++++
-  81.00    3%                 SICK +++++++
- 108.50    4%                ME0SF ++++++++++
- 109.00    4%                 GE11 ++++++++++
- 120.50    4%                 GE21 +++++++++++
- 125.50    5%               APOLLO +++++++++++
- 160.00    6%              HOLIDAY ++++++++++++++
- 207.00    8%             VACATION ++++++++++++++++++
- 246.50   10%              TRACKER ++++++++++++++++++++++
- 432.75   17%                  ETL ++++++++++++++++++++++++++++++++++++++
- 563.50   23%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-2417.75
-
 
 
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-   8.00    0%             VACATION +
-   8.00    0%                  ME0 +
-  27.00    1%                  CSC ++
-  40.00    2%                ME0BE ++++
+   4.50    0%                  ME0
+  28.50    1%                  CSC ++
   49.50    2%             EMPHATIC ++++
-  75.50    3%                ME0OH +++++++
- 108.50    5%                ME0SF ++++++++++
- 109.00    5%                 GE11 ++++++++++
- 120.50    6%                 GE21 +++++++++++
- 125.50    6%               APOLLO +++++++++++
- 245.50   12%              TRACKER ++++++++++++++++++++++
- 432.75   22%                  ETL ++++++++++++++++++++++++++++++++++++++
- 563.50   29%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
+  58.00    2%                ME0BE ++++
+  84.00    3%                ME0OH +++++++
+ 121.00    5%                 GE11 +++++++++
+ 133.00    5%                 GE21 ++++++++++
+ 138.00    6%                ME0SF +++++++++++
+ 148.75    6%               APOLLO ++++++++++++
+ 245.50   10%              TRACKER +++++++++++++++++++
+ 636.00   27%                L0MDT +++++++++++++++++++++++++++++++++++++++++++++++++
+ 645.00   28%                  ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1914.25
+2292.75
 #+end_example
 
 *** Past 6 Months
@@ -493,9 +125,9 @@ Hours   %Tot             Project
 Hours   %Tot             Project
 --------------------------------
    1.00    0%     SCOTT-LAB-CAMERA
-   4.00    0%                  ME0
+   2.50    0%                  ME0
    5.50    0%                  CSC +
-  29.00    1%                ME0BE +++
+  30.50    1%                ME0BE +++
   49.50    3%             EMPHATIC +++++
   67.50    4%                ME0OH +++++++
   72.50    4%                 GE11 ++++++++
@@ -521,18 +153,19 @@ Hours   %Tot             Project
 
 Hours   %Tot    Project
 --------------------------------
-   3.00    0%     TRACKER +
-  14.50    2%       ME0OH ++++
-  18.00    3%       ME0SF +++++
-  22.50    3%       ME0BE ++++++
-  23.00    3%         CSC ++++++
-  39.00    6%        GE21 ++++++++++
-  43.50    7%        GE11 +++++++++++
-  62.75   10%      APOLLO ++++++++++++++++
- 156.50   27%       L0MDT ++++++++++++++++++++++++++++++++++++++++
- 194.00   33%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
+   2.00    0%         ME0
+   3.00    0%     TRACKER
+  16.50    2%       ME0OH +++
+  23.00    3%         CSC ++++
+  26.50    3%       ME0BE ++++
+  36.50    4%       ME0SF ++++++
+  44.50    5%        GE21 +++++++
+  48.50    6%        GE11 ++++++++
+  74.75    9%      APOLLO ++++++++++++
+ 172.50   22%       L0MDT ++++++++++++++++++++++++++++
+ 304.25   40%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-576.75
+752.00
 #+end_example
 
 *** Monthly
