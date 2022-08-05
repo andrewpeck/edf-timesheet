@@ -9,13 +9,14 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt"]:
     if fname=="monthly_histo.txt":
         fmt = "%Y/%m"
         suffix = "monthly"
+        df["Date"] = pd.to_datetime(df["Date"], format=fmt)
     if fname=="yearly_histo.txt":
         fmt = "%Y"
         suffix = "yearly"
 
-    df["Date"] = pd.to_datetime(df["Date"], format=fmt)
-
     print(df)
+
+    plt.style.use("ggplot")
 
     df.head()
 
