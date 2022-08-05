@@ -2,7 +2,6 @@
 :ID:       57aa8f9a-0324-48f9-83b3-7b6161a4e740
 :END:
 #+TITLE: Billing
-#+SETUPFILE: "../org.setup"
 #+OPTIONS: toc:t
 #+STARTUP: overview
 

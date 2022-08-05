@@ -87,18 +87,6 @@ def is_float(string):
     except ValueError:
         return False
 
-# def check_project_active (name, time, dict):
-#     """Check if a project had activity on a given day"""
-#     d = time
-#     for i in range(7):
-#         if (d.month in projects):
-#             if (prj in projects[d.month]):
-#                 if (d.day in projects[d.month][prj]):
-#                     if (projects[d.month][prj][d.day]["hours"] > 0):
-#                         return True
-#         d = d + ONEDAY  # INCREMENT
-
-
 def project_to_summary(projects):
     ""
 
