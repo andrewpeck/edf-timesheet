@@ -1,6 +1,9 @@
 .PHONY: export_org_tables summary_tables summary_tables_html
 
-all: export_org_tables db_tables summary
+all: export_org_tables db_tables summary plots
+
+plots:
+	@python3 timesheets.py
 
 export_org_tables:
 	@bash export_org_tables.sh billing.org
@@ -12,7 +15,7 @@ db_tables: sum_tables.py
 	@bash ./beautify_table.sh summary_tables.org
 	@cat summary_tables.org
 	@bash export_org_tables.sh summary_tables.org
-	@scp *-*Summary.csv ohm:~/billing/
+	@scp csv/*-*Summary.csv ohm:~/billing/
 
 # summary_tables_html: summary_tables
 # 	@bash org_to_html.sh summary_tables.org
