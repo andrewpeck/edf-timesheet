@@ -11,9 +11,9 @@ BEGIN {
 {
   if ($HOURS ~ /^[0-9.]+$/) {
 
-    split(FILENAME, yearmonth, "[-.]")
-    year=yearmonth[1]
-    month=yearmonth[2]
+    split(FILENAME, yearmonth, "[-./]")
+    year=yearmonth[2]
+    month=yearmonth[3]
 
     prj = toupper($PROJECT)
 
