@@ -23,14 +23,9 @@ BEGIN {
     sub("TRACKER", "APOLLO", prj)
     sub("VACATION", "VAC", prj)
 
-    skipped_plots["VAC"]=1
-    skipped_plots["SICK"]=1
-    skipped_plots["DEVEL"]=1
-    skipped_plots["ADMIN"]=1
-    skipped_plots["HOLIDAY"]=1
-    skipped_plots["SCOTT-LAB-CAMERA"]=1
+    asplit("-- VAC SICK DEVEL ADMIN HOLIDAY SCOTT-LAB-CAMERA", skipped_plots)
 
-    if (prj != "--" && !(prj in skipped_plots)) {
+    if (!(prj in skipped_plots)) {
       sum += $HOURS
       sum_by_prj[prj] += $HOURS
 
@@ -62,6 +57,14 @@ function print_heading (array, outfile) {
   s = s sprintf("\n")
   printf(s) | pipe
   close(pipe)
+}
+
+# make an assoc array from a string
+function asplit (str, arr) {
+  n = split(str, temp, " ")
+  for (i=1; i<=n; i++)
+    arr[temp[i]]++
+  return n
 }
 
 END {
