@@ -5,10 +5,9 @@
 #+OPTIONS: toc:t
 #+STARTUP: overview
 
-# http://gnuplot.sourceforge.net/demo/histograms.html
-
 * Notes :noexport:
 - EDF Database Script: https://gauss.bu.edu/redmine/projects/edf-database/repository/changes/user_scripts/load_csv_table.pl
+- http://gnuplot.sourceforge.net/demo/histograms.html
 * Visualization
 :PROPERTIES:
 :VISIBILITY: children
@@ -272,72 +271,76 @@ Apollo   %Tot      Month
 - [[https://docs.google.com/spreadsheets/d/1am6T83QQ67BVeGEFzn1hMH9ymb-Ll9q9DUA2qJ4tnsY/edit#gid=1426975892][2022 July]]
 *** GEM Accruals
 #+begin_src sh :results output table :exports results :hlines yes
-cat accruals.txt | grep EMU-UPGRADE
+cat accruals.txt | grep GE21
+cat accruals.txt | grep ME0
 #+end_src
 
 #+RESULTS:
-| CMS-EMU-UPGRADE-ME0  | 2021 |  1 |  8.0 | $ 560.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  2 |  7.5 | $ 525.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  3 | 12.5 | $ 875.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  4 | 33.0 | $2310.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  5 | 23.5 | $1645.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  6 |  6.5 | $ 455.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  7 | 18.0 | $1602.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  8 | 20.5 | $1824.5 |
-| CMS-EMU-UPGRADE-ME0  | 2021 |  9 | 34.0 | $3026.0 |
-| CMS-EMU-UPGRADE-ME0  | 2021 | 10 | 15.5 | $1379.5 |
-| CMS-EMU-UPGRADE-ME0  | 2021 | 11 | 17.5 | $1557.5 |
-| CMS-EMU-UPGRADE-ME0  | 2021 | 12 |  5.5 | $ 489.5 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  1 |  8.0 | $ 712.0 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  2 | 12.5 | $1112.5 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  3 |  9.5 | $ 845.5 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  4 |  8.0 | $ 712.0 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  5 | 13.0 | $1157.0 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  6 | 13.5 | $1201.5 |
-| CMS-EMU-UPGRADE-ME0  | 2022 |  7 | 12.0 | $1068.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  1 |  6.5 | $ 455.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  2 |  3.0 | $ 210.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  3 | 10.5 | $ 735.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  4 |  1.5 | $ 105.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  5 | 10.5 | $ 735.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  6 | 16.0 | $1120.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  7 |  3.0 | $ 267.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  8 |  9.5 | $ 845.5 |
-| CMS-EMU-UPGRADE-GE21 | 2021 |  9 |  4.5 | $ 400.5 |
-| CMS-EMU-UPGRADE-GE21 | 2021 | 10 |  4.0 | $ 356.0 |
-| CMS-EMU-UPGRADE-GE21 | 2021 | 11 |  2.5 | $ 222.5 |
-| CMS-EMU-UPGRADE-GE21 | 2021 | 12 | 17.0 | $1513.0 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  1 |  3.0 | $ 267.0 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  2 | 11.5 | $1023.5 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  3 | 17.5 | $1557.5 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  4 |  1.0 | $  89.0 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  5 |  4.5 | $ 400.5 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  6 |  6.5 | $ 578.5 |
-| CMS-EMU-UPGRADE-GE21 | 2022 |  7 |  0.5 | $  44.5 |
+| GE21 | 2021-01 | 6.50 hours  |  5.4% | $578.50  |
+| GE21 | 2021-02 | 3.00 hours  |  3.0% | $267.00  |
+| GE21 | 2021-03 | 9.50 hours  |  7.3% | $845.50  |
+| GE21 | 2021-04 | 1.50 hours  |  1.3% | $133.50  |
+| GE21 | 2021-05 | 10.50 hours |  7.9% | $934.50  |
+| GE21 | 2021-06 | 16.00 hours |  9.2% | $1424.00 |
+| GE21 | 2021-07 | 3.00 hours  |  2.4% | $267.00  |
+| GE21 | 2021-08 | 9.50 hours  |  6.2% | $845.50  |
+| GE21 | 2021-09 | 4.50 hours  |  3.3% | $400.50  |
+| GE21 | 2021-10 | 4.00 hours  |  3.8% | $356.00  |
+| GE21 | 2021-11 | 2.50 hours  |  2.1% | $222.50  |
+| GE21 | 2021-12 | 17.00 hours | 17.8% | $1513.00 |
+| GE21 | 2022-01 | 3.00 hours  |  2.6% | $267.00  |
+| GE21 | 2022-02 | 11.50 hours | 10.4% | $1023.50 |
+| GE21 | 2022-03 | 17.50 hours | 11.8% | $1557.50 |
+| GE21 | 2022-04 | 1.00 hours  |  1.2% | $89.00   |
+| GE21 | 2022-05 | 4.50 hours  |  5.2% | $400.50  |
+| GE21 | 2022-06 | 6.50 hours  |  5.1% | $578.50  |
+| GE21 | 2022-07 | 0.50 hours  |  0.6% | $44.50   |
+| ME0  | 2021-01 | 8.00 hours  |  6.7% | $712.00  |
+| ME0  | 2021-02 | 7.50 hours  |  7.6% | $667.50  |
+| ME0  | 2021-03 | 12.50 hours |  9.5% | $1112.50 |
+| ME0  | 2021-04 | 33.00 hours | 28.7% | $2937.00 |
+| ME0  | 2021-05 | 23.50 hours | 17.7% | $2091.50 |
+| ME0  | 2021-06 | 6.50 hours  |  3.7% | $578.50  |
+| ME0  | 2021-07 | 18.00 hours | 14.4% | $1602.00 |
+| ME0  | 2021-08 | 17.50 hours | 11.4% | $1557.50 |
+| ME0  | 2021-09 | 34.00 hours | 24.9% | $3026.00 |
+| ME0  | 2021-10 | 15.50 hours | 14.8% | $1379.50 |
+| ME0  | 2021-11 | 17.50 hours | 14.9% | $1557.50 |
+| ME0  | 2021-12 | 5.50 hours  |  5.8% | $489.50  |
+| ME0  | 2022-01 | 8.00 hours  |  7.0% | $712.00  |
+| ME0  | 2022-02 | 12.50 hours | 11.3% | $1112.50 |
+| ME0  | 2022-03 | 9.50 hours  |  6.4% | $845.50  |
+| ME0  | 2022-04 | 8.00 hours  |  9.9% | $712.00  |
+| ME0  | 2022-05 | 13.00 hours | 15.1% | $1157.00 |
+| ME0  | 2022-06 | 13.50 hours | 10.6% | $1201.50 |
+| ME0  | 2022-07 | 16.00 hours | 20.5% | $1424.00 |
+| ME0  | 2022-08 | 2.00 hours  | 40.0% | $178.00  |
 *** ETL Accruals
 #+begin_src sh :results output table :exports results :hlines yes
-cat accruals.txt | grep CMS-ETL
+cat accruals.txt | grep ETL
 #+end_src
 
 #+RESULTS:
-| CMS-ETL | 2021 |  1 | 59.5 | $4165.0 |
-| CMS-ETL | 2021 |  2 | 19.0 | $1330.0 |
-| CMS-ETL | 2021 |  3 | 18.0 | $1260.0 |
-| CMS-ETL | 2021 |  4 | 17.5 | $1225.0 |
-| CMS-ETL | 2021 |  5 | 19.5 | $1365.0 |
-| CMS-ETL | 2021 |  6 | 21.0 | $1470.0 |
-| CMS-ETL | 2021 |  7 | 32.5 | $2892.5 |
-| CMS-ETL | 2021 |  8 | 59.0 | $5251.0 |
-| CMS-ETL | 2021 |  9 | 38.8 | $3448.8 |
-| CMS-ETL | 2021 | 10 | 24.0 | $2136.0 |
-| CMS-ETL | 2021 | 11 | 25.5 | $2269.5 |
-| CMS-ETL | 2021 | 12 |  6.5 | $ 578.5 |
-| CMS-ETL | 2022 |  1 | 16.0 | $1424.0 |
-| CMS-ETL | 2022 |  2 | 31.0 | $2759.0 |
-| CMS-ETL | 2022 |  3 | 46.5 | $4138.5 |
-| CMS-ETL | 2022 |  4 | 46.5 | $4138.5 |
-| CMS-ETL | 2022 |  5 | 34.0 | $3026.0 |
-| CMS-ETL | 2022 |  6 |  0.0 | $   0.0 |
+| ETL | 2021-01 | 58.50 hours | 48.8% | $5206.50 |
+| ETL | 2021-02 | 19.00 hours | 19.2% | $1691.00 |
+| ETL | 2021-03 | 12.50 hours |  9.5% | $1112.50 |
+| ETL | 2021-04 | 17.50 hours | 15.2% | $1557.50 |
+| ETL | 2021-05 | 19.50 hours | 14.7% | $1735.50 |
+| ETL | 2021-06 | 21.00 hours | 12.1% | $1869.00 |
+| ETL | 2021-07 | 32.50 hours | 26.0% | $2892.50 |
+| ETL | 2021-08 | 58.50 hours | 38.0% | $5206.50 |
+| ETL | 2021-09 | 38.75 hours | 28.3% | $3448.75 |
+| ETL | 2021-10 | 24.00 hours | 23.0% | $2136.00 |
+| ETL | 2021-11 | 25.50 hours | 21.7% | $2269.50 |
+| ETL | 2021-12 | 6.50 hours  |  6.8% | $578.50  |
+| ETL | 2022-01 | 16.00 hours | 14.1% | $1424.00 |
+| ETL | 2022-02 | 31.00 hours | 27.9% | $2759.00 |
+| ETL | 2022-03 | 46.50 hours | 31.4% | $4138.50 |
+| ETL | 2022-04 | 46.50 hours | 57.4% | $4138.50 |
+| ETL | 2022-05 | 34.00 hours | 39.5% | $3026.00 |
+| ETL | 2022-06 | 69.25 hours | 54.3% | $6163.25 |
+| ETL | 2022-07 | 56.00 hours | 71.8% | $4984.00 |
+| ETL | 2022-08 | 3.00 hours  | 60.0% | $267.00  |
 
 * Helpers :noexport:
 :PROPERTIES:
@@ -433,6 +436,7 @@ cat accruals.txt | grep CMS-ETL
 :PROPERTIES:
 :VISIBILITY: children
 :END:
+** 2020
 ** 2021
 *** January 2021
 #+ATTR_HTML: :border 2 :frame none
@@ -3761,6 +3765,9 @@ Hours   %Tot     Project
 | # | 3 |     9-10 | ME0     | Segment finder     | WED |   1.0 |
 | # | 3 | 10-11:30 | ETL     | Meeting; Mechanics | WED |   1.5 |
 | # |   |          |         |                    |     |       |
+| # | 4 |      9-2 | ETL     | Mechanics meeting  | THU |   5.0 |
+| # |   |          |         |                    |     |       |
+| # | 5 |      3-6 | ETL     | BV connector       | FRI |   3.0 |
 |---+---+----------+---------+--------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2022"))::$7='(org-sbe subtract (a $$3))
 

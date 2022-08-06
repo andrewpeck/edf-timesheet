@@ -19,7 +19,6 @@ BEGIN {
 
     # make some common substitutions
     sub("ME0[A-z][A-z]", "ME0", prj)
-    sub("GE[0-9]1", "GEX1", prj)
     sub("TRACKER", "APOLLO", prj)
     sub("VACATION", "VAC", prj)
 
@@ -50,7 +49,7 @@ function print_title (title) {
 function print_heading (array, outfile) {
   pipe = "tee " outfile
   s = ""
-  s = s sprintf("Date")
+  s = s sprintf("%7s", "Date")
   for (prj in array) {
     s = s sprintf("\t%8s", prj)
   }
@@ -73,11 +72,19 @@ END {
   print_title("Monthly Accruals")
   ################################################################################
 
-  sortcmd="sort -t'\t' -n -k1"
+  sortcmd="sort -t'\t' -n -k1 | tee accruals.txt"
   for (prj in sum_by_prj_yy_mm) {
     for (year in sum_by_prj_yy_mm[prj]) {
       for (month in sum_by_prj_yy_mm[prj][year]) {
-        printf("%10s\t%4d-%02d\t%6.2f hours\t%4.1f\%\n", prj, year, month, sum_by_prj_yy_mm[prj][year][month], sum_by_prj_yy_mm[prj][year][month]/sum_by_yy_mm[year][month]*100) | sortcmd
+
+        amt = sum_by_prj_yy_mm[prj][year][month];
+        sum = sum_by_yy_mm[year][month];
+        rate = 89
+
+        printf("%10s \t %4d-%02d \t %6.2f hours \t %4.1f\% \t $%.2f\n", prj, year, month,
+               amt,
+               amt/sum*100,
+               amt * rate) | sortcmd
       }
     }
   }
