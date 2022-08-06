@@ -70,10 +70,9 @@ function asplit (str, arr) {
 END {
 
   ################################################################################
-  #
+  print_title("Monthly Accruals")
   ################################################################################
 
-  print_title("Monthly Accruals")
   sortcmd="sort -t'\t' -n -k1"
   for (prj in sum_by_prj_yy_mm) {
     for (year in sum_by_prj_yy_mm[prj]) {
@@ -85,10 +84,9 @@ END {
   close(sortcmd)
 
   ################################################################################
-  #
+  print_title("Total by Project")
   ################################################################################
 
-  print_title("Total by Project")
   sortcmd="sort -t'\t' -n -k2"
   for (key in sum_by_prj) {
     printf("%10s \t %5.1f \t %4.1f\%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
@@ -96,10 +94,9 @@ END {
   close(sortcmd)
 
   ################################################################################
-  #
+  print_title("Total by Month")
   ################################################################################
 
-  print_title("Total by Month")
   sortcmd="sort -t'\t' -n -k1"
   for (year in sum_by_yy_mm) {
     for (month in sum_by_yy_mm[year]) {
@@ -109,10 +106,9 @@ END {
   close(sortcmd)
 
   ################################################################################
-  #
+  print_title("Yearly Accruals")
   ################################################################################
 
-  print_title("Yearly Accruals")
   sortcmd="sort -t'\t' -n -k1"
   for (prj in sum_by_prj_yy) {
     for (year in sum_by_prj_yy[prj]) {
@@ -124,7 +120,7 @@ END {
   close(sortcmd)
 
   ################################################################################
-  # Yearly histogram
+  print_title("Yearly Histogram")
   ################################################################################
 
   outfile = "yearly_histo.txt"
@@ -143,10 +139,9 @@ END {
   close(sortcmd)
 
   ################################################################################
-  # Monthly histogram
+  print_title("Monthly Histogram")
   ################################################################################
 
-  print_title("Monthly Stack")
   outfile = "monthly_histo.txt"
   sortcmd="sort -t'\t' -n -k1 | tee -a " outfile
 
