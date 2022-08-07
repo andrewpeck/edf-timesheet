@@ -46,16 +46,19 @@ function print_title (title) {
   printf("-----------------------------------------------------\n")
 }
 
-function print_heading (array, outfile) {
+function fmt_sort_cmd () {
+  return "sort -t',' -n -k1 | column -t -s \",\" "
+}
+
+function fmt_heading (array, outfile) {
   pipe = "tee " outfile
   s = ""
-  s = s sprintf("%7s", "Date")
+  s = s sprintf("%s", "Date")
   for (prj in array) {
-    s = s sprintf("\t%8s", prj)
+    s = s sprintf(", %s", prj)
   }
   s = s sprintf("\n")
-  printf(s) | pipe
-  close(pipe)
+  return s
 }
 
 # make an assoc array from a string
@@ -72,7 +75,7 @@ END {
   print_title("Monthly Accruals")
   ################################################################################
 
-  sortcmd="sort -t'\t' -n -k1 | tee accruals.txt"
+  sortcmd="sort -t',' -n -k1  | column -t -s \",\" | tee accruals.txt"
   for (prj in sum_by_prj_yy_mm) {
     for (year in sum_by_prj_yy_mm[prj]) {
       for (month in sum_by_prj_yy_mm[prj][year]) {
@@ -81,7 +84,7 @@ END {
         sum = sum_by_yy_mm[year][month];
         rate = 89
 
-        printf("%10s \t %4d-%02d \t %6.2f hours \t %4.1f\% \t $%.2f\n", prj, year, month,
+        printf("%s, %4d-%02d, %6.2f hours, %4.1f\%, $%.2f\n", prj, year, month,
                amt,
                amt/sum*100,
                amt * rate) | sortcmd
@@ -94,9 +97,9 @@ END {
   print_title("Total by Project")
   ################################################################################
 
-  sortcmd="sort -t'\t' -n -k2"
+  sortcmd="sort -t',' -n -k2 | column -t -s \",\" "
   for (key in sum_by_prj) {
-    printf("%10s \t %5.1f \t %4.1f\%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
+    printf("%s, %5.1f, %4.1f\%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
   }
   close(sortcmd)
 
@@ -104,11 +107,11 @@ END {
   print_title("Total by Month")
   ################################################################################
 
-  sortcmd="sort -t'\t' -n -k1"
+  sortcmd=fmt_sort_cmd()
   for (year in sum_by_yy_mm) {
     for (month in sum_by_yy_mm[year]) {
-      printf("    %4d-%02d\t%6.2f hours\n", year, month, sum_by_yy_mm[year][month]) | sortcmd
-      E}
+      printf("%4d-%02d, %6.2f hours\n", year, month, sum_by_yy_mm[year][month]) | sortcmd
+      }
   }
   close(sortcmd)
 
@@ -116,10 +119,10 @@ END {
   print_title("Yearly Accruals")
   ################################################################################
 
-  sortcmd="sort -t'\t' -n -k1"
+  sortcmd=fmt_sort_cmd()
   for (prj in sum_by_prj_yy) {
     for (year in sum_by_prj_yy[prj]) {
-      printf("%10s\t%4d\t%6.2f hours \t %4.1f\%\n",
+      printf("%s, %4d, %6.2f hours, %4.1f\%\n",
              prj, year, sum_by_prj_yy[prj][year],
              sum_by_prj_yy[prj][year]/sum_by_yy[year]*100) | sortcmd
     }
@@ -131,18 +134,18 @@ END {
   ################################################################################
 
   outfile = "yearly_histo.txt"
-  sortcmd="sort -t'\t' -n -k1 | tee -a " outfile
-  print_heading(sum_by_prj, outfile)
+  sortcmd=fmt_sort_cmd() " | tee " outfile
+
+  s = fmt_heading(sum_by_prj, outfile)
   for (year in sum_by_yy_prj) {
-    s = ""
-    s = s sprintf("%4d    ", year)
+    s = s sprintf("%4d", year)
     for (prj in sum_by_prj) {
       hrs = sum_by_yy_prj[year][prj]/sum_by_yy[year]
-      s = s sprintf("\t%8.3f", hrs)
+      s = s sprintf(", %.3f", hrs)
     }
     s = s sprintf("\n")
-    printf("%s", s) | sortcmd
   }
+  printf("%s", s) | sortcmd
   close(sortcmd)
 
   ################################################################################
@@ -150,22 +153,21 @@ END {
   ################################################################################
 
   outfile = "monthly_histo.txt"
-  sortcmd="sort -t'\t' -n -k1 | tee -a " outfile
+  sortcmd=fmt_sort_cmd() " | tee " outfile
 
-  print_heading(sum_by_prj, outfile)
+  s = fmt_heading(sum_by_prj, outfile)
 
   for (year in sum_by_yy_mm_prj) {
     for (month in sum_by_yy_mm_prj[year]) {
-      s = ""
-      s = s sprintf("%4d/%02d    ", year, month)
+      s = s sprintf("%4d/%02d", year, month)
       for (prj in sum_by_prj) {
         hrs = sum_by_yy_mm_prj[year][month][prj]/sum_by_yy_mm[year][month]
-        s = s sprintf("\t%8.3f", hrs)
+        s = s sprintf(", %.3f", hrs)
       }
       s = s sprintf("\n")
-      printf("%s", s) | sortcmd
     }
   }
+  printf("%s", s) | sortcmd
   close(sortcmd)
 
 }
