@@ -8,6 +8,7 @@ plt.style.use("fivethirtyeight")
 df = pd.read_csv("accruals.txt", delim_whitespace=True, header=None)
 df.columns = ["Project", "Year/Month", "Hours", "hrs", "Percent", "Dollars"]
 df['Project'] = df['Project'].map(lambda x : "OTHER" if x == "CSC" or x == "EMPHATIC" else x)
+df['Project'] = df['Project'].map(lambda x : "GEM" if x == "GE11" or x == "GE21" else x)
 df = df.groupby(df["Project"]).sum()
 df.plot.pie(y='Hours',legend=None, title=None)
 plt.ylabel("")
