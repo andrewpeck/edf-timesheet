@@ -1,7 +1,20 @@
 #!/usr/bin/env python3
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import pie, axis, show
 
+plt.style.use("fivethirtyeight")
+
+df = pd.read_csv("accruals.txt", delim_whitespace=True, header=None)
+df.columns = ["Project", "Year/Month", "Hours", "hrs", "Percent", "Dollars"]
+df['Project'] = df['Project'].map(lambda x : "OTHER" if x == "CSC" or x == "EMPHATIC" else x)
+df = df.groupby(df["Project"]).sum()
+df.plot.pie(y='Hours',legend=None, title=None)
+plt.ylabel("")
+plt.savefig('timesheet_pi.svg')
+
+
+plt.style.use("ggplot")
 for fname in ["monthly_histo.txt", "yearly_histo.txt"]:
 
     df = pd.read_csv(fname, delim_whitespace=True)
@@ -15,8 +28,6 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt"]:
         suffix = "yearly"
 
     print(df)
-
-    plt.style.use("ggplot")
 
     df.head()
 
