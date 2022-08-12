@@ -3,6 +3,7 @@ import datetime
 import re
 import sys
 import os
+import json
 from collections import OrderedDict
 #import pprint
 #from glob import glob
@@ -233,4 +234,5 @@ if __name__ == "__main__":
         print(__file__ + ' requires Python 3, while Python ' +
               str(sys.version[0] + ' was detected. Terminating. '))
         sys.exit(1)
+    #print(json.dumps(project_to_summary(parse_projects()), indent=1))
     print_org_summary(project_to_summary(parse_projects()))

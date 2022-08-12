@@ -21,8 +21,11 @@ BEGIN {
     sub("ME0[A-z][A-z]", "ME0", prj)
     sub("TRACKER", "APOLLO", prj)
     sub("VACATION", "VAC", prj)
+    sub("CSC", "OTHER", prj)
+    sub("EMPHATIC", "OTHER", prj)
+    sub("SCOTT-LAB-CAMERA", "OTHER", prj)
 
-    asplit("-- VAC SICK DEVEL ADMIN HOLIDAY SCOTT-LAB-CAMERA", skipped_plots)
+    asplit("-- VAC SICK DEVEL ADMIN HOLIDAY", skipped_plots)
 
     if (!(prj in skipped_plots)) {
       sum += $HOURS
