@@ -1,6 +1,8 @@
-#+title: EDF Timesheet
+#+TITLE: EDF Timesheet
 
-This is my timesheet for work in the BU EDF.
+This is my timesheet for work in the BU EDF, dating from 2021 on. Time from 2020 was recorded in a
+paper log which may eventually be converted.
+
 [[file:timesheet_pi.svg]]
 
 [[file:timesheetmonthly.svg]]
