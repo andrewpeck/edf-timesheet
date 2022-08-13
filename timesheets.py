@@ -16,13 +16,17 @@ plt.savefig('timesheet_pi.svg')
 
 
 plt.style.use("ggplot")
-for fname in ["monthly_histo.txt", "yearly_histo.txt"]:
+for fname in ["monthly_histo.txt", "yearly_histo.txt", "monthly_totals.txt"]:
 
     df = pd.read_csv(fname, delim_whitespace=True)
 
     if fname=="monthly_histo.txt":
         fmt = "%Y/%m"
         suffix = "monthly"
+        df["Date"] = pd.to_datetime(df["Date"], format=fmt)
+    if fname=="monthly_totals.txt":
+        fmt = "%Y/%m"
+        suffix = "totals"
         df["Date"] = pd.to_datetime(df["Date"], format=fmt)
     if fname=="yearly_histo.txt":
         fmt = "%Y"
@@ -39,6 +43,8 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt"]:
         df.plot.area(x="Date")
     if (suffix=="yearly"):
         df.plot.bar(x="Date", stacked=True)
+    if (suffix=="totals"):
+        df.plot.area(x="Date")
 
     plt.title('EDF Work')
     plt.legend(bbox_to_anchor=(1.0, 1.0))

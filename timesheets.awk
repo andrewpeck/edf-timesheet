@@ -173,4 +173,24 @@ END {
   printf("%s", s) | sortcmd
   close(sortcmd)
 
+  ################################################################################
+  print_title("Monthly Totals")
+  ################################################################################
+
+  outfile = "monthly_totals.txt"
+  sortcmd=fmt_sort_cmd() " | tee " outfile
+
+  s = "Date, Total\n"
+
+  for (year in sum_by_yy_mm) {
+    for (month in sum_by_yy_mm[year]) {
+      s = s sprintf("%4d/%02d", year, month)
+        hrs = sum_by_yy_mm[year][month]
+        s = s sprintf(", %.3f", hrs)
+      s = s sprintf("\n")
+    }
+  }
+  printf("%s", s) | sortcmd
+  close(sortcmd)
+
 }

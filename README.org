@@ -8,3 +8,5 @@ paper log which may eventually be converted.
 [[file:timesheetmonthly.svg]]
 
 [[file:timesheetyearly.svg]]
+
+[[file:timesheettotals.svg]]
