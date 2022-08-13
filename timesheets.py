@@ -27,14 +27,13 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt", "monthly_totals.txt"]:
     if fname=="monthly_totals.txt":
         fmt = "%Y/%m"
         suffix = "totals"
-        df["Date"] = pd.to_datetime(df["Date"], format=fmt)
+        #df["Date"] = pd.to_datetime(df["Date"], format=fmt)
     if fname=="yearly_histo.txt":
         fmt = "%Y"
         suffix = "yearly"
 
     print(df)
-
-    df.head()
+    #df.head()
 
     plt.rcParams["figure.figsize"] = [7.50, 5]
     plt.rcParams["figure.autolayout"] = True
@@ -44,7 +43,7 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt", "monthly_totals.txt"]:
     if (suffix=="yearly"):
         df.plot.bar(x="Date", stacked=True)
     if (suffix=="totals"):
-        df.plot.area(x="Date")
+        df.plot.bar(x="Date", stacked=True)
 
     plt.title('EDF Work')
     plt.legend(bbox_to_anchor=(1.0, 1.0))
