@@ -730,7 +730,7 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot    Project
 --------------------------------
-   0.50    0%       ME0SF 
+   0.50    0%       ME0SF
    1.00    0%         ME0 +
    1.50    1%       ME0BE ++
    3.00    2%        GE21 +++
@@ -930,7 +930,7 @@ Hours   %Tot    Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%          CSC 
+   0.50    0%          CSC
    3.50    1%        ME0BE +++
    3.50    1%        ME0SF +++
    5.50    2%        ME0OH +++++
@@ -1280,8 +1280,8 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%          ME0 
-   0.50    0%          CSC 
+   0.50    0%          ME0
+   0.50    0%          CSC
    2.00    1%        ME0BE ++
    3.00    1%         GE11 +++
    7.00    4%     EMPHATIC +++++++
@@ -1867,7 +1867,7 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%          CSC 
+   0.50    0%          CSC
    1.00    0%        DEVEL +
    1.00    0%        ADMIN +
    1.00    0%     EMPHATIC +
@@ -2273,7 +2273,7 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%         GE11 
+   0.50    0%         GE11
    1.00    0%        DEVEL +
    1.50    0%        ME0BE ++
    2.00    1%        ME0OH ++
@@ -2758,7 +2758,7 @@ Hours   %Tot    Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%      TRACKER 
+   0.50    0%      TRACKER
    1.00    0%        ME0SF +
    2.50    1%       APOLLO ++
    3.00    1%         GE21 ++
@@ -3445,7 +3445,7 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%          CSC 
+   0.50    0%          CSC
    2.00    1%        ME0OH ++
    2.50    1%        ADMIN ++
    3.00    1%         GE11 +++
@@ -3765,7 +3765,7 @@ Hours   %Tot     Project
 #+begin_example
 Hours   %Tot     Project
 --------------------------------
-   0.50    0%         GE21 
+   0.50    0%         GE21
    1.00    0%       APOLLO +
    1.00    0%        ME0BE +
    4.50    2%        L0MDT ++++
@@ -3823,6 +3823,50 @@ Hours   %Tot     Project
 | # | 12 |        3-4 | ME0     | Segment finder           | FRI |   1.0 |
 | # |    |            |         |                          |     |       |
 |---+----+------------+---------+--------------------------+-----+-------|
+| # |    |            |         |                          |     |       |
+| # | 15 |        9-5 | CSC     | EMTF Workshop            | MON |   8.0 |
+| # |    |            |         |                          |     |       |
+| # | 16 |        9-1 | ME0     | EMTF Workshop            | TUE |   4.0 |
+| # | 16 |        1-5 | GE21    | EMTF Workshop            | TUE |   4.0 |
+| # |    |            |         |                          |     |       |
+| # | 17 |       9-11 | ETL     | Meet with Rice           | WED |   2.0 |
+| # | 17 |       11-1 | CSC     | EMTF Workshop            | WED |   2.0 |
+| # | 17 |        1-3 | ME0     | EMTF Workshop            | WED |   2.0 |
+| # | 17 |        3-5 | GE21    | EMTF Workshop            | WED |   2.0 |
+| # |    |            |         |                          |     |       |
+| # | 18 |       9-10 | GE21    | Cluster finding          | THU |   1.0 |
+| # | 18 |      10-11 | GE11    | Cluster finding          | THU |   1.0 |
+| # | 18 |      11-12 | ETL     | Meet with Daniel         | THU |   1.0 |
+| # | 18 |        2-3 | ADMIN   | EDF Meeting              | THU |   1.0 |
+| # | 18 |        3-4 | GE21    | Cluster finding          | THU |   1.0 |
+| # | 18 |        4-5 | GE11    | Cluster finding          | THU |   1.0 |
+| # | 18 |        5-6 | ME0OH   | OH meeting               | THU |   1.0 |
+| # |    |            |         |                          |     |       |
+| # | 19 |       9-12 | GE21    | Cluster finding          | FRI |   3.0 |
+| # | 19 |       11-1 | GE11    | Cluster finding          | FRI |   2.0 |
+| # | 19 |        1-3 | GE21    | Cluster finding          | FRI |   2.0 |
+| # | 19 |        4-5 | GE11    | Cluster finding          | FRI |   1.0 |
+| # |    |            |         |                          |     |       |
+|---+----+------------+---------+--------------------------+-----+-------|
+| # |    |            |         |                          |     |       |
+| # | 22 |       9-10 | --      | Sleep                    | MON |   1.0 |
+| # | 22 |      10-11 | ADMIN   | EDF Meeting              | MON |   1.0 |
+| # | 22 |      11-12 | ETL     | Bias voltage             | MON |   1.0 |
+| # | 22 |        1-2 | L0MDT   | Meeting                  | MON |   1.0 |
+| # | 22 |     2-2:30 | ETL     | Meeting                  | MON |   0.5 |
+| # | 22 |     2:30-3 | GE21    | Meeting                  | MON |   0.5 |
+| # | 22 |        3-5 | --      | Beer w/ Daniel           | MON |   2.0 |
+| # |    |            |         |                          |     |       |
+| # | 23 |       9-10 | L0MDT   | Meeting                  | TUE |   1.0 |
+| # | 23 |      11-12 | ME0BE   | Meeting                  | TUE |   1.0 |
+| # | 23 |   12-12:30 | ADMIN   | Timesheets               | TUE |   0.5 |
+| # |    |            |         |                          |     |       |
+| # | 24 |       9-10 | SICK    | Doctor's appt            | WED |   1.0 |
+| # | 24 |      10-12 | ETL     | Meeting                  | WED |   2.0 |
+| # | 24 |   12-12:30 | ADMIN   | EDF Meeting              | WED |   0.5 |
+| # | 24 |    12:30-1 | L0MDT   | Fix Firmware Bug         | WED |   0.5 |
+| # |    |            |         |                          |     |       |
+|---+----+------------+---------+--------------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"August 2022"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-08
@@ -3830,15 +3874,23 @@ Hours   %Tot     Project
 #+end_src
 
 #+RESULTS:
-: Hours   %Tot    Project
-: --------------------------------
-:    1.00    3%         CSC +
-:    2.00    6%      APOLLO ++
-:    3.00    9%       ADMIN +++
-:   10.00   31%         ME0 ++++++++++
-:   16.00   50%         ETL ++++++++++++++++
-: --------------------------------
-:  32.00
+#+begin_example
+Hours   %Tot    Project
+--------------------------------
+   1.00    1%        SICK +
+   1.00    1%       ME0BE +
+   1.00    1%       ME0OH +
+   2.00    2%      APOLLO ++
+   2.50    2%       L0MDT ++
+   5.00    5%        GE11 +++++
+   6.00    7%       ADMIN ++++++
+  11.00   13%         CSC +++++++++++
+  13.50   15%        GE21 ++++++++++++++
+  16.00   18%         ME0 ++++++++++++++++
+  22.50   26%         ETL ++++++++++++++++++++++
+--------------------------------
+ 84.50
+#+end_example
 
 * Processing Hooks
 #+NAME: update_all_histograms
@@ -3860,5 +3912,5 @@ Hours   %Tot     Project
 # Local Variables:
 # fill-column: 120
 # eval: (if (functionp '+word-wrap-mode) (+word-wrap-mode 0))
-# eval: (add-hook 'write-contents-functions (lambda () (org-sbe "write_contents_hooks")) nil t)
+# eval: (add-hook 'write-contents-functions (lambda () (and nil (org-sbe "write_contents_hooks"))) nil t)
 # End:

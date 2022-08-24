@@ -8,4 +8,70 @@ D,Time,Project,Task,Day,Hours
 3,9-10,ME0,Segment finder,WED,1.0
 3,10-11:30,ETL,Meeting; Mechanics,WED,1.5
 ,,,,,
+4,9-2,ETL,Mechanics meeting,THU,5.0
+,,,,,
+5,3-6,ETL,BV; Mechanics,FRI,3.0
+,,,,,
+,,,,,
+8,9-10,ME0,Segment finder,MON,1.0
+8,10-11,ETL,BV; Mechanics,MON,1.0
+,,,,,
+9,9-11,ME0,Segment finder,TUE,2.0
+9,11-12,ETL,BV; Mechanics,TUE,1.0
+,,,,,
+10,9:30-11:30,ME0,Segment finder,WED,2.0
+10,12-1,ETL,BV,WED,1.0
+,,,,,
+11,1-2,ME0,Segment finder,THU,1.0
+11,2-3,ETL,BV,THU,1.0
+11,3-4,CSC,Debug X2O fw build issue,THU,1.0
+,,,,,
+,,,,,
+12,11-12,ME0,Segment finder,FRI,1.0
+12,12-1,ETL,BV,FRI,1.0
+12,1-3,APOLLO,IPMC,FRI,2.0
+12,3-4,ME0,Segment finder,FRI,1.0
+,,,,,
+,,,,,
+15,9-5,CSC,EMTF Workshop,MON,8.0
+,,,,,
+16,9-1,ME0,EMTF Workshop,TUE,4.0
+16,1-5,GE21,EMTF Workshop,TUE,4.0
+,,,,,
+17,9-11,ETL,Meet with Rice,WED,2.0
+17,11-1,CSC,EMTF Workshop,WED,2.0
+17,1-3,ME0,EMTF Workshop,WED,2.0
+17,3-5,GE21,EMTF Workshop,WED,2.0
+,,,,,
+18,9-10,GE21,Cluster finding,THU,1.0
+18,10-11,GE11,Cluster finding,THU,1.0
+18,11-12,ETL,Meet with Daniel,THU,1.0
+18,2-3,ADMIN,EDF Meeting,THU,1.0
+18,3-4,GE21,Cluster finding,THU,1.0
+18,4-5,GE11,Cluster finding,THU,1.0
+18,5-6,ME0OH,OH meeting,THU,1.0
+,,,,,
+19,9-12,GE21,Cluster finding,FRI,3.0
+19,11-1,GE11,Cluster finding,FRI,2.0
+19,1-3,GE21,Cluster finding,FRI,2.0
+19,4-5,GE11,Cluster finding,FRI,1.0
+,,,,,
+,,,,,
+22,9-10,--,Sleep,MON,1.0
+22,10-11,ADMIN,EDF Meeting,MON,1.0
+22,11-12,ETL,Bias voltage,MON,1.0
+22,1-2,L0MDT,Meeting,MON,1.0
+22,2-2:30,ETL,Meeting,MON,0.5
+22,2:30-3,GE21,Meeting,MON,0.5
+22,3-5,--,Beer w/ Daniel,MON,2.0
+,,,,,
+23,9-10,L0MDT,Meeting,TUE,1.0
+23,11-12,ME0BE,Meeting,TUE,1.0
+23,12-12:30,ADMIN,Timesheets,TUE,0.5
+,,,,,
+24,9-10,SICK,Doctor's appt,WED,1.0
+24,10-12,ETL,Meeting,WED,2.0
+24,12-12:30,ADMIN,EDF Meeting,WED,0.5
+24,12:30-1,L0MDT,Fix Firmware Bug,WED,0.5
+,,,,,
 
