@@ -18,6 +18,7 @@ BEGIN {
     prj = toupper($PROJECT)
 
     # make some common substitutions
+    sub("ME0BE", "ME0SF", prj)
     sub("ME0[A-z][A-z]", "ME0", prj)
     sub("TRACKER", "APOLLO", prj)
     sub("VACATION", "VAC", prj)

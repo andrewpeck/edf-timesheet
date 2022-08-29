@@ -16,11 +16,11 @@ CMS-EMU-OPS-CSC,8.00,0,2.00,0,0,0,0,EMTF Workshop
 CMS-EMU-UPGRADE-GE21,0,4.00,2.00,2.00,5.00,0,0,Cluster finding; EMTF Workshop
 CMS-EMU-OPS-GE11,0,0,0,2.00,3.00,0,0,Cluster finding
 ,22,23,24,25,26,27,28,
-ADMIN,1.00,0.50,0.50,0,0,0,0,EDF Meeting; Timesheets
+ADMIN,1.00,0.50,0.50,1.50,0,0,0,EDF Meeting; Timesheets
 CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Meeting
-CMS-ETL,1.50,0,2.00,0,0,0,0,Bias voltage; Meeting
+CMS-ETL,1.50,0,4.00,2.00,3.50,0,0,BV; Emulator FW; Meeting; RB; Test stand
 CMS-EMU-UPGRADE-GE21,0.50,0,0,0,0,0,0,Meeting
-ATLAS-MUON-PHASE2,1.00,1.00,0.50,0,0,0,0,Fix Firmware Bug; Meeting
-SICK,0,0,1.00,0,0,0,0,Doctor's appt
+ATLAS-MUON-PHASE2,1.00,1.00,0.50,1.00,0,0,0,EE Meeting; Fix Firmware Bug; Meeting
+SICK,0,0,1.00,0,0,0,0,Doctors appt
 ,29,30,31,1*,2*,3*,4*,
 
