@@ -39,7 +39,7 @@ for fname in ["monthly_histo.txt", "yearly_histo.txt", "monthly_totals.txt"]:
     plt.rcParams["figure.autolayout"] = True
 
     if (suffix=="monthly"):
-        df.plot.area(x="Date")
+        df.plot.area(x="Date",lw=0)
     if (suffix=="yearly"):
         df.plot.bar(x="Date", stacked=True)
     if (suffix=="totals"):
