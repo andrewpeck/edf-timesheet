@@ -20,6 +20,7 @@ BEGIN {
     # make some common substitutions
     sub("ME0BE", "ME0SF", prj)
     sub("ME0[A-z][A-z]", "ME0", prj)
+    #sub("GE[2,1]", "GEM", prj)
     sub("TRACKER", "APOLLO", prj)
     sub("VACATION", "VAC", prj)
     sub("CSC", "OTHER", prj)
