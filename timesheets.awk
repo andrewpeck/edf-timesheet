@@ -27,7 +27,16 @@ BEGIN {
     sub("EMPHATIC", "OTHER", prj)
     sub("SCOTT-LAB-CAMERA", "OTHER", prj)
 
-    asplit("-- VAC SICK DEVEL ADMIN HOLIDAY", skipped_plots)
+    sub("DEVEL", "ETC", prj)
+   #sub("SICK", "ETC", prj)
+    sub("VAC", "ETC", prj)
+    sub("HOLIDAY", "ETC", prj)
+    sub("ADMIN", "ETC", prj)
+
+    asplit("-- HOLIDAY SICK", skipped_plots)
+    #asplit("-- VAC SICK DEVEL ADMIN HOLIDAY", skipped_plots)
+
+    wordcloud = "wordcloud.txt"
 
     if (!(prj in skipped_plots)) {
       sum += $HOURS
@@ -42,6 +51,15 @@ BEGIN {
       sum_by_yy_mm[year][month] += $HOURS
 
       sum_by_prj_yy_mm[prj][year][month] += $HOURS
+
+      sub("chat", "meeting", $4)
+      sub("Chat", "meeting", $4)
+      sub("Meetings", "meeting", $4)
+      sub("meetings", "meeting", $4)
+      sub("meet ", "meeting ", $4)
+      sub("Meet ", "meeting ", $4)
+      gsub(" ", "\n", $4)
+      print tolower($4) > "wordcloud.txt"
     }
   }
 }
@@ -166,7 +184,7 @@ END {
     for (month in sum_by_yy_mm_prj[year]) {
       s = s sprintf("%4d/%02d", year, month)
       for (prj in sum_by_prj) {
-        hrs = sum_by_yy_mm_prj[year][month][prj]/sum_by_yy_mm[year][month]
+        hrs = sum_by_yy_mm_prj[year][month][prj]
         s = s sprintf(", %.3f", hrs)
       }
       s = s sprintf("\n")

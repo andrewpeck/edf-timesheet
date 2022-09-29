@@ -10,3 +10,5 @@ paper log which may eventually be converted.
 [[file:timesheetyearly.svg]]
 
 [[file:timesheettotals.svg]]
+
+[[file:wordcloud.png]]
