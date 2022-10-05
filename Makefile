@@ -23,7 +23,7 @@ db_tables: sum_tables.py
 
 summary:
 	@awk -f timesheets.awk csv/20[0-9][0-9]-[0-9][0-9].csv
-	@wordcloud_cli --text wordcloud.txt --imagefile wordcloud.png --background white --colormap "Solarize_Light2" --max_words 50 --width 1024 --height 768 --fontfile "DroidSans" --margin 4 --min_word_length 3 --prefer_horizontal 15
+	@wordcloud_cli --text wordcloud.txt --imagefile wordcloud.png --background white --colormap "Solarize_Light2" --max_words 50 --width 1024 --height 768 --fontfile "DroidSans" --margin 4 --min_word_length 3 --prefer_horizontal 15 --no_collocations
 
 clean:
 	rm *.csv
