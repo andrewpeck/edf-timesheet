@@ -28,12 +28,12 @@ BEGIN {
     sub("SCOTT-LAB-CAMERA", "OTHER", prj)
 
     sub("DEVEL", "ETC", prj)
-   #sub("SICK", "ETC", prj)
+    sub("SICK", "ETC", prj)
     sub("VAC", "ETC", prj)
     sub("HOLIDAY", "ETC", prj)
     sub("ADMIN", "ETC", prj)
 
-    asplit("-- HOLIDAY SICK", skipped_plots)
+    asplit("--", skipped_plots)
     #asplit("-- VAC SICK DEVEL ADMIN HOLIDAY", skipped_plots)
 
     wordcloud = "wordcloud.txt"
