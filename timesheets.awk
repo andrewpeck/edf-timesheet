@@ -58,8 +58,8 @@ BEGIN {
       sub("meetings", "meeting", $4)
       sub("meet ", "meeting ", $4)
       sub("Meet ", "meeting ", $4)
-      gsub(" ", "\n", $4)
-      print tolower($4) > "wordcloud.txt"
+      gsub(" ", "\n\n", $4)
+      print tolower($4) "\n" > "wordcloud.txt"
     }
   }
 }
@@ -93,6 +93,8 @@ function asplit (str, arr) {
 }
 
 END {
+
+  # system("sort -o wordcloud.txt wordcloud.txt")
 
   ################################################################################
   print_title("Monthly Accruals")
