@@ -39,6 +39,8 @@ CMS-ETL,6.50,5.00,4.50,3.50,6.00,0,0,Firmware; Meeting; Meeting atc; NIM adapter
 ATLAS-MUON-PHASE2,0,0,0,1.00,0,0,0,Meeting
 ADMIN,0,0,0,0.50,0,0,0,EDF Meeting
 SICK,0,0,0,2.00,0,0,0,Doctor
-LUNCH,0,0,0,0,0.50,0,0,Firmware; RB
 ,31,1*,2*,3*,4*,5*,6*,
+CMS-ETL,7.00,0,0,0,0,0,0,Firmware
+ATLAS-MUON-PHASE2,1.00,0,0,0,0,0,0,Meeting
+ADMIN,1.00,0,0,0,0,0,0,EDF chat
 

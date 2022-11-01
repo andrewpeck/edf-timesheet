@@ -104,7 +104,13 @@ D,Time,Project,Task,Day,Hours
 27,2-4,SICK,Doctor,THU,2.0
 ,,,,,
 28,9-1,ETL,Firmware; RB,FRI,4.0
-28,1-1:30,Lunch,Firmware; RB,FRI,0.5
+28,1-1:30,--,Lunch,FRI,0.5
 28,1:30-3:30,ETL,Firmware; RB,FRI,2.0
+,,,,,
+,,,,,
+31,9-10,ADMIN,EDF chat,MON,1.0
+31,10-1,ETL,Firmware,MON,6.0
+31,1-2,L0MDT,Meeting,MON,1.0
+31,2-3,ETL,Firmware,MON,1.0
 ,,,,,
 
