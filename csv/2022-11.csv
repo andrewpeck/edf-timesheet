@@ -1,0 +1,95 @@
+D,Time,Project,Task,Day,Hours
+1,9-3:30,ETL,RB Firmware,TUE,6.5
+1,3:30-4,ADMIN,EDF chat,TUE,0.5
+1,4-5,ETL,RB Firmware,TUE,1.0
+,,,,,
+2,9-3,ETL,RB Firmware; Meeting,WED,6.0
+2,4-5,APOLLO,IPMC Debug,WED,1.0
+,,,,,
+3,9-5,SICK,Sick,THU,8.0
+,,,,,
+4,9-12,ETL,Slides; Firmware,FRI,3.0
+4,12-1,--,EDF Lunch,FRI,1.0
+4,1-2,ME0SF,Meeting,FRI,1.0
+4,2-4,ETL,Meeting; BV,FRI,2.0
+,,,,,
+,,,,,
+7,9:30-10,ETL,RB,MON,0.5
+7,10-11,ME0BE,Meeting,MON,1.0
+7,11-12,ETL,Firmware,MON,1.0
+7,1-2,L0MDT,Meeting,MON,1.0
+7,2-3,ETL,DAQ,MON,1.0
+,,,,,
+9,9-12,--,Car mechanic,WED,3.0
+9,12-1,ETL,RB,WED,1.0
+9,1-2,ME0OH,Meeting,WED,1.0
+9,2-3,ETL,RB,WED,1.0
+9,3-4,ETL,Meeting,WED,1.0
+,,,,,
+10,9-1,ETL,RB; Firmware,THU,4.0
+10,1-2,APOLLO,IPMC,THU,1.0
+10,2-4,ETL,Firmware; Software,THU,2.0
+,,,,,
+11,9-5,HOLIDAY,Veterans day,FRI,8.0
+,,,,,
+,,,,,
+14,9-10,ETL,RB,MON,1.0
+14,10-11,ME0BE,Meeting,MON,1.0
+14,11-3,ETL,RB,MON,4.0
+,,,,,
+15,9:30-10,ADMIN,EDF Meeting,TUE,0.5
+15,10-11,ETL,RB,TUE,1.0
+,,,,,
+16,9-10,APOLLO,IPMC,WED,1.0
+16,10-1,ETL,Meeting; RB; Slides,WED,3.0
+16,1-2,ADMIN,EDF Meeting,WED,1.0
+16,2-2:30,ETL,Firmware,WED,0.5
+16,2:30-3,ETL,SW,WED,0.5
+,,,,,
+17,9-1,ETL,Firmware; RB,THU,4.0
+17,1-2:30,SICK,Doctors visit,THU,1.5
+17,2:30-3,ETL,Firmware,THU,0.5
+17,3:00-4,DEVEL,Seminar,THU,1.0
+,,,,,
+18,9-12,ETL,Software; Firmware,FRI,3.0
+18,12-1,APOLLO,IPMC,FRI,1.0
+18,1-3,ETL,Software; RB,FRI,2.0
+18,3-4,ETL,Meeting,FRI,1.0
+,,,,,
+,,,,,
+21,9-3,ETL,Firmware,MON,6.0
+21,,,,MON,
+,,,,,
+22,9-10,ETL,Module,TUE,1.0
+22,10-11:30,SICK,Doctors appt,TUE,1.5
+22,11:30-1,ETL,Firmware,TUE,1.5
+22,1-2,ME0SF,Backend,TUE,1.0
+22,2-3,ETL,RB,TUE,1.0
+22,3-4,--,,TUE,1.0
+22,4-5,GE21,Optohybrid,TUE,1.0
+,,,,,
+23,9-5,HOLIDAY,Thanksgiving,WED,8.0
+,,,,,
+24,9-5,HOLIDAY,Thanksgiving,THU,8.0
+,,,,,
+25,9-5,HOLIDAY,Thanksgiving,FRI,8.0
+,,,,,
+,,,,,
+28,10-10:30,ME0BE,Meeting,MON,0.5
+28,10:30-1,ME0SF,Firmware integration,MON,2.5
+28,1-1:30,L0MDT,Meeting,MON,0.5
+28,1:30-3,ETL,RB; BV,MON,1.5
+28,3-4,ME0SF,Slides,MON,1.0
+,,,,,
+29,10-11,ETL,RB,TUE,1.0
+29,11-12:30,APOLLO,Gitlab CI setup,TUE,1.5
+29,12:30-1,ETL,RB,TUE,0.5
+29,1-2:30,ME0BE,Backend,TUE,2.5
+29,2:30-3:30,GE21,Optohybrid,TUE,1.0
+,,,,,
+30,9-10:30,ME0SF,Workshop,WED,1.5
+30,10:30-11,ETL,Meeting,WED,0.5
+30,11-2,GE21,OH Firmware,WED,3.0
+30,2-4,GE11,OH Firmware,WED,2.0
+,,,,,
+
