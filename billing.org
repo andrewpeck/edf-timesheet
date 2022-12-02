@@ -4332,6 +4332,35 @@ Hours   %Tot    Project
 141.50
 #+end_example
 
+*** December 2022
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+
+#+TBLNAME: 2022-12
+|---+---+------+---------+-------------+-----+-------|
+|   | D | Time | Project | Task        | Day | Hours |
+|---+---+------+---------+-------------+-----+-------|
+| # | 1 | 9-12 | GE21    | OH Firmware | THU |   3.0 |
+| # | 1 | 12-2 | GE11    | OH Firmware | THU |   2.0 |
+| # | 1 |  2-3 | ETL     | RB          | THU |   1.0 |
+|---+---+------+---------+-------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"December 2022"))::$7='(org-sbe subtract (a $$3))
+
+#+begin_src emacs-lisp :exports results :results output :var data=2022-12
+(plot-monthly-work-chart data)
+#+end_src
+
+#+RESULTS:
+: Hours   %Tot    Project
+: --------------------------------
+:    1.00   16%         ETL +
+:    2.00   33%        GE11 ++
+:    3.00   50%        GE21 +++
+: --------------------------------
+:   6.00
+
 * Processing Hooks
 #+NAME: update_all_histograms
 #+begin_src emacs-lisp
