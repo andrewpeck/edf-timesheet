@@ -412,14 +412,18 @@ cat accruals.txt | grep ETL
     (_ -1)))
 
 ;; org-get-outline-path t
-(let* ((heading (split-string path " " t))
-       (month (month-to-number (car heading)))
-       (year (string-to-number (cadr heading)))
-       (y (mod year 100))
-       (c (/ year 100)))
-  (if (string= k "") " "
-    (weekday-to-abbr (ymd-to-weekday c y month (string-to-number k)))))
+(defun get-day-of-week (title day)
+  (let* ((heading (split-string title " " t))
+         (month (month-to-number (car heading)))
+         (year (string-to-number (cadr heading)))
+         (y (mod year 100))
+         (c (/ year 100)))
+    (if (string= day "") " "
+      (weekday-to-abbr (ymd-to-weekday c y month (string-to-number day))))))
 
+
+(when (and (boundp 'path) (boundp 'k))
+    (get-day-of-week path k))
 #+END_SRC
 
 #+NAME: subtract
