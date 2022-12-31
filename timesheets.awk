@@ -110,6 +110,7 @@ END {
         rate = 89
 
         printf("%s, %4d-%02d, %6.2f hours, %4.1f\%, $%.2f\n", prj, year, month,
+
                amt,
                amt/sum*100,
                amt * rate) | sortcmd
