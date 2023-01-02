@@ -2637,7 +2637,6 @@ Hours   %Tot    Project
 --------------------------------
 177.50
 #+end_example
-
 ** 2022
 *** January 2022
 #+ATTR_HTML: :border 2 :frame none
@@ -4420,21 +4419,21 @@ Hours   %Tot    Project
 | # | 20 |    10-11 | ETL     | Module       | TUE |   1.0 |
 | # | 20 | 11-12:30 | ETL     | TIP Meeting  | TUE |   1.5 |
 | # |    |          |         |              |     |       |
-| # | 21 |      9-5 | --      | Covid        | WED |   8.0 |
+| # | 21 |      9-5 | SICK    | Covid        | WED |   8.0 |
 | # |    |          |         |              |     |       |
 | # | 22 |      9-5 | --      | FMLA         | THU |   8.0 |
 | # |    |          |         |              |     |       |
-| # | 23 |      9-5 | --      | Covid        | FRI |   8.0 |
+| # | 23 |      9-5 | SICK    | Covid        | FRI |   8.0 |
 | # |    |          |         |              |     |       |
 |---+----+----------+---------+--------------+-----+-------|
 | # |    |          |         |              |     |       |
 | # | 26 |      9-5 | HOLIDAY | Christmas    | MON |   8.0 |
 | # |    |          |         |              |     |       |
-| # | 27 |      9-5 | HOLIDAY | Christmas    | TUE |   8.0 |
+| # | 27 |      9-5 | --      | Christmas    | TUE |   8.0 |
 | # |    |          |         |              |     |       |
 | # | 28 |      9-5 | HOLIDAY | Christmas    | WED |   8.0 |
 | # |    |          |         |              |     |       |
-| # | 29 |      9-5 | HOLIDAY | Christmas    | THU |   8.0 |
+| # | 29 |      9-5 | --      | Christmas    | THU |   8.0 |
 | # |    |          |         |              |     |       |
 | # | 30 |     9-11 | ETL     | Hog          | FRI |   2.0 |
 | # | 30 |    11-12 | ME0     | Hog          | FRI |   1.0 |
@@ -4479,6 +4478,15 @@ Hours   %Tot    Project
 |---+---+------+---------+------------------+-----+-------|
 |   |   |      |         |                  |     |       |
 | # | 2 |  9-2 | ETL     | Emulator adapter | MON |   5.0 |
+| # |   |      |         |                  |     |       |
+| # | 3 |  9-5 | --      | FMLA             | MON |   8.0 |
+| # |   |      |         |                  |     |       |
+| # | 4 |      |         |                  | WED |       |
+| # |   |      |         |                  |     |       |
+| # | 5 |  9-5 | --      | FMLA             | THU |   8.0 |
+| # |   |      |         |                  |     |       |
+| # | 6 |      |         |                  | FRI |       |
+| # |   |      |         |                  |     |       |
 |---+---+------+---------+------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"January 2023"))::$7='(org-sbe subtract (a $$3))
 
