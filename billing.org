@@ -4464,6 +4464,35 @@ Hours   %Tot    Project
 122.00
 #+end_example
 
+** 2023
+*** January 2022
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+
+#+TBLNAME: 2023-01
+|---+---+------+---------+------------------+-----+-------|
+|   | D | Time | Project | Task             | Day | Hours |
+|---+---+------+---------+------------------+-----+-------|
+| # |   |      |         |                  |     |       |
+|---+---+------+---------+------------------+-----+-------|
+|   |   |      |         |                  |     |       |
+| # | 2 |  9-2 | ETL     | Emulator adapter | MON |   5.0 |
+|---+---+------+---------+------------------+-----+-------|
+#+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"January 2023"))::$7='(org-sbe subtract (a $$3))
+
+#+begin_src emacs-lisp :exports results :results output :var data=2023-01
+(plot-monthly-work-chart data)
+#+end_src
+
+#+RESULTS:
+: Hours   %Tot    Project
+: --------------------------------
+:    5.00   100%         ETL +++++
+: --------------------------------
+:   5.00
+
 * Processing Hooks
 #+NAME: update_all_histograms
 #+begin_src emacs-lisp
