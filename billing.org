@@ -4436,10 +4436,13 @@ Hours   %Tot    Project
 | # |    |          |         |              |     |       |
 | # | 29 |      9-5 | HOLIDAY | Christmas    | THU |   8.0 |
 | # |    |          |         |              |     |       |
-| # | 30 |      9-5 | HOLIDAY | Christmas    | FRI |   8.0 |
+| # | 30 |     9-11 | ETL     | Hog          | FRI |   2.0 |
+| # | 30 |    11-12 | ME0     | Hog          | FRI |   1.0 |
+| # | 30 |     12-1 | GE21    | Hog          | FRI |   1.0 |
+| # | 30 |      1-2 | GE11    | Hog          | FRI |   1.0 |
+| # | 30 |      2-4 | L0MDT   | Hog          | FRI |   2.0 |
 | # |    |          |         |              |     |       |
 |---+----+----------+---------+--------------+-----+-------|
-
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"December 2022"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-12
