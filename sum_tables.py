@@ -2,10 +2,11 @@ import csv
 import datetime
 import re
 import sys
+import csv
 import os
 import json
 from collections import OrderedDict
-#import pprint
+import pprint
 #from glob import glob
 
 ONEDAY = datetime.timedelta(days=1)
@@ -208,6 +209,72 @@ def print_org_summary(summaries):
             d = d + ONEDAY # INCREMENT
         print_spacer()
 
+def create_summary_tables(summaries):
+
+    tables = {}
+
+    def weekdays(time):
+        """"""
+        weekrow = [""]
+        d = time
+        # print the day number headings
+        for weekday in range(7):
+            if (d.day < 7 and d.weekday() > weekday):
+                diff = d.weekday() - weekday
+                weekrow.append("%d*" % (d-diff*ONEDAY).day)
+            else:
+                if d.month == month:
+                    weekrow.append("%d" % d.day)
+                else:
+                    weekrow.append("%d*" % d.day)
+                d = d + ONEDAY
+        weekrow.append("")
+        return(weekrow)
+
+    for file in get_csv_files():
+
+        d = datetime.datetime.strptime(file.replace(".csv", ""), "%Y-%m")
+
+        month = d.month
+        year = d.year
+
+        d = datetime.datetime(year, month, 1)
+
+        table = []
+
+        table.append(["%4d-%02d" % (year, month), "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su", "Notes"])
+
+        while d.month == month:
+
+            if (d.day == 1 or d.weekday() == 0):
+                table.append(weekdays(d))
+
+                week = d.isocalendar()[1]
+
+                if week in summaries[year]:
+                    for prj in summaries[year][week]:
+                        if prj == "--":
+                            continue
+                        projectrow = [prj]
+                        for weekday in range(7):
+                            if weekday in summaries[year][week][prj]:
+                                projectrow.append("%3.2f" % summaries[year][week][prj][weekday])
+                            else:
+                                projectrow.append("0")
+                        projectrow.append(summaries[year][week][prj]["notes"])
+                        table.append(projectrow)
+
+            d = d + ONEDAY # INCREMENT
+
+        table.append("")
+        csvfile = "csv/" + os.path.splitext(file)[0] + "-Summary.csv"
+        with open(csvfile, 'w') as f:
+            # using csv.writer method from CSV package
+            write = csv.writer(f, lineterminator="\n")
+            write.writerows(table)
+
+        tables["%4d-%02d" % (year, month)]=table
+    return tables
 
 def parse_projects():
     """Reads in Org exported CSV files and converts it into a
@@ -230,9 +297,6 @@ def parse_projects():
 
 
 if __name__ == "__main__":
-    if sys.version_info < (3, 0, 0):
-        print(__file__ + ' requires Python 3, while Python ' +
-              str(sys.version[0] + ' was detected. Terminating. '))
-        sys.exit(1)
-    #print(json.dumps(project_to_summary(parse_projects()), indent=1))
-    print_org_summary(project_to_summary(parse_projects()))
+    summaries=project_to_summary(parse_projects())
+    tables=create_summary_tables(summaries)
+    # print_org_summary(project_to_summary(parse_projects()))

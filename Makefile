@@ -10,16 +10,7 @@ export_org_tables:
 	@mv *.csv csv/
 
 db_tables: sum_tables.py
-	@python sum_tables.py > summary_tables.org
-	@bash ./beautify_table.sh summary_tables.org
-	@cat summary_tables.org
-	@bash export_org_tables.sh summary_tables.org
-	@mv *.csv csv/
-	@scp csv/*-*Summary.csv ohm:~/billing/
-
-# summary_tables_html: summary_tables
-# 	@bash org_to_html.sh summary_tables.org
-#@scp summary_tables.html ohm:~/public_html/notes/hours.html
+	@python sum_tables.py
 
 summary:
 	@awk -f timesheets.awk csv/20[0-9][0-9]-[0-9][0-9].csv
