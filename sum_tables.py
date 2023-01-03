@@ -142,73 +142,6 @@ def project_to_summary(projects):
 
     return summaries
 
-
-def print_org_summary(summaries):
-
-    def print_spacer():
-        spacer = "|----------------------+-------+-------+-------+-------+-------+-------+-------+-------|"
-        print(spacer)
-
-    def print_weekdays(time):
-        """"""
-        d = time
-        # print the day number headings
-        princ("| %20s |" % "")
-        for weekday in range(7):
-            if (d.day < 7 and d.weekday() > weekday):
-                diff = d.weekday() - weekday
-                princ("% 6d*|" % (d-diff*ONEDAY).day)
-            else:
-                if d.month == month:
-                    princ("% 6d |" % d.day)
-                else:
-                    princ("% 6d*|" % d.day)
-                d = d + ONEDAY
-        princ("       |\n")
-
-    print("#+TITLE: Hours")
-
-    for file in get_csv_files():
-
-        d = datetime.datetime.strptime(file.replace(".csv", ""), "%Y-%m")
-
-        month = d.month
-        year = d.year
-
-        d = datetime.datetime(year, month, 1)
-
-        print("")
-        print("* %4d-%02d" % (year, month))
-        print("#+TBLNAME: %4d-%02d-Summary" % (year, month))
-        print("| %20s |    Mo |    Tu |    We |    Th |    Fr |    Sa |    Su | Notes |" %
-              ("%04d-%02d" % (year, month)))
-        print_spacer()
-
-        while d.month == month:
-
-            if (d.day == 1 or d.weekday() == 0):
-                print_weekdays(d)
-                print_spacer()
-                week = d.isocalendar()[1]
-
-                if week in summaries[year]:
-                    for prj in summaries[year][week]:
-                        if prj == "--":
-                            continue
-                        princ("| %20s |" % prj)
-                        for weekday in range(7):
-                            if weekday in summaries[year][week][prj]:
-                                princ(" % 3.2f |" % summaries[year][week][prj][weekday])
-                            else:
-                                princ("     0 |")
-                        princ("%s | \n" % summaries[year][week][prj]["notes"])
-
-            if d.weekday() == 6:
-                print_spacer()
-
-            d = d + ONEDAY # INCREMENT
-        print_spacer()
-
 def create_summary_tables(summaries):
 
     tables = {}
@@ -295,8 +228,6 @@ def parse_projects():
 
     return projects
 
-
 if __name__ == "__main__":
     summaries=project_to_summary(parse_projects())
     tables=create_summary_tables(summaries)
-    # print_org_summary(project_to_summary(parse_projects()))
