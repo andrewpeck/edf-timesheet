@@ -131,7 +131,7 @@ Hours   %Tot             Project
 *** 2022 Work
 
 #+begin_src emacs-lisp :exports both :results output
-(plot-work-chart-in-date-range "2022 Work" :start-year 2022 :start-month 01 :end-year 2021 :end-month 12 :short t)
+(plot-work-chart-in-date-range "2022 Work" :start-year 2022 :start-month 01 :end-year 2022 :end-month 12 :short t)
 #+end_src
 
 #+RESULTS:
@@ -142,14 +142,14 @@ Hours   %Tot    Project
 --------------------------------
    3.00    0%     TRACKER
   38.50    3%         CSC ++++
-  77.00    6%        GE11 +++++++
-  91.25    7%      APOLLO +++++++++
-  92.00    7%        GE21 +++++++++
- 151.00   12%         ME0 ++++++++++++++
- 194.00   16%       L0MDT ++++++++++++++++++
- 535.75   45%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
+  78.00    6%        GE11 +++++++
+  91.25    7%      APOLLO ++++++++
+  93.00    7%        GE21 +++++++++
+ 152.00   12%         ME0 ++++++++++++++
+ 196.00   16%       L0MDT ++++++++++++++++++
+ 537.75   45%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
 --------------------------------
-1182.50
+1189.50
 #+end_example
 
 *** Monthly

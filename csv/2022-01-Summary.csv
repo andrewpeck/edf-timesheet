@@ -1,5 +1,11 @@
 2022-01,Mo,Tu,We,Th,Fr,Sa,Su,Notes
 ,27*,28*,29*,30*,31*,1,2,
+CMS-EMU-UPGRADE-GE21,0,0,0,0,1.00,0,0,Hog
+CMS-EMU-OPS-GE11,0,0,0,0,1.00,0,0,Hog
+CMS-ETL,0,0,0,0,2.00,0,0,Hog
+CMS-EMU-UPGRADE-ME0,0,0,0,0,1.00,0,0,Hog
+ATLAS-MUON-PHASE2,0,0,0,0,2.00,0,0,Hog
+HOLIDAY,8.00,0,8.00,0,0,0,0,Christmas
 ,3,4,5,6,7,8,9,
 VAC,8.00,0,0,0,0,0,0,Day off
 ADMIN,0,2.00,0,1.50,0,0,0,EDF Chat; Email cleanup; Furniture
