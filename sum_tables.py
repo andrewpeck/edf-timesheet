@@ -11,44 +11,29 @@ import pprint
 
 ONEDAY = datetime.timedelta(days=1)
 
-
 def get_csv_files():
     "Get a list of CSV files matching the date format e.g. 2021-09.csv"
     res = [f for f in os.listdir("./csv/") if re.search(r'.[0-9]+-[0-9]+\.csv$', f)]
     res.sort()
     return res
 
-
-def princ(string):
-    """Wrapper to print without a newine... uhg"""
-    print(string, end='')
-
-
 def substitute_project_name(name):
     "Replace some alternative project names with the canconical names"
 
-    def subst(name, vara, varb):
-        if name == vara:
-            return varb
-        return name
+    import re
 
     """Common substitions from shorthand to EDF database names"""
-    name = subst(name, "ETL", "CMS-ETL")
-    name = subst(name, "ETL-RB", "CMS-ETL")
-    name = subst(name, "ETL-MODULE", "CMS-ETL")
-    name = subst(name, "GE21", "CMS-EMU-UPGRADE-GE21")
-    name = subst(name, "CSC", "CMS-EMU-OPS-CSC")
-    name = subst(name, "GE11", "CMS-EMU-OPS-GE11")
-    name = subst(name, "ME0", "CMS-EMU-UPGRADE-ME0")
-    name = subst(name, "ME0OH", "CMS-EMU-UPGRADE-ME0")
-    name = subst(name, "ME0SF", "CMS-EMU-UPGRADE-ME0")
-    name = subst(name, "ME0BE", "CMS-EMU-UPGRADE-ME0")
-    name = subst(name, "IPMC", "CMS-PIXEL-DTC")
-    name = subst(name, "ATLAS", "ATLAS-MUON-PHASE2")
-    name = subst(name, "L0MDT", "ATLAS-MUON-PHASE2")
-    name = subst(name, "APOLLO-IPMC", "APOLLO")
-    name = subst(name, "TRACKER", "CMS-PIXEL-DTC")
-    name = subst(name, "VACATION", "VAC")
+    name = re.sub(".*ETL.*", "ETL", name)
+    name = re.sub(".*ME0.*", "ME0", name)
+    name = re.sub(".*CSC.*", "CMS-EMU-OPS-CSC", name)
+    name = re.sub(".*GE21.*", "CMS-EMU-UPGRADE-GE21", name)
+    name = re.sub(".*GE11.*", "CMS-EMU-OPS-GE11", name)
+    name = re.sub(".*IPMC.*", "CMS-PIXEL-DTC", name)
+    name = re.sub(".*ATLAS.*", "ATLAS-MUON-PHASE2", name)
+    name = re.sub(".*L0MDT.*", "ATLAS-MUON-PHASE2", name)
+    name = re.sub(".*APOLLO-IPMC.*", "APOLLO", name)
+    name = re.sub(".*TRACKER.*", "CMS-PIXEL-DTC", name)
+    name = re.sub(".*VACATION.*", "VAC", name)
     return name
 
 
