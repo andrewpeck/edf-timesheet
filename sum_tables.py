@@ -119,14 +119,12 @@ def project_to_summary(projects):
                 notes = re.sub(r"\s+", " ", notes)  # REMOVE DUPLICATE SPACES
                 notes = re.sub(r", ", ";", notes)  # CONVERT COMMAS TO SEMICOLONS
                 notes = re.sub(r"; ", ";", notes)  # REMOVE SPACE SEPARATORS
-
                 notes = re.split(";", notes)
                 notes.sort()
                 notes = list(set(notes))  # REMOVE DUPLICATES
                 notes.sort()
-                notes = " ".join(
-                    [str(elem) + ";" for elem in notes]
-                )  # CONVERT FROM LIST TO STRING
+                # CONVERT FROM LIST TO STRING
+                notes = " ".join([str(elem) + ";" for elem in notes])
                 notes = re.sub(r"^;\s*", "", notes)  # REMOVE THE FIRST SEMICOLON
                 notes = re.sub(r";\s*$", "", notes)  # REMOVE THE LAST SEMICOLON
                 summaries[year][week][prj]["notes"] = notes
@@ -167,19 +165,8 @@ def create_summary_tables(summaries):
 
         table = []
 
-        table.append(
-            [
-                "%4d-%02d" % (year, month),
-                "Mo",
-                "Tu",
-                "We",
-                "Th",
-                "Fr",
-                "Sa",
-                "Su",
-                "Notes",
-            ]
-        )
+        table.append(["%4d-%02d" % (year, month),
+                      "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su", "Notes",])
 
         while d.month == month:
 
