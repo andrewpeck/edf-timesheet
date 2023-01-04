@@ -76,4 +76,6 @@ D,Time,Project,Task,Day,Hours
 30,1-2,GE11,Hog,FRI,1.0
 30,2-4,L0MDT,Hog,FRI,2.0
 ,,,,,
+31,9-2,ETL,Emulator adapter,SAT,5.0
+,,,,,
 

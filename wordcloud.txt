@@ -8082,3 +8082,19 @@ emulator
 
 adapter
 
+new
+
+years
+
+firmware
+
+meeting
+
+edf
+
+meeting
+
+etroc
+
+card
+

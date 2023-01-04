@@ -1,0 +1,16 @@
+D,Time,Project,Task,Day,Hours
+,,,,,
+2,9-5,HOLIDAY,New years,MON,8.0
+,,,,,
+3,9-5,--,FMLA,TUE,8.0
+3,11-12,ME0,Firmware Meeting,TUE,1.0
+3,1-2,ADMIN,EDF Meeting,TUE,1.0
+3,2-4:30,ETL,ETROC Card,TUE,2.5
+,,,,,
+4,,,,WED,
+,,,,,
+5,9-5,--,FMLA,THU,8.0
+,,,,,
+6,,,,FRI,
+,,,,,
+

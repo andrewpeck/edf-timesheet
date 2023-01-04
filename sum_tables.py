@@ -7,15 +7,18 @@ import os
 import json
 from collections import OrderedDict
 import pprint
-#from glob import glob
+
+# from glob import glob
 
 ONEDAY = datetime.timedelta(days=1)
 
+
 def get_csv_files():
     "Get a list of CSV files matching the date format e.g. 2021-09.csv"
-    res = [f for f in os.listdir("./csv/") if re.search(r'.[0-9]+-[0-9]+\.csv$', f)]
+    res = [f for f in os.listdir("./csv/") if re.search(r".[0-9]+-[0-9]+\.csv$", f)]
     res.sort()
     return res
+
 
 def substitute_project_name(name):
     "Replace some alternative project names with the canconical names"
@@ -23,8 +26,8 @@ def substitute_project_name(name):
     import re
 
     """Common substitions from shorthand to EDF database names"""
-    name = re.sub(".*ETL.*", "ETL", name)
-    name = re.sub(".*ME0.*", "ME0", name)
+    name = re.sub(".*ETL.*", "CMS-ETL", name)
+    name = re.sub(".*ME0.*", "CMS-EMU-UPGRADE-ME0", name)
     name = re.sub(".*CSC.*", "CMS-EMU-OPS-CSC", name)
     name = re.sub(".*GE21.*", "CMS-EMU-UPGRADE-GE21", name)
     name = re.sub(".*GE11.*", "CMS-EMU-OPS-GE11", name)
@@ -47,7 +50,7 @@ def csv_to_dict(file):
 
         table = csv.reader(csvfile, delimiter=",")
         for row in table:
-            if (len(row) > 0):
+            if len(row) > 0:
                 if is_float(row[5]):
                     day = int(row[0])
                     project = substitute_project_name(row[2].upper())
@@ -74,8 +77,9 @@ def is_float(string):
     except ValueError:
         return False
 
+
 def project_to_summary(projects):
-    ""
+    """"""
 
     summaries = OrderedDict()
 
@@ -113,19 +117,22 @@ def project_to_summary(projects):
 
                 # conditioning of the text
                 notes = re.sub(r"\s+", " ", notes)  # REMOVE DUPLICATE SPACES
-                notes = re.sub(r", ", ";", notes)   # CONVERT COMMAS TO SEMICOLONS
+                notes = re.sub(r", ", ";", notes)  # CONVERT COMMAS TO SEMICOLONS
                 notes = re.sub(r"; ", ";", notes)  # REMOVE SPACE SEPARATORS
 
                 notes = re.split(";", notes)
                 notes.sort()
                 notes = list(set(notes))  # REMOVE DUPLICATES
                 notes.sort()
-                notes = ' '.join([str(elem)+";" for elem in notes])  # CONVERT FROM LIST TO STRING
+                notes = " ".join(
+                    [str(elem) + ";" for elem in notes]
+                )  # CONVERT FROM LIST TO STRING
                 notes = re.sub(r"^;\s*", "", notes)  # REMOVE THE FIRST SEMICOLON
                 notes = re.sub(r";\s*$", "", notes)  # REMOVE THE LAST SEMICOLON
                 summaries[year][week][prj]["notes"] = notes
 
     return summaries
+
 
 def create_summary_tables(summaries):
 
@@ -137,9 +144,9 @@ def create_summary_tables(summaries):
         d = time
         # print the day number headings
         for weekday in range(7):
-            if (d.day < 7 and d.weekday() > weekday):
+            if d.day < 7 and d.weekday() > weekday:
                 diff = d.weekday() - weekday
-                weekrow.append("%d*" % (d-diff*ONEDAY).day)
+                weekrow.append("%d*" % (d - diff * ONEDAY).day)
             else:
                 if d.month == month:
                     weekrow.append("%d" % d.day)
@@ -147,7 +154,7 @@ def create_summary_tables(summaries):
                     weekrow.append("%d*" % d.day)
                 d = d + ONEDAY
         weekrow.append("")
-        return(weekrow)
+        return weekrow
 
     for file in get_csv_files():
 
@@ -160,11 +167,23 @@ def create_summary_tables(summaries):
 
         table = []
 
-        table.append(["%4d-%02d" % (year, month), "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su", "Notes"])
+        table.append(
+            [
+                "%4d-%02d" % (year, month),
+                "Mo",
+                "Tu",
+                "We",
+                "Th",
+                "Fr",
+                "Sa",
+                "Su",
+                "Notes",
+            ]
+        )
 
         while d.month == month:
 
-            if (d.day == 1 or d.weekday() == 0):
+            if d.day == 1 or d.weekday() == 0:
                 table.append(weekdays(d))
 
                 week = d.isocalendar()[1]
@@ -176,23 +195,26 @@ def create_summary_tables(summaries):
                         projectrow = [prj]
                         for weekday in range(7):
                             if weekday in summaries[year][week][prj]:
-                                projectrow.append("%3.2f" % summaries[year][week][prj][weekday])
+                                projectrow.append(
+                                    "%3.2f" % summaries[year][week][prj][weekday]
+                                )
                             else:
                                 projectrow.append("0")
                         projectrow.append(summaries[year][week][prj]["notes"])
                         table.append(projectrow)
 
-            d = d + ONEDAY # INCREMENT
+            d = d + ONEDAY  # INCREMENT
 
         table.append("")
         csvfile = "csv/" + os.path.splitext(file)[0] + "-Summary.csv"
-        with open(csvfile, 'w') as f:
+        with open(csvfile, "w") as f:
             # using csv.writer method from CSV package
             write = csv.writer(f, lineterminator="\n")
             write.writerows(table)
 
-        tables["%4d-%02d" % (year, month)]=table
+        tables["%4d-%02d" % (year, month)] = table
     return tables
+
 
 def parse_projects():
     """Reads in Org exported CSV files and converts it into a
@@ -206,13 +228,14 @@ def parse_projects():
         month = d.month
         year = d.year
 
-        if (year not in projects):
+        if year not in projects:
             projects[year] = OrderedDict()
 
         projects[year][month] = csv_to_dict("csv/" + file)
 
     return projects
 
+
 if __name__ == "__main__":
-    summaries=project_to_summary(parse_projects())
-    tables=create_summary_tables(summaries)
+    summaries = project_to_summary(parse_projects())
+    tables = create_summary_tables(summaries)

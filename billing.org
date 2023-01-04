@@ -4357,91 +4357,93 @@ Hours   %Tot    Project
 #+ATTR_HTML: :border 2 :frame none
 
 #+TBLNAME: 2022-12
-|---+----+----------+---------+--------------+-----+-------|
-|   |  D |     Time | Project | Task         | Day | Hours |
-|---+----+----------+---------+--------------+-----+-------|
-| # |  1 |     9-12 | GE21    | OH Firmware  | THU |   3.0 |
-| # |  1 |     12-2 | GE11    | OH Firmware  | THU |   2.0 |
-| # |  1 |      2-3 | ETL     | RB           | THU |   1.0 |
-| # |    |          |         |              |     |       |
-| # |  2 |     9-10 | ETL     | RB           | FRI |   1.0 |
-| # |  2 |    10-12 | GE21    | CVP13        | FRI |   2.0 |
-| # |  2 |     12-2 | GE11    | CVP13        | FRI |   2.0 |
-| # |  2 |      2-4 | ME0     | CVP13        | FRI |   2.0 |
-| # |    |          |         |              |     |       |
-|---+----+----------+---------+--------------+-----+-------|
-| # |    |          |         |              |     |       |
-| # |  5 |     9-10 | GE21    | OH Firmware  | MON |   1.0 |
-| # |  5 |    10-11 | ME0     | Meeting      | MON |   1.0 |
-| # |  5 |     12-4 | ETL     | Bias voltage | MON |   4.0 |
-| # |  5 |      4-5 | GE11    | OH Firmware  | MON |   1.0 |
-| # |    |          |         |              |     |       |
-| # |  6 |    10-11 | ETL     | Firmware     | TUE |   1.0 |
-| # |  6 |  11-1:30 | GE21    | CVP13        | TUE |   2.5 |
-| # |  6 |   1:30-4 | ME0     | CVP13        | TUE |   2.5 |
-| # |  6 |      4-5 | GE11    | CVP13        | TUE |   1.0 |
-| # |    |          |         |              |     |       |
-| # |  7 |     9-12 | ME0     | CVP13 Setup  | WED |   3.0 |
-| # |  7 |     12-2 | GE21    | OH Firmware  | WED |   2.0 |
-| # |  7 |      2-4 | GE11    | OH Firmware  | WED |   2.0 |
-| # |    |          |         |              |     |       |
-| # |  8 |      9-5 | --      | FMLA         | THU |   8.0 |
-| # |    |          |         |              |     |       |
-| # |  9 |     9-12 | ME0     | CVP13 Setup  | FRI |   3.0 |
-| # |  9 |     12-2 | GE21    | OH Firmware  | FRI |   2.0 |
-| # |  9 |      2-3 | GE11    | OH Firmware  | FRI |   1.0 |
-| # |  9 |      3-5 | ETL     | Firmware     | FRI |   2.0 |
-| # |    |          |         |              |     |       |
-|---+----+----------+---------+--------------+-----+-------|
-| # |    |          |         |              |     |       |
-| # | 12 |     9-12 | ME0     | CVP13 Setup  | MON |   3.0 |
-| # | 12 |     12-2 | GE21    | OH Firmware  | MON |   2.0 |
-| # | 12 |      2-4 | GE11    | OH Firmware  | MON |   2.0 |
-| # | 12 |      4-5 | ETL     | Meeting      | MON |   1.0 |
-| # |    |          |         |              |     |       |
-| # | 13 |    10-11 | ETL     | Hog          | TUE |   1.0 |
-| # | 13 |     9-10 | --      | FMLA         | TUE |   1.0 |
-| # | 13 |     11-5 | --      | FMLA         | TUE |   6.0 |
-| # |    |          |         |              |     |       |
-| # | 14 | 11-12:30 | L0MDT   | HAL meeting  | WED |   1.5 |
-| # | 14 |      1-2 | ME0     | Meeting      | WED |   1.0 |
-| # | 14 |      2-5 | SICK    | COVID        | WED |   3.0 |
-| # |    |          |         |              |     |       |
-| # | 15 |      9-5 | SICK    | COVID        | THU |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 16 |      9-5 | SICK    | COVID        | FRI |   8.0 |
-| # |    |          |         |              |     |       |
-|---+----+----------+---------+--------------+-----+-------|
-| # |    |          |         |              |     |       |
-| # | 19 |      9-5 | SICK    | COVID        | MON |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 20 |      9-5 | --      | FMLA         | TUE |   8.0 |
-| # | 20 |    10-11 | ETL     | Module       | TUE |   1.0 |
-| # | 20 | 11-12:30 | ETL     | TIP Meeting  | TUE |   1.5 |
-| # |    |          |         |              |     |       |
-| # | 21 |      9-5 | SICK    | Covid        | WED |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 22 |      9-5 | --      | FMLA         | THU |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 23 |      9-5 | SICK    | Covid        | FRI |   8.0 |
-| # |    |          |         |              |     |       |
-|---+----+----------+---------+--------------+-----+-------|
-| # |    |          |         |              |     |       |
-| # | 26 |      9-5 | HOLIDAY | Christmas    | MON |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 27 |      9-5 | --      | Christmas    | TUE |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 28 |      9-5 | HOLIDAY | Christmas    | WED |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 29 |      9-5 | --      | Christmas    | THU |   8.0 |
-| # |    |          |         |              |     |       |
-| # | 30 |     9-11 | ETL     | Hog          | FRI |   2.0 |
-| # | 30 |    11-12 | ME0     | Hog          | FRI |   1.0 |
-| # | 30 |     12-1 | GE21    | Hog          | FRI |   1.0 |
-| # | 30 |      1-2 | GE11    | Hog          | FRI |   1.0 |
-| # | 30 |      2-4 | L0MDT   | Hog          | FRI |   2.0 |
-| # |    |          |         |              |     |       |
-|---+----+----------+---------+--------------+-----+-------|
+|---+----+----------+---------+------------------+-----+-------|
+|   |  D |     Time | Project | Task             | Day | Hours |
+|---+----+----------+---------+------------------+-----+-------|
+| # |  1 |     9-12 | GE21    | OH Firmware      | THU |   3.0 |
+| # |  1 |     12-2 | GE11    | OH Firmware      | THU |   2.0 |
+| # |  1 |      2-3 | ETL     | RB               | THU |   1.0 |
+| # |    |          |         |                  |     |       |
+| # |  2 |     9-10 | ETL     | RB               | FRI |   1.0 |
+| # |  2 |    10-12 | GE21    | CVP13            | FRI |   2.0 |
+| # |  2 |     12-2 | GE11    | CVP13            | FRI |   2.0 |
+| # |  2 |      2-4 | ME0     | CVP13            | FRI |   2.0 |
+| # |    |          |         |                  |     |       |
+|---+----+----------+---------+------------------+-----+-------|
+| # |    |          |         |                  |     |       |
+| # |  5 |     9-10 | GE21    | OH Firmware      | MON |   1.0 |
+| # |  5 |    10-11 | ME0     | Meeting          | MON |   1.0 |
+| # |  5 |     12-4 | ETL     | Bias voltage     | MON |   4.0 |
+| # |  5 |      4-5 | GE11    | OH Firmware      | MON |   1.0 |
+| # |    |          |         |                  |     |       |
+| # |  6 |    10-11 | ETL     | Firmware         | TUE |   1.0 |
+| # |  6 |  11-1:30 | GE21    | CVP13            | TUE |   2.5 |
+| # |  6 |   1:30-4 | ME0     | CVP13            | TUE |   2.5 |
+| # |  6 |      4-5 | GE11    | CVP13            | TUE |   1.0 |
+| # |    |          |         |                  |     |       |
+| # |  7 |     9-12 | ME0     | CVP13 Setup      | WED |   3.0 |
+| # |  7 |     12-2 | GE21    | OH Firmware      | WED |   2.0 |
+| # |  7 |      2-4 | GE11    | OH Firmware      | WED |   2.0 |
+| # |    |          |         |                  |     |       |
+| # |  8 |      9-5 | --      | FMLA             | THU |   8.0 |
+| # |    |          |         |                  |     |       |
+| # |  9 |     9-12 | ME0     | CVP13 Setup      | FRI |   3.0 |
+| # |  9 |     12-2 | GE21    | OH Firmware      | FRI |   2.0 |
+| # |  9 |      2-3 | GE11    | OH Firmware      | FRI |   1.0 |
+| # |  9 |      3-5 | ETL     | Firmware         | FRI |   2.0 |
+| # |    |          |         |                  |     |       |
+|---+----+----------+---------+------------------+-----+-------|
+| # |    |          |         |                  |     |       |
+| # | 12 |     9-12 | ME0     | CVP13 Setup      | MON |   3.0 |
+| # | 12 |     12-2 | GE21    | OH Firmware      | MON |   2.0 |
+| # | 12 |      2-4 | GE11    | OH Firmware      | MON |   2.0 |
+| # | 12 |      4-5 | ETL     | Meeting          | MON |   1.0 |
+| # |    |          |         |                  |     |       |
+| # | 13 |    10-11 | ETL     | Hog              | TUE |   1.0 |
+| # | 13 |     9-10 | --      | FMLA             | TUE |   1.0 |
+| # | 13 |     11-5 | --      | FMLA             | TUE |   6.0 |
+| # |    |          |         |                  |     |       |
+| # | 14 | 11-12:30 | L0MDT   | HAL meeting      | WED |   1.5 |
+| # | 14 |      1-2 | ME0     | Meeting          | WED |   1.0 |
+| # | 14 |      2-5 | SICK    | COVID            | WED |   3.0 |
+| # |    |          |         |                  |     |       |
+| # | 15 |      9-5 | SICK    | COVID            | THU |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 16 |      9-5 | SICK    | COVID            | FRI |   8.0 |
+| # |    |          |         |                  |     |       |
+|---+----+----------+---------+------------------+-----+-------|
+| # |    |          |         |                  |     |       |
+| # | 19 |      9-5 | SICK    | COVID            | MON |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 20 |      9-5 | --      | FMLA             | TUE |   8.0 |
+| # | 20 |    10-11 | ETL     | Module           | TUE |   1.0 |
+| # | 20 | 11-12:30 | ETL     | TIP Meeting      | TUE |   1.5 |
+| # |    |          |         |                  |     |       |
+| # | 21 |      9-5 | SICK    | Covid            | WED |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 22 |      9-5 | --      | FMLA             | THU |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 23 |      9-5 | SICK    | Covid            | FRI |   8.0 |
+| # |    |          |         |                  |     |       |
+|---+----+----------+---------+------------------+-----+-------|
+| # |    |          |         |                  |     |       |
+| # | 26 |      9-5 | HOLIDAY | Christmas        | MON |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 27 |      9-5 | --      | Christmas        | TUE |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 28 |      9-5 | HOLIDAY | Christmas        | WED |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 29 |      9-5 | --      | Christmas        | THU |   8.0 |
+| # |    |          |         |                  |     |       |
+| # | 30 |     9-11 | ETL     | Hog              | FRI |   2.0 |
+| # | 30 |    11-12 | ME0     | Hog              | FRI |   1.0 |
+| # | 30 |     12-1 | GE21    | Hog              | FRI |   1.0 |
+| # | 30 |      1-2 | GE11    | Hog              | FRI |   1.0 |
+| # | 30 |      2-4 | L0MDT   | Hog              | FRI |   2.0 |
+| # |    |          |         |                  |     |       |
+| # | 31 |      9-2 | ETL     | Emulator adapter | SAT |   5.0 |
+| # |    |          |         |                  |     |       |
+|---+----+----------+---------+------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"December 2022"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-12
@@ -4464,30 +4466,31 @@ Hours   %Tot    Project
 #+end_example
 
 ** 2023
-*** January 2022
+*** January 2023
 :PROPERTIES:
 :VISIBILITY: showall
 :END:
 #+ATTR_HTML: :border 2 :frame none
 
 #+TBLNAME: 2023-01
-|---+---+------+---------+------------------+-----+-------|
-|   | D | Time | Project | Task             | Day | Hours |
-|---+---+------+---------+------------------+-----+-------|
-| # |   |      |         |                  |     |       |
-|---+---+------+---------+------------------+-----+-------|
-|   |   |      |         |                  |     |       |
-| # | 2 |  9-2 | ETL     | Emulator adapter | MON |   5.0 |
-| # |   |      |         |                  |     |       |
-| # | 3 |  9-5 | --      | FMLA             | MON |   8.0 |
-| # |   |      |         |                  |     |       |
-| # | 4 |      |         |                  | WED |       |
-| # |   |      |         |                  |     |       |
-| # | 5 |  9-5 | --      | FMLA             | THU |   8.0 |
-| # |   |      |         |                  |     |       |
-| # | 6 |      |         |                  | FRI |       |
-| # |   |      |         |                  |     |       |
-|---+---+------+---------+------------------+-----+-------|
+|---+---+--------+---------+------------------+-----+-------|
+|   | D |   Time | Project | Task             | Day | Hours |
+|---+---+--------+---------+------------------+-----+-------|
+| # |   |        |         |                  |     |       |
+| # | 2 |    9-5 | HOLIDAY | New years        | MON |   8.0 |
+| # |   |        |         |                  |     |       |
+| # | 3 |    9-5 | --      | FMLA             | TUE |   8.0 |
+| # | 3 |  11-12 | ME0     | Firmware Meeting | TUE |   1.0 |
+| # | 3 |    1-2 | ADMIN   | EDF Meeting      | TUE |   1.0 |
+| # | 3 | 2-4:30 | ETL     | ETROC Card       | TUE |   2.5 |
+| # |   |        |         |                  |     |       |
+| # | 4 |        |         |                  | WED |       |
+| # |   |        |         |                  |     |       |
+| # | 5 |    9-5 | --      | FMLA             | THU |   8.0 |
+| # |   |        |         |                  |     |       |
+| # | 6 |        |         |                  | FRI |       |
+| # |   |        |         |                  |     |       |
+|---+---+--------+---------+------------------+-----+-------|
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"January 2023"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2023-01
@@ -4497,9 +4500,12 @@ Hours   %Tot    Project
 #+RESULTS:
 : Hours   %Tot    Project
 : --------------------------------
-:    5.00   100%         ETL +++++
+:    1.00    8%       ADMIN +
+:    1.00    8%         ME0 +
+:    2.50   20%         ETL ++
+:    8.00   64%     HOLIDAY ++++++++
 : --------------------------------
-:   5.00
+:  12.50
 
 * Goals
 ** 2021
@@ -4621,20 +4627,19 @@ Week 2022-11-48: 135.4% (32 hours) +++++++++++++++++++++++++++
 Week 2022-12-49: 120.8% (29 hours) ++++++++++++++++++++++++
 Week 2022-12-50: 127.1% (30 hours) +++++++++++++++++++++++++
 Week 2022-12-51: 110.4% (26 hours) ++++++++++++++++++++++
-Week 2022-12-52:  95.8% (23 hours) +++++++++++++++++++|
-Week 2023-01-01:  12.5% ( 5 hours) ++                 |
+Week 2022-12-52: 116.7% (28 hours) +++++++++++++++++++++++
 #+end_example
 
 ** 2023
 #+begin_src elisp :results output
 (let ((year (nth 5 (decode-time (current-time))))
-       (month (nth 5 (decode-time (current-time))))
+      (month (nth 4 (decode-time (current-time)))))
 
-(plot-weekly-work-goals-for-date-range 2023 1 year month)
+  (plot-weekly-work-goals-for-date-range 2023 1 year month))
 #+end_src
 
 #+RESULTS:
-: Week 2023-01-01:  12.5% ( 5 hours) ++                 |
+: Week 2023-01-01:  31.2% (12 hours) ++++++             |
 
 * Processing Hooks
 #+NAME: update_all_histograms
