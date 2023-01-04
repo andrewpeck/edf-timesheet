@@ -100,7 +100,10 @@ END {
   print_title("Monthly Accruals")
   ################################################################################
 
-  sortcmd="sort -t',' -n -k1  | column -t -s \",\" | tee accruals.txt"
+  printf("Project Date     Hours Prcnt  Cost\n") | "tee accruals.txt"
+  close("tee accruals.txt")
+
+  sortcmd="sort -t',' -n -k1 >> accruals.txt"
   for (prj in sum_by_prj_yy_mm) {
     for (year in sum_by_prj_yy_mm[prj]) {
       for (month in sum_by_prj_yy_mm[prj][year]) {
@@ -109,11 +112,8 @@ END {
         sum = sum_by_yy_mm[year][month];
         rate = 89
 
-        printf("%s, %4d-%02d, %6.2f hours, %4.1f\%, $%.2f\n", prj, year, month,
-
-               amt,
-               amt/sum*100,
-               amt * rate) | sortcmd
+        printf("%-7s %4d-%02d %6.2f %4.1f%%  $%.2f\n",
+               prj, year, month, amt, amt/sum*100, amt * rate) | sortcmd
       }
     }
   }

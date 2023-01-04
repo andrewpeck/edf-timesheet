@@ -5,11 +5,9 @@ paper log which may eventually be converted to this electronic format.
 
 [[file:timesheet_pi.svg]]
 
-[[file:timesheetmonthly.svg]]
+[[file:timesheettotals.svg]]
 
 [[file:timesheetyearly.svg]]
-
-[[file:timesheettotals.svg]]
 
 #+attr_html: :width 720px
 [[file:wordcloud.png]]
