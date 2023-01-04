@@ -3,7 +3,7 @@
 all: export_org_tables db_tables summary plots
 
 plots:
-	@python3 timesheets.py
+	@clj plot-timesheets.clj
 
 export_org_tables:
 	@bash export_org_tables.sh billing.org

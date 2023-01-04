@@ -1,17 +1,23 @@
+;;------------------------------------------------------------------------------
+;; Deps + Constants
+;;------------------------------------------------------------------------------
+
 (ns plot-timesheets
   (:require [applied-science.darkstar :as ds]
             [clojure.data.json :as json]
-            [clojure.data.csv :as csv]
             [clojure.edn :as edn]
             [clojure.string :as str]))
 
-;; at the REPL
-;; (use 'clojure.string)
 (use '[clojure.pprint :only (pprint)])
 (use '[clojure.java.shell :only [sh]])
+(use '[clojure.string :only [split]])
 
 (def plt-width 800)
 (def plt-height 600)
+
+;;------------------------------------------------------------------------------
+;; Utility Functions
+;;------------------------------------------------------------------------------
 
 (defn plot! [file spec]
   (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
@@ -20,15 +26,15 @@
   (with-open
     [rdr (clojure.java.io/reader file)]
     (->> (line-seq rdr)
-         (map (fn [x] (str/split x #"\s+")))
+         (map (fn [x] (split x #"\s+")))
          (mapv vec))))
 
 (defn map-work-row [row]
   {:Date (nth row 1) :Project (nth row 0) :Hours (nth row 2)})
 
-(defn sum-project [project]
+(defn sum-project [project data]
   (->>
-   (filter (fn [x] (= project (:Project x))) tsv)
+   (filter (fn [x] (= project (:Project x))) data)
    (map :Hours)
    (map edn/read-string)
    (reduce +)))
@@ -48,6 +54,9 @@
                  (fn [hour] (/ (edn/read-string hour)
                                (sum-date (:Date entry)
                                          data))))) data))
+;;------------------------------------------------------------------------------
+;; Data
+;;------------------------------------------------------------------------------
 
 (def tsv (->> (rest (read-tsv  "accruals.txt"))
               (map map-work-row)))
@@ -62,21 +71,25 @@
 (def pie-data
   (map (fn [prj]
          {:Project prj
-          :Hours  (sum-project prj)}) projects ))
+          :Hours  (sum-project prj tsv)}) projects ))
 
-(plot! "timesheet_pie.svg"
-       (let [oradius (/ plt-width 3)
-             iradius (- oradius 40)]
-         {:title "Cumulative EDF Work"
-          :width plt-width
-          :height plt-height
-          :config {:style {:cell {:stroke "transparent"}}}
-          :data {:values pie-data}
-          :layer [{:mark {:type "arc" :outerRadius iradius}}
-                  {:mark {:type "text" :radius oradius :fontSize 20},
-                   :encoding {:text {:field "Project", :type "nominal"}}}]
-          :encoding {:theta {:field "Hours" :type "quantitative" :stack true}
-                     :color {:field "Project" :type "nominal" :legend nil}}}))
+;;------------------------------------------------------------------------------
+;; Plots Functions
+;;------------------------------------------------------------------------------
+
+(defn pie-chart [title x y data]
+  (let [oradius (/ plt-width 3)
+        iradius (- oradius 40)]
+    {:title title
+     :width plt-width
+     :height plt-height
+     :config {:style {:cell {:stroke "transparent"}}}
+     :data {:values data}
+     :layer [{:mark {:type "arc" :outerRadius iradius}}
+             {:mark {:type "text" :radius oradius :fontSize 20},
+              :encoding {:text {:field x, :type "nominal"}}}]
+     :encoding {:theta {:field y :type "quantitative" :stack true}
+                :color {:field x :type "nominal" :legend nil}}}))
 
 (defn bar-chart [x y data]
   {:data {:values data}
@@ -87,6 +100,11 @@
               :y {:field y :aggregate "sum" :type "quantitative"}
               :color {:field "Project" :type "nominal"}}})
 
+;;------------------------------------------------------------------------------
+;; Plots
+;;------------------------------------------------------------------------------
+
+(plot! "timesheet_pie.svg" (pie-chart "Cumulative EDF Work" "Project" "Hours" pie-data))
 (plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" tsv))
 (plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize tsv)))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" tsv-by-year))
