@@ -12,9 +12,6 @@ df["Project"] = df["Project"].map(
 )
 df["Project"] = df["Project"].map(lambda x: "GEM" if x == "GE11" or x == "GE21" else x)
 df = df.groupby(df["Project"]).sum()
-df.plot.pie(y="Hours", legend=None, title=None)
-plt.ylabel("")
-plt.savefig("timesheet_pi.svg")
 
 plt.style.use("ggplot")
 for fname in ["yearly_histo.txt"]:

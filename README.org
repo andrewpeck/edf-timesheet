@@ -5,7 +5,7 @@ was recorded in a paper log which may eventually be converted to this electronic
 format.
 
 #+attr_html: :width 720px
-[[file:timesheet_pi.svg]]
+[[file:timesheet_pie.svg]]
 
 #+attr_html: :width 720px
 [[file:timesheettotals.svg]]
