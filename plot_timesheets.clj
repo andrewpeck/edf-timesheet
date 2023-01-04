@@ -10,11 +10,11 @@
 (use '[clojure.pprint :only (pprint)])
 (use '[clojure.java.shell :only [sh]])
 
+(def plt-width 800)
+(def plt-height 600)
+
 (defn plot! [file spec]
-  (->> spec
-       json/write-str
-       ds/vega-lite-spec->svg
-       (spit file)))
+  (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
 
 (defn read-tsv [file]
   (with-open
@@ -24,9 +24,14 @@
          (mapv vec))))
 
 (defn map-work-row [row]
-  {:Date (nth row 1)
-   :Project (nth row 0)
-   :Hours (nth row 2)})
+  {:Date (nth row 1) :Project (nth row 0) :Hours (nth row 2)})
+
+(defn sum-project [project]
+  (->>
+   (filter (fn [x] (= project (:Project x))) tsv)
+   (map :Hours)
+   (map edn/read-string)
+   (reduce +)))
 
 (def tsv (->> (read-tsv  "accruals.txt")
               rest
@@ -36,51 +41,30 @@
   "List of all projects"
   (distinct (map :Project tsv)))
 
-(defn sum-project [project]
-  (->>
-   (filter (fn [x] (= project (:Project x))) tsv)
-   (map :Hours)
-   (map edn/read-string)
-   (reduce +)))
-
-(def pie-data
-  '({:category 1 :value 4}
-    {:category 2 :value 6}
-    {:category 3 :value 10}
-    {:category 4 :value 3}
-    {:category 5 :value 7}
-    {:category 6 :value 8}))
-
-(println pie-data)
-
 (def pie-data
   (map (fn [prj]
          {:Project prj
           :Hours  (sum-project prj)}) projects ))
 
-(println pie-data)
-
-
-(plot! "pie.svg"
-  {:description "A simple pie chart with embedded data." ,
-   :width 800
-   :height 600
-   :data {:values pie-data}
-   :mark "arc"
-   ;; :mark {:type "text" :radius 90}
-   ;; :layer {:mark {:type "arc" :outerRadius 80}}
-   :encoding {
-              :theta {:field "Hours"
-                      ;; :stack "true"
-                      :type "quantitative"}
-              :color {:field "Project"
-                      :type "nominal"}}})
+(plot! "timesheet_pie.svg"
+       (let [oradius (/ plt-width 3)
+             iradius (- oradius 40)]
+         {:title "Cumulative EDF Work"
+          :width plt-width
+          :height plt-height
+          :config {:style {:cell {:stroke "transparent"}}}
+          :data {:values pie-data}
+          :layer [{:mark {:type "arc" :outerRadius iradius}}
+                  {:mark {:type "text" :radius oradius :fontSize 20},
+                   :encoding {:text {:field "Project", :type "nominal"}}}]
+          :encoding {:theta {:field "Hours" :type "quantitative" :stack true}
+                     :color {:field "Project" :type "nominal" :legend nil}}}))
 
 (plot! "timesheettotals.svg"
        {:data {:values tsv}
         :mark "bar"
-        :width 800
-        :height 600
+        :width plt-width
+        :height plt-height
         :encoding {:x {:field "Date"
                        :type "ordinal"}
                    :y {:field "Hours"
