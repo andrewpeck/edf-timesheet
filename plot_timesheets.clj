@@ -55,17 +55,6 @@
 (def tsv-by-year
   (map (fn [x] (update x :Date (fn [x] (get-year x)))) tsv))
 
-(def tsv-by-year-normalized
-  (normalize tsv-by-year))
-
-;; (println (sum-date "2021" tsv-by-year))
-;; (println (sum-date "2022" tsv-by-year))
-;; (println (sum-date "2023" tsv-by-year))
-
-;; (println tsv-by-year)
-
-;; (println (normalize tsv-by-year))
-
 (def projects
   "List of all projects"
   (distinct (map :Project tsv)))
@@ -98,6 +87,7 @@
               :y {:field y :aggregate "sum" :type "quantitative"}
               :color {:field "Project" :type "nominal"}}})
 
-(plot! "timesheettotals.svg" (bar-chart  "Date" "Hours" tsv))
+(plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" tsv))
+(plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize tsv)))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" tsv-by-year))
-(plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" tsv-by-year-normalized))
+(plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" (normalize tsv-by-year)))
