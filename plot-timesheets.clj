@@ -33,51 +33,62 @@
   {:Date (nth row 1) :Project (nth row 0) :Hours (nth row 2)})
 
 (defn sum-project [project data]
-  (->>
-   (filter (fn [x] (= project (:Project x))) data)
-   (map :Hours)
-   (map edn/read-string)
-   (reduce +)))
+  (->> (filter (fn [x] (= project (:Project x))) data)
+       (map :Hours)
+       (map edn/read-string)
+       (reduce +)))
 
 (defn sum-date [date data]
-  (->>
-   (filter (fn [x] (= date (:Date x))) data)
-   (map :Hours)
-   (map edn/read-string)
-   (reduce +)))
+  (->> (filter (fn [x] (= date (:Date x))) data)
+       (map :Hours)
+       (map edn/read-string)
+       (reduce +)))
 
-(defn get-year [x] (first (split x #"-")))
+(defn get-year [x]
+  (->> (split x #"-")
+       first))
 
 (defn normalize [data]
-  (map (fn [entry]
-         (update entry :Hours
-                 (fn [hour] (/ (edn/read-string hour)
-                               (sum-date (:Date entry)
-                                         data))))) data))
+  (->> data
+       (map
+        (fn [entry]
+          (update entry :Hours
+                  (fn [hour] (/ (edn/read-string hour)
+                                (sum-date (:Date entry)
+                                          data))))))))
+
+(defn extract-data [file]
+  (->> (rest (read-tsv file))
+       (map map-work-row)))
+
 ;;------------------------------------------------------------------------------
 ;; Data
 ;;------------------------------------------------------------------------------
 
-(def tsv (->> (rest (read-tsv  "accruals.txt"))
-              (map map-work-row)))
+(def work-data
+  "EDF workload by day"
+  (extract-data "accruals.txt"))
 
-(def tsv-by-year
-  (map (fn [x] (update x :Date (fn [x] (get-year x)))) tsv))
+(def work-data-by-year
+  "EDF workload by year"
+  (map (fn [x] (update x :Date (fn [x] (get-year x)))) work-data))
 
 (def projects
   "List of all projects"
-  (distinct (map :Project tsv)))
+  (distinct (map :Project work-data)))
 
-(def pie-data
+(def total-data
+  "EDF workload summed by project (all years combined)"
   (map (fn [prj]
          {:Project prj
-          :Hours  (sum-project prj tsv)}) projects ))
+          :Hours  (sum-project prj work-data)}) projects ))
 
 ;;------------------------------------------------------------------------------
 ;; Plots Functions
 ;;------------------------------------------------------------------------------
 
 (defn pie-chart [title x y data]
+  "Return a vega-lite spec for a pie-chart."
   (let [oradius (/ plt-width 3)
         iradius (- oradius 40)]
     {:title title
@@ -92,6 +103,7 @@
                 :color {:field x :type "nominal" :legend nil}}}))
 
 (defn bar-chart [x y data]
+  "Return a vega-lite spec for a bar-chart."
   {:data {:values data}
    :mark "bar"
    :width plt-width
@@ -104,8 +116,8 @@
 ;; Plots
 ;;------------------------------------------------------------------------------
 
-(plot! "timesheet_pie.svg" (pie-chart "Cumulative EDF Work" "Project" "Hours" pie-data))
-(plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" tsv))
-(plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize tsv)))
-(plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" tsv-by-year))
-(plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" (normalize tsv-by-year)))
+(plot! "timesheet_pie.svg" (pie-chart "Cumulative EDF Work" "Project" "Hours" total-data))
+(plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" work-data))
+(plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data)))
+(plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" work-data-by-year))
+(plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data-by-year)))
