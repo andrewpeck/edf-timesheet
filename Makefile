@@ -6,7 +6,7 @@ plots:
 	@clj plot-timesheets.clj
 
 export_org_tables:
-	@bash export_org_tables.sh billing.org
+	@./export-org-tables billing.org
 	@mv *.csv csv/
 
 db_tables: sum_tables.py
