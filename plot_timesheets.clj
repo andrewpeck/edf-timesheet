@@ -33,11 +33,38 @@
    (map edn/read-string)
    (reduce +)))
 
+(defn sum-date [date data]
+  (->>
+   (filter (fn [x] (= date (:Date x))) data)
+   (map :Hours)
+   (map edn/read-string)
+   (reduce +)))
+
+(defn get-year [x] (first (split x #"-")))
+
+(defn normalize [data]
+  (map (fn [entry]
+         (update entry :Hours
+                 (fn [hour] (/ (edn/read-string hour)
+                               (sum-date (:Date entry)
+                                         data))))) data))
+
 (def tsv (->> (rest (read-tsv  "accruals.txt"))
               (map map-work-row)))
 
 (def tsv-by-year
-  (map (fn [x] (update x :Date (fn [x] (first (split x #"-"))))) tsv))
+  (map (fn [x] (update x :Date (fn [x] (get-year x)))) tsv))
+
+(def tsv-by-year-normalized
+  (normalize tsv-by-year))
+
+;; (println (sum-date "2021" tsv-by-year))
+;; (println (sum-date "2022" tsv-by-year))
+;; (println (sum-date "2023" tsv-by-year))
+
+;; (println tsv-by-year)
+
+;; (println (normalize tsv-by-year))
 
 (def projects
   "List of all projects"
@@ -73,3 +100,4 @@
 
 (plot! "timesheettotals.svg" (bar-chart  "Date" "Hours" tsv))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" tsv-by-year))
+(plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" tsv-by-year-normalized))

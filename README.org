@@ -5,13 +5,16 @@ was recorded in a paper log which may eventually be converted to this electronic
 format.
 
 #+attr_html: :width 720px
-[[file:timesheet_pie.svg]]
-
-#+attr_html: :width 720px
 [[file:timesheettotals.svg]]
 
 #+attr_html: :width 720px
 [[file:timesheetyearly.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheetyearlynormal.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheet_pie.svg]]
 
 #+attr_html: :width 720px
 [[file:wordcloud.png]]
