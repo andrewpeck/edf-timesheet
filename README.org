@@ -4,24 +4,24 @@ This is my timesheet for work in the BU EDF, dating from 2021 on. Time from 2020
 was recorded in a paper log which may eventually be converted to this electronic
 format.
 
-* Normalized Timesheets
+** Normalized Timesheets
 #+attr_html: :width 720px
 [[file:timesheetmonthlynormal.svg]]
 
 #+attr_html: :width 720px
 [[file:timesheetyearlynormal.svg]]
 
-* Unnormalized Timesheets
+** Unnormalized Timesheets
 #+attr_html: :width 720px
 [[file:timesheetmonthly.svg]]
 
 #+attr_html: :width 720px
 [[file:timesheetyearly.svg]]
 
-* Pie Chart
+** Pie Chart
 #+attr_html: :width 720px
 [[file:timesheet_pie.svg]]
 
-* Word Cloud
+** Word Cloud
 #+attr_html: :width 720px
 [[file:wordcloud.png]]
