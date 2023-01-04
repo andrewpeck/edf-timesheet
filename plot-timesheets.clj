@@ -46,17 +46,16 @@
        (reduce +)))
 
 (defn get-year [x]
-  (->> (str/split x #"-")
-       first))
+  (first (str/split x #"-")))
 
 (defn normalize [data]
-  (->> data
-       (map
-        (fn [entry]
-          (update entry :Hours
-                  (fn [hour] (/ (edn/read-string hour)
-                                (sum-date (:Date entry)
-                                          data))))))))
+  (letfn [(updater [entry]
+            (fn [hour] (/ (edn/read-string hour)
+                          (sum-date (:Date entry) data))))
+          (normalize-row [entry]
+            (update entry :Hours (updater entry)))]
+
+    (map normalize-row data)))
 
 (defn extract-data [file]
   (->> (rest (read-tsv file))
