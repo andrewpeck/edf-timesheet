@@ -36,6 +36,8 @@
 (def stacked-bar
   {:data {:values tsv}
    :mark "bar"
+   :width 800
+   :height 600
    :encoding {:x {:field "Date"
                   :type "ordinal"}
               :y {:field "Hours"

@@ -1,12 +1,16 @@
 #+TITLE: EDF Timesheet
 
-This is my timesheet for work in the BU EDF, dating from 2021 on. Time from 2020 was recorded in a
-paper log which may eventually be converted to this electronic format.
+This is my timesheet for work in the BU EDF, dating from 2021 on. Time from 2020
+was recorded in a paper log which may eventually be converted to this electronic
+format.
 
+#+attr_html: :width 720px
 [[file:timesheet_pi.svg]]
 
+#+attr_html: :width 720px
 [[file:timesheettotals.svg]]
 
+#+attr_html: :width 720px
 [[file:timesheetyearly.svg]]
 
 #+attr_html: :width 720px
