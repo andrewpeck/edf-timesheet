@@ -6,7 +6,7 @@
             [clojure.string :as str]))
 
 ;; at the REPL
-(use 'clojure.string)
+;; (use 'clojure.string)
 (use '[clojure.pprint :only (pprint)])
 (use '[clojure.java.shell :only [sh]])
 
@@ -33,9 +33,11 @@
    (map edn/read-string)
    (reduce +)))
 
-(def tsv (->> (read-tsv  "accruals.txt")
-              rest
+(def tsv (->> (rest (read-tsv  "accruals.txt"))
               (map map-work-row)))
+
+(def tsv-by-year
+  (map (fn [x] (update x :Date (fn [x] (first (split x #"-"))))) tsv))
 
 (def projects
   "List of all projects"
@@ -60,15 +62,14 @@
           :encoding {:theta {:field "Hours" :type "quantitative" :stack true}
                      :color {:field "Project" :type "nominal" :legend nil}}}))
 
-(plot! "timesheettotals.svg"
-       {:data {:values tsv}
-        :mark "bar"
-        :width plt-width
-        :height plt-height
-        :encoding {:x {:field "Date"
-                       :type "ordinal"}
-                   :y {:field "Hours"
-                       :aggregate "sum"
-                       :type "quantitative"}
-                   :color {:field "Project"
-                           :type "nominal"}}})
+(defn bar-chart [x y data]
+  {:data {:values data}
+   :mark "bar"
+   :width plt-width
+   :height plt-height
+   :encoding {:x {:field x :type "ordinal"}
+              :y {:field y :aggregate "sum" :type "quantitative"}
+              :color {:field "Project" :type "nominal"}}})
+
+(plot! "timesheettotals.svg" (bar-chart  "Date" "Hours" tsv))
+(plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" tsv-by-year))
