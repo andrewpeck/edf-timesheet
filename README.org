@@ -24,4 +24,4 @@ format.
 
 ** Word Cloud
 #+attr_html: :width 720px
-[[file:wordcloud.png]]
+[[file:wordcloud.svg]]
