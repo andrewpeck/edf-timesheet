@@ -125,7 +125,7 @@ END {
 
   sortcmd="sort -t',' -n -k2 | column -t -s \",\" "
   for (key in sum_by_prj) {
-    printf("%s, %5.1f, %4.1f\%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
+    printf("%s, %5.1f, %4.1f%%\n", key, sum_by_prj[key], sum_by_prj[key]/sum * 100) | sortcmd
   }
   close(sortcmd)
 
@@ -148,7 +148,7 @@ END {
   sortcmd=fmt_sort_cmd()
   for (prj in sum_by_prj_yy) {
     for (year in sum_by_prj_yy[prj]) {
-      printf("%s, %4d, %6.2f hours, %4.1f\%\n",
+      printf("%s, %4d, %6.2f hours, %4.1f%%\n",
              prj, year, sum_by_prj_yy[prj][year],
              sum_by_prj_yy[prj][year]/sum_by_yy[year]*100) | sortcmd
     }
