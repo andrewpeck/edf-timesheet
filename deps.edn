@@ -1,5 +1,8 @@
-{:deps {applied-science/darkstar {:git/url "https://github.com/applied-science/darkstar/"
-                                  :sha "541a3ff36065c59e92fe6aa61e41a4385ba6f893"}
-        org.clojure/data.json {:git/url "https://github.com/clojure/data.json"
-                               :sha "0b491b25e61d108951c64d33d28a90080758a271"}
-        cljfmt {:mvn/version "0.9.0"}}}
+{:deps {applied-science/darkstar
+        {:git/url "https://github.com/applied-science/darkstar"
+         :sha "541a3ff36065c59e92fe6aa61e41a4385ba6f893"}
+        org.clojure/data.json
+        {:git/url "https://github.com/clojure/data.json"
+         :sha "0b491b25e61d108951c64d33d28a90080758a271"}
+        cljfmt
+        {:mvn/version "0.9.0"}}}

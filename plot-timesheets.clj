@@ -6,11 +6,12 @@
   (:require [applied-science.darkstar :as ds]
             [clojure.data.json :as json]
             [clojure.edn :as edn]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [clojure.java.io :as io]
 
-(use '[clojure.pprint :only (pprint)])
-(use '[clojure.java.shell :only [sh]])
-(use '[clojure.string :only [split]])
+            ;; [clojure.pprint :only (pprint)]
+            ;; [clojure.java.shell :only [sh]]
+            ))
 
 (def plt-width 800)
 (def plt-height 600)
@@ -24,9 +25,9 @@
 
 (defn read-tsv [file]
   (with-open
-    [rdr (clojure.java.io/reader file)]
+    [rdr (io/reader file)]
     (->> (line-seq rdr)
-         (map (fn [x] (split x #"\s+")))
+         (map (fn [x] (str/split x #"\s+")))
          (mapv vec))))
 
 (defn map-work-row [row]
@@ -45,7 +46,7 @@
        (reduce +)))
 
 (defn get-year [x]
-  (->> (split x #"-")
+  (->> (str/split x #"-")
        first))
 
 (defn normalize [data]
@@ -87,8 +88,9 @@
 ;; Plots Functions
 ;;------------------------------------------------------------------------------
 
-(defn pie-chart [title x y data]
-  "Return a vega-lite spec for a pie-chart."
+(defn pie-chart "Return a vega-lite spec for a pie-chart."
+  [title x y data]
+
   (let [oradius (/ plt-width 3)
         iradius (- oradius 40)]
     {:title title
@@ -102,8 +104,9 @@
      :encoding {:theta {:field y :type "quantitative" :stack true}
                 :color {:field x :type "nominal" :legend nil}}}))
 
-(defn bar-chart [x y data]
-  "Return a vega-lite spec for a bar-chart."
+(defn bar-chart "Return a vega-lite spec for a bar-chart."
+  [x y data]
+
   {:data {:values data}
    :mark "bar"
    :width plt-width
@@ -116,7 +119,7 @@
 ;; Plots
 ;;------------------------------------------------------------------------------
 
-(plot! "timesheet_pie.svg" (pie-chart "Cumulative EDF Work" "Project" "Hours" total-data))
+(plot! "timesheet_pie.svg" (pie-chart "EDF Work" "Project" "Hours" total-data))
 (plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" work-data))
 (plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data)))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" work-data-by-year))
