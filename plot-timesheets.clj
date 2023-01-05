@@ -24,7 +24,6 @@
   (try (Float/parseFloat s)
        (catch NumberFormatException _ false)))
 
-
 (defn plot! [file spec]
   (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
 
@@ -43,12 +42,13 @@
          (mapv vec))))
 
 (defn map-work-row [row]
-  {:Date (nth row 1) :Project (nth row 0) :Hours (nth row 2)})
+  {:Project (nth row 0)
+   :Date (nth row 1)
+   :Hours (to-float (nth row 2))})
 
 (defn sum-project [project data]
   (->> (filter (fn [x] (= project (:Project x))) data)
        (map :Hours)
-       (map edn/read-string)
        (reduce +)))
 
 (defn sum-key
@@ -59,21 +59,17 @@
        (reduce +)))
 
 (defn sum-weekday [weekday data]
-  (->> (filter (fn [x] (= weekday (:Day x))) data)
-       (map :Hours)
-       (reduce +)))
+  (sum-key :Day weekday data))
+
 (defn sum-date [date data]
-  (->> (filter (fn [x] (= date (:Date x))) data)
-       (map :Hours)
-       (map edn/read-string)
-       (reduce +)))
+  (sum-key :Date date data))
 
 (defn get-year [x]
   (first (str/split x #"-")))
 
 (defn normalize [data]
   (letfn [(updater [entry]
-            (fn [hour] (/ (edn/read-string hour)
+            (fn [hour] (/ hour
                           (sum-date (:Date entry) data))))
           (normalize-row [entry]
             (update entry :Hours (updater entry)))]
@@ -82,7 +78,8 @@
 
 (defn extract-data [file]
   (->> (rest (read-tsv file))
-       (map map-work-row)))
+       (map map-work-row)
+       (filter #(number? (:Hours %)))))
 
 (defn get-csv-file-names []
   (->> (mapv str (filter #(.isFile %) (file-seq (clojure.java.io/file "csv/"))))
@@ -130,7 +127,7 @@
   "EDF workload summed by project (all years combined)"
   (map (fn [prj]
          {:Project prj
-          :Hours  (sum-project prj work-data)}) projects ))
+          :Hours  (sum-project prj work-data)}) projects))
 
 (def all-work-data
   "All the work data directly from CSV"
@@ -165,7 +162,6 @@
 
 (defn bar-chart "Return a vega-lite spec for a bar-chart."
   [x y data]
-
   {:data {:values data}
    :mark "bar"
    :width plt-width
