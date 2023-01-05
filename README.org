@@ -22,6 +22,10 @@ format.
 #+attr_html: :width 720px
 [[file:timesheet_pie.svg]]
 
+** By weekday
+#+attr_html: :width 720px
+[[file:timesheetdaily.svg]]
+
 ** Word Cloud
 #+attr_html: :width 720px
 [[file:wordcloud.svg]]
