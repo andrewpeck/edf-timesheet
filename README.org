@@ -22,6 +22,21 @@ format.
 #+attr_html: :width 720px
 [[file:timesheet_pie.svg]]
 
+** By weekday
+#+attr_html: :width 720px
+[[file:timesheetdaily.svg]]
+
+** Integrated billed hours
+
+#+attr_html: :width 720px
+[[file:timesheetdayrunning_2021.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheetdayrunning_2022.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheetdayrunning_2023.svg]]
+
 ** Word Cloud
 #+attr_html: :width 720px
 [[file:wordcloud.svg]]

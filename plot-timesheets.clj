@@ -6,10 +6,11 @@
   (:require [applied-science.darkstar :as ds]
             [clojure.data.json :as json]
             [clojure.edn :as edn]
+            [clojure.set :as set]
             [clojure.string :as str]
             [clojure.java.io :as io]
 
-            ;; [clojure.pprint :only (pprint)]
+            [clojure.pprint :only (pprint)]
             ;; [clojure.java.shell :only [sh]]
             ))
 
@@ -19,6 +20,10 @@
 ;;------------------------------------------------------------------------------
 ;; Utility Functions
 ;;------------------------------------------------------------------------------
+
+(defn to-float [s]
+  (try (Float/parseFloat s)
+       (catch NumberFormatException _ false)))
 
 (defn plot! [file spec]
   (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
@@ -30,27 +35,42 @@
          (map (fn [x] (str/split x #"\s+")))
          (mapv vec))))
 
+(defn read-csv [file]
+  (with-open
+    [rdr (io/reader file)]
+    (->> (line-seq rdr)
+         (map (fn [x] (str/split x #"\s*,\s*")))
+         (mapv vec))))
+
 (defn map-work-row [row]
-  {:Date (nth row 1) :Project (nth row 0) :Hours (nth row 2)})
+  {:Project (nth row 0)
+   :Date (nth row 1)
+   :Hours (to-float (nth row 2))})
 
 (defn sum-project [project data]
   (->> (filter (fn [x] (= project (:Project x))) data)
        (map :Hours)
-       (map edn/read-string)
        (reduce +)))
 
-(defn sum-date [date data]
-  (->> (filter (fn [x] (= date (:Date x))) data)
+(defn sum-key
+  "e.g. sum-key :Date '2021-01'"
+  [key val data]
+  (->> (filter (fn [x] (= val (key x))) data)
        (map :Hours)
-       (map edn/read-string)
        (reduce +)))
+
+(defn sum-weekday [weekday data]
+  (sum-key :Day weekday data))
+
+(defn sum-date [date data]
+  (sum-key :Date date data))
 
 (defn get-year [x]
   (first (str/split x #"-")))
 
 (defn normalize [data]
   (letfn [(updater [entry]
-            (fn [hour] (/ (edn/read-string hour)
+            (fn [hour] (/ hour
                           (sum-date (:Date entry) data))))
           (normalize-row [entry]
             (update entry :Hours (updater entry)))]
@@ -59,10 +79,58 @@
 
 (defn extract-data [file]
   (->> (rest (read-tsv file))
-       (map map-work-row)))
+       (map map-work-row)
+       (filter #(number? (:Hours %)))))
+
+(defn clock-to-float
+  "Convert a clock time (e.g. 12:30) to a float (e.g. 12.5)"
+  [time]
+
+  (let [split (str/split time #":")
+        hours (edn/read-string (first split))
+        minutes  (if (second split)
+                   (edn/read-string (second split))
+                   0)]
+    (+ hours (/ minutes 60.0))))
+(clock-to-float "12:30")
+
+(defn range-to-time
+  "Convert a 12hr clock time range time (e.g. 1-2:30) to a float amount of time (1.5)"
+  [range]
+  (let [start (clock-to-float (first (str/split range #"-")))
+        end (clock-to-float (second (str/split range #"-")))
+        wrap (if (> start end) (+ 12 end) end)]
+    (- wrap start)))
+
+(defn get-csv-file-names []
+  (->> (mapv str (filter #(.isFile %) (file-seq (clojure.java.io/file "csv/"))))
+       (filter #(re-matches #"csv/[0-9]{4}-[0-9]{2}.csv" %))
+       sort))
+
+(defn slurp-timesheet [fname]
+  (let [split (str/split fname #"[^A-z0-9]")
+        year (Integer/parseInt (nth split 1))
+        month (Integer/parseInt (nth split 2))]
+    (->> fname
+         read-csv
+         (remove empty?)
+         (map (fn [row]
+                {:Date (edn/read-string (nth row 0 ""))
+                 :Time (nth row 1 "")
+                 :Project (nth row 2 "")
+                 :Task (nth row 3 "")
+                 :Day (nth row 4 "")
+                 :Hours (to-float (nth row 5 ""))}))
+         (filter (fn [row]
+                   (and
+                    (not (str/blank? (:Project row)))
+                    (not (str/blank? (:Time row)))
+                    (number? (:Hours row))
+                    (number? (:Date row)))))
+         (map (fn [row] (update row :Date #(format "%04d-%02d-%02d" year month %)))))))
 
 ;;------------------------------------------------------------------------------
-;; Data
+;; Data From Accruals.txt
 ;;------------------------------------------------------------------------------
 
 (def work-data
@@ -81,7 +149,41 @@
   "EDF workload summed by project (all years combined)"
   (map (fn [prj]
          {:Project prj
-          :Hours  (sum-project prj work-data)}) projects ))
+          :Hours  (sum-project prj work-data)}) projects))
+
+;;------------------------------------------------------------------------------
+;; Data From CSVs
+;;------------------------------------------------------------------------------
+
+(def all-work-data
+  "All the work data directly from CSV"
+  (apply concat (mapv slurp-timesheet (get-csv-file-names))))
+
+(def data-by-weekday
+  "Data binned by day of the week"
+  (map (fn [weekday]
+         {:Day weekday
+          :Hours  (sum-weekday weekday all-work-data)})
+       ["MON" "TUE" "WED" "THU" "FRI" "SAT" "SUN"] ))
+
+(defn bin-by-day [data]
+  (let
+      [dates (distinct (for [date data] (:Date date)))
+       sums (reductions +  (for [date dates]
+                             (sum-date date data)))]
+    (list dates sums)))
+
+(prn (bin-by-day all-work-data))
+
+(defn running-sum-by-day [& {:keys [year month] :as opts} ]
+  (let [[dates hours]
+        (->> all-work-data
+             (filter (fn [x] (or (not year) (= year (first (str/split (:Date x) #"-"))))))
+             bin-by-day)]
+    (map (fn [date hour] {:Project "Total" :Date date :Hours hour})
+         dates hours)))
+
+(prn (running-sum-by-day))
 
 ;;------------------------------------------------------------------------------
 ;; Plots Functions
@@ -105,7 +207,6 @@
 
 (defn bar-chart "Return a vega-lite spec for a bar-chart."
   [x y data]
-
   {:data {:values data}
    :mark "bar"
    :width plt-width
@@ -113,6 +214,17 @@
    :encoding {:x {:field x :type "ordinal"}
               :y {:field y :aggregate "sum" :type "quantitative"}
               :color {:field "Project" :type "nominal"}}})
+
+(defn bar-chart-day "Return a vega-lite spec for a bar-chart."
+  [x y data]
+  {:data {:values data}
+   :mark "bar"
+   :width plt-width
+   :height plt-height
+   :encoding {:x {:field x
+                  :type "ordinal"
+                  :sort ["MON" "TUE" "WED" "THU" "FRI" "SAT" "SUN"]}
+              :y {:field y :aggregate "sum" :type "quantitative"}}})
 
 (defn line-chart ""
   [x y data]
@@ -130,7 +242,18 @@
 ;; Plots
 ;;------------------------------------------------------------------------------
 
+;; work data
+;; 0. { :Project "APOLLO", :Date "2021-01", :Hours 22.0 }
+;;
+;; all-work-data
+;; 0. { :Date "2021-03-01", :Time "8:30-9:30", :Project "ETL", :Task "Slides for Ted", :Day "MON", ... } ;;
+
+(plot! "timesheetdaily.svg" (bar-chart-day  "Day" "Hours" data-by-weekday))
 (plot! "timesheet_pie.svg" (pie-chart "EDF Work" "Project" "Hours" total-data))
+(plot! "timesheetday.svg" (bar-chart  "Date" "Hours" all-work-data))
+(plot! "timesheetdayrunning_2021.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2021")))
+(plot! "timesheetdayrunning_2022.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2022")))
+(plot! "timesheetdayrunning_2023.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2023")))
 (plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" work-data))
 (plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data)))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" work-data-by-year))
