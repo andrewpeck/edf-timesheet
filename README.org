@@ -29,13 +29,7 @@ format.
 ** Integrated billed hours
 
 #+attr_html: :width 720px
-[[file:timesheetdayrunning_2021.svg]]
-
-#+attr_html: :width 720px
-[[file:timesheetdayrunning_2022.svg]]
-
-#+attr_html: :width 720px
-[[file:timesheetdayrunning_2023.svg]]
+[[file:timesheetdayrunning.svg]]
 
 ** Word Cloud
 #+attr_html: :width 720px
