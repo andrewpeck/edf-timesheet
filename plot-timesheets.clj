@@ -14,6 +14,10 @@
             ;; [clojure.java.shell :only [sh]]
             ))
 
+;;------------------------------------------------------------------------------
+;; Constants
+;;------------------------------------------------------------------------------
+
 (def plt-width 800)
 (def plt-height 600)
 
@@ -21,7 +25,7 @@
 ;; Utility Functions
 ;;------------------------------------------------------------------------------
 
-(defn get-one-day-from-each-month [data]
+(defn get-first-day-from-each-month [data]
   (->> (for [day (running-sum-by-day :year "2021")
              :let [month (first (str/split (:Date day) #"/"))]]
          (assoc day :Month month))
@@ -40,7 +44,10 @@
        (catch NumberFormatException _ false)))
 
 (defn plot! [file spec]
-  (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
+  (spit file
+        (->> spec
+             json/write-str
+             ds/vega-lite-spec->svg)))
 
 (defn read-tsv [file]
   (with-open
@@ -186,7 +193,9 @@
 
 (prn (bin-by-day all-work-data))
 
-(defn running-sum-by-day [& {:keys [year month] :as opts} ]
+(defn running-sum-by-day
+  ""
+  [& {:keys [year] :as opts} ]
 
   (letfn [(year-match? [x]
             (or (not year)
@@ -196,7 +205,7 @@
           (->> all-work-data
                (filter year-match?)
                (bin-by-day))]
-      (map (fn [date hour] {:Project (if year year  "Total")
+      (map (fn [date hour] {:Project (if year year "Total")
                             :Date (str/join "/" (rest (str/split date #"-")))
                             :Hours hour}) dates hours))))
 
@@ -252,7 +261,7 @@
                   :axis {:ticks 12
                          :tickCount 12
                          :labelValues (range 1 13)
-                         :values (get-one-day-from-each-month data)
+                         :values (get-first-day-from-each-month data)
                          :labelExpr "parseInt(slice(toString(datum.label), 0, 2), 10)"}}
               :y {:field y :aggregate "sum" :type "quantitative"},
               :color {:field "Project", :type "nominal"}}})
@@ -266,6 +275,8 @@
 ;;
 ;; all-work-data
 ;; 0. { :Date "2021-03-01", :Time "8:30-9:30", :Project "ETL", :Task "Slides for Ted", :Day "MON", ... } ;;
+
+
 
 (plot! "timesheetdaily.svg" (bar-chart-day  "Day" "Hours" data-by-weekday))
 (plot! "timesheet_pie.svg" (pie-chart "EDF Work" "Project" "Hours" total-data))
