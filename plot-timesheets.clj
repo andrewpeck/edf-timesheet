@@ -51,14 +51,14 @@
 
 (defn read-tsv [file]
   (with-open
-    [rdr (io/reader file)]
+   [rdr (io/reader file)]
     (->> (line-seq rdr)
          (map (fn [x] (str/split x #"\s+")))
          (mapv vec))))
 
 (defn read-csv [file]
   (with-open
-    [rdr (io/reader file)]
+   [rdr (io/reader file)]
     (->> (line-seq rdr)
          (map (fn [x] (str/split x #"\s*,\s*")))
          (mapv vec))))
@@ -133,19 +133,19 @@
         (map to-int
              (subvec (str/split fname #"[^A-z0-9]") 1 3))
         rows (->> fname read-csv (remove empty?))]
-      (for [row rows
-            :let [rowmap {:Date (edn/read-string (nth row 0 ""))
-                          :Time (nth row 1 "")
-                          :Project (nth row 2 "")
-                          :Task (nth row 3 "")
-                          :Day (nth row 4 "")
-                          :Hours (to-float (nth row 5 ""))}]
-            :when (and (not (str/blank? (:Project rowmap)))
-                       (not (str/blank? (:Time rowmap)))
-                       (number? (:Hours rowmap))
-                       (number? (:Date rowmap)))]
-        (update rowmap :Date
-                #(format "%04d-%02d-%02d" year month %)))))
+    (for [row rows
+          :let [rowmap {:Date (edn/read-string (nth row 0 ""))
+                        :Time (nth row 1 "")
+                        :Project (nth row 2 "")
+                        :Task (nth row 3 "")
+                        :Day (nth row 4 "")
+                        :Hours (to-float (nth row 5 ""))}]
+          :when (and (not (str/blank? (:Project rowmap)))
+                     (not (str/blank? (:Time rowmap)))
+                     (number? (:Hours rowmap))
+                     (number? (:Date rowmap)))]
+      (update rowmap :Date
+              #(format "%04d-%02d-%02d" year month %)))))
 
 ;;------------------------------------------------------------------------------
 ;; Data From Accruals.txt
@@ -182,20 +182,20 @@
   (map (fn [weekday]
          {:Day weekday
           :Hours  (sum-weekday weekday all-work-data)})
-       ["MON" "TUE" "WED" "THU" "FRI" "SAT" "SUN"] ))
+       ["MON" "TUE" "WED" "THU" "FRI" "SAT" "SUN"]))
 
 (defn bin-by-day [data]
   (let
-      [dates (distinct (for [date data] (:Date date)))
-       sums (reductions +  (for [date dates]
-                             (sum-date date data)))]
+   [dates (distinct (for [date data] (:Date date)))
+    sums (reductions +  (for [date dates]
+                          (sum-date date data)))]
     (list dates sums)))
 
 (prn (bin-by-day all-work-data))
 
 (defn running-sum-by-day
   ""
-  [& {:keys [year] :as opts} ]
+  [& {:keys [year] :as opts}]
 
   (letfn [(year-match? [x]
             (or (not year)
@@ -275,8 +275,6 @@
 ;;
 ;; all-work-data
 ;; 0. { :Date "2021-03-01", :Time "8:30-9:30", :Project "ETL", :Task "Slides for Ted", :Day "MON", ... } ;;
-
-
 
 (plot! "timesheetdaily.svg" (bar-chart-day  "Day" "Hours" data-by-weekday))
 (plot! "timesheet_pie.svg" (pie-chart "EDF Work" "Project" "Hours" total-data))
