@@ -154,7 +154,7 @@
 
 (def projects
   "List of all projects"
-  (distinct (map :Project work-data)))
+  (set (map :Project work-data)))
 
 (def total-data
   "EDF workload summed by project (all years combined)"
