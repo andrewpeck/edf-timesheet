@@ -22,15 +22,14 @@
 ;;------------------------------------------------------------------------------
 
 (defn get-one-day-from-each-month [data]
-  (sort
-   (map :Date
-        (map first
-             (vals
-              (group-by
-               :Month
-               (for [day (running-sum-by-day :year "2021")
-                     :let [month (first (str/split (:Date day) #"/"))]]
-                 (assoc day :Month month))))))))
+  (->> (for [day (running-sum-by-day :year "2021")
+             :let [month (first (str/split (:Date day) #"/"))]]
+         (assoc day :Month month))
+       (group-by :Month)
+       (vals)
+       (map first)
+       (map :Date)
+       (sort)))
 
 (defn to-float [s]
   (try (Float/parseFloat s)
