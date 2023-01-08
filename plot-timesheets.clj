@@ -110,24 +110,21 @@
 (defn slurp-timesheet [fname]
   (let [split (str/split fname #"[^A-z0-9]")
         year (Integer/parseInt (nth split 1))
-        month (Integer/parseInt (nth split 2))]
-    (->> fname
-         read-csv
-         (remove empty?)
-         (map (fn [row]
-                {:Date (edn/read-string (nth row 0 ""))
-                 :Time (nth row 1 "")
-                 :Project (nth row 2 "")
-                 :Task (nth row 3 "")
-                 :Day (nth row 4 "")
-                 :Hours (to-float (nth row 5 ""))}))
-         (filter (fn [row]
-                   (and
-                    (not (str/blank? (:Project row)))
-                    (not (str/blank? (:Time row)))
-                    (number? (:Hours row))
-                    (number? (:Date row)))))
-         (map (fn [row] (update row :Date #(format "%04d-%02d-%02d" year month %)))))))
+        month (Integer/parseInt (nth split 2))
+        rows (->> fname read-csv (remove empty?))]
+      (for [row rows
+            :let [rowmap {:Date (edn/read-string (nth row 0 ""))
+                          :Time (nth row 1 "")
+                          :Project (nth row 2 "")
+                          :Task (nth row 3 "")
+                          :Day (nth row 4 "")
+                          :Hours (to-float (nth row 5 ""))}]
+            :when (and (not (str/blank? (:Project rowmap)))
+                       (not (str/blank? (:Time rowmap)))
+                       (number? (:Hours rowmap))
+                       (number? (:Date rowmap)))]
+        (update rowmap :Date
+                #(format "%04d-%02d-%02d" year month %)))))
 
 ;;------------------------------------------------------------------------------
 ;; Data From Accruals.txt
