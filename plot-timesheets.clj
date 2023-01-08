@@ -65,9 +65,9 @@
 (defn sum-key
   "e.g. sum-key :Date '2021-01'"
   [key val data]
-  (->> (filter (fn [x] (= val (key x))) data)
-       (map :Hours)
-       (reduce +)))
+  (reduce +
+          (for [x data :when (= val (key x))]
+            (:Hours x))))
 
 (defn sum-weekday [weekday data]
   (sum-key :Day weekday data))
