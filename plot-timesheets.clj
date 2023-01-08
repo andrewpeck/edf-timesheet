@@ -28,15 +28,13 @@
 
 (defn to-float
   "Convert a string to float. Returns nil if the conversion fails."
-  [s]
-  (try (Float/parseFloat s)
-       (catch NumberFormatException _ false)))
+  [s] (try (Float/parseFloat s)
+           (catch NumberFormatException _ false)))
 
 (defn to-int
   "Convert a string to integer. Returns nil if the conversion fails."
-  [s]
-  (try (Integer/parseInt s)
-       (catch NumberFormatException _ false)))
+  [s] (try (Integer/parseInt s)
+           (catch NumberFormatException _ false)))
 
 (defn plot!
   "Plot a vega-lite SPEC and save it as svg to the provided FILE"
@@ -56,18 +54,17 @@
          (mapv vec))))
 
 (defn read-tsv
-  "Read a tsv into a vector."
+  "Read the tsv FILE into a vector."
   [file] (read-delimited file #"\s+"))
 
 (defn read-csv
-  "Read a csv into a vector."
+  "Read the csv FILE into a vector."
   [file] (read-delimited file #"\s*,\s*"))
 
 (defn map-work-row
   "Convert a timesheet row into a map"
-  [row]
-  (let [[prj date hrs] row]
-    {:Project prj :Date date :Hours (to-float hrs)}))
+  [row] (let [[prj date hrs] row]
+          {:Project prj :Date date :Hours (to-float hrs)}))
 
 (defn sum-key
   "e.g. sum-key :Date '2021-01'"
@@ -91,10 +88,17 @@
   [date data]
   (sum-key :Date date data))
 
+(defn split-date
+  "Split on - or /"
+  [x] (str/split x #"[-/]"))
+
 (defn get-year
   "Extract the year from a string a la 2022-01-02"
-  [x]
-  (first (str/split x #"-")))
+  [x] (first (split-date x)))
+
+(defn get-month
+  "Extract the month from a string a la 2022-01-02"
+  [x] (second (split-date x)))
 
 (defn normalize
   "Normalize a timesheet to be a fraction of the total instead of the actual value."
@@ -131,7 +135,7 @@
              (subvec (str/split fname #"[^A-z0-9]") 1 3))
         rows (->> fname read-csv (remove empty?))]
     (for [row rows
-          :let [rowmap {:Date (edn/read-string (nth row 0 ""))
+          :let [rowmap {:Date (to-int (nth row 0 ""))
                         :Time (nth row 1 "")
                         :Project (nth row 2 "")
                         :Task (nth row 3 "")
@@ -192,8 +196,6 @@
                               (sum-date date data)))]
     (list dates sums)))
 
-(prn (bin-by-day all-work-data))
-
 (defn running-sum-by-day
   "Compute a running sum (by day) for a given YEAR.
   If the YEAR is not supplied then compute the total for all years."
@@ -201,7 +203,7 @@
 
   (letfn [(year-match? [x]
             (or (not year)
-                (= year (first (str/split (:Date x) #"-")))))]
+                (= year (get-year (:Date x)))))]
 
     (let [[dates hours]
           (->> all-work-data
@@ -218,7 +220,7 @@
 
   ([year]
    (->> (for [day (running-sum-by-day :year year)
-              :let [month (first (str/split (:Date day) #"/"))]]
+              :let [month (get-month (:Date day))]]
           (assoc day :Month month))
         (group-by :Month)
         (vals)
