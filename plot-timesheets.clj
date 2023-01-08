@@ -179,10 +179,9 @@
         (->> all-work-data
              (filter (fn [x] (or (not year) (= year (first (str/split (:Date x) #"-"))))))
              bin-by-day)]
-    (map (fn [date hour] {:Project "Total" :Date date :Hours hour})
-         dates hours)))
-
-(prn (running-sum-by-day))
+    (map (fn [date hour] {:Project (if year year  "Total")
+                          :Date (str/join "/" (rest (str/split date #"-")))
+                          :Hours hour}) dates hours)))
 
 ;;------------------------------------------------------------------------------
 ;; Plots Functions
@@ -250,10 +249,12 @@
 (plot! "timesheetdaily.svg" (bar-chart-day  "Day" "Hours" data-by-weekday))
 (plot! "timesheet_pie.svg" (pie-chart "EDF Work" "Project" "Hours" total-data))
 (plot! "timesheetday.svg" (bar-chart  "Date" "Hours" all-work-data))
-(plot! "timesheetdayrunning_2021.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2021")))
-(plot! "timesheetdayrunning_2022.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2022")))
-(plot! "timesheetdayrunning_2023.svg" (line-chart  "Date" "Hours" (running-sum-by-day :year "2023")))
 (plot! "timesheetmonthly.svg" (bar-chart  "Date" "Hours" work-data))
 (plot! "timesheetmonthlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data)))
 (plot! "timesheetyearly.svg" (bar-chart  "Date" "Hours" work-data-by-year))
 (plot! "timesheetyearlynormal.svg" (bar-chart  "Date" "Hours" (normalize work-data-by-year)))
+(plot! "timesheetdayrunning.svg"
+       (line-chart  "Date" "Hours"
+                    (concat  (running-sum-by-day :year "2021")
+                             (running-sum-by-day :year "2022")
+                             (running-sum-by-day :year "2023"))))
