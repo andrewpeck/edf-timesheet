@@ -185,13 +185,18 @@
 (prn (bin-by-day all-work-data))
 
 (defn running-sum-by-day [& {:keys [year month] :as opts} ]
-  (let [[dates hours]
-        (->> all-work-data
-             (filter (fn [x] (or (not year) (= year (first (str/split (:Date x) #"-"))))))
-             bin-by-day)]
-    (map (fn [date hour] {:Project (if year year  "Total")
-                          :Date (str/join "/" (rest (str/split date #"-")))
-                          :Hours hour}) dates hours)))
+
+  (letfn [(year-match? [x]
+            (or (not year)
+                (= year (first (str/split (:Date x) #"-")))))]
+
+    (let [[dates hours]
+          (->> all-work-data
+               (filter year-match?)
+               (bin-by-day))]
+      (map (fn [date hour] {:Project (if year year  "Total")
+                            :Date (str/join "/" (rest (str/split date #"-")))
+                            :Hours hour}) dates hours))))
 
 ;;------------------------------------------------------------------------------
 ;; Plots Functions
