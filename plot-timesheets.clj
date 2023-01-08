@@ -239,13 +239,15 @@
   ([] (get-first-day-from-each-month "2021"))
 
   ([year]
-   (->> (for [day (running-sum-by-day :year year)
-              :let [month (get-month (:Date day))]]
+   (->> (for [day all-work-data
+              :let [month (get-month (:Date day))]
+              :when (= year (get-year (:Date day)))]
           (assoc day :Month month))
         (group-by :Month)
         (vals)
         (map first)
         (map :Date)
+        (map (fn [x] (str/join "/" (subvec  (str/split x #"-") 1 3))))
         (sort))))
 
 (defn strip-date [data]
@@ -312,10 +314,7 @@
    :data {:values data}
    :mark {:type "line"}
    :encoding {:x {:field x :type "ordinal"
-                  :axis {:ticks 12
-                         :tickCount 12
-                         :labelValues (range 1 13)
-                         :values (get-first-day-from-each-month)
+                  :axis {:values (get-first-day-from-each-month)
                          :labelExpr "parseInt(slice(toString(datum.label), 0, 2), 10)"}}
               :y {:field y :aggregate "sum" :type "quantitative"},
               :color {:field "Project", :type "nominal"}}})
