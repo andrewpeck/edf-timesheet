@@ -4501,16 +4501,17 @@ Hours   %Tot    Project
 #+TBLFM: $6='(org-sbe ymd_to_weekday (k $$2) (path $"January 2023"))::$7='(org-sbe subtract (a $$3))
 
 #+begin_src emacs-lisp :exports results :results output :var data=2023-01
-(princ
- (format "\n%s\n\n"
-         (string-join
-          (cl-remove-if-not (lambda (x) (string-search "2023-01" x))
-                            (split-string
-                             (with-output-to-string
-                               (plot-weekly-work-goals-for-date-range 2022 1
-                                                                      2023 2))
-                             "\n" t)) "\n")))
 
+(require 'cl-lib)
+(require 'subr-x)
+(require 'dash)
+(-as-> (with-output-to-string
+         (plot-weekly-work-goals-for-date-range 2022 12 2023 2)) data
+       (split-string data "\n" t)
+       (cl-remove-if-not (lambda (x) (string-search "2023-01" x)) data)
+       (string-join data "\n")
+       (format "\n%s\n\n" data)
+       (princ data))
 
 (plot-monthly-work-chart data)
 #+end_src
