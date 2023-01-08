@@ -103,9 +103,11 @@
     (- wrap start)))
 
 (defn get-csv-file-names []
-  (->> (mapv str (filter #(.isFile %) (file-seq (clojure.java.io/file "csv/"))))
+  (->> (file-seq (clojure.java.io/file "csv/"))
+       (filter #(.isFile %))
+       (mapv str)
        (filter #(re-matches #"csv/[0-9]{4}-[0-9]{2}.csv" %))
-       sort))
+       (sort)))
 
 (defn slurp-timesheet [fname]
   (let [[year month]
