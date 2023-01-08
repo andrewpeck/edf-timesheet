@@ -35,6 +35,10 @@
   (try (Float/parseFloat s)
        (catch NumberFormatException _ false)))
 
+(defn to-int [s]
+  (try (Integer/parseInt s)
+       (catch NumberFormatException _ false)))
+
 (defn plot! [file spec]
   (->> spec json/write-str ds/vega-lite-spec->svg (spit file)))
 
@@ -119,7 +123,7 @@
 
 (defn slurp-timesheet [fname]
   (let [[year month]
-        (map #(Integer/parseInt %)
+        (map to-int
              (subvec (str/split fname #"[^A-z0-9]") 1 3))
         rows (->> fname read-csv (remove empty?))]
       (for [row rows
