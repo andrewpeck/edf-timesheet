@@ -150,27 +150,32 @@
 
  ;; #((jt/local-date "yyyy-MM-dd" (format "%04d-%02d-%02d" year month %))))
 
-;;------------------------------------------------------------------------------
-;; Data From Accruals.txt
-;;------------------------------------------------------------------------------
-
-(def work-data
-  "EDF workload by day"
-  (extract-data "accruals.txt"))
-
-(def work-data-by-year
-  "EDF workload by year"
-  (map (fn [x] (update x :Date (fn [x] (get-year x)))) work-data))
-
-(def projects
-  "List of all projects"
-  (set (map :Project work-data)))
-
-(def total-data
-  "EDF workload summed by project (all years combined)"
-  (map (fn [prj]
-         {:Project prj
-          :Hours  (sum-project prj work-data)}) projects))
+(defn standardize-project-names
+  "Replace the names in the timesheets with the standard database names."
+  [data]
+  (letfn [(subst [x]
+            (-> x
+                (str/upper-case)
+                (str/replace #".*ETL.*" "ETL")
+                (str/replace #".*ME0.*" "GEM")
+                (str/replace #".*GE21.*"  "GEM")
+                (str/replace #".*GE11.*"  "GEM")
+                (str/replace #".*ATLAS.*"  "L0MDT")
+                (str/replace #".*L0MDT.*"  "L0MDT")
+                (str/replace #".*IPMC.*"  "APOLLO")
+                (str/replace #".*APOLLO-IPMC.*"  "APOLLO")
+                (str/replace #".*TRACKER.*"  "APOLLO")
+                (str/replace #".*CSC.*"  "OTHER PRJ")
+                (str/replace #".*EMPHATIC.*"  "OTHER PRJ")
+                (str/replace #".*SCOTT-LAB.*"  "OTHER PRJ")
+                (str/replace #"ADMIN"  "EDF")
+                (str/replace #"DEVEL"  "EDF")
+                (str/replace #".*VAC.*"  "--")
+                (str/replace #".*SICK.*"  "--")
+                (str/replace #".*HOLIDAY.*"  "VAC/SICK/HOL")))]
+    (remove (fn [x] (= "--" (:Project x)))
+            (for [item data]
+              (update item :Project #(subst %))))))
 
 ;;------------------------------------------------------------------------------
 ;; Data From CSVs
@@ -178,7 +183,22 @@
 
 (def all-work-data
   "All the work data directly from CSV"
-  (apply concat (mapv slurp-timesheet (get-csv-file-names))))
+  (standardize-project-names
+   (apply concat (mapv slurp-timesheet (get-csv-file-names)))))
+
+(def projects
+  "List of all projects"
+  (set (map :Project all-work-data)))
+
+(def total-data
+  "EDF workload summed by project (all years combined)"
+  (map (fn [prj]
+         {:Project prj
+          :Hours  (sum-project prj all-work-data)}) projects))
+
+(def work-data-by-year
+  "EDF workload by year"
+  (map (fn [x] (update x :Date (fn [x] (get-year x)))) all-work-data))
 
 (def data-by-weekday
   "Data binned by day of the week"
@@ -227,6 +247,12 @@
         (map first)
         (map :Date)
         (sort))))
+
+(defn strip-date [data]
+  (for [item data]
+    (update item :Date
+            (fn [x]
+              (str/join "-" (subvec  (str/split x #"-") 0 2))))))
 
 ;;------------------------------------------------------------------------------
 ;; Plots Functions
@@ -299,9 +325,9 @@
 ;;------------------------------------------------------------------------------
 
 (plot! "timesheetdaily.svg"         (bar-chart-day  "Day"      "Hours" data-by-weekday))
-(plot! "timesheetday.svg"           (bar-chart      "Date"     "Hours" all-work-data))
-(plot! "timesheetmonthly.svg"       (bar-chart      "Date"     "Hours" work-data))
-(plot! "timesheetmonthlynormal.svg" (bar-chart      "Date"     "Hours" (normalize work-data)))
+(plot! "timesheetday.svg"           (bar-chart      "Date"     "Hours" (strip-date all-work-data)))
+(plot! "timesheetmonthly.svg"       (bar-chart      "Date"     "Hours" (strip-date all-work-data)))
+(plot! "timesheetmonthlynormal.svg" (bar-chart      "Date"     "Hours" (normalize (strip-date all-work-data))))
 (plot! "timesheetyearly.svg"        (bar-chart      "Date"     "Hours" work-data-by-year))
 (plot! "timesheetyearlynormal.svg"  (bar-chart      "Date"     "Hours" (normalize work-data-by-year)))
 
