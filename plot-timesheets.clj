@@ -108,9 +108,9 @@
        sort))
 
 (defn slurp-timesheet [fname]
-  (let [split (str/split fname #"[^A-z0-9]")
-        year (Integer/parseInt (nth split 1))
-        month (Integer/parseInt (nth split 2))
+  (let [[year month]
+        (map #(Integer/parseInt %)
+             (subvec (str/split fname #"[^A-z0-9]") 1 3))
         rows (->> fname read-csv (remove empty?))]
       (for [row rows
             :let [rowmap {:Date (edn/read-string (nth row 0 ""))
