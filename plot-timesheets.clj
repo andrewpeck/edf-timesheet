@@ -21,6 +21,17 @@
 ;; Utility Functions
 ;;------------------------------------------------------------------------------
 
+(defn get-one-day-from-each-month [data]
+  (sort
+   (map :Date
+        (map first
+             (vals
+              (group-by
+               :Month
+               (for [day (running-sum-by-day :year "2021")
+                     :let [month (first (str/split (:Date day) #"/"))]]
+                 (assoc day :Month month))))))))
+
 (defn to-float [s]
   (try (Float/parseFloat s)
        (catch NumberFormatException _ false)))
@@ -230,11 +241,15 @@
    :width plt-width
    :height plt-height
    :data {:values data}
-   :mark {:type "line", :point true},
-   :encoding
-   {:x {:field x :type "ordinal"}
-    :y {:field y :aggregate "sum" :type "quantitative"},
-    :color {:field "Project", :type "nominal"}}})
+   :mark {:type "line"}
+   :encoding {:x {:field x :type "ordinal"
+                  :axis {:ticks 12
+                         :tickCount 12
+                         :labelValues (range 1 13)
+                         :values (get-one-day-from-each-month data)
+                         :labelExpr "parseInt(slice(toString(datum.label), 0, 2), 10)"}}
+              :y {:field y :aggregate "sum" :type "quantitative"},
+              :color {:field "Project", :type "nominal"}}})
 
 ;;------------------------------------------------------------------------------
 ;; Plots
