@@ -57,17 +57,15 @@
    :Date (nth row 1)
    :Hours (to-float (nth row 2))})
 
-(defn sum-project [project data]
-  (->> (filter (fn [x] (= project (:Project x))) data)
-       (map :Hours)
-       (reduce +)))
-
 (defn sum-key
   "e.g. sum-key :Date '2021-01'"
   [key val data]
   (reduce +
           (for [x data :when (= val (key x))]
             (:Hours x))))
+
+(defn sum-project [Project data]
+  (sum-key :Project project data))
 
 (defn sum-weekday [weekday data]
   (sum-key :Day weekday data))
