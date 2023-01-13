@@ -3,6 +3,7 @@
 :END:
 #+TITLE: Billing
 #+OPTIONS: toc:nil
+#+OPTIONS: |:nil
 #+STARTUP: overview
 
 * Notes :noexport:
@@ -19,32 +20,14 @@
 #+end_src
 
 #+RESULTS:
-#+begin_example
-
-
-Hours   %Tot             Project
---------------------------------
-   1.00    0%     SCOTT-LAB-CAMERA
-  44.00    1%                  CSC +++
-  49.50    1%             EMPHATIC +++
- 149.50    5%                 GE11 +++++++++
- 165.25    6%               APOLLO +++++++++
- 180.50    6%                 GE21 ++++++++++
- 245.50    9%              TRACKER ++++++++++++++
- 354.00   12%                  ME0 ++++++++++++++++++++
- 657.50   24%                L0MDT ++++++++++++++++++++++++++++++++++++++
- 876.50   32%                  ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-2723.25
-
-
-Hours   %Tot      Project
---------------------------------
-1000.25   36%       MEETING +++++++++++++++++++++++++++++
-1723.00   63%     REAL WORK ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-2723.25
-#+end_example
+:
+:
+:                         Cumulative Meetings
+:              ┌                                        ┐
+:      MEETING ┤■■■■■■■■■■■■■■■■■■ 1003.25
+:    REAL WORK ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 1780.5
+:              └                                        ┘
+:
 
 *** Cumulative Work
 
@@ -56,20 +39,20 @@ Hours   %Tot      Project
 #+begin_example
 
 
-Hours   %Tot             Project
---------------------------------
-   1.00    0%     SCOTT-LAB-CAMERA
-  44.00    1%                  CSC +++
-  49.50    1%             EMPHATIC +++
- 149.50    5%                 GE11 +++++++++
- 165.25    6%               APOLLO +++++++++
- 180.50    6%                 GE21 ++++++++++
- 245.50    9%              TRACKER ++++++++++++++
- 354.00   12%                  ME0 ++++++++++++++++++++
- 657.50   24%                L0MDT ++++++++++++++++++++++++++++++++++++++
- 876.50   32%                  ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-2723.25
+                                 Cumulative Work
+                    ┌                                        ┐
+   SCOTT-LAB-CAMERA ┤ 1.0
+                CSC ┤■■ 48.0
+           EMPHATIC ┤■■ 53.0
+               GE11 ┤■■■■■■ 159.5
+             APOLLO ┤■■■■■■ 166.75
+               GE21 ┤■■■■■■■ 185.5
+            TRACKER ┤■■■■■■■■■ 248.5
+                ME0 ┤■■■■■■■■■■■■■ 362.5
+              L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■ 665.5
+                ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 893.5
+                    └                                        ┘
+
 #+end_example
 
 *** 2021 Work
@@ -82,25 +65,25 @@ Hours   %Tot             Project
 #+begin_example
 
 
-Hours   %Tot             Project
---------------------------------
-   1.00    0%     SCOTT-LAB-CAMERA
-   6.00    0%                  CSC +
-  53.00    3%             EMPHATIC ++++++
-  72.00    4%                 GE11 ++++++++
-  76.00    4%               APOLLO ++++++++
-  85.50    5%                 GE21 +++++++++
- 203.50   13%                  ME0 ++++++++++++++++++++++
- 245.50   15%              TRACKER ++++++++++++++++++++++++++
- 340.25   21%                  ETL +++++++++++++++++++++++++++++++++++++
- 465.50   30%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-1548.25
+                                    2021 Work
+                    ┌                                        ┐
+   SCOTT-LAB-CAMERA ┤ 1.0
+                CSC ┤ 6.0
+           EMPHATIC ┤■■■■ 53.0
+               GE11 ┤■■■■■ 72.0
+             APOLLO ┤■■■■■ 76.0
+               GE21 ┤■■■■■■ 85.5
+                ME0 ┤■■■■■■■■■■■■■■ 203.5
+            TRACKER ┤■■■■■■■■■■■■■■■■■ 245.5
+                ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■ 340.25
+              L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 465.5
+                    └                                        ┘
+
 #+end_example
 
 *** 2022 Work
 
-#+begin_src emacs-lisp :exports both :results output
+#+begin_src emacs-lisp :exports results :results output
 (plot-work-chart-in-date-range "2022 Work" :start-year 2022 :start-month 01 :end-year 2022 :end-month 12 :short t)
 #+end_src
 
@@ -108,18 +91,43 @@ Hours   %Tot             Project
 #+begin_example
 
 
-Hours   %Tot    Project
---------------------------------
-   3.00    0%     TRACKER
-  38.50    3%         CSC ++++
-  78.00    6%        GE11 +++++++
-  90.75    7%      APOLLO ++++++++
-  91.50    7%        GE21 ++++++++
- 153.00   12%         ME0 ++++++++++++++
- 196.00   16%       L0MDT ++++++++++++++++++
- 541.25   45%         ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-1192.00
+                           2022 Work
+           ┌                                        ┐
+   TRACKER ┤ 3.0
+       CSC ┤■■ 38.5
+      GE11 ┤■■■■■ 78.0
+    APOLLO ┤■■■■■ 90.75
+      GE21 ┤■■■■■ 91.5
+       ME0 ┤■■■■■■■■■ 153.0
+     L0MDT ┤■■■■■■■■■■■■ 196.0
+       ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 541.25
+           └                                        ┘
+
+#+end_example
+
+*** 2023 Work
+
+#+begin_src emacs-lisp :exports results :results output
+(plot-work-chart-in-date-range "2023 Work"
+                               :start-year 2023 :start-month 01
+                               :end-year 2023 :end-month (nth 4 (decode-time (current-time)))
+                               :short t)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+
+                         2023 Work
+         ┌                                        ┐
+     CSC ┤■■■■■■■■■■ 3.5
+   L0MDT ┤■■■■■■■■■■■ 4.0
+     ME0 ┤■■■■■■■■■■■ 4.0
+    GE21 ┤■■■■■■■■■■■■■■■■■■■■■■■■ 8.5
+    GE11 ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■ 9.5
+     ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 12.0
+         └                                        ┘
+
 #+end_example
 
 *** Monthly
@@ -341,7 +349,7 @@ cat accruals.txt | grep ETL
 | ETL | 2022-11 |  63.5 | hours | 46.5% | $5651.50 |
 | ETL | 2022-12 |  11.0 | hours | 13.7% | $979.00  |
 
-* Hours :noexport:
+* Hours
 :PROPERTIES:
 :VISIBILITY: children
 :END:
@@ -494,26 +502,26 @@ cat accruals.txt | grep ETL
 #+TBLFM: $6='(get-day-of-week "January 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-01
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   1.00    0%        DEVEL +
-   2.00    1%        ADMIN ++
-   2.50    1%         GE11 ++
-   5.00    3%         GE21 ++++
-   6.00    4%         SICK +++++
-   8.00    5%      HOLIDAY +++++++
-   8.00    5%          ME0 +++++++
-   8.00    5%     VACATION +++++++
-  21.00   14%        L0MDT +++++++++++++++++
-  21.50   14%      TRACKER ++++++++++++++++++
-  60.50   42%          ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-143.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+      DEVEL ┤■ 1.0
+      ADMIN ┤■ 2.0
+       GE11 ┤■ 2.5
+       GE21 ┤■■■ 5.0
+       SICK ┤■■■ 6.0
+    HOLIDAY ┤■■■■ 8.0
+        ME0 ┤■■■■ 8.0
+   VACATION ┤■■■■ 8.0
+      L0MDT ┤■■■■■■■■■■■■ 21.0
+    TRACKER ┤■■■■■■■■■■■■ 21.5
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 60.5
+            └                                        ┘
+
 #+end_example
 
 *** February 2021
@@ -827,25 +835,25 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "March 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-03
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   0.50    0%          CSC
-   6.50    3%     EMPHATIC +++++
-  10.00    5%         SICK ++++++++
-  10.00    5%         GE11 ++++++++
-  10.50    5%         GE21 +++++++++
-  12.50    7%          ME0 ++++++++++
-  16.00    9%     VACATION +++++++++++++
-  18.00   10%          ETL +++++++++++++++
-  33.00   18%      TRACKER +++++++++++++++++++++++++++
-  60.50   34%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-177.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+        CSC ┤ 0.5
+   EMPHATIC ┤■■■■ 6.5
+       SICK ┤■■■■■■ 10.0
+       GE11 ┤■■■■■■ 10.0
+       GE21 ┤■■■■■■ 10.5
+        ME0 ┤■■■■■■■ 12.5
+   VACATION ┤■■■■■■■■■ 16.0
+        ETL ┤■■■■■■■■■■ 18.0
+    TRACKER ┤■■■■■■■■■■■■■■■■■■■ 33.0
+      L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 60.5
+            └                                        ┘
+
 #+end_example
 
 *** April 2021
@@ -1173,25 +1181,25 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "May 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-05
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   0.50    0%          CSC
-   3.00    1%         GE11 +++
-   7.00    4%     EMPHATIC +++++++
-  10.50    6%         GE21 +++++++++++
-  12.50    7%         SICK ++++++++++++
-  13.00    8%     VACATION +++++++++++++
-  19.00   11%          ETL +++++++++++++++++++
-  24.50   15%          ME0 ++++++++++++++++++++++++
-  32.50   20%      TRACKER ++++++++++++++++++++++++++++++++
-  37.50   23%        L0MDT ++++++++++++++++++++++++++++++++++++++
---------------------------------
-160.00
+                    Monthly Work Distribution
+            ┌                                        ┐
+        CSC ┤ 0.5
+       GE11 ┤■■■ 3.0
+   EMPHATIC ┤■■■■■■ 7.0
+       GE21 ┤■■■■■■■■■■ 10.5
+       SICK ┤■■■■■■■■■■■ 12.5
+   VACATION ┤■■■■■■■■■■■■ 13.0
+        ETL ┤■■■■■■■■■■■■■■■■■ 19.0
+        ME0 ┤■■■■■■■■■■■■■■■■■■■■■■ 24.5
+    TRACKER ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 32.5
+      L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 37.5
+            └                                        ┘
+
 #+end_example
 
 *** June 2021
@@ -1545,28 +1553,28 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "July 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-07
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   2.00    1%         SICK ++
-   2.50    1%          CSC ++
-   3.00    1%         GE21 +++
-   3.00    1%        ADMIN +++
-   7.00    4%     EMPHATIC +++++++
-   8.00    4%      HOLIDAY ++++++++
-   8.00    4%         GE11 ++++++++
-   9.00    5%      TRACKER +++++++++
-  16.00    9%        L0MDT ++++++++++++++++
-  18.00   10%          ME0 ++++++++++++++++++
-  32.00   18%     VACATION ++++++++++++++++++++++++++++++++
-  32.50   18%       APOLLO ++++++++++++++++++++++++++++++++
-  33.50   19%          ETL ++++++++++++++++++++++++++++++++++
---------------------------------
-174.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+       SICK ┤■■ 2.0
+        CSC ┤■■■ 2.5
+       GE21 ┤■■■ 3.0
+      ADMIN ┤■■■ 3.0
+   EMPHATIC ┤■■■■■■■ 7.0
+    HOLIDAY ┤■■■■■■■■ 8.0
+       GE11 ┤■■■■■■■■ 8.0
+    TRACKER ┤■■■■■■■■■ 9.0
+      L0MDT ┤■■■■■■■■■■■■■■■■ 16.0
+        ME0 ┤■■■■■■■■■■■■■■■■■■ 18.0
+   VACATION ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 32.0
+     APOLLO ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 32.5
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 33.5
+            └                                        ┘
+
 #+end_example
 
 *** August 2021
@@ -1980,28 +1988,28 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "September 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-09
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   2.00    1%          CSC ++
-   4.00    2%        DEVEL ++++
-   4.00    2%        ADMIN ++++
-   5.00    2%         GE21 +++++
-   6.00    3%         GE11 ++++++
-   6.50    3%         SICK ++++++
-   6.50    3%      TRACKER ++++++
-   8.00    4%      HOLIDAY ++++++++
-   8.00    4%     VACATION ++++++++
-  20.50   12%       APOLLO ++++++++++++++++++++
-  25.00   14%        L0MDT +++++++++++++++++++++++++
-  34.00   20%          ME0 ++++++++++++++++++++++++++++++++++
-  39.25   23%          ETL +++++++++++++++++++++++++++++++++++++++
---------------------------------
-168.75
+                    Monthly Work Distribution
+            ┌                                        ┐
+        CSC ┤■■ 2.0
+      DEVEL ┤■■■ 4.0
+      ADMIN ┤■■■ 4.0
+       GE21 ┤■■■■ 5.0
+       GE11 ┤■■■■■ 6.0
+       SICK ┤■■■■■ 6.5
+    TRACKER ┤■■■■■ 6.5
+    HOLIDAY ┤■■■■■■■ 8.0
+   VACATION ┤■■■■■■■ 8.0
+     APOLLO ┤■■■■■■■■■■■■■■■■■ 20.5
+      L0MDT ┤■■■■■■■■■■■■■■■■■■■■■ 25.0
+        ME0 ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 34.0
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 39.25
+            └                                        ┘
+
 #+end_example
 
 *** October 2021
@@ -2340,27 +2348,27 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "November 2021" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2021-11
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot             Project
---------------------------------
-   1.00    0%     SCOTT-LAB-CAMERA +
-   2.00    1%             EMPHATIC ++
-   2.50    1%                DEVEL ++
-   2.50    1%                 GE21 ++
-   4.50    2%                 SICK ++++
-   5.00    3%                ADMIN ++++
-   7.00    4%                 GE11 ++++++
-   8.00    4%              TRACKER +++++++
-  17.50   10%                  ME0 +++++++++++++++
-  25.00   15%                  ETL ++++++++++++++++++++++
-  32.00   19%              HOLIDAY ++++++++++++++++++++++++++++
-  58.00   35%                L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-165.00
+                            Monthly Work Distribution
+                    ┌                                        ┐
+   SCOTT-LAB-CAMERA ┤■ 1.0
+           EMPHATIC ┤■ 2.0
+              DEVEL ┤■ 2.5
+               GE21 ┤■ 2.5
+               SICK ┤■■■ 4.5
+              ADMIN ┤■■■ 5.0
+               GE11 ┤■■■■ 7.0
+            TRACKER ┤■■■■■ 8.0
+                ME0 ┤■■■■■■■■■■ 17.5
+                ETL ┤■■■■■■■■■■■■■■■ 25.0
+            HOLIDAY ┤■■■■■■■■■■■■■■■■■■■ 32.0
+              L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 58.0
+                    └                                        ┘
+
 #+end_example
 
 *** December 2021
@@ -2632,26 +2640,26 @@ Hours   %Tot             Project
 #+TBLFM: $6='(get-day-of-week "January 2022" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-01
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   0.50    0%      TRACKER
-   2.50    1%       APOLLO ++
-   3.00    2%         GE21 ++
-   3.50    2%        ADMIN ++
-   6.00    4%         GE11 ++++
-   7.50    5%          CSC +++++
-   8.00    5%      HOLIDAY ++++++
-   8.00    5%          ME0 ++++++
-  16.00   10%          ETL +++++++++++
-  24.00   16%     VACATION +++++++++++++++++
-  70.00   46%        L0MDT ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-149.00
+                    Monthly Work Distribution
+            ┌                                        ┐
+    TRACKER ┤ 0.5
+     APOLLO ┤■ 2.5
+       GE21 ┤■ 3.0
+      ADMIN ┤■■ 3.5
+       GE11 ┤■■■ 6.0
+        CSC ┤■■■■ 7.5
+    HOLIDAY ┤■■■■ 8.0
+        ME0 ┤■■■■ 8.0
+        ETL ┤■■■■■■■■ 16.0
+   VACATION ┤■■■■■■■■■■■■ 24.0
+      L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 70.0
+            └                                        ┘
+
 #+end_example
 
 *** February 2022
@@ -3006,25 +3014,25 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "March 2022" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-03
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   1.00    0%      TRACKER +
-   3.00    1%        ADMIN +++
-   7.50    4%          CSC ++++++++
-   9.50    5%          ME0 ++++++++++
-  16.50    9%         GE11 ++++++++++++++++
-  17.50   10%         GE21 ++++++++++++++++++
-  18.00   10%     VACATION ++++++++++++++++++
-  19.50   11%        L0MDT ++++++++++++++++++++
-  31.00   18%       APOLLO +++++++++++++++++++++++++++++++
-  45.00   26%          ETL +++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-168.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+    TRACKER ┤■ 1.0
+      ADMIN ┤■■ 3.0
+        CSC ┤■■■■■■ 7.5
+        ME0 ┤■■■■■■■ 9.5
+       GE11 ┤■■■■■■■■■■■■ 16.5
+       GE21 ┤■■■■■■■■■■■■■ 17.5
+   VACATION ┤■■■■■■■■■■■■■■ 18.0
+      L0MDT ┤■■■■■■■■■■■■■■■ 19.5
+     APOLLO ┤■■■■■■■■■■■■■■■■■■■■■■■ 31.0
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 45.0
+            └                                        ┘
+
 #+end_example
 
 *** April 2022
@@ -3311,26 +3319,26 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "May 2022" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-05
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   0.50    0%          CSC
-   2.50    1%        ADMIN ++
-   3.00    2%         GE11 +++
-   3.00    2%         GE21 +++
-   4.00    2%       APOLLO ++++
-   8.00    5%      HOLIDAY ++++++++
-  13.00    9%          ME0 +++++++++++++
-  15.00   10%         SICK +++++++++++++++
-  26.50   19%        L0MDT ++++++++++++++++++++++++++
-  29.00   20%     VACATION +++++++++++++++++++++++++++++
-  34.00   24%          ETL ++++++++++++++++++++++++++++++++++
---------------------------------
-138.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+        CSC ┤■ 0.5
+      ADMIN ┤■■■ 2.5
+       GE11 ┤■■■ 3.0
+       GE21 ┤■■■ 3.0
+     APOLLO ┤■■■■ 4.0
+    HOLIDAY ┤■■■■■■■■ 8.0
+        ME0 ┤■■■■■■■■■■■■■ 13.0
+       SICK ┤■■■■■■■■■■■■■■■ 15.0
+      L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■ 26.5
+   VACATION ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 29.0
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 34.0
+            └                                        ┘
+
 #+end_example
 
 *** June 2022
@@ -3627,24 +3635,24 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "July 2022" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-07
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   0.50    0%         GE21
-   1.00    0%       APOLLO +
-   4.50    2%        L0MDT ++++
-   8.00    5%      HOLIDAY +++++++
-  10.00    6%        ADMIN +++++++++
-  16.00   10%          ME0 ++++++++++++++
-  16.00   10%     VACATION ++++++++++++++
-  38.50   25%         SICK +++++++++++++++++++++++++++++++++
-  58.00   38%          ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-152.50
+                    Monthly Work Distribution
+            ┌                                        ┐
+       GE21 ┤ 0.5
+     APOLLO ┤■ 1.0
+      L0MDT ┤■■■ 4.5
+    HOLIDAY ┤■■■■■ 8.0
+      ADMIN ┤■■■■■■ 10.0
+        ME0 ┤■■■■■■■■■ 16.0
+   VACATION ┤■■■■■■■■■ 16.0
+       SICK ┤■■■■■■■■■■■■■■■■■■■■■■■ 38.5
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 58.0
+            └                                        ┘
+
 #+end_example
 
 *** August 2022
@@ -3914,25 +3922,25 @@ Hours   %Tot     Project
 #+TBLFM: $6='(get-day-of-week "September 2022" $2 )::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2022-09
-(plot-monthly-work-chart data)
+(plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-Hours   %Tot     Project
---------------------------------
-   4.00    3%        ADMIN ++++
-   4.00    3%         GE11 ++++
-   4.00    3%       APOLLO ++++
-   5.00    3%         GE21 +++++
-   8.00    6%      HOLIDAY +++++++
-   8.50    6%         SICK ++++++++
-  10.00    7%        L0MDT +++++++++
-  15.00   11%     VACATION ++++++++++++++
-  16.50   12%          ME0 +++++++++++++++
-  55.00   42%          ETL ++++++++++++++++++++++++++++++++++++++++++++++++++
---------------------------------
-130.00
+                    Monthly Work Distribution
+            ┌                                        ┐
+      ADMIN ┤■■ 4.0
+       GE11 ┤■■ 4.0
+     APOLLO ┤■■ 4.0
+       GE21 ┤■■■ 5.0
+    HOLIDAY ┤■■■■■ 8.0
+       SICK ┤■■■■■ 8.5
+      L0MDT ┤■■■■■■ 10.0
+   VACATION ┤■■■■■■■■■ 15.0
+        ME0 ┤■■■■■■■■■■ 16.5
+        ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 55.0
+            └                                        ┘
+
 #+end_example
 
 *** October 2022
@@ -4402,19 +4410,23 @@ Hours   %Tot     Project
 
 #+begin_src emacs-lisp :exports results :results output :var data=2023-01
 
-;; (-as-> (with-output-to-string
-;;          (plot-weekly-work-goals-for-date-range 2022 12 2023 2)) data
-;;        (split-string data "\n" t)
-;;        (cl-remove-if-not (lambda (x) (string-search "2023-01" x)) data)
-;;        (string-join data "\n")
-;;        (format "\n%s\n\n" data)
-;;        (princ data))
+(-as-> (with-output-to-string
+         (plot-weekly-work-goals-for-date-range 2022 12 2023 2)) data
+       (split-string data "\n" t)
+       (cl-remove-if-not (lambda (x) (string-search "2023-01" x)) data)
+       (string-join data "\n")
+       (format "\n%s\n\n" data)
+       (princ data))
 
 (plot-monthly-work-chart data :uplot t)
 #+end_src
 
 #+RESULTS:
 #+begin_example
+
+Week 2023-01-01: 125.0% (27 hours) +++++++++++++++++++++++++     (5)
+Week 2023-01-02: 122.7% (27 hours) +++++++++++++++++++++++++     (5)
+
                    Monthly Work Distribution
            ┌                                        ┐
        CSC ┤■■■■■■■■■■ 3.5
