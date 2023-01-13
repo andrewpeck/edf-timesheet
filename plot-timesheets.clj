@@ -323,6 +323,12 @@
 ;; Plots
 ;;------------------------------------------------------------------------------
 
+(with-open [wrtr (io/writer "by-weekday.txt")]
+  (let [output
+        (str/join "\n" (->> data-by-weekday
+                            (map (fn [x] (format "%s, %s" (:Day x) (:Hours x))))))]
+    (.write wrtr output)))
+
 (plot! "timesheetdaily.svg"         (bar-chart-day  "Day"      "Hours" data-by-weekday))
 (plot! "timesheetday.svg"           (bar-chart      "Date"     "Hours" (strip-date all-work-data)))
 (plot! "timesheetmonthly.svg"       (bar-chart      "Date"     "Hours" (strip-date all-work-data)))

@@ -23,15 +23,32 @@ format.
 [[file:timesheet_pie.svg]]
 
 ** By weekday
-#+attr_html: :width 720px
-[[file:timesheetdaily.svg]]
+
+#+begin_src bash :results output :exports results
+cat by-weekday.txt \
+| uplot bar -d, -t "Work by Day of Week" 2>&1
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                  Work by Day of Week
+       ┌                                        ┐
+   MON ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 599.0
+   TUE ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■ 566.5
+   WED ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 679.25
+   THU ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 655.0
+   FRI ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 611.5
+   SAT ┤ 10.0
+   SUN ┤ 1.5
+       └                                        ┘
+#+end_example
 
 ** Integrated billed hours
 
 #+attr_html: :width 720px
 [[file:timesheetdayrunning.svg]]
 
-** Word Cloud
+** Task Distribution
 
 #+begin_src bash :results output :exports results
 cat wordcloud.txt \
@@ -44,7 +61,6 @@ cat wordcloud.txt \
 | grep -v "work" \
 | head -n 25 \
 | uplot bar -d, -t "Tasks" 2>&1
-#grep "\S" wordcloud.txt | tr -d ";" | uniq -c | sort | tail -n 100 > tmp.txt
 #+end_src
 
 #+RESULTS:
@@ -78,9 +94,6 @@ cat wordcloud.txt \
         tester ┤■ 17.0
                └                                        ┘
 #+end_example
-
-#+attr_html: :width 720px
-[[file:wordcloud.svg]]
 
 ** Histogram by month
 #+begin_src bash :results output :exports results
