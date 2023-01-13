@@ -164,6 +164,8 @@ meeting
 
 firmware
 
+firmware
+
 
 
 meeting
@@ -7508,6 +7510,10 @@ oh
 
 meeting
 
+cern
+
+training
+
 meeting
 
 with
@@ -8135,4 +8141,88 @@ slow
 control
 
 meeting
+
+readout
+
+board
+
+emulator
+
+adapter
+
+administrative
+
+details
+
+meeting
+
+oh
+
+link
+
+oh
+
+link
+
+hog
+
+module
+
+design
+
+csm
+
+setup
+
+oh
+
+firmware
+
+oh
+
+firmware
+
+hog
+
+hog
+
+hog
+
+tamalero
+
+setup
+
+help
+
+oh
+
+meeting
+
+oh
+
+firmware
+
+oh
+
+firmware
+
+edf
+
+meeting
+
+firmware
+
+firmware
+
+hog
+
+hog
+
+upgrade
+
+mtg
+
+upgrade
+
+mtg
 

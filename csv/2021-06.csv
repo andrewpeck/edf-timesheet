@@ -1,25 +1,25 @@
 D,Time,Project,Task,Day,Hours
 1,10-11,L0MDT,Meet with Eric,TUE,1.0
 1,11-12,L0MDT,Meeting,TUE,1.0
-1,1-6,EMPHATIC,Ethernet Firmware; Documentation; Eval board setup + test,TUE,4.0
-1,6-7,ETL,LINPOL Email Discussion,TUE,4.0
+1,1-6,EMPHATIC,Ethernet Firmware; Documentation; Eval board setup + test,TUE,5.0
+1,6-7,ETL,LINPOL Email Discussion,TUE,1.0
 ,,,,,
 2,9-10,Tracker,Meeting,WED,1.0
-2,10-12:30,EMPHATIC,Firmware,WED,2.0
+2,10-12:30,EMPHATIC,Firmware,WED,2.5
 2,1-2,Tracker,IPMC Updates,WED,1.0
 2,2-3:30,ME0SF,Meet with Chloe,WED,1.5
 2,3:30-4,GE21,Firmware timing closure,WED,0.5
 2,4-5,ETL,Meeting,WED,1.0
 2,5-6,GE21,Firmware timing closure,WED,1.0
 2,6-8,EMPHATIC,IPBus DAQ readout,WED,2.0
-2,8-9:30,L0MDT,Apollo Documentation,WED,1.0
+2,8-9:30,L0MDT,Apollo Documentation,WED,1.5
 2,9:30-11,Tracker,Apollo Documentation,WED,1.5
 ,,,,,
-3,9-11,GE21,Meeting; Firmware Updates,THU,3.0
+3,9-11,GE21,Meeting; Firmware Updates,THU,2.0
 3,11-12,GE11,Firmware Updates,THU,1.0
 3,12-1,Tracker,Firmware Updates,THU,1.0
 3,3-4,EMPHATIC,Work with Tejasava,THU,1.0
-3,4-7,EMPHATIC,DAQ Firmware,THU,2.0
+3,4-7,EMPHATIC,DAQ Firmware,THU,3.0
 ,,,,,
 4,9-10,Tracker,Meeting,FRI,1.0
 4,10-11:30,EMPHATIC,DAQ Firmware,FRI,1.5
@@ -41,10 +41,10 @@ D,Time,Project,Task,Day,Hours
 8,12:30-2:00,EMPHATIC,Firmware repo; Firmware updates,TUE,1.5
 8,2-3,EMPHATIC,Board debug,TUE,1.0
 8,3-3:30,EMPHATIC,Tejasava,TUE,0.5
-8,3:30-4:30,Tracker,IPMC,TUE,0.5
+8,3:30-4:30,Tracker,IPMC,TUE,1.0
 8,4:30-5:30,L0MDT,Firmware,TUE,1.0
 ,,,,,
-9,9-10:30,Tracker,Soc Workshop,WED,1.0
+9,9-10:30,Tracker,Soc Workshop,WED,1.5
 9,10:30-12,L0MDT,Soc Workshop,WED,1.5
 9,12-1:30,EMPHATIC,Firmware updates; Debugging,WED,1.5
 9,1:30-2,Tracker,IPMC,WED,0.5
@@ -60,7 +60,7 @@ D,Time,Project,Task,Day,Hours
 10,2:30-4,ETL,Meet with Andy,THU,1.5
 10,4-7,GE21,Radtest firmware,THU,3.0
 ,,,,,
-11,9-10:30,Tracker,Soc Workshop,FRI,1.0
+11,9-10:30,Tracker,Soc Workshop,FRI,1.5
 11,10:30-12,L0MDT,Soc Workshop,FRI,1.5
 11,1-1:30,L0MDT,Gitlab maintainence,FRI,0.5
 11,1:30-2:30,EMPHATIC,Meet with Eric,FRI,1.0
@@ -69,11 +69,11 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 ,,,,,
 14,9-10,L0MDT,Aldec tutorial,MON,1.0
-14,10-12:30,ETL,Meeting; Slides,MON,2.0
-14,12:30-1,--,LUNCH,MON,1.0
+14,10-12:30,ETL,Meeting; Slides,MON,2.5
+14,12:30-1,--,LUNCH,MON,0.5
 14,1-2,Tracker,IPMC,MON,1.0
 14,2-3,L0MDT,Meeting,MON,1.0
-14,3-5:30,Tracker,IPMC,MON,2.0
+14,3-5:30,Tracker,IPMC,MON,2.5
 ,,,,,
 15,9-12,L0MDT,HOG Tutorial,TUE,3.0
 15,12-2,Tracker,IPMC/ESM,TUE,2.0
@@ -97,7 +97,7 @@ D,Time,Project,Task,Day,Hours
 21,9-9:30,--,Email,MON,0.5
 21,9:30-10,Tracker,IPMC Firmware,MON,0.5
 21,10-11,L0MDT,Chat with Eric,MON,1.0
-21,12-12:30,EMPHATIC,Chat with Eric,MON,1.0
+21,12-12:30,EMPHATIC,Chat with Eric,MON,0.5
 21,12:30-1,Tracker,Chat with Dan,MON,0.5
 21,1-2,Tracker,IPMC/ESM,MON,1.0
 21,2-3,L0MDT,Meeting,MON,1.0
@@ -117,7 +117,7 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 24,9-10,L0MDT,Meeting,THU,1.0
 24,10-2,Tracker,IPMC,THU,4.0
-24,2-3,GE11,Firmware,THU,2.0
+24,2-3,GE11,Firmware,THU,1.0
 24,3-4,ETL,Firmware,THU,1.0
 24,4-5,ME0OH,Meeting,THU,1.0
 24,5-6,L0MDT,HOG,THU,1.0
@@ -126,7 +126,7 @@ D,Time,Project,Task,Day,Hours
 25,10-11,GE11,Firmware,FRI,1.0
 25,11-12,--,LUNCH,FRI,1.0
 25,12-3,Tracker,Lab setup,FRI,3.0
-25,3-4:30,GE21,Firmware,FRI,3.0
+25,3-4:30,GE21,Firmware,FRI,1.5
 25,4:30-6,GE11,Firmware,FRI,1.5
 ,,,,,
 ,,,,,

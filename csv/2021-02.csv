@@ -14,7 +14,7 @@ D,Time,Project,Task,,Hours
 3,11-4,Tracker,IPMC,WED,5.0
 ,,,,,
 4,1-1:30,GE21,Accruals,THU,0.5
-4,1:30-2,ME0,Accruals,,0.5
+4,1:30-2,ME0,Accruals,THU,0.5
 ,,,,,
 5,9-11,Tracker,DAQ Meeting,FRI,2.0
 5,2-3,ME0OH,Meeting w/ UCLA,FRI,1.0
@@ -79,9 +79,9 @@ D,Time,Project,Task,,Hours
 22,11:30-1,L0MDT,Chat w/ Eric,MON,1.5
 22,1-7,L0MDT,Yaml BD,MON,6.0
 ,,,,,
-23,11-12,L0MDT,HOG Meeting,MON,1.0
-23,12-1,L0MDT,Slides,MON,1.0
-23,1-2,L0MDT,Slides,MON,1.0
+23,11-12,L0MDT,HOG Meeting,TUE,1.0
+23,12-1,L0MDT,Slides,TUE,1.0
+23,1-2,L0MDT,Slides,TUE,1.0
 23,2-5,SICK,Chiropractor,TUE,3.0
 ,,,,,
 24,9-10:30,Tracker,Meeting,WED,1.5
@@ -97,7 +97,7 @@ D,Time,Project,Task,,Hours
 26,5-6,ETL,Meet w/ Daniel + Chris,FRI,1.0
 26,4-5,ME0OH,UCLA meeting,FRI,1.0
 ,,,,,
-28,11:30-12:00,GE21,Accruals,SUN,1.0
+28,11:30-12:00,GE21,Accruals,SUN,0.5
 28,12:00-12:30,ME0,Accruals,SUN,0.5
 28,12:30-1,ETL,Slides,SUN,0.5
 

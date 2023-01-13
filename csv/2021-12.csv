@@ -14,7 +14,7 @@ D,Time,Project,Task,Day,Hours
 2,4-5,ME0OH,Meeting,THU,1.0
 ,,,,,
 3,9-10,Tracker,Meeting,FRI,1.0
-3,10-12,L0MDT,Firmware,FRI,1.0
+3,10-12,L0MDT,Firmware,FRI,2.0
 3,12-1,--,EDF LUNCH,FRI,1.0
 3,1-5,DEVEL,Cleanup EDF,FRI,4.0
 ,,,,,
@@ -31,7 +31,7 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 8,9-12:30,GE21,GBT Firmware,WED,3.5
 8,12:30-4,L0MDT,Firmware,WED,3.5
-8,4-5:30,L0MDT,CM Review,WED,1.0
+8,4-5:30,L0MDT,CM Review,WED,1.5
 ,,,,,
 9,9-10,L0MDT,Firmware,THU,1.0
 9,10-11,L0MDT,Firmware,THU,1.0
@@ -46,11 +46,11 @@ D,Time,Project,Task,Day,Hours
 10,2:30-3:30,ME0SF,Chloe,FRI,1.0
 10,3:30-4:30,L0MDT,Schematic review,FRI,1.0
 ,,,,,
-11,12-5,L0MDT,Schematic review,SAT,6.0
+11,12-5,L0MDT,Schematic review,SAT,5.0
 ,,,,,
 ,,,,,
 13,9-10:00,GE11,OH Timing,MON,1.0
-13,10-12:30,GE21,OH Timing,MON,1.5
+13,10-12:30,GE21,OH Timing,MON,2.5
 13,12:30-3,L0MDT,Firmware,MON,2.5
 13,3-6,ADMIN,Holiday Party,MON,3.0
 ,,,,,
@@ -86,11 +86,11 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 ,,,,,
 20,9-11,L0MDT,Firmware,MON,2.0
-20,11-12,GE11,Firmware,MON,2.0
+20,11-12,GE11,Firmware,MON,1.0
 20,12-1,GE21,Firmware,MON,1.0
 20,1-2,GE11,Firmware (4g link),MON,1.0
 20,2-3,--,LUNCH,MON,1.0
-20,3-5,L0MDT,Firmware,MON,1.0
+20,3-5,L0MDT,Firmware,MON,2.0
 ,,,,,
 21,9-11,GE11,Firmware,TUE,2.0
 22,11-1,GE21,Firmware,WED,2.0

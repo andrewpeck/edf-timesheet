@@ -18,34 +18,34 @@ ADMIN,0,0,0,0.50,0,0,0,Billing
 EMPHATIC,0,0,0,0,2.00,0,0,Meet with Eric + Tejasava
 ,12,13,14,15,16,17,18,
 ATLAS-MUON-PHASE2,1.00,0,0,1.00,0,0,0,Meeting
-APOLLO,5.00,1.00,3.00,0,3.50,0,0,I2C debugging; IPMC; Schematic review
+APOLLO,5.00,1.00,4.00,0,3.50,0,0,I2C debugging; IPMC; Schematic review
 CMS-EMU-OPS-GE11,0,0,0.50,0,0,0,0,Firmware updates
 CMS-EMU-UPGRADE-ME0,0,3.50,0,1.50,2.00,0,0,ASIAGO Release; Chloe; Meeting
 CMS-PIXEL-DTC,0,0,1.00,0,1.00,0,0,Meeting
-CMS-ETL,1.00,3.00,3.00,4.00,0.50,0,0,Chat with Indara; Meet with Indara; Meeting; Orders; PCB; Power adapter; Requirements doc
+CMS-ETL,1.00,3.00,3.00,5.50,0.50,0,0,Chat with Indara; Meet with Indara; Meeting; Orders; PCB; Power adapter; Requirements doc
 ADMIN,0,0.50,0,0,0,0,0,Billing
 EMPHATIC,1.00,1.00,1.00,0.50,0,0,0,Eric + Tejasava; Tejasava
 CMS-EMU-UPGRADE-GE21,0,0.50,0.50,0,0,0,0,Firmware; Firmware updates
 ,19,20,21,22,23,24,25,
-ATLAS-MUON-PHASE2,0,0,0,2.00,2.00,0,0,AXI Register Map; Meeting
+ATLAS-MUON-PHASE2,0,0,0,2.00,1.50,0,0,AXI Register Map; Meeting
 APOLLO,0,0,1.50,0,0,0,0,Schematic review
 CMS-EMU-OPS-GE11,0,0,1.00,0.50,0,0,0,Chat with Evaldas; Cluster format DN; GEM-CSC Meeting
 CMS-EMU-UPGRADE-ME0,0,0,0.50,2.00,0.50,0,0,Chloe; Hog updates; Meeting
 CMS-PIXEL-DTC,0,0,1.00,0,1.00,0,0,Meeting
 VAC,8.00,8.00,0,0,0,0,0,Vacation days
-CMS-ETL,0,0,0.50,1.00,5.00,0,0,Chat with Eric; Meeting; Readout board; Schematic updates
+CMS-ETL,0,0,0.50,1.00,4.50,0,0,Chat with Eric; Meeting; Readout board; Schematic updates
 ADMIN,0,0,1.00,0,0,0,0,Admin meeting
 CMS-EMU-UPGRADE-GE21,0,0,0,1.00,0,0,0,Hog updates
-CMS-EMU-OPS-CSC,0,0,0.50,0.50,1.00,0,0,Email to Xiaofeng; GEM-CSC Meeting; TMB Meeting
+CMS-EMU-OPS-CSC,0,0,1.00,0.50,1.00,0,0,Email to Xiaofeng; GEM-CSC Meeting; TMB Meeting
 SICK,0,0,2.00,0,0,0,0,Chiropractor
 ,26,27,28,29,30,31,1*,
 ATLAS-MUON-PHASE2,2.50,0,2.00,1.00,0,0,0,Meeting; Regmap software; TDC Review
 APOLLO,1.50,3.00,0,1.00,4.00,0,0,Regmap software; SM PCB review
-CMS-EMU-OPS-GE11,0.50,0,0.50,0,0,0,0,Repository maintenance; Repository updates
+CMS-EMU-OPS-GE11,0.50,0,2.50,0,0,0,0,Repository maintenance; Repository updates
 CMS-EMU-UPGRADE-ME0,0,2.00,0.50,1.00,1.50,0,0,Chloe; Meeting; Repository updates
 CMS-PIXEL-DTC,0,0,1.00,0,1.00,0,0,Meeting
 CMS-ETL,2.00,1.00,2.00,4.50,1.50,0,0,Meeting; Power adapter assembly; Power adapter assembly+test; Readout board; SW debugging; Work in lab
 ADMIN,1.00,0,0,0,0,0,0,EDF Meeting
-EMPHATIC,0,1.00,0,0,0,0,0,PCB Import Testing
+EMPHATIC,0,1.50,0,0,0,0,0,PCB Import Testing
 CMS-EMU-UPGRADE-GE21,0.50,0,0.50,0,0,0,0,Repository maintenance; Repository updates
 

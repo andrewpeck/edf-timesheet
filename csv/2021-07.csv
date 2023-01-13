@@ -54,15 +54,15 @@ D,Time,Project,Task,Day,Hours
 14,11-12,APOLLO,IPMC,WED,1.0
 14,12-1,Tracker,Meeting,WED,1.0
 14,1-2,EMPHATIC,Tejasava,WED,1.0
-14,2-5,APOLLO,IPMC,WED,2.0
+14,2-5,APOLLO,IPMC,WED,3.0
 14,5-7,ETL,Power adapter,WED,2.0
 ,,,,,
 15,9:30-10,EMPHATIC,Eric + Tejasava,THU,0.5
 15,10-11,L0MDT,Meeting,THU,1.0
 15,11-12,ETL,Power adapter; Orders,THU,1.0
 15,12-1:30,ETL,Meeting; PCB,THU,1.5
-15,1:30-3:00,ETL,Requirements doc,THU,1.0
-15,3:30-5:00,ETL,Meeting,THU,0.5
+15,1:30-3:00,ETL,Requirements doc,THU,1.5
+15,3:30-5:00,ETL,Meeting,THU,1.5
 15,5-6:30,ME0SF,Chloe,THU,1.5
 ,,,,,
 16,7-9,ME0OH,ASIAGO Release,FRI,2.0
@@ -80,7 +80,7 @@ D,Time,Project,Task,Day,Hours
 21,9-10,ADMIN,Admin meeting,WED,1.0
 21,10-10:30,ETL,Chat with Eric,WED,0.5
 21,10:30-11,GE11,Chat with Evaldas,WED,0.5
-21,11:00-12,CSC,Email to Xiaofeng,WED,0.5
+21,11:00-12,CSC,Email to Xiaofeng,WED,1.0
 21,12-1,Tracker,Meeting,WED,1.0
 21,1-1:30,ME0OH,Meeting,WED,0.5
 21,1:30-3:30,SICK,Chiropractor,WED,2.0
@@ -99,9 +99,9 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 23,9-10,Tracker,Meeting,FRI,1.0
 23,10-11,CSC,TMB Meeting,FRI,1.0
-23,11-12:00,ETL,Readout board,FRI,1.5
+23,11-12:00,ETL,Readout board,FRI,1.0
 23,12-1,--,LUNCH,FRI,1.0
-23,1-2:30,L0MDT,AXI Register Map,FRI,2.0
+23,1-2:30,L0MDT,AXI Register Map,FRI,1.5
 23,2:30-3,ME0SF,Chloe,FRI,0.5
 23,3-6:30,ETL,Schematic updates,FRI,3.5
 ,,,,,
@@ -122,13 +122,13 @@ D,Time,Project,Task,Day,Hours
 27,1-3,APOLLO,Regmap software,TUE,2.0
 27,3-4,ETL,Readout board,TUE,1.0
 27,4-5,ME0SF,Chloe,TUE,1.0
-27,5-6:30,EMPHATIC,PCB Import Testing,TUE,1.0
+27,5-6:30,EMPHATIC,PCB Import Testing,TUE,1.5
 ,,,,,
 28,9-11,L0MDT,TDC Review,WED,2.0
 28,11-11:30,GE21,Repository updates,WED,0.5
 28,11:30-12,ME0BE,Repository updates,WED,0.5
 28,12-1,Tracker,Meeting,WED,1.0
-28,11-1:30,GE11,Repository updates,WED,0.5
+28,11-1:30,GE11,Repository updates,WED,2.5
 28,2-4,ETL,Meeting,WED,2.0
 28,4-6,--,Baseball game,WED,2.0
 ,,,,,

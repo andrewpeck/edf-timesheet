@@ -31,11 +31,11 @@ ATLAS-MUON-PHASE2,0.50,3.00,3.00,0,0,0,0,Slides; Workshop
 CMS-EMU-UPGRADE-ME0,1.00,0.50,0,1.00,1.50,0,0,Hardware meeting; KCU105; Meeting
 CMS-ETL,2.00,0,0,4.00,0,0,0,BV distribution; Documentation; Integration meeting; Meeting; Specs
 SICK,0,2.00,5.00,0,0,0,0,Back pain; Doctor\'s appt
-CMS-EMU-UPGRADE-GE21,1.00,2.00,0,0,0,0,0,KCU105
+CMS-EMU-UPGRADE-GE21,1.00,0.50,0,0,0,0,0,KCU105
 CMS-EMU-OPS-GE11,1.00,0.50,0,0,0,0,0,KCU105
 ,23,24,25,26,27,28,29,
 VAC,8.00,8.00,0,0,0,0,0,Vacation
-ATLAS-MUON-PHASE2,0,0,4.50,3.50,2.00,0,0,Firmware updates; Meet with Dan; Meet with Eric; Meet with Guillermo; Update build; Update flavors; Update flavors script
+ATLAS-MUON-PHASE2,0,0,4.00,3.50,2.00,0,0,Firmware updates; Meet with Dan; Meet with Eric; Meet with Guillermo; Update build; Update flavors; Update flavors script
 CMS-EMU-UPGRADE-ME0,0,0,1.00,1.00,1.50,0,0,Firmware meeting; Meeting
 CMS-ETL,0,0,0,1.00,1.00,0,0,Integration meeting; Meeting
 ,30,31,1*,2*,3*,4*,5*,

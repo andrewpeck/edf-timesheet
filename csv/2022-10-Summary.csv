@@ -6,7 +6,7 @@ CMS-EMU-UPGRADE-ME0,0,0,0,1.00,0.50,0,0,OH Meeting; Reporting
 APOLLO,0,0,0,1.00,0,0,0,Meet with Alp
 CMS-EMU-OPS-GE11,0,0,1.00,0,0,0,0,OH firmware
 CMS-EMU-UPGRADE-GE21,0,0,1.00,0,0.50,0,0,OH firmware; Reporting
-ADMIN,0,0,0,0,1.00,0,0,EDF Meeting
+ADMIN,0,0,0,0,2.50,0,0,CERN Training; EDF Meeting
 ,3,4,5,6,7,8,9,
 APOLLO,0.50,0,1.00,0,0,0,0,Panos; lpGBT
 CMS-EMU-UPGRADE-ME0,1.50,1.00,1.00,0,0,0,0,Meeting; Reporting
@@ -40,7 +40,7 @@ ATLAS-MUON-PHASE2,0,0,0,1.00,0,0,0,Meeting
 ADMIN,0,0,0,0.50,0,0,0,EDF Meeting
 SICK,0,0,0,2.00,0,0,0,Doctor
 ,31,1*,2*,3*,4*,5*,6*,
-CMS-ETL,7.00,7.50,6.00,0,5.00,0,0,BV; Firmware; Meeting; RB Firmware; Slides
+CMS-ETL,4.00,7.50,6.00,0,5.00,0,0,BV; Firmware; Meeting; RB Firmware; Slides
 ATLAS-MUON-PHASE2,1.00,0,0,0,0,0,0,Meeting
 ADMIN,1.00,0.50,0,0,0,0,0,EDF chat
 APOLLO,0,0,1.00,0,0,0,0,IPMC Debug

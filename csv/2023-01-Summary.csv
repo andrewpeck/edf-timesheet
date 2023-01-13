@@ -1,14 +1,21 @@
 2023-01,Mo,Tu,We,Th,Fr,Sa,Su,Notes
 ,26*,27*,28*,29*,30*,31*,1,
 ,2,3,4,5,6,7,8,
-HOLIDAY,6.00,0,0,0,0,0,0,New years
+HOLIDAY,8.00,0,0,0,0,0,0,New years
 CMS-EMU-UPGRADE-ME0,0,1.00,1.00,2.00,0,0,0,Firmware Meeting; OH tester; Teststand
 ADMIN,0,1.00,0,0,1.00,0,0,EDF Meeting; Meeting
-CMS-ETL,0,2.50,1.50,0,1.00,0,0,3D Printer; ETROC Card; Panos; Readout board
+CMS-ETL,0,2.50,2.00,0,2.00,0,0,3D Printer; ETROC Card; Panos; Readout board
 CMS-EMU-UPGRADE-GE21,0,0,0,2.00,1.00,0,0,OH Slow control; Teststand
 CMS-EMU-OPS-GE11,0,0,0,2.00,1.00,0,0,OH Slow control; Teststand
 CMS-EMU-OPS-CSC,0,0,0,0,1.00,0,0,Electronics mtg
 ,9,10,11,12,13,14,15,
+CMS-EMU-UPGRADE-ME0,0,0,1.00,0,0,0,0,OH Meeting
+ADMIN,1.00,0,0,1.00,0,0,0,Administrative details; EDF Meeting
+CMS-ETL,2.00,1.00,1.50,1.00,0,0,0,Emulator adapter; Hog; Module design; Tamalero setup help
+CMS-EMU-UPGRADE-GE21,1.00,0.50,2.00,2.00,0,0,0,Firmware; Hog; OH Firmware; OH Link
+CMS-EMU-OPS-GE11,1.00,1.50,2.00,2.00,0,0,0,Firmware; Hog; OH Firmware; OH Link
+CMS-EMU-OPS-CSC,0,0,0,0,2.50,0,0,Upgrade mtg
+ATLAS-MUON-PHASE2,1.00,2.00,0,1.00,0,0,0,CSM Setup; Hog; Meeting
 ,16,17,18,19,20,21,22,
 ,23,24,25,26,27,28,29,
 ,30,31,1*,2*,3*,4*,5*,

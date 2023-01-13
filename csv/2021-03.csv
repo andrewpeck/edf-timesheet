@@ -1,7 +1,7 @@
 D,Time,Project,Task,Day,Hours
 ,,,,,
 1,8:30-9:30,ETL,Slides for Ted,MON,1.0
-1,9:30-10:30,L0MDT,Cocotb,,1.0
+1,9:30-10:30,L0MDT,Cocotb,MON,1.0
 1,10:30-12,ETL,Meeting,MON,1.5
 1,12-1,Tracker,IPMC work,MON,1.0
 1,1:30-2,ME0SF,Segment finding,MON,0.5

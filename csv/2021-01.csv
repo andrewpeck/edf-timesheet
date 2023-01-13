@@ -64,7 +64,7 @@ D,Time,Project,Task,,Hours
 15,1-2,L0MDT,Meet w/ Dan + Adam,FRI,1.0
 15,2-3,ME0OH,Meeting,FRI,1.0
 15,3-6,ETL,Firmware,FRI,3.0
-15,6-7,ETL,Firmware,,
+15,6-7,ETL,Firmware,FRI,1.0
 ,,,,,
 ,,,,,
 18,9-5,HOLIDAY,,MON,8.0
@@ -100,7 +100,7 @@ D,Time,Project,Task,,Hours
 25,1:30-2,ETL,Firmware,MON,0.5
 25,2-3,L0MDT,Meeting (Group),MON,1.0
 25,3-3:30,ETL,Lab Tour,MON,0.5
-25,3:30-4,Tracker,Lab Tour,MON,1.0
+25,3:30-4,Tracker,Lab Tour,MON,0.5
 25,4-6,ETL,SCA Firmware,MON,2.0
 ,,,,,
 26,9-10,L0MDT,Shopping,TUE,1.0
@@ -108,8 +108,8 @@ D,Time,Project,Task,,Hours
 26,10-11:30,Tracker,IPMC,TUE,1.5
 26,11:30-12:30,L0MDT,Email to Frans,TUE,1.0
 26,1-2,L0MDT,Meet with Dan + Eric,TUE,1.0
-26,2-3:30,GE21,Repo configuration,TUE,3.0
-26,3:30-5,GE11,Repo configuration,TUE,3.0
+26,2-3:30,GE21,Repo configuration,TUE,1.5
+26,3:30-5,GE11,Repo configuration,TUE,1.5
 ,,,,,
 27,9-10:30,Tracker,Meeting,WED,1.5
 27,11-12,L0MDT,Meeting (Tube mapping),WED,1.0

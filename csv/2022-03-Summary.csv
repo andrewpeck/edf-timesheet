@@ -9,16 +9,16 @@ CMS-EMU-UPGRADE-GE21,0,1.00,1.50,3.50,0,0,0,Firmware; Firmware (new sorter); Mee
 CMS-EMU-OPS-GE11,0,1.00,2.50,1.00,0,0,0,Firmware; Firmware (new sorter)
 VAC,0,0,0,0,2.00,0,0,Katherine
 ,7,8,9,10,11,12,13,
-CMS-ETL,0,3.00,3.00,2.50,0.50,0,0,Firmware Update; Firmware update; Hog updates; Meeting (Modules); Spec doc; Test stand; Test stand setup
+CMS-ETL,0,3.00,2.00,2.50,0.50,0,0,Firmware Update; Firmware update; Hog updates; Meeting (Modules); Spec doc; Test stand; Test stand setup
 CMS-EMU-UPGRADE-ME0,0,1.00,0,1.00,1.00,0,0,Cluster DAQ; Firmware meeting; Meeting
 CMS-EMU-UPGRADE-GE21,0,2.00,1.00,0,1.00,0,0,Cluster DAQ; Firmware; Firmware updates
 CMS-EMU-OPS-GE11,0,1.50,1.00,0,1.00,0,0,Cluster DAQ; Firmware; Firmware updates
 APOLLO,0,0,1.00,3.00,0,0,0,Documentation; Firmware update; IPMC FW; Meeting
-ATLAS-MUON-PHASE2,0,0,0,1.00,3.50,0,0,Meeting (EE); PDR Answers; PDR Followup Meeting
+ATLAS-MUON-PHASE2,0,0,0,1.00,4.00,0,0,Meeting (EE); PDR Answers; PDR Followup Meeting
 VAC,8.00,0,0,0,0,0,0,Katherine
 CMS-EMU-OPS-CSC,0,0,3.00,0,0.50,0,0,ODMB Review
 ,14,15,16,17,18,19,20,
-CMS-ETL,3.50,2.00,0.50,3.50,0,0,0,BU Meeting; Firmware update; Lab work with Daniel; Mechanical meeting; Mechanical meeting with Daniel; Meeting; Programming script; Reverse engineering documentation; Specifications
+CMS-ETL,3.50,2.00,0.50,3.00,0,0,0,BU Meeting; Firmware update; Lab work with Daniel; Mechanical meeting; Mechanical meeting with Daniel; Meeting; Programming script; Reverse engineering documentation; Specifications
 CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Firmware meeting
 CMS-EMU-UPGRADE-GE21,0,1.00,1.00,0.50,2.00,0,0,Firmware; Firmware placement; Hog fixes
 CMS-EMU-OPS-GE11,0.50,1.00,1.00,1.00,2.00,0,0,Cluster DAQ; Firmware; Firmware (timing); Firmware placement; Hog fixes
@@ -30,7 +30,7 @@ CMS-PIXEL-DTC,0,0,0.50,0,0,0,0,Meeting
 CMS-ETL,0,0,3.00,4.00,4.00,0,0,Dataformats; ETROC firmware; Emulator version control; Firmware update; Meeting; Schedule; test stand debug
 CMS-EMU-UPGRADE-GE21,0,0,2.00,1.00,0,0,0,DDR s-bits; ISERDES placement
 CMS-EMU-OPS-GE11,0,0,0,2.50,0,0,0,MGT loopback
-APOLLO,0,5.00,1.00,5.00,3.00,0,0,IPMC Firmware update; IPMC dongle; IPMC firmware test; IPMC firmware update / test; Rev2a debug; shipping
+APOLLO,0,5.00,1.00,3.00,3.00,0,0,IPMC Firmware update; IPMC dongle; IPMC firmware test; IPMC firmware update / test; Rev2a debug; shipping
 VAC,8.00,0,0,0,0,0,0,Vacation
 CMS-PIXEL-DTC,0,0,0.50,0,0,0,0,Meeting
 ,28,29,30,31,1*,2*,3*,
@@ -38,7 +38,7 @@ CMS-ETL,4.50,0.50,1.50,1.00,7.00,0,0,Firmware; MT Schematic; Meet with Indara; M
 CMS-EMU-UPGRADE-ME0,0,1.00,0,0,0,0,0,Accruals; Chloe
 CMS-EMU-OPS-GE11,0,0.50,0,0,0,0,0,Loopback firmware
 ADMIN,0,1.00,0,0,0,0,0,Meet with Panos
-APOLLO,0,2.00,1.00,3.00,0,0,0,AXI Regmap; IPMC; IPMC Meeting; Rev 1 Repair; SM Gerbers
+APOLLO,0,2.50,1.00,4.00,0,0,0,AXI Regmap; IPMC; IPMC Meeting; Rev 1 Repair; SM Gerbers
 ATLAS-MUON-PHASE2,1.00,1.50,5.50,1.50,0,0,0,Meeting; Repository; Thiago visit; Update project generator
 CMS-EMU-OPS-CSC,0,1.00,0,0,0,0,0,ODMB Review
 
