@@ -4,20 +4,6 @@ This is my timesheet for work in the BU EDF, dating from 2021 on. Time from 2020
 was recorded in a paper log which may eventually be converted to this electronic
 format.
 
-** Normalized Timesheets
-#+attr_html: :width 720px
-[[file:timesheetmonthlynormal.svg]]
-
-#+attr_html: :width 720px
-[[file:timesheetyearlynormal.svg]]
-
-** Unnormalized Timesheets
-#+attr_html: :width 720px
-[[file:timesheetmonthly.svg]]
-
-#+attr_html: :width 720px
-[[file:timesheetyearly.svg]]
-
 ** By project
 
 #+begin_src bash :results output :exports results
@@ -59,11 +45,6 @@ cat by-weekday.txt \
    SUN ┤ 1.5
        └                                        ┘
 #+end_example
-
-** Integrated billed hours
-
-#+attr_html: :width 720px
-[[file:timesheetdayrunning.svg]]
 
 ** Task Distribution
 
@@ -153,3 +134,22 @@ cat "monthly_totals.txt" \
 #+end_example
 
 #+RESULTS:
+
+** Normalized Timesheets
+#+attr_html: :width 720px
+[[file:timesheetmonthlynormal.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheetyearlynormal.svg]]
+
+** Unnormalized Timesheets
+#+attr_html: :width 720px
+[[file:timesheetmonthly.svg]]
+
+#+attr_html: :width 720px
+[[file:timesheetyearly.svg]]
+
+** Integrated billed hours
+
+#+attr_html: :width 720px
+[[file:timesheetdayrunning.svg]]
