@@ -18,9 +18,26 @@ format.
 #+attr_html: :width 720px
 [[file:timesheetyearly.svg]]
 
-** Pie Chart
-#+attr_html: :width 720px
-[[file:timesheet_pie.svg]]
+** By project
+
+#+begin_src bash :results output :exports results
+cat by-project.txt \
+| uplot bar -d, -t "Work by Project" 2>&1
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                             Work by Project
+                ┌                                        ┐
+            ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 880.5
+            GEM ┤■■■■■■■■■■■■■■■■■■■■■■■■■■ 702.5
+          L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■■■ 653.0
+         APOLLO ┤■■■■■■■■■■■■■■■ 404.75
+   VAC/SICK/HOL ┤■■■■■■■■■■ 256.0
+            EDF ┤■■■■■ 124.0
+      OTHER PRJ ┤■■■■ 102.0
+                └                                        ┘
+#+end_example
 
 ** By weekday
 

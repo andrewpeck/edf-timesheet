@@ -192,9 +192,11 @@
 
 (def total-data
   "EDF workload summed by project (all years combined)"
-  (map (fn [prj]
-         {:Project prj
-          :Hours  (sum-project prj all-work-data)}) projects))
+  (reverse
+   (sort-by :Hours
+            (map (fn [prj]
+                   {:Project prj
+                    :Hours  (sum-project prj all-work-data)}) projects))))
 
 (def work-data-by-year
   "EDF workload by year"
@@ -327,6 +329,12 @@
   (let [output
         (str/join "\n" (->> data-by-weekday
                             (map (fn [x] (format "%s, %s" (:Day x) (:Hours x))))))]
+    (.write wrtr output)))
+
+(with-open [wrtr (io/writer "by-project.txt")]
+  (let [output
+        (str/join "\n" (->> total-data
+                            (map (fn [x] (format "%s, %s" (:Project x) (:Hours x))))))]
     (.write wrtr output)))
 
 (plot! "timesheetdaily.svg"         (bar-chart-day  "Day"      "Hours" data-by-weekday))
