@@ -282,7 +282,7 @@ SORT to non-nill will sort the list. "
              (goal (if (or (>= year 2023)
                            (and (>= year 2022)
                                 (>= week 48)))
-                       21 32))
+                       24 40))
              (percentage (* 100 (/ sum goal)))
              (indicator-count-total 20)
              (indicator-count (round (* indicator-count-total
@@ -318,8 +318,8 @@ SORT to non-nill will sort the list. "
 
       (if (= month 12)
           (setq month 1
-                year (+ 1 year))
-        (setq month (+ 1 month))))
+                year (1+ year))
+        (setq month (1+ month))))
 
     (plot-weekly-work-goals (reverse timesheets))))
 
@@ -502,6 +502,31 @@ SORT to non-nill will sort the list. "
     :start-year start-year :start-month start-month :end-year end-year :end-month end-month
     :short short :meetings meetings :meetings-detailed meetings-detailed) :title title :uplot t))
 
+(defun plot-weekly-summary-for-month (year month)
+
+  (let* ((start-year (if (= month 1) (- year 1) year))
+         (end-year (if (= month 12) (+ year 1) year))
+         (start-month (if (= month 1) 12 (- month 1)))
+         (end-month (cond
+                     ;; december should wrap to jan
+                     ((= month 12) 1)
+                     ;;  current month
+                     ((= month (nth 4 (decode-time (current-time)))) (+ 1 month))
+                     ;; any other month
+                     (t (+ month 2)))))
+
+    ;; (print start-year)
+    ;; (print end-year)
+    ;; (print start-month)
+    ;; (print end-month)
+    (-as-> (with-output-to-string
+             (plot-weekly-work-goals-for-date-range start-year start-month end-year end-month)) data
+             (split-string data "\n" t)
+             (cl-remove-if-not (lambda (x) (string-search (format "%04d-%02d" year month) x)) data)
+             (string-join data "\n")
+             (format "\n%s\n\n" data)
+             (princ data))))
+
 (cl-defun filter-timesheet-for-hours (data)
   ""
   (let ((plot-data
@@ -525,3 +550,33 @@ SORT to non-nill will sort the list. "
   (plot-chart (filter-timesheet-for-hours data) "Month" title
               :normalize 50 :uplot t :title title)
   (princ "\n"))
+
+(defun org-insert-monthly-timesheet ()
+  "Insert a new timesheet for the current month"
+  (interactive)
+  (let* ((time (current-time))
+         (month (format-time-string "%B" time))
+         (mm (format-time-string "%m" time))
+         (year (format-time-string "%Y" time)))
+
+    (insert
+     (concat
+      ;; (s-lex-format)
+      (format "*** %s %s\n" month year)
+      ":PROPERTIES:\n"
+      ":VISIBILITY: showall\n"
+      ":END:\n"
+      "#+ATTR_HTML: :border 2 :frame none\n"
+      "\n"
+      (format  "#+TBLNAME: %s-%s\n" year mm)
+      "|---+---+----------+---------+--------------------+-----+-------|\n"
+      "|   | D |     Time | Project | Task               | Day | Hours |\n"
+      "|---+---+----------+---------+--------------------+-----+-------|\n"
+      "| # |   |          |         |                    |     |       |\n"
+      "|---+---+----------+---------+--------------------+-----+-------|\n"
+      (format  "#+TBLFM: $6='(get-day-of-week \"%s %s\" $2)::$7='(range-to-time $3)\n" month year)
+      "\n"
+      (format  "#+begin_src emacs-lisp :exports results :results output :var data=%s-%s\n" year mm)
+      "(plot-monthly-work-chart data :uplot t)\n"
+      (format "(plot-weekly-summary-for-month %d %d)\n" year mm)
+      "#+end_src\n"))))

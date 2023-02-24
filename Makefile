@@ -11,6 +11,7 @@ export_org_tables:
 
 db_tables: sum_tables.py
 	@python sum_tables.py
+	@scp -r csv/*-Summary.csv ohm:~/billing/
 
 summary:
 	@awk -f timesheets.awk csv/20[0-9][0-9]-[0-9][0-9].csv
