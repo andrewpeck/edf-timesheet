@@ -4,5 +4,5 @@
         org.clojure/data.json
         {:git/url "https://github.com/clojure/data.json"
          :sha "0b491b25e61d108951c64d33d28a90080758a271"}
-        cljfmt
-        {:mvn/version "0.9.0"}}}
+        clojure.java-time/clojure.java-time {:mvn/version "1.2.0"}
+        cljfmt/cljfmt {:mvn/version "0.9.0"}}}

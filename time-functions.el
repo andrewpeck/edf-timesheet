@@ -578,5 +578,5 @@ SORT to non-nill will sort the list. "
       "\n"
       (format  "#+begin_src emacs-lisp :exports results :results output :var data=%s-%s\n" year mm)
       "(plot-monthly-work-chart data :uplot t)\n"
-      (format "(plot-weekly-summary-for-month %d %d)\n" year mm)
+      (format "(plot-weekly-summary-for-month %s %s)\n" year mm)
       "#+end_src\n"))))

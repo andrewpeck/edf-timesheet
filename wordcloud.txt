@@ -8398,9 +8398,7 @@ meeting
 
 meeting
 
-readout
-
-board
+rb
 
 meeting
 
@@ -8408,15 +8406,11 @@ flood
 
 remediation
 
-readout
-
-board
+rb
 
 me0sf
 
-readout
-
-board
+rb
 
 me0sf
 
@@ -8456,9 +8450,7 @@ meeting
 
 meeting
 
-readout
-
-board
+rb
 
 edf
 
@@ -8474,17 +8466,17 @@ module
 
 pcb
 
-review
+module
 
-parts
-
-orders
+pcb
 
 module
 
 pcb;
 
-software
+rb
+
+sw
 
 meeting
 
@@ -8504,7 +8496,7 @@ meeting
 
 meeting
 
-president's
+president\'s
 
 day
 
@@ -8573,4 +8565,6 @@ meeting
 edf
 
 meeting
+
+naomi
 

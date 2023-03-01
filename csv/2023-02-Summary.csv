@@ -8,23 +8,23 @@ ATLAS-MUON-PHASE2,0.50,0,0,0,0,0,0,Meeting
 APOLLO,0,0,1.00,0,0,0,0,PiJTAG
 CMS-EMU-OPS-CSC,0,0,0.50,0,1.00,0,0,FED meeting; TMB2025
 ,6,7,8,9,10,11,12,
-CMS-ETL,3.50,0,3.00,1.00,3.00,0,0,Emulator testing; Meeting; Readout board
+CMS-ETL,3.50,0,3.00,1.00,3.00,0,0,Emulator testing; Meeting; RB
 CMS-EMU-UPGRADE-ME0,0,0.50,1.50,4.00,1.50,0,0,Hog; ME0SF; Meeting
 ADMIN,0,2.50,2.00,0,0,0,0,EDF Meeting; Flood remediation
 CMS-EMU-UPGRADE-GE21,0,0.50,0,0,0,0,0,Hog
 ATLAS-MUON-PHASE2,0.50,0,0,0,0,0,0,Meeting
 ,13,14,15,16,17,18,19,
-CMS-ETL,0,2.00,2.50,2.75,2.50,0,0,Meeting; Module PCB; Module PCB review; Naomi; Parts orders; Readout board; Software
+CMS-ETL,0,2.00,2.50,2.75,2.50,0,0,Meeting; Module PCB; Naomi; RB; RB SW; Software
 CMS-EMU-UPGRADE-ME0,2.50,2.00,1.00,0,0.50,0,0,ME0SF; Meeting
 ADMIN,1.50,0,0,0.50,0,0,0,BU Network Issues; Billing; EDF Meeting
 CMS-EMU-UPGRADE-GE21,0,0,0,0.50,0,0,0,Strip mapping
 ATLAS-MUON-PHASE2,0.50,0,0,0,1.50,0,0,HAL; Meet with Guillermo; Meeting
 ,20,21,22,23,24,25,26,
-CMS-ETL,0,2.25,2.00,3.00,1.50,0,0,Meeting; Module PCB; Module PCB APC
+CMS-ETL,0,2.25,2.00,3.00,1.50,0,0.50,Meeting; Module PCB; Module PCB APC; Naomi
 CMS-EMU-UPGRADE-ME0,0,1.50,3.00,2.50,0.50,0,0,ME0SF; Meeting
 ADMIN,0,0.50,0,0,0.50,0,0,EDF Meeting
 CMS-EMU-UPGRADE-GE21,0,1.50,0,0,1.00,0,0,Channel mapping
 ATLAS-MUON-PHASE2,0,0.50,0,0,0,0,0,Guillermo
-HOLIDAY,5.00,0,0,0,0,0,0,President's day
+HOLIDAY,5.00,0,0,0,0,0,0,President\'s day
 ,27,28,1*,2*,3*,4*,5*,
 
