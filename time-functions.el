@@ -61,7 +61,8 @@
     (print (+ hours (/ minutes 60.0)))))
 
 (defun range-to-time (range)
-  "Convert a 12hr clock time range time (e.g. 1-2:30) to a float amount of time (1.5)"
+  "Convert a 12hr clock time range time (e.g. 1-2:30)
+to a float amount of time (1.5)"
   (if (string-empty-p range) ""
     (let ((start (clock-to-float (car (split-string range "-" t))))
           (end (clock-to-float (cadr (split-string range "-" t)))))
@@ -81,6 +82,15 @@
     (goto-char (point-min))
     (while
         (re-search-forward "#\\+begin_src emacs-lisp.*data=[0-9]\\{4\\}-[0-9]\\{2\\}$" nil t)
+      (forward-line)
+      (org-babel-execute-src-block))))
+
+(defun update-all-src-blocks ()
+  (save-excursion
+    (goto-char (point-min))
+    (while
+        (re-search-forward "#\\+begin_src" nil t)
+      (print (point))
       (forward-line)
       (org-babel-execute-src-block))))
 
