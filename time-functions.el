@@ -159,9 +159,10 @@ SORT to non-nill will sort the list. "
     (setq sum (apply #'+ (mapcar (lambda (a) (float (car (cdr a)))) totals)))
 
     ;; Get the longest key so we can zero pad accordingly
-    (setq max-length (max (length keyword)
-                          (apply #'max (mapcar
-                                        (lambda (a) (length (car a))) totals))))
+    (setq max-length
+          (max (length keyword)
+               (apply #'max (mapcar
+                             (lambda (a) (length (car a))) totals))))
 
     ;; Get the number of decimal digits needed, if not specified
 
@@ -169,7 +170,7 @@ SORT to non-nill will sort the list. "
     (if (< max-val normalize) (setq normalize max-val))
 
     (when (not uplot)
-      (princ (format "%5s   %4s    %s%s\n" valword "%Tot"
+      (princ (format "%s  %4s    %s%s\n" valword "%Tot"
                      (make-string (- max-length (length keyword)) ? ) keyword))
 
       (princ (format "%s\n" (make-string 32 ?-)))
@@ -180,7 +181,7 @@ SORT to non-nill will sort the list. "
                (percent (* 100 (/ count sum))))
 
 
-          (princ (format "%7.2f   %2d%%     %s%s %s\n"
+          (princ (format "%5.2f   %2d%%     %s%s %s\n"
                          count        ; count
                          percent      ; percent
                          (make-string (- max-length (length key)) ? ) ; white paddng
