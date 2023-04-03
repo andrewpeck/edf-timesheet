@@ -94,6 +94,25 @@ D,Time,Project,Task,Day,Hours
 ,,,,,
 27,9:30-11,ETL,Module PCB,MON,1.5
 27,11-12,ME0OH,Meeting,MON,1.0
-27,12-2,ME0SF,Segment finder,MON,2.0
+27,12-2:30,ME0SF,Segment finder,MON,2.5
+27,2:30-3,ME0OH,Firmware,MON,0.5
+,,,,,
+28,9-10,ETL,Software,TUE,1.0
+28,10-3,ME0SF,Segment finder,TUE,5.0
+,,,,,
+29,9-9:30,APOLLO,Splice plate,WED,0.5
+29,9:30-11:30,ME0SF,Segment finder,WED,2.0
+29,11:30-12:30,ETL,Meeting,WED,1.0
+29,12:30-2,ME0SF,Segment finder,WED,1.5
+29,1-2,ME0OH,Meeting,WED,1.0
+,,,,,
+30,9-10,ME0SF,Segment finder,THU,3.0
+30,10-12:30,ME0,Meeting,THU,2.0
+,,,,,
+31,9:30-12,ME0SF,Segment finder,FRI,2.5
+31,12-12:30,ETL,Naomi,FRI,0.5
+31,1-1:30,ETL,Meeting,FRI,0.5
+31,1:30-2:30,ETL,Software,FRI,0.5
+31,2:30-3:30,ME0SF,Segment finder,FRI,1.0
 ,,,,,
 

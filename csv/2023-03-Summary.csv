@@ -28,6 +28,7 @@ CMS-EMU-UPGRADE-ME0,2.00,2.00,3.00,2.50,2.00,0,0,Meeting; Segment finder
 ADMIN,0,0,0,0,0,2.00,0,Grad student visits
 APOLLO,0,0,0.50,0,0,0,0,Panos
 ,27,28,29,30,31,1*,2*,
-CMS-ETL,1.50,0,0,0,0,0,0,Module PCB
-CMS-EMU-UPGRADE-ME0,3.00,0,0,0,0,0,0,Meeting; Segment finder
+CMS-ETL,1.50,1.00,1.00,0,1.50,0,0,Meeting; Module PCB; Naomi; Software
+CMS-EMU-UPGRADE-ME0,4.00,5.00,4.50,5.00,3.50,0,0,Firmware; Meeting; Segment finder
+APOLLO,0,0,0.50,0,0,0,0,Splice plate
 
