@@ -1,0 +1,76 @@
+D,Time,Project,Task,Day,Hours
+,,,,,
+3,9:30-12,ME0SF,Segment finder,MON,2.5
+3,12-1,ADMIN,Air conditioner,MON,1.0
+3,1-1:30,L0MDT,Meeting,MON,0.5
+3,1:30-2,ETL,Daniel,MON,0.5
+3,2-3,ME0SF,Segment finder,MON,1.0
+,,,,,
+4,9-10:30,ME0SF,Segment finder,TUE,1.5
+4,10:30-11,ETL,Firmware,TUE,0.5
+4,11-11:45,ETL,BV/LV Connectors,TUE,0.75
+4,11:45-12:15,ADMIN,Air conditioner,TUE,0.5
+4,12:15-1:30,ME0SF,Segment finder,TUE,1.25
+,,,,,
+5,9-11:30,ME0SF,Segment finder,WED,2.5
+5,11:30-12:30,ETL,Meeting,WED,1.0
+5,1-2,ME0OH,Meeting,WED,1.0
+5,2-3,ME0SF,Segment finder,WED,1.0
+,,,,,
+6,9-10,ETL,Module PCB,THU,1.0
+6,10-1,ME0SF,Segment finder,THU,3.0
+,,,,,
+7,9-1,ME0SF,Segment finder,FRI,4.0
+7,1-2,ETL,Meeting,FRI,1.0
+,,,,,
+10,9:30-1,CSC,TMB2025,MON,3.5
+10,1-2,L0MDT,Refclk firmware,MON,1.0
+,,,,,
+10,9-11,L0MDT,Refclk firmware,MON,2.0
+10,11-12,--,Chloe,MON,1.0
+10,12-2,ETL,Software,MON,2.0
+,,,,,
+12,9-10,ADMIN,EDF Meeting,WED,1.0
+12,10-11:30,ETL,Clock synth script,WED,1.5
+12,11:30-12:30,ETL,Meeting,WED,1.0
+12,12:30-1,ETL,Software,WED,0.5
+12,1-2,ME0,Meeting,WED,1.0
+12,2-3,ETL,Software,WED,1.0
+12,3-3:30,GE21,Firware,WED,0.5
+,,,,,
+13,9-2,VAC,DMV,THU,5.0
+,,,,,
+14,9-12,ME0,Firmware,FRI,3.0
+14,12-1,L0MDT,Refclk firmware,FRI,1.0
+14,1-5,ETL,"Meeting, ATC",FRI,4.0
+,,,,,
+,,,,,
+17,9-2,HOLIDAY,Patriots day,MON,5.0
+,,,,,
+18,9-9:30,GE21,Nana,TUE,0.5
+18,9:30-10,ME0,Woohyon,TUE,0.5
+18,10-10:30,L0MDT,LPGBT,TUE,0.5
+18,10:30-11:30,ETL,Software,TUE,1.0
+,,,,,
+19,9-10,ADMIN,EDF Meeting,WED,1.0
+19,10-10:30,ETL,Naomi,WED,0.5
+19,10:30-11:30,ME0SF,Segment finder,WED,1.0
+19,11:30-12:30,ETL,Meeting,WED,1.0
+19,12:30-1:30,ME0,Meeting,WED,1.0
+,,,,,
+20,9-10,ROBLYER-DDOSI,Board update,THU,1.0
+20,10-11,ETL,DAQ GUI,THU,1.0
+20,11-12:30,ETL,Meeting,THU,1.5
+20,12:30-2,ETL,DAQ GUI,THU,1.5
+,,,,,
+21,9-10,ETL,DAQ GUI,FRI,1.0
+21,10-10:30,CMS-PIXEL-DTC,Panos test bench,FRI,0.5
+,,,,,
+,,,,,
+24,9-2,VAC,Vacation,MON,5.0
+25,9-2,VAC,Vacation,TUE,5.0
+26,9-2,VAC,Vacation,WED,5.0
+27,9-2,VAC,Vacation,THU,5.0
+28,9-2,VAC,Vacation,FRI,5.0
+,,,,,
+
