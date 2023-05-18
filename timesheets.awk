@@ -25,6 +25,7 @@ BEGIN {
     sub("VACATION", "VAC", prj)
     sub("CSC", "OTHER", prj)
     sub("EMPHATIC", "OTHER", prj)
+    sub("ROBLYER-DDOSI", "OTHER", prj)
     sub("SCOTT-LAB-CAMERA", "OTHER", prj)
 
     sub("DEVEL", "ETC", prj)

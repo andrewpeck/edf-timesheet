@@ -167,6 +167,7 @@
                 (str/replace #".*TRACKER.*"  "APOLLO")
                 (str/replace #".*CSC.*"  "OTHER PRJ")
                 (str/replace #".*EMPHATIC.*"  "OTHER PRJ")
+                (str/replace #".*DDOSI.*"  "OTHER PRJ")
                 (str/replace #".*SCOTT-LAB.*"  "OTHER PRJ")
                 (str/replace #"ADMIN"  "EDF")
                 (str/replace #"DEVEL"  "EDF")

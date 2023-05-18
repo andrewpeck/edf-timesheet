@@ -1,0 +1,22 @@
+2023-05,Mo,Tu,We,Th,Fr,Sa,Su,Notes
+,1,2,3,4,5,6,7,
+CMS-EMU-UPGRADE-GE21,0.50,0,0,0.50,0,0,0,Nana; Optical links
+VAC,5.00,5.00,5.00,0,0,0,0,Vacation
+CMS-EMU-UPGRADE-ME0,0,0.50,0,0.50,0.50,0,0,Current sense; Segment finder
+CMS-ETL,0,0,0,3.50,1.50,0,0,Module PCB testing; Naomi
+ADMIN,0,0,0,1.00,0,0,0,Billing
+CMS-EMU-OPS-CSC,0,0,0,0,1.00,0,0,Electronics meeting
+CMS-PIXEL-DTC,0,0,0,0,0.50,0,0,Test bench
+,8,9,10,11,12,13,14,
+CMS-EMU-UPGRADE-GE21,0.50,0.50,0,1.50,0,0,0,Meeting; Strip mapping
+CMS-EMU-UPGRADE-ME0,1.00,1.50,2.50,1.50,3.00,0,0,GEB Monitoring; Meeting; Segment finder
+CMS-ETL,2.00,0.50,1.00,0,0.50,0,0,Meeting; Module PCB; Panos
+ADMIN,1.50,1.50,1.50,1.00,0,0,0,CERN Email Issues; Computer setup; EDF Meeting; Gitlab runner; Grace
+ATLAS-MUON-PHASE2,0.50,0,0,0,0,0,0,Meeting
+,15,16,17,18,19,20,21,
+CMS-EMU-UPGRADE-ME0,1.00,0,0.50,1.50,0,0,0,ME0SF; Meeting; Segment finder
+CMS-ETL,1.00,3.00,5.00,0.50,0,0,0,Meeting; Module PCB; Readout board; TX Firmware
+CMS-EMU-OPS-CSC,3.00,1.50,0,0,0,0,0,OTMB
+,22,23,24,25,26,27,28,
+,29,30,31,1*,2*,3*,4*,
+
