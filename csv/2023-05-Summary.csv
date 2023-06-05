@@ -14,9 +14,18 @@ CMS-ETL,2.00,0.50,1.00,0,0.50,0,0,Meeting; Module PCB; Panos
 ADMIN,1.50,1.50,1.50,1.00,0,0,0,CERN Email Issues; Computer setup; EDF Meeting; Gitlab runner; Grace
 ATLAS-MUON-PHASE2,0.50,0,0,0,0,0,0,Meeting
 ,15,16,17,18,19,20,21,
-CMS-EMU-UPGRADE-ME0,1.00,0,0.50,1.50,0,0,0,ME0SF; Meeting; Segment finder
-CMS-ETL,1.00,3.00,5.00,0.50,0,0,0,Meeting; Module PCB; Readout board; TX Firmware
+CMS-EMU-UPGRADE-ME0,1.00,0,0.50,3.50,2.00,0,0,ME0SF; Meeting; Segment finder
+CMS-ETL,1.00,3.00,5.00,0.50,1.00,0,0,Firmware; Meeting; Module PCB; Readout board; TX Firmware
 CMS-EMU-OPS-CSC,3.00,1.50,0,0,0,0,0,OTMB
 ,22,23,24,25,26,27,28,
+CMS-EMU-UPGRADE-ME0,0,0,4.00,0,0,0,0,Review; Segment finder
+CMS-ETL,6.50,9.00,1.00,4.00,2.50,0,0,ETROC2; Firmware; Joshua; Meeting; Naomi
+CMS-EMU-OPS-CSC,0,0,0,0,0.50,0,0,Slides; Travel
+ATLAS-MUON-PHASE2,0.50,0,1.00,0,0,0,0,CSM Review; Meeting
 ,29,30,31,1*,2*,3*,4*,
+CMS-EMU-UPGRADE-ME0,0,1.00,0,4.00,3.00,0,0,Segment finder; USCMS
+CMS-ETL,0,0,4.00,0,1.00,0,0,Naomi; USCMS
+CMS-EMU-OPS-CSC,0,3.00,4.00,0,0,0,0,Slides; USCMS
+HOLIDAY,5.00,0,0,0,0,0,0,Memorial day
+CMS-EMU-UPGRADE-GE21,0,0,0,4.00,0,0,0,USCMS
 
