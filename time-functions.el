@@ -99,10 +99,13 @@ to a float amount of time (1.5)"
         (ht (make-hash-table :test 'equal))
         (max-val 0))
 
+    (debug)
+
     (dolist (row data 't)
       (let ((key (nth 0 row))
             (val (nth 1 row)))
-        (when (and (> val 0) (numberp val))
+        (when (and (numberp val)
+                   (> val 0))
           (puthash key (+ val (gethash key ht 0)) ht))))
 
     (maphash (lambda (key value)
@@ -140,13 +143,13 @@ SORT to non-nill will sort the list. "
     (dolist (row data 't)
       (let ((key (nth 0 row))
             (val (nth 1 row)))
-        (when (and (not (equal key "--"))
-                   (> val 0)
-                   (numberp val))
+        (when (and (numberp val)
+                   (not (equal key "--"))
+                   (> val 0))
           (puthash key (+ val (gethash key ht 0)) ht))))
 
-    (maphash (lambda (key value)
-               (setq totals (cons (list key value) totals))) ht)
+    ;; Call FUNCTION for all entries in hash table TABLE.
+    (maphash (lambda (k v) (setq totals (cons (list k v) totals))) ht)
 
     ;; sort in increasing date order
     (when sort
@@ -165,8 +168,6 @@ SORT to non-nill will sort the list. "
                              (lambda (a) (length (car a))) totals))))
 
     ;; Get the number of decimal digits needed, if not specified
-
-    ;;
     (if (< max-val normalize) (setq normalize max-val))
 
     (when (not uplot)

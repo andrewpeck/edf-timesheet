@@ -1,0 +1,54 @@
+D,Time,Project,Task,Day,Hours
+,,,,,
+1,9-1,GE21,USCMS,THU,4.0
+1,1-5,ME0,USCMS,THU,4.0
+,,,,,
+2,9-12,ME0,Segment finder,FRI,3.0
+2,12-1,ETL,Naomi,FRI,1.0
+,,,,,
+,,,,,
+5,11-12,ME0,Segment finder,MON,1.0
+5,10-11,ETL,GUI,MON,1.0
+5,11-12,ME0,Segment finder,MON,1.0
+5,12-1,ETL,Firmware,MON,1.0
+5,1-2,ME0,Segment finder,MON,1.0
+5,2-3,--,Personal time,MON,1.0
+,,,,,
+6,9-11,ME0,Segment finder,TUE,2.5
+6,11-11:30,ETL,Firmware,TUE,0.5
+6,11:30-2,--,Lunch with Eric,TUE,2.5
+,,,,,
+7,9-10,ADMIN,EDF Meeting,WED,1.0
+7,10-10:30,ME0,Segment finder,WED,0.5
+7,10:30-11,ETL,Naomi,WED,0.5
+7,11-1,ETL,TX FIFO,WED,2.0
+7,1-2,ME0,Meeting,WED,1.0
+7,2-2:30,ETL,Group meeting,WED,0.5
+7,2:30-3,L0MDT,AXI C2C,WED,0.5
+,,,,,
+8,8:30-9,ME0,Segment finder,THU,0.5
+8,9-9:30,L0MDT,AXI C2C,THU,0.5
+8,9:30-10,--,VHDL2019,THU,0.5
+8,10-12,ETL,Naomi,THU,2.0
+8,12-2,--,Gone home,THU,2.0
+,,,,,
+9,9-11,ETL,I2C debugging,FRI,2.0
+9,11-1,ETL,Naomi,FRI,2.0
+,,,,,
+12,9-12,ETL,Naomi; RB; Module,MON,3.0
+12,1-2,L0MDT,Meeting,MON,1.0
+,,,,,
+13,9-9:30,--,,TUE,0.5
+13,11-12:30,ME0,Meeting,TUE,1.5
+13,12:30-1:30,ME0,Segment finder,TUE,1.0
+13,1:30-2:30,ETL,PCB quotes,TUE,1.0
+14,2:30-3:30,DINESH-MIGDAL,MIGDAL,WED,1.0
+,,,,,
+14,9:30-11:30,ME0,Segment finder,WED,2.0
+14,11:30-1,ETL,Josh,WED,1.5
+14,1-1:30,DINESH-MIGDAL,MIGDAL,WED,0.5
+14,1:30-2,ETL,Josh,WED,0.5
+14,2-3:30,ETL,Meeting,WED,1.5
+14,4-5:30,L0MDT,Config readback,WED,1.5
+,,,,,
+
