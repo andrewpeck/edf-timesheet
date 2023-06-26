@@ -2,8 +2,7 @@
 :ID:       57aa8f9a-0324-48f9-83b3-7b6161a4e740
 :END:
 #+TITLE: Billing
-#+OPTIONS: toc:nil
-#+OPTIONS: |:nil
+#+OPTIONS: toc:nil |:nil
 #+STARTUP: overview
 
 * Notes :noexport:
@@ -15,6 +14,7 @@
 :END:
 ** Project Distributions
 *** Meetings vs. Not Meetings
+
 #+begin_src emacs-lisp :exports results :results output
 (plot-work-chart-in-date-range "Cumulative Meetings" :short t :meetings t)
 #+end_src
@@ -253,6 +253,7 @@
 - [[https://docs.google.com/spreadsheets/d/1Me4MwJRjFEeAccOltM7_VUCcM1vAfIo5IxJmJRgrgBU/edit#gid=638982745][2023 March]]
 - [[https://docs.google.com/spreadsheets/d/1qpCLNsySN4qLFWY1g8dQXhsoRvfHrDuPLlZqytaiisA/edit#gid=1099201990][2023 April]]
 - [[https://docs.google.com/spreadsheets/d/1UEpQCHrayXaX_YJHkmzv-2pEw2PS14cD2GIUyKmZBcA/edit#gid=1747716051][2023 May]]
+- [[https://docs.google.com/spreadsheets/d/1xUmWRm7fdieOgYH4iLg7gswg5qEfaR758bSok1ccL6s/edit#gid=629399192][2023 June]]
 *** GEM Accruals
 
 #+begin_src sh :results output table :exports results :hlines yes
@@ -290,7 +291,8 @@ cat accruals.txt | grep ME0
 | GE21 | 2023-02 |   7.0 |  7.3% | $623.00  |
 | GE21 | 2023-03 |   5.0 |  4.4% | $445.00  |
 | GE21 | 2023-04 |   1.0 |  1.1% | $89.00   |
-| GE21 | 2023-05 |   3.5 |  3.6% | $311.50  |
+| GE21 | 2023-05 |   3.5 |  3.0% | $311.50  |
+| GE21 | 2023-06 |   4.0 |  3.7% | $356.00  |
 |      |         |       |       |          |
 | ME0  | 2021-01 |   8.0 |  5.6% | $712.00  |
 | ME0  | 2021-02 |   7.5 |  6.5% | $667.50  |
@@ -320,7 +322,8 @@ cat accruals.txt | grep ME0
 | ME0  | 2023-02 |  24.5 | 25.7% | $2180.50 |
 | ME0  | 2023-03 | 45.25 | 39.5% | $4027.25 |
 | ME0  | 2023-04 | 24.25 | 26.4% | $2158.25 |
-| ME0  | 2023-05 |  22.0 | 22.4% | $1958.00 |
+| ME0  | 2023-05 |  23.0 | 20.0% | $2047.00 |
+| ME0  | 2023-06 |  24.0 | 22.2% | $2136.00 |
 
 *** GEM M&S
 **** November 2022
@@ -5118,63 +5121,122 @@ Week 2023-05-22: 120.8% (29 hours) ++++++++++++++++++++++++      (5)
 #+ATTR_HTML: :border 2 :frame none
 
 #+TBLNAME: 2023-06
-|---+----+------------+---------------+-------------------+-----+-------|
-|   |  D |       Time | Project       | Task              | Day | Hours |
-|---+----+------------+---------------+-------------------+-----+-------|
-| # |    |            |               |                   |     |       |
-| # |  1 |        9-1 | GE21          | USCMS             | THU |   4.0 |
-| # |  1 |        1-5 | ME0           | USCMS             | THU |   4.0 |
-| # |    |            |               |                   |     |       |
-| # |  2 |       9-12 | ME0           | Segment finder    | FRI |   3.0 |
-| # |  2 |       12-1 | ETL           | Naomi             | FRI |   1.0 |
-| # |    |            |               |                   |     |       |
-|---+----+------------+---------------+-------------------+-----+-------|
-| # |    |            |               |                   |     |       |
-| # |  5 |      11-12 | ME0           | Segment finder    | MON |   1.0 |
-| # |  5 |      10-11 | ETL           | GUI               | MON |   1.0 |
-| # |  5 |      11-12 | ME0           | Segment finder    | MON |   1.0 |
-| # |  5 |       12-1 | ETL           | Firmware          | MON |   1.0 |
-| # |  5 |        1-2 | ME0           | Segment finder    | MON |   1.0 |
-| # |  5 |        2-3 | --            | Personal time     | MON |   1.0 |
-| # |    |            |               |                   |     |       |
-| # |  6 |       9-11 | ME0           | Segment finder    | TUE |   2.5 |
-| # |  6 |   11-11:30 | ETL           | Firmware          | TUE |   0.5 |
-| # |  6 |    11:30-2 | --            | Lunch with Eric   | TUE |   2.5 |
-| # |    |            |               |                   |     |       |
-| # |  7 |       9-10 | ADMIN         | EDF Meeting       | WED |   1.0 |
-| # |  7 |   10-10:30 | ME0           | Segment finder    | WED |   0.5 |
-| # |  7 |   10:30-11 | ETL           | Naomi             | WED |   0.5 |
-| # |  7 |       11-1 | ETL           | TX FIFO           | WED |   2.0 |
-| # |  7 |        1-2 | ME0           | Meeting           | WED |   1.0 |
-| # |  7 |     2-2:30 | ETL           | Group meeting     | WED |   0.5 |
-| # |  7 |     2:30-3 | L0MDT         | AXI C2C           | WED |   0.5 |
-| # |    |            |               |                   |     |       |
-| # |  8 |     8:30-9 | ME0           | Segment finder    | THU |   0.5 |
-| # |  8 |     9-9:30 | L0MDT         | AXI C2C           | THU |   0.5 |
-| # |  8 |    9:30-10 | --            | VHDL2019          | THU |   0.5 |
-| # |  8 |      10-12 | ETL           | Naomi             | THU |   2.0 |
-| # |  8 |       12-2 | --            | Gone home         | THU |   2.0 |
-| # |    |            |               |                   |     |       |
-| # |  9 |       9-11 | ETL           | I2C debugging     | FRI |   2.0 |
-| # |  9 |       11-1 | ETL           | Naomi             | FRI |   2.0 |
-| # |    |            |               |                   |     |       |
-| # | 12 |       9-12 | ETL           | Naomi; RB; Module | MON |   3.0 |
-| # | 12 |        1-2 | L0MDT         | Meeting           | MON |   1.0 |
-| # |    |            |               |                   |     |       |
-| # | 13 |     9-9:30 | --            |                   | TUE |   0.5 |
-| # | 13 |   11-12:30 | ME0           | Meeting           | TUE |   1.5 |
-| # | 13 | 12:30-1:30 | ME0           | Segment finder    | TUE |   1.0 |
-| # | 13 |  1:30-2:30 | ETL           | PCB quotes        | TUE |   1.0 |
-| # | 14 |  2:30-3:30 | DINESH-MIGDAL | MIGDAL            | WED |   1.0 |
-| # |    |            |               |                   |     |       |
-| # | 14 | 9:30-11:30 | ME0           | Segment finder    | WED |   2.0 |
-| # | 14 |    11:30-1 | ETL           | Josh              | WED |   1.5 |
-| # | 14 |     1-1:30 | DINESH-MIGDAL | MIGDAL            | WED |   0.5 |
-| # | 14 |     1:30-2 | ETL           | Josh              | WED |   0.5 |
-| # | 14 |     2-3:30 | ETL           | Meeting           | WED |   1.5 |
-| # | 14 |     4-5:30 | L0MDT         | Config readback   | WED |   1.5 |
-| # |    |            |               |                   |     |       |
-|---+----+------------+---------------+-------------------+-----+-------|
+|---+----+-------------+---------------+------------------------------+-----+-------|
+|   |  D |        Time | Project       | Task                         | Day | Hours |
+|---+----+-------------+---------------+------------------------------+-----+-------|
+| # |    |             |               |                              |     |       |
+| # |  1 |         9-1 | GE21          | USCMS                        | THU |   4.0 |
+| # |  1 |         1-5 | ME0           | USCMS                        | THU |   4.0 |
+| # |    |             |               |                              |     |       |
+| # |  2 |        9-12 | ME0           | Segment finder               | FRI |   3.0 |
+| # |  2 |        12-1 | ETL           | Naomi                        | FRI |   1.0 |
+| # |    |             |               |                              |     |       |
+|---+----+-------------+---------------+------------------------------+-----+-------|
+| # |    |             |               |                              |     |       |
+| # |  5 |       11-12 | ME0           | Segment finder               | MON |   1.0 |
+| # |  5 |       10-11 | ETL           | GUI                          | MON |   1.0 |
+| # |  5 |       11-12 | ME0           | Segment finder               | MON |   1.0 |
+| # |  5 |        12-1 | ETL           | Firmware                     | MON |   1.0 |
+| # |  5 |         1-2 | ME0           | Segment finder               | MON |   1.0 |
+| # |  5 |         2-3 | --            | Personal time                | MON |   1.0 |
+| # |    |             |               |                              |     |       |
+| # |  6 |        9-11 | ME0           | Segment finder               | TUE |   2.5 |
+| # |  6 |    11-11:30 | ETL           | Firmware                     | TUE |   0.5 |
+| # |  6 |     11:30-2 | --            | Lunch with Eric              | TUE |   2.5 |
+| # |    |             |               |                              |     |       |
+| # |  7 |        9-10 | ADMIN         | EDF Meeting                  | WED |   1.0 |
+| # |  7 |    10-10:30 | ME0           | Segment finder               | WED |   0.5 |
+| # |  7 |    10:30-11 | ETL           | Naomi                        | WED |   0.5 |
+| # |  7 |        11-1 | ETL           | TX FIFO                      | WED |   2.0 |
+| # |  7 |         1-2 | ME0           | Meeting                      | WED |   1.0 |
+| # |  7 |      2-2:30 | ETL           | Group meeting                | WED |   0.5 |
+| # |  7 |      2:30-3 | L0MDT         | AXI C2C                      | WED |   0.5 |
+| # |    |             |               |                              |     |       |
+| # |  8 |      8:30-9 | ME0           | Segment finder               | THU |   0.5 |
+| # |  8 |      9-9:30 | L0MDT         | AXI C2C                      | THU |   0.5 |
+| # |  8 |     9:30-10 | --            | VHDL2019                     | THU |   0.5 |
+| # |  8 |       10-12 | ETL           | Naomi                        | THU |   2.0 |
+| # |  8 |        12-2 | --            | Gone home                    | THU |   2.0 |
+| # |    |             |               |                              |     |       |
+| # |  9 |        9-11 | ETL           | I2C debugging                | FRI |   2.0 |
+| # |  9 |        11-1 | ETL           | Naomi                        | FRI |   2.0 |
+| # |    |             |               |                              |     |       |
+| # | 12 |        9-12 | ETL           | Naomi; RB; Module            | MON |   3.0 |
+| # | 12 |         1-2 | L0MDT         | Meeting                      | MON |   1.0 |
+| # |    |             |               |                              |     |       |
+| # | 13 |      9-9:30 | --            |                              | TUE |   0.5 |
+| # | 13 |    11-12:30 | ME0           | Meeting                      | TUE |   1.5 |
+| # | 13 |  12:30-1:30 | ME0           | Segment finder               | TUE |   1.0 |
+| # | 13 |   1:30-2:30 | ETL           | PCB quotes                   | TUE |   1.0 |
+| # | 14 |   2:30-3:30 | DINESH-MIGDAL | MIGDAL                       | WED |   1.0 |
+| # |    |             |               |                              |     |       |
+| # | 14 |  9:30-11:30 | ME0           | Segment finder               | WED |   2.0 |
+| # | 14 |     11:30-1 | ETL           | Josh                         | WED |   1.5 |
+| # | 14 |      1-1:30 | DINESH-MIGDAL | MIGDAL                       | WED |   0.5 |
+| # | 14 |      1:30-2 | ETL           | Josh                         | WED |   0.5 |
+| # | 14 |      2-3:30 | ETL           | Meeting                      | WED |   1.5 |
+| # | 14 |      4-5:30 | L0MDT         | Config readback              | WED |   1.5 |
+| # |    |             |               |                              |     |       |
+| # | 15 |   8:30-9:30 | CSC           | CMS week meeting             | THU |   1.0 |
+| # | 15 |  9:30-12:30 | L0MDT         | Config readback; CSM 20 mezz | THU |   3.0 |
+| # | 15 |     12:30-1 | ETL           | Naomi/Isaul                  | THU |   0.5 |
+| # | 15 |         1-2 | ME0           | Meeting                      | THU |   1.0 |
+| # | 15 |         2-5 | L0MDT         | Config readback; CSM 20 mezz | THU |   3.0 |
+| # |    |             |               |                              |     |       |
+| # | 16 |       11-12 | DINESH-MIGDAL | Parts; PCB Order             | FRI |   1.0 |
+| # | 16 |        12-2 | ETL           | RB                           | FRI |   2.0 |
+| # | 16 |         3-4 | L0MDT         | AXI issues                   | FRI |   1.0 |
+| # |    |             |               |                              |     |       |
+|---+----+-------------+---------------+------------------------------+-----+-------|
+| # |    |             |               |                              |     |       |
+| # | 19 |         9-2 | HOLIDAY       | Juneteenth                   | MON |   5.0 |
+| # | 19 |    10:30-11 | ETL           | Meeting                      | MON |   0.5 |
+| # | 19 |    11-11:30 | ETL           | RB Design                    | MON |   0.5 |
+| # |    |             |               |                              |     |       |
+| # | 20 |        9-10 | --            | Forgot my phone              | TUE |   1.0 |
+| # | 20 |       10-11 | L0MDT         | DTSI Issues                  | TUE |   1.0 |
+| # | 20 |        11-1 | L0MDT         | MGT Issues                   | TUE |   2.0 |
+| # | 20 |         1-2 | ETL           | New firmware                 | TUE |   1.0 |
+| # | 20 |         2-3 | ETL           | Bias voltage                 | TUE |   1.0 |
+| # |    |             |               |                              |     |       |
+| # | 21 |      9-9:30 | L0MDT         | MGT Issues                   | WED |   0.5 |
+| # | 21 |  9:30-10:30 | ADMIN         | EDF Meeting                  | WED |   1.0 |
+| # | 21 | 10:30-11:30 | L0MDT         | MGT Issues                   | WED |   1.0 |
+| # | 21 | 11:30-12:30 | ETL           | Naomi                        | WED |   1.0 |
+| # | 21 |     12:30-1 | L0MDT         | MGT Issues                   | WED |   0.5 |
+| # | 21 |      1-1:30 | --            | Slides                       | WED |   0.5 |
+| # | 21 |      1:30-2 | ETL           | Joshua                       | WED |   0.5 |
+| # |    |             |               |                              |     |       |
+| # | 22 |        9-10 | ETL           | Meeting                      | THU |   1.0 |
+| # | 22 |        10-1 | L0MDT         | Verena                       | THU |   3.0 |
+| # | 22 |         1-2 | ME0           | Meeting                      | THU |   1.0 |
+| # | 22 |      2-2:30 | ETL           | Joshua                       | THU |   0.5 |
+| # | 22 |      2:30-3 | ETL           | Naomi                        | THU |   0.5 |
+| # |    |             |               |                              |     |       |
+| # | 23 |        9-11 | ETL           | Naomi; Joshua                | FRI |   2.0 |
+| # | 23 |        11-1 | --            | Priority encoder             | FRI |   2.0 |
+| # |    |             |               |                              |     |       |
+|---+----+-------------+---------------+------------------------------+-----+-------|
+| # |    |             |               |                              |     |       |
+| # | 26 |         9-2 | VAC           | California                   | MON |   5.0 |
+| # |    |             |               |                              |     |       |
+| # | 27 |         9-2 | VAC           | California                   | TUE |   5.0 |
+| # |    |             |               |                              |     |       |
+| # | 28 |        9-12 | L0MDT         | Workshop                     | WED |   3.0 |
+| # |    |             |               |                              |     |       |
+| # | 29 |     8:30-10 | L0MDT         | Workshop                     | THU |   1.5 |
+| # | 29 |       10-11 | ETL           | Naomi                        | THU |   1.0 |
+| # | 29 |       11-12 | ADMIN         | Ranting                      | THU |   1.0 |
+| # | 29 |    12-12:30 | ETL           | Daniel                       | THU |   0.5 |
+| # | 29 |     12:30-1 | ETL           | Boards orders                | THU |   0.5 |
+| # | 29 |         1-2 | ME0           | Meeting                      | THU |   1.0 |
+| # |    |             |               |                              |     |       |
+| # | 30 |     9-10:30 | --            | Doctors appt                 | FRI |   1.5 |
+| # | 30 |    10:30-11 | ETL           | Board orders                 | FRI |   0.5 |
+| # | 30 |        11-1 | ME0           | Firmware; Parts              | FRI |   2.0 |
+| # | 30 |         1-3 | ETL           | Chloe; Naomi                 | FRI |   2.0 |
+| # |    |             |               |                              |     |       |
+|---+----+-------------+---------------+------------------------------+-----+-------|
 #+TBLFM: $6='(get-day-of-week "June 2023" $2)::$7='(range-to-time $3)
 
 #+begin_src emacs-lisp :exports results :results output :var data=2023-06
@@ -5186,17 +5248,72 @@ Week 2023-05-22: 120.8% (29 hours) ++++++++++++++++++++++++      (5)
 #+begin_example
                          Monthly Work Distribution
                  ┌                                        ┐
-           ADMIN ┤■■ 1.0
-   DINESH-MIGDAL ┤■■■ 1.5
-           L0MDT ┤■■■■■■ 3.5
-            GE21 ┤■■■■■■■ 4.0
-             ME0 ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 19.0
-             ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 20.0
+             CSC ┤■ 1.0
+   DINESH-MIGDAL ┤■■ 2.5
+           ADMIN ┤■■■ 3.0
+            GE21 ┤■■■■ 4.0
+         HOLIDAY ┤■■■■■ 5.0
+        VACATION ┤■■■■■■■■■■ 10.0
+           L0MDT ┤■■■■■■■■■■■■■■■■■■■■■■ 23.0
+             ME0 ┤■■■■■■■■■■■■■■■■■■■■■■■ 24.0
+             ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 35.5
                  └                                        ┘
 
 
 Week 2023-06-23:  87.5% (21 hours) ++++++++++++++++++ |          (-3)
-Week 2023-06-24:  66.7% (16 hours) +++++++++++++      |          (-8)
+Week 2023-06-24: 118.8% (28 hours) ++++++++++++++++++++++++      (4)
+Week 2023-06-25:  97.9% (23 hours) ++++++++++++++++++++          (0)
+Week 2023-06-26:  95.8% (23 hours) +++++++++++++++++++|          (-1)
+
+#+end_example
+
+*** July 2023
+:PROPERTIES:
+:VISIBILITY: showall
+:END:
+#+ATTR_HTML: :border 2 :frame none
+
+#+TBLNAME: 2023-07
+|---+---+-------------+---------+---------------------------+-----+-------|
+|   | D |        Time | Project | Task                      | Day | Hours |
+|---+---+-------------+---------+---------------------------+-----+-------|
+| # |   |             |         |                           |     |       |
+| # | 3 |         9-2 | HOLIDAY | July 4                    | MON |   5.0 |
+| # |   |             |         |                           |     |       |
+| # | 4 |         9-2 | HOLIDAY | July 4                    | TUE |   5.0 |
+| # |   |             |         |                           |     |       |
+| # | 5 |        9-10 | ETL     | MTD DAQ                   | WED |   1.0 |
+| # | 5 |    10-10:30 | ADMIN   | EDF Meeting               | WED |   0.5 |
+| # | 5 | 10:30-12:30 | ADMIN   | EDF Committee             | WED |   2.0 |
+| # | 5 |     12:30-1 | --      | Jay                       | WED |   0.5 |
+| # | 5 |      2:15-4 | ETL     | Group Meeting             | WED |  1.75 |
+| # |   |             |         |                           |     |       |
+| # | 6 |     10:30-2 | ETL     | Naomi; Firmware; Software | THU |   3.5 |
+| # |   |             |         |                           |     |       |
+| # | 7 |        9-11 | ETL     | Tech support; Firmware    | FRI |   2.0 |
+| # | 7 |       11-12 | ETL     | Firmware update           | FRI |   1.0 |
+| # |   |             |         |                           |     |       |
+| # | 8 |     9-10:30 | ETL     | Firmware update           | SAT |   1.5 |
+| # |   |             |         |                           |     |       |
+|---+---+-------------+---------+---------------------------+-----+-------|
+#+TBLFM: $6='(get-day-of-week "July 2023" $2)::$7='(range-to-time $3)
+
+#+begin_src emacs-lisp :exports results :results output :var data=2023-07
+(plot-monthly-work-chart data :uplot t)
+(plot-weekly-summary-for-month 2023 07)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                   Monthly Work Distribution
+           ┌                                        ┐
+     ADMIN ┤■■■■■■■■ 2.5
+   HOLIDAY ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 10.0
+       ETL ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 10.75
+           └                                        ┘
+
+
+Week 2023-07-27:  96.9% (23 hours) +++++++++++++++++++|          (0)
 
 #+end_example
 
@@ -5356,7 +5473,7 @@ Week 2023-06-24:  66.7% (16 hours) +++++++++++++      |          (-8)
 
 #+NAME: write_contents_hooks
 #+begin_src emacs-lisp :exports none
-(update-all-histograms)
+;; (update-all-histograms)
 #+end_src
 
 #+RESULTS: write_contents_hooks
@@ -5366,5 +5483,4 @@ Week 2023-06-24:  66.7% (16 hours) +++++++++++++      |          (-8)
 # fill-column: 120
 # eval: (when (functionp '+word-wrap-mode) (+word-wrap-mode 0))
 # eval: (load-file (concat (file-name-directory (buffer-file-name)) "time-functions.el"))
-# eval: (add-hook 'write-contents-functions (lambda () (and nil (org-sbe "write_contents_hooks"))) nil t)
 # End:
