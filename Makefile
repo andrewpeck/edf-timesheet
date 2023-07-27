@@ -1,6 +1,10 @@
 .PHONY: export_org_tables summary_tables summary_tables_html
 
-all: export_org_tables db_tables summary plots
+all:
+	make export_org_tables
+	make db_tables
+	make summary
+	make plots
 
 plots:
 	@clj plot-timesheets.clj

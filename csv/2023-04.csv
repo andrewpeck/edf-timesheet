@@ -64,7 +64,7 @@ D,Time,Project,Task,Day,Hours
 20,12:30-2,ETL,DAQ GUI,THU,1.5
 ,,,,,
 21,9-10,ETL,DAQ GUI,FRI,1.0
-21,10-10:30,CMS-PIXEL-DTC,Panos test bench,FRI,0.5
+21,10-10:30,Tracker,Panos test bench,FRI,0.5
 ,,,,,
 ,,,,,
 24,9-2,VAC,Vacation,MON,5.0

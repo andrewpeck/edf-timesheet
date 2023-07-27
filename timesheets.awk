@@ -26,6 +26,7 @@ BEGIN {
     sub("CSC", "OTHER", prj)
     sub("EMPHATIC", "OTHER", prj)
     sub("ROBLYER-DDOSI", "OTHER", prj)
+    sub("YOUNGER-MISC", "OTHER", prj)
     sub("SCOTT-LAB-CAMERA", "OTHER", prj)
     sub("DINESH-MIGDAL", "OTHER", prj)
 
